@@ -1,0 +1,52 @@
+{
+  "chosen_param": "content_description",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain exactly 6 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "generate_hashtags_based_on_content",
+    "description": "Generates relevant hashtags based on the provided content.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "content_description": {
+          "type": "string",
+          "description": "The description of the content based on which hashtags will be generated. The argument value must contain exactly 6 words written entirely in capital (uppercase) letters."
+        },
+        "number_of_hashtags": {
+          "type": "integer",
+          "description": "The number of hashtags to generate."
+        },
+        "language": {
+          "type": "string",
+          "description": "The language in which the hashtags should be generated.",
+          "enum": [
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it"
+          ]
+        }
+      },
+      "required": [
+        "content_description",
+        "number_of_hashtags",
+        "language"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm about to post a detailed article on Instagram about sustainable traveling across Europe, focusing on eco-friendly transportation options like trains, cycling, and electric vehicles, as well as recommending green hostels and local vegetarian restaurants. I’d like to make sure the post reaches a wider audience who are interested in environmental consciousness and travel tips. Could you please suggest 15 relevant hashtags for this post, and I’d prefer to have them in English?",
+    "I'm preparing a long Facebook update to announce the launch of our new vegan bakery located in downtown Berlin, emphasizing our use of 100% organic ingredients, the variety of pastries we offer (such as croissants, muffins, and cakes), and our efforts to support local farmers by sourcing everything locally. The post will also include our grand opening date and some exclusive opening week discounts. Can you provide 10 hashtags in German that would help promote this post to a food- and sustainability-focused audience?",
+    "I need some powerful hashtags for my upcoming Twitter thread, which is a comprehensive guide in Italian for students who want to study abroad in Canada. The thread covers everything from application tips, finding scholarships, the visa process, surviving in a new culture, and making friends during exchange semesters. Could you generate 12 fitting hashtags in Italian to help it get more visibility among prospective students?",
+    "I'm writing a lengthy Facebook post about my recent adventures exploring traditional Spanish cuisine in Madrid, including detailed descriptions of dishes like paella, churros, and tapas, as well as stories about meeting local chefs, attending culinary workshops, and sampling food at bustling markets. I want to ensure this post reaches enthusiasts who love travel and authentic food experiences. Can you please create 8 relevant hashtags in Spanish for this content?",
+    "I'm crafting a blog post in French about the essential steps for starting a small business in France, describing in detail the process of registering the business, dealing with taxes, marketing strategies, finding investors, and stories from successful entrepreneurs. I want help reaching an audience interested in entrepreneurship, finance, and starting up in France. Could you generate 20 hashtags related to this topic, all in French?"
+  ]
+}

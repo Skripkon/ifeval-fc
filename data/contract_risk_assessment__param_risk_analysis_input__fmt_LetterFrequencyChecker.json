@@ -1,0 +1,46 @@
+{
+  "chosen_param": "risk_analysis_input",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'x' exactly 1 time. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "x",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "contract_risk_assessment",
+    "description": "Assesses the risk level of a contract based on specified criteria and a natural language input.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "risk_analysis_input": {
+          "type": "string",
+          "description": "Natural language input specifying the aspects and context of the contract to be assessed. The input must contain the letter 'x' exactly once, regardless of case."
+        },
+        "contract_id": {
+          "type": "string",
+          "description": "Unique identifier of the contract that needs risk assessment."
+        },
+        "include_high_risk_clauses": {
+          "type": "boolean",
+          "description": "Whether to include a detailed analysis of high-risk clauses in the output."
+        }
+      },
+      "required": [
+        "risk_analysis_input",
+        "contract_id",
+        "include_high_risk_clauses"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hello, I need a comprehensive risk evaluation for our upcoming partnership agreement, contract ID 2024-ACME-XY12. Please review the contract with special focus on non-compete clauses, liability limitations, indemnification terms, and dispute resolution mechanisms. Also, could you include a breakdown that specifically highlights any high-risk clauses that might expose us to significant financial, legal, or reputational damages? I want a full assessment, detailing both general and high-risk elements, so I know exactly where our vulnerabilities may lie before finalizing the deal. Please ensure that assessment is thorough and covers every relevant aspect.",
+    "I’m reviewing contract number CNTR-987654321 for our new supplier arrangement, and I’d like you to perform a detailed risk assessment. Specifically, please analyze the terms concerning payment delays, breach penalties, escalation procedures, and any ambiguities around service delivery timelines. I would also appreciate it if you provide an in-depth analysis of any sections that you identify as high risk, since I want to fully understand if there are any clauses that could put our company at significant disadvantage or increased liability.",
+    "For contract ID LEGAL-2023-7789, I require a thorough risk assessment emphasizing the sections on intellectual property rights, confidentiality, sub-contracting limitations, and termination triggers. Additionally, I am particularly concerned about any high-risk clauses that may affect our company’s ownership over technology developed during the partnership. Please provide a report that outlines all identified risks, and explicitly includes analysis of those high-risk contract clauses, so I can present this information to our legal committee with concrete examples and recommendations.",
+    "We’re about to sign contract OP-55A3-BR, and I want a meticulous risk evaluation. Can you examine the entire document, focusing especially on the landlord’s obligations, maintenance responsibilities, early termination penalties, and insurance requirements? Additionally, I need you to identify and explain any high-risk clauses in the contract that could potentially expose us to increased financial burden or legal complications during the lease period. Please make sure to provide both a general risk summary and a specific breakdown of the riskiest terms that you find.",
+    "Can you analyze contract 2312-FIN/SEC/45 for potential risks, paying particular attention to the representations and warranties, consequences of breach, dispute resolution mechanisms, and the scope of indemnity? I would like a full assessment of these areas within the context of recent regulatory changes. Furthermore, please ensure that your report specifically includes a detailed analysis of any high-risk clauses that could lead to substantial legal exposure or financial losses for our organization, as this will be critical for our executive team’s review process."
+  ]
+}

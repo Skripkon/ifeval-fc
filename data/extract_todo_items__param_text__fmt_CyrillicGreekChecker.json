@@ -1,0 +1,48 @@
+{
+  "chosen_param": "text",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Cyrillic letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "cyrillic"
+    }
+  },
+  "fn_schema": {
+    "name": "extract_todo_items",
+    "description": "Extracts to-do items or action points from a given block of text.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Block of text from which to-do items need to be extracted. The argument value must be written entirely in Cyrillic letters; no letters from other scripts are allowed."
+        },
+        "prioritize": {
+          "type": "boolean",
+          "description": "Whether the extracted to-do items should be prioritized."
+        },
+        "context_tags": {
+          "type": "array",
+          "description": "Tags that provide context for to-do items to ensure accurate extraction.",
+          "items": {
+            "type": "string",
+            "description": "A single tag for additional context."
+          }
+        }
+      },
+      "required": [
+        "text",
+        "prioritize",
+        "context_tags"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi! I just finished a long team meeting and took detailed notes, but there’s a lot of information and I want to make sure I capture all the action items efficiently. Can you read through the following block of text and pick out any to-do items, making sure they are listed in order of priority? The meeting was mostly about the upcoming software release, QA testing, and coordinating with the marketing department. Here are my notes: \"Discussed project timeline adjustments. John to coordinate with designers by Friday. QA team needs to finalize test cases by Monday. Everyone should review release notes. Marketing to prepare social post drafts. Schedule next meeting for next Wednesday. Update documentation for new features.\" Please use the context tags: 'software release', 'QA', 'marketing'.",
+    "I have this chunk of text from my daily journal where I tried to jot down everything I need to follow up on at work and at home. Could you go through it and pull out all the to-do or actionable items, prioritizing them, and using these context tags: \"work\", \"personal\", \"follow-up\"? Here’s the text: \"Email manager about the budget report. Buy groceries for the week. Schedule a doctor’s appointment. Submit feedback for the team project. Water the garden. Prepare slides for Monday meeting. Call plumber about leaky faucet.\"",
+    "Can you help me identify all the action points from the minutes of our recent parent-teacher association meeting? Please make sure to prioritize the tasks and use context tags \"school\", \"PTA\", and \"volunteering\". Here is the text: \"Finalize the list of volunteers for the Spring Fair. Contact local businesses for sponsorships. Update the school newsletter with upcoming events. Assign roles for bake sale. Order banner for the main entrance. Arrange meeting with the principal to discuss playground repairs.\"",
+    "Below is a lengthy email exchange between me and my colleagues discussing our quarterly planning. I feel like there are many things we agreed to do but it’s hard to see at a glance. Could you extract the complete list of to-do items, sort them by priority, and keep the context in mind with these tags: \"quarterly planning\", \"team\", \"deadlines\"? Here’s the text: \"We should finalize key objectives by next Tuesday. Sarah to revise marketing plan draft. IT to set up new servers by end of month. Reminder for everyone to send availability for training sessions. Collect feedback from all departments on workflow changes. Organize team lunch after project launch.\"",
+    "I’d appreciate your help pulling all actionable items out of the notes I took during today’s remote brainstorming session. Please prioritize the tasks and use these context tags: \"remote work\", \"brainstorming\", \"team collaboration\". Here is the block of text: \"Create a shared document for ideas. Assign someone to research competitors. Schedule follow-up meeting for next Thursday. Each member to bring three suggestions for new features. Design mockups for top three ideas. Discuss challenges with current tools.\""
+  ]
+}

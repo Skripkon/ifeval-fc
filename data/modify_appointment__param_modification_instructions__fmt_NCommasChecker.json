@@ -1,0 +1,45 @@
+{
+  "chosen_param": "modification_instructions",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain exactly 7 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "modify_appointment",
+    "description": "Modifies an existing appointment based on user instructions.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "modification_instructions": {
+          "type": "string",
+          "description": "User-provided details on how they wish to modify the current appointment, such as changes in date, time, or type. The argument value must contain exactly 7 commas, which may appear anywhere within the value."
+        },
+        "appointment_id": {
+          "type": "string",
+          "description": "Unique identifier of the appointment to be modified."
+        },
+        "confirmation_required": {
+          "type": "boolean",
+          "description": "Indicates if a user confirmation is required after the modifications are made."
+        }
+      },
+      "required": [
+        "modification_instructions",
+        "appointment_id",
+        "confirmation_required"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I need to change my upcoming doctor's appointment. I originally scheduled it for next Monday at 3 PM, but I can't make that time anymore because of a work conflict. My appointment ID is APPT-48291. Can you please reschedule it to Wednesday of the same week, preferably in the late morning, around 11 AM? Please let me know once the new time is confirmed, as I need to update my calendar. I require a confirmation after you've made the changes.",
+    "Hey, I want to adjust my haircut appointment. It's currently booked under appointment ID HC-3225 for this Friday at 2 PM. I would like to move it to the following Friday at the same time if there's availability, otherwise suggest another afternoon slot. Please send me a confirmation after you have made the change, because I need to coordinate with my ride.",
+    "Can you help me with modifying my existing therapy session? The appointment ID is THP-9913. I need to change the session type from in-person to a virtual meeting due to unexpected travel plans. Keep the same date and time if possible. Once you've handled it, please make sure to require a confirmation so I can be certain the changes have been applied.",
+    "I have an appointment with my accountant (appointment ID: ACCT-11234) scheduled for May 18th at 9:30 AM. I would like to switch the time to sometime after noon on the same day, as a morning meeting has come up. Please make this adjustment and ensure that I receive a confirmation so I know the new timing is set and I don't show up at the wrong time.",
+    "Would it be possible to modify my dental cleaning appointment? The appointment ID is DNT-56078. I need to delay the date by one week because I will be out of town. Ideally, I’d prefer the same day of the week and time as originally scheduled if that's available. Please require my confirmation after the modification before it becomes final, as I have to verify with my personal schedule."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "chosen_param": "user_query",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at least 4 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 4,
+      "comparison_option": "at least"
+    }
+  },
+  "fn_schema": {
+    "name": "compose_email_response",
+    "description": "Composes an automatic email response based on the user's query and specified parameters.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_query": {
+          "type": "string",
+          "description": "The user's original email query or request needing a response. The argument value must have at least 4 sentences, and each sentence should be properly punctuated."
+        },
+        "response_tone": {
+          "type": "string",
+          "enum": [
+            "formal",
+            "informal",
+            "concise",
+            "detailed"
+          ],
+          "description": "Desired tone of the email response."
+        },
+        "include_attachments": {
+          "type": "boolean",
+          "description": "Indicator if the response should include attachments. Defaults to False."
+        }
+      },
+      "required": [
+        "user_query",
+        "response_tone",
+        "include_attachments"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently received an email from a client who is requesting an update on their project status. Their message reads: \"Hi, I wanted to check in on the progress of my website redesign. Could you let me know how things are coming along and whether there are any updates or issues I should be aware of? Also, do you have a timeline for the next steps?\" Could you please help me craft a detailed and formal response to this email, and make sure to include any relevant attachments to support the update?",
+    "A customer just contacted my support inbox with the following: \"Hello team, I am not able to log in to my account despite resetting the password several times. Can you help me resolve this issue?\" I'd appreciate it if you could generate a concise and informal reply for me to send back, and I don't think attachments are necessary for this response.",
+    "I got this message from a job applicant: \"Dear hiring manager, I am following up on the status of my application for the Marketing Coordinator position. I submitted my materials two weeks ago and wanted to see if there are any updates or further steps involved in the process.\" Please write a formal, concise reply addressing their query and let me know if attachments should be included in the response or not—I would prefer not to attach documents this time.",
+    "There's an email from a colleague in my inbox that says: \"Hey, do you have a copy of last month’s sales report? If so, could you send it over along with any key highlights or findings? Would love a quick update.\" Please create a detailed but informal response for me and be sure to include the reports as attachments in the reply.",
+    "A vendor just wrote: \"Good morning, just checking in about the invoice I submitted on May 2nd. Can you confirm receipt and let me know when payment will be processed? Also, do I need to provide any additional paperwork?\" Could you generate a formal and detailed response for me, and please make sure to attach any necessary supporting documents referenced in the conversation?"
+  ]
+}

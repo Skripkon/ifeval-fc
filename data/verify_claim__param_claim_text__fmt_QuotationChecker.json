@@ -1,0 +1,46 @@
+{
+  "chosen_param": "claim_text",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in single quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "single"
+    }
+  },
+  "fn_schema": {
+    "name": "verify_claim",
+    "description": "Verifies the authenticity of a claim made in a given text, providing a verification result and the source used for verification.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "claim_text": {
+          "type": "string",
+          "description": "The text containing the claim that needs to be verified. The argument value must be wrapped in single quotation marks, and no additional characters should appear outside the quotes."
+        },
+        "verification_source": {
+          "type": "string",
+          "description": "The primary source or methodology used to verify the claim."
+        },
+        "confidence_level": {
+          "type": "integer",
+          "description": "A percentage representing the confidence level in the verification result.",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "claim_text",
+        "verification_source",
+        "confidence_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Recently, I came across an article that stated, \"The Amazon rainforest produces 20% of the world's oxygen supply.\" I've seen this claim circulating on social media for years and I'm starting to doubt its accuracy. Could you please check if this statement is correct or not? For your verification, I suggest referring to published research from National Geographic or scientific reports by the World Wildlife Fund as your primary source. Given their authority, I trust that you could provide a confidence level of 95% regarding the verification of this claim.",
+    "I read online that \"The human brain uses only 10% of its capacity.\" This has always sounded a bit suspicious to me, but I keep hearing it from various sources including movies and TV shows. Can you clarify once and for all if this claim is true? To check, I would recommend using peer-reviewed neuroscience studies found in the journal Nature Neuroscience as your main source for verification. I would like the answer to have a confidence level of 100%, since it's important I get a thoroughly accurate reply.",
+    "My friend told me that \"Vaccines cause autism in children,\" and this statement really concerned me since I want to make sure what the science says before making any decisions. Could you help me verify whether this claim is supported by evidence? Please use comprehensive meta-analyses from the Centers for Disease Control and Prevention (CDC) as your basis for verification. Ideally, I would appreciate a confidence level of 99%, given the seriousness of the topic.",
+    "I recently heard that \"Mount Everest is getting taller every year due to tectonic activity.\" This was mentioned in a documentary, but I haven't found clear confirmation elsewhere and I'd like to be sure about the accuracy of this information. For your verification, can you reference data or reports from the United States Geological Survey (USGS) as your methodology? Also, please give me a confidence level of 90% based on your assessment and the reliability of the source.",
+    "Someone mentioned to me that \"Eating carrots significantly improves your night vision,\" and I'm really curious if there is any scientific truth to this. I remember hearing it was a myth, but I want to be certain by relying on rigorous evidence. For verification, I suggest you use studies or reviews published by the British Nutrition Foundation as your primary source. Please provide a confidence level of 85% regarding the accuracy of this claim after your investigation."
+  ]
+}

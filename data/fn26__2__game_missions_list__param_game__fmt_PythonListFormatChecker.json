@@ -1,0 +1,33 @@
+{
+  "chosen_param": "game",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn26__2__game_missions_list",
+    "description": "List all missions for a certain game.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "game": {
+          "type": "string",
+          "description": "The name of the game. The argument value must be a valid Python list of strings, and the list must be syntactically correct and parseable with ast.literal_eval()."
+        }
+      },
+      "required": [
+        "game"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I've been playing this fascinating game called 'Wonders of the Ancient World' recently, and I am curious to delve deeper into its structure. I want to maximize my experience and explore each and every aspect of the game thoroughly. Could you provide a comprehensive list of all the missions available within 'Wonders of the Ancient World'? I am especially interested in detailed information about the missions, as I plan to tackle them one by one. Having access to such a resource would be incredibly handy, allowing me to strategize and enhance my gameplay significantly.",
+    "Hello! I am currently totally engrossed in this game called 'Virtual Voyage'. It's been a real rollercoaster ride full of engaging tasks and activities. To make the most out of my gaming journey, I’m looking for a complete rundown of the missions available in 'Virtual Voyage'. Understanding what challenges lie ahead would be fantastic and would certainly help me prepare better and enjoy the game even more. Could you possibly list out all the available missions in this game for me? I want to ensure I complete every task the developers have laid out.",
+    "Hey, I've heard about this game called 'Battle of the Galactic Empires', and I'm planning to start playing it soon. Before diving in, I would love to know more about the different mission types that are offered within this game as they seem quite intriguing from what little I've found on various forums and review sites. Could you list all the missions for 'Battle of the Galactic Empires' so I have a comprehensive understanding of the various tasks and objectives I’ll be tackling? This way, I can plan my strategies accordingly and ensure a satisfying and rewarding experience.",
+    "Good day! I've become quite captivated by this game called 'Mysteries of the Deep Blue', and I want to ensure I uncover every secret and mission that it has to offer. It is said to have an immersive list of tasks that enhance the experience by presenting interesting challenges. Could you provide me with an extensive list of all the missions in 'Mysteries of the Deep Blue'? This way, I can chart out a plan to methodically pursue and complete each mission. I look forward to experiencing the full depth of the game and not missing out on any of its rich content.",
+    "Greetings! I just started exploring this new game titled 'Rise of the Ancient Warriors' and it seems to have an exciting array of missions that come with different challenges and rewards. To engage with it more effectively and fully enjoy what it has to offer, could you help me by listing all the missions for 'Rise of the Ancient Warriors'? Having a detailed list would be immensely useful in helping me decide how to approach the game strategically so I can ensure a rewarding and comprehensive play-through from start to finish. Your support is much appreciated!"
+  ]
+}

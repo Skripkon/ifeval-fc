@@ -1,0 +1,49 @@
+{
+  "chosen_param": "text",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have at most 8 words. Longer responses are not allowed.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 8,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "extract_todo_items",
+    "description": "Extracts to-do items or action points from a given block of text.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Block of text from which to-do items need to be extracted. The argument value must have at most 8 words; longer responses are not allowed."
+        },
+        "prioritize": {
+          "type": "boolean",
+          "description": "Whether the extracted to-do items should be prioritized."
+        },
+        "context_tags": {
+          "type": "array",
+          "description": "Tags that provide context for to-do items to ensure accurate extraction.",
+          "items": {
+            "type": "string",
+            "description": "A single tag for additional context."
+          }
+        }
+      },
+      "required": [
+        "text",
+        "prioritize",
+        "context_tags"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently had a very detailed meeting with my team and am a bit overwhelmed with all the action items that were discussed. Here’s the full transcript of the meeting: 'Yesterday during the weekly project sync, Sarah mentioned that the marketing materials for the July launch need to be drafted by next Friday. Tom said he will reach out to the design team about the updated logo by Thursday. I was reminded to finalize the Q3 budget estimates before the end of this week. We also agreed someone should review last quarter’s customer feedback and create a summary report. Jacob will check the progress on the mobile app updates. Finally, everyone is supposed to prepare slides on their respective deliverables for the next meeting.' Can you go through this entire text, extract all the to-do items, make sure they are prioritized, and use these context tags: 'project management', 'team meeting', and 'Q3 planning' to ensure nothing gets missed?",
+    "I've got this lengthy email from my boss and I find it difficult to sort through all the things I need to do. Could you please read through the text below and extract all the action points? Please prioritize them according to importance, and consider these context tags: 'work tasks', 'deadline', and 'marketing project'. Here’s the email: 'Hi team, by the end of next week, we need to finalize the new marketing brochure content and confirm vendor quotes. Please update the social media calendar with June posts and schedule a brainstorm session to discuss campaign ideas for Q4. I also need someone to compile website analytics from this month. Don’t forget to follow up with the client about the contract renewal and send out the team availability request for July. Thanks!'",
+    "I'm trying to organize my life better and recently wrote a long journal entry with all the things that have been on my mind in terms of tasks and responsibilities. Could you please look at the following entry, extract all the to-do items from it, and prioritize them for me? Please take into account these tags for better context: 'personal organization', 'household', and 'health'. Here’s my journal entry: 'Today I remembered I need to schedule a doctor’s appointment for my annual physical, clean out the garage this weekend, and get groceries for the week including ingredients for healthy dinners. I also want to finish reading the book I started last month, call mom to check in, sort out the paperwork for the car insurance renewal, and book a plumber to fix the leaking sink. I should also set up a dedicated study schedule to prepare for my upcoming certification exam and find time for daily walks.'",
+    "Could you help me with the following directive I received from my volunteer organization? I want to make sure I don’t miss any important tasks. Please extract all to-do items from the provided message and list them in prioritized order. Use these context tags for additional accuracy: 'volunteering', 'event planning', 'community outreach'. Here’s the message: 'For the community fair next Saturday, someone needs to confirm the vendor reservations by Monday. We should distribute flyers in the neighborhood by Wednesday and coordinate with local businesses for sponsorships this week. Set up an online signup form for volunteers, assign team leads for each activity booth, and prepare a list of materials needed for setup. The cleanup crew schedule should be finalized before Friday. Ensure everyone receives their shift details ahead of time. Thanks for your dedication!'",
+    "I attended our startup’s all-hands meeting and took these extensive notes. There were a lot of tasks mentioned, and I’d like you to pull out all the actionable items, prioritize them based on urgency and importance, and use these context tags: 'startup', 'product development', and 'quarterly objectives'. Here are my notes: 'Finish the beta build of the mobile app by June 15th and schedule a review meeting with the stakeholders. Collect user feedback from the latest prototype and integrate changes. Set up an onboarding process for new hires, and update the investor pitch deck with Q2 performance metrics. Organize a team-building outing for July. Coordinate with the tech team to address security updates, and finalize the partnership agreements with at least two new vendors. Submit all expense reports by the end of the month.'"
+  ]
+}

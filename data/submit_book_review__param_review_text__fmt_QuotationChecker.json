@@ -1,0 +1,46 @@
+{
+  "chosen_param": "review_text",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in single quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "single"
+    }
+  },
+  "fn_schema": {
+    "name": "submit_book_review",
+    "description": "Submits a review for a specific book, including the user's personal insights and a rating score.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "review_text": {
+          "type": "string",
+          "description": "Detailed feedback about the book, including thoughts, opinions, and insights. The argument value must be wrapped in single quotation marks, with no additional characters appearing outside the quotes."
+        },
+        "book_title": {
+          "type": "string",
+          "description": "The title of the book being reviewed."
+        },
+        "rating": {
+          "type": "integer",
+          "description": "Rating score for the book between 1 and 5.",
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "required": [
+        "review_text",
+        "book_title",
+        "rating"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'd like to share my thoughts about \"The Catcher in the Rye.\" I found the character of Holden Caulfield to be deeply relatable, especially his struggles with alienation and his critique of the adult world. The writing style was captivating and the narrative voice really stood out from any other book I've read. However, some parts felt repetitive and the pacing slowed at times. Overall, the themes of innocence and cynicism really resonated with me, and I appreciate how the author painted such a realistic portrayal of teenage angst. I would rate this book a solid 4 out of 5.",
+    "I'm submitting my review for \"Educated\" by Tara Westover. This memoir was incredibly moving. Tara’s journey from a strict and abusive household with no formal education to earning a Ph.D. from Cambridge was inspirational. The way she describes her family dynamics and her struggle for self-identity kept me hooked throughout the pages. I admired her resilience and quest for knowledge, even though some sections were quite distressing and heartbreaking. It's a book I won't soon forget, and I absolutely recommend it to others. I give it a 5 rating.",
+    "I just finished reading \"The Alchemist\" by Paulo Coelho and wanted to provide a review. The story's message about following one's dreams and listening to your heart was very uplifting and positive. The writing felt a bit simplistic at times, but it actually made the book quite accessible and easy to digest. I especially loved the philosophy interwoven with the protagonist’s journey and the symbolism throughout the story. My only critique would be that some parts felt a bit repetitive. I’m going to rate it 4 out of 5.",
+    "Here's my review for \"To Kill a Mockingbird.\" I was deeply moved by the themes of justice, morality, and racial inequality. The character of Atticus Finch was inspiring in his unwavering commitment to fairness, and Scout's perspective as a child made the heavy themes feel so much more tangible and genuine. The setting was vividly drawn and the social commentary remains profoundly relevant. Despite being published decades ago, its impact hasn't diminished. The book occasionally lingered on certain plot points, but overall it was a powerful and important read. I would rate it 5 stars.",
+    "I've just finished \"1984\" by George Orwell, and wanted to share my detailed feedback. The bleak portrayal of a totalitarian regime was chilling and the sense of paranoia and surveillance was palpable throughout the narrative. Orwell's depiction of psychological manipulation and the loss of free will was deeply disturbing, yet fascinating. The concepts of Newspeak and thoughtcrime were especially thought-provoking. The only downside is that the ending felt abrupt and left me with a lingering sense of hopelessness. Nonetheless, it’s a masterpiece that made me reflect on today's world. My rating for this book is 5."
+  ]
+}

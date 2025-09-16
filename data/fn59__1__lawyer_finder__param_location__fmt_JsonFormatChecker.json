@@ -1,0 +1,45 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn59__1__lawyer_finder",
+    "description": "Locate lawyers near you based on their specialization.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Your location. The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable."
+        },
+        "specialization": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Specializations of lawyer that you are looking for."
+          }
+        },
+        "experience": {
+          "type": "integer",
+          "description": "Experience in years that lawyer has. Default 1"
+        }
+      },
+      "required": [
+        "location",
+        "specialization"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm planning to start a new business venture in Los Angeles, California, and I really want to ensure that all my legal documents are handled by someone with a keen insight into business law. It's critical for me to find a lawyer who specializes in business law or corporate law. I would appreciate it if you could help me identify a few options nearby. The legal aspects of setting up a company can be quite complex, and while I'm not too concerned about how much experience they have, I do think a general familiarity with small business laws is vital.",
+    "As someone who's just moved to New York City, I'm really trying to get everything in place for my young family. One of my immediate needs is finding a lawyer who specializes in family law or child custody issues. I need someone who is ideally nearby and who has at least a few years of experience, though I'm flexible on the exact number of years. The city is large, and I'm feeling a bit overwhelmed trying to get settled, so having some professional legal assistance will be absolutely invaluable to me and my family.",
+    "Living in Miami, Florida has been fantastic so far, but I've come across a few legal issues relating to real estate that I need help with. I would really like to find a lawyer who is well-versed in property law or real estate law. It's important for me that they're located within the city so we can discuss any paperwork or negotiations easily. While I don't necessarily require someone with decades of experience, having a lawyer who has handled several cases of similar nature would definitely put my mind at ease.",
+    "Recently, in Chicago, Illinois, I've started to look into making some personal plans about my estate and future financial planning. I've been told it's wise to have a lawyer guide me through this, particularly someone who is skilled in either estate planning law or elder law. It's crucial they are operating in my area as I may need multiple consultations. Although years of experience are not my primary concern, I consider finding a lawyer who has a good track record in dealing with these specific matters is necessary to make sure everything is in order.",
+    "As a recent college graduate settling in Austin, Texas looking for job opportunities, I've been advised to patent an innovative product idea. I need a lawyer specializing in intellectual property law or patent law to navigate this process. It would be best if they were located nearby, so in-person meetings can happen seamlessly and without excessive travel. Since I am new to patenting, I am flexible about their years of experience, but their proficiency in patent law is something I highly value to protect my idea effectively."
+  ]
+}

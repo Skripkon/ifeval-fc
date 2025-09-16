@@ -1,0 +1,55 @@
+{
+  "chosen_param": "user_preferences",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Cyrillic letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "cyrillic"
+    }
+  },
+  "fn_schema": {
+    "name": "book_hotel_room",
+    "description": "Book a hotel room based on user requirements such as room type, check-in, and check-out dates.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_preferences": {
+          "type": "string",
+          "description": "User's specified preferences for the room such as amenities, bed type, or location within the hotel. The value must be written entirely in Cyrillic letters; no letters from other scripts are allowed."
+        },
+        "room_type": {
+          "type": "string",
+          "enum": [
+            "single",
+            "double",
+            "suite",
+            "family"
+          ],
+          "description": "Type of room to book."
+        },
+        "check_in_date": {
+          "type": "string",
+          "description": "Check-in date in YYYY-MM-DD format."
+        },
+        "check_out_date": {
+          "type": "string",
+          "description": "Check-out date in YYYY-MM-DD format."
+        }
+      },
+      "required": [
+        "user_preferences",
+        "room_type",
+        "check_in_date",
+        "check_out_date"
+      ]
+    }
+  },
+  "user_queries": [
+    "I’m planning a trip to Paris next week and would love your help booking a hotel room. I'd like to reserve a double room with a king-sized bed and a balcony, preferably on one of the higher floors for a nice view. I’d also appreciate if the room is non-smoking and comes with complimentary breakfast. My check-in date will be 2024-06-15 and I’ll be checking out on 2024-06-20. Could you please take care of this for me?",
+    "Could you please book a suite for me at a hotel? I’m looking for a suite that has a jacuzzi, city view, and is pet-friendly since I’ll be bringing my dog. I require a late check-out option if available, and proximity to the hotel gym would be great. I will be checking in on 2024-07-03 and checking out on 2024-07-07. Please let me know if this can be arranged.",
+    "I'm organizing accommodation for my family vacation and need to book a family room. The room should have two queen beds and a sofa bed, plus it must be close to the swimming pool and include a kitchenette. We will need access to laundry facilities and a room with blackout curtains, as we have kids who sleep early. Check-in will be on 2024-08-10 and check-out will be on 2024-08-18. Can you assist with this booking?",
+    "Hello, I’d like to make a hotel reservation for a single room. My preferences include an ocean view, access to high-speed WiFi, early check-in if possible, and hypoallergenic bedding. I am a light sleeper so a quiet room away from the elevators or main road would be ideal. Please book this for me with check-in on 2024-09-05 and check-out on 2024-09-12.",
+    "I'm going to a business conference and need to stay at a hotel nearby. Could you reserve a double room for me with access to a business lounge, strong desk lighting, and close proximity to public transport? I'd also appreciate soundproof walls for undisturbed work and availability of room service around the clock. My stay will be from 2024-06-23 to 2024-06-25. Thank you!"
+  ]
+}

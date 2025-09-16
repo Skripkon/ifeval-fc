@@ -1,0 +1,44 @@
+{
+  "chosen_param": "dietary_requirements",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 6 consecutive spaces between every pair of words. Only 6 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "get_nutritional_advice",
+    "description": "Provides nutritional advice tailored to a pet's specific dietary needs and health conditions.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dietary_requirements": {
+          "type": "string",
+          "description": "Specific dietary needs or restrictions of the pet, including any known allergies or conditions. The argument value must use exactly 6 consecutive spaces between every pair of words, and only sequences of 6 spaces in a row are allowed in the string."
+        },
+        "pet_age": {
+          "type": "integer",
+          "description": "Age of the pet in years."
+        },
+        "health_condition": {
+          "type": "string",
+          "description": "Any existing health condition or medical diagnosis of the pet that may affect its dietary requirements."
+        }
+      },
+      "required": [
+        "dietary_requirements",
+        "pet_age",
+        "health_condition"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've recently adopted a 7-year-old Labrador Retriever, and I'm trying to ensure I provide the best possible diet for her. She has some specific dietary requirements, as she's allergic to chicken and needs a grain-free regimen. Additionally, she has been diagnosed with early-stage kidney disease. Given her age, dietary restrictions, and health condition, what nutritional advice can you offer to make sure she's getting everything she needs while also managing her kidney issues and avoiding her allergens?",
+    "My 3-year-old Persian cat has always had a sensitive stomach, and I was recently told by my vet that she has mild pancreatitis. She can’t tolerate fish or beef products, so her dietary requirements are mainly limited to novel proteins and she needs to avoid high-fat foods. Considering all this and her current age, could you provide me with tailored nutritional recommendations that will help her manage the pancreatitis while also staying away from her food intolerances?",
+    "I have an 8-year-old German Shepherd who must be on a low-fat, high-fiber diet due to his proneness to obesity and a past diagnosis of diabetes. He also can't have any foods containing wheat because of an allergy that causes skin reactions. Could you give me comprehensive nutritional guidance and suggestions to help manage his diabetes, maintain a healthy weight, and avoid triggering his wheat allergy, based on his age and these dietary challenges?",
+    "We have a 2-year-old rabbit who recently developed gastrointestinal stasis and it’s crucial that his diet is carefully managed. He absolutely can't have any foods high in sugar and is also allergic to alfalfa. Given his young age, these specific dietary requirements (no sugar, no alfalfa), and his GI condition, what would be the best nutritional approach to keep him healthy and prevent further digestive problems?",
+    "My senior cat is 13 years old and suffers from chronic kidney disease. She must be on a low-protein, phosphorus-restricted diet as prescribed by our vet, and she's also allergic to dairy and seafood. Considering her advanced age, these dietary restrictions, and her ongoing health concern, could you provide detailed nutritional advice to optimally support her kidney function and avoid her allergies?"
+  ]
+}

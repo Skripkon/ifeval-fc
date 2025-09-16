@@ -1,0 +1,49 @@
+{
+  "chosen_param": "extracted_user_problem",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Greek letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "greek"
+    }
+  },
+  "fn_schema": {
+    "name": "diagnose_technical_issue",
+    "description": "Diagnoses and provides solutions for technical issues described by the user.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "extracted_user_problem": {
+          "type": "string",
+          "description": "Detailed description of the technical issue reported by the user. The argument value must be written entirely in Greek letters, with no letters from other scripts allowed."
+        },
+        "device_type": {
+          "type": "string",
+          "description": "Type of device where the issue is occurring, such as 'mobile', 'computer', or 'tablet'."
+        },
+        "urgency_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "User-specified urgency level of the issue."
+        }
+      },
+      "required": [
+        "extracted_user_problem",
+        "device_type",
+        "urgency_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi there, I really need some help with my laptop computer because it's been giving me a recurring error every time I try to open any application. Specifically, whenever I double-click on any icon, it takes several minutes to respond, and sometimes the screen just freezes completely and I have to force restart the whole system. I depend on this laptop for remote work and am worried about losing files. I'm quite frustrated because this just started happening after a recent Windows update. This situation is pretty urgent for me, so can you help me troubleshoot and fix this issue as soon as possible? My urgency level is high.",
+    "I’ve been experiencing a persistent problem with my Android mobile phone. Every time I try to make a call or receive one, the device randomly reboots itself, and sometimes it gets stuck on the startup screen for several minutes before coming back to life. I have already tried restarting and clearing some cache, but the issue keeps coming back. I rely heavily on my phone for work-related communications, and this malfunction is affecting my productivity. Could you please help me figure out what the problem might be and suggest some solutions? I’m marking this as a medium urgency issue.",
+    "I’m having trouble with my iPad tablet, and it’s becoming pretty inconvenient. The device is not connecting to my home Wi-Fi network even though all the other devices in the house, including my laptop and phone, are working perfectly fine with the same network. I tried forgetting the network and reconnecting, rebooting the iPad, and even resetting network settings, but nothing seems to resolve it. Since I mainly use this iPad for entertainment and some light reading, the issue isn’t critical right away, but I would like your help in diagnosing what is wrong and how to fix it—it’s a low urgency problem.",
+    "I currently have a persistent issue with my desktop computer. Ever since I installed a new antivirus program, my computer has become noticeably slower. Programs take a long time to open, and sometimes the system hangs for several minutes, forcing me to restart it. I use this computer for both work and gaming, and the slow performance is really impacting my ability to do both efficiently. Please assist me in identifying what the root cause could be, and what steps I can take to resolve this performance issue. I consider this a medium urgency problem.",
+    "Over the last few days, my Samsung Galaxy S21 mobile phone has been failing to send text messages, regardless of the network coverage. The message stays stuck in 'sending' status, and eventually fails to deliver. I’ve already tried rebooting the phone, clearing the messaging app’s cache, and even switching SIM cards, but the issue persists. This problem is critically impacting my ability to communicate with family and colleagues, so I’d really appreciate a fast and thorough solution. Please let me know what’s going on and how to resolve this issue. The urgency level here is high."
+  ]
+}

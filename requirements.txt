@@ -1,0 +1,42 @@
+# Core dependencies
+nltk>=3.8
+typing-extensions>=4.0.0
+python-dotenv>=1.0.0
+
+# LangChain dependencies for inference
+langchain>=0.1.0
+langchain-core>=0.1.0
+
+# LLM Provider dependencies (install only what you need)
+# OpenAI
+langchain-openai>=0.1.0
+
+# Anthropic
+langchain-anthropic>=0.1.0
+
+# Google
+langchain-google-genai>=1.0.0
+
+# GigaChat (via langchain-community)
+langchain-community>=0.0.20
+
+# To view metrics
+colorama>=0.4.6
+
+# Optional dependencies for development
+# Uncomment the following lines if you want to install development dependencies
+# pytest>=6.0
+# pytest-cov>=2.0
+# black>=22.0
+# isort>=5.0
+# pylint>=2.15
+# mypy>=1.0
+# pre-commit>=2.20
+
+# Optional dependencies for notebook usage
+# Uncomment the following lines if you want to install notebook dependencies
+# jupyter>=1.0
+# ipykernel>=6.0
+# matplotlib>=3.5
+# rich>=12.0
+# tqdm>=4.60

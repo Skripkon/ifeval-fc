@@ -1,0 +1,64 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must include the keywords: ['separate', 'odd', 'bad', 'usual', 'sudden']. Each keyword must appear at least once, in any order. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "separate",
+        "odd",
+        "bad",
+        "usual",
+        "sudden"
+      ],
+      "must_include": true
+    }
+  },
+  "fn_schema": {
+    "name": "fn4__1__get_news_report",
+    "description": "Retrieve the latest news based on a specified location in the format of 'City, State', such as 'San Francisco, CA'.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "The location for which to get the news, specified in the format of 'City, State (abbr)', such as 'San Francisco, CA'. State needs to be in short form. If state not available in use 'City, Country'. The argument value must include the keywords: 'separate', 'odd', 'bad', 'usual', and 'sudden'—each keyword must appear at least once, in any order, and case does not matter."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of news to filter by, such as 'Politics', 'Technology', 'Sports', etc.",
+          "enum": [
+            "Politics",
+            "Technology",
+            "Sports",
+            "Entertainment",
+            "Health"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "description": "The language of the news report. Use ISO 639-1 language codes like 'en' for English, 'es' for Spanish, etc.",
+          "enum": [
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it"
+          ]
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm trying to keep up with what's happening in Orlando, FL, particularly since I'm interested in how tech companies and innovation are shaping the area. Could you provide me with the latest news reports about Orlando, FL? If possible, I would like to receive the news in English and focused mainly on technology, especially any major developments or noteworthy stories that have come out in the past few days regarding the tech industry.",
+    "As someone who follows politics quite closely, I'm very curious about any political developments that might be impacting Berlin, Germany at the moment. Please share a comprehensive update on the latest news reports from Berlin, Germany, specifically concentrating on the politics category. Ideally, I would prefer the coverage to be in German so I can get the native perspective and really understand the nuances of what's going on politically there lately.",
+    "My parents live in Miami, FL and they are huge sports fans, always following basketball and football, especially local teams. Can you gather the most recent and important sports news reports from Miami, FL for me? The news should be in Spanish since that's their preferred language, and I'd love to share with them any updates on the teams or any significant sporting events that have happened there recently.",
+    "I am conducting some research on public health trends and recent outbreaks, focusing especially on Paris, France. Could you please fetch the latest health-related news articles concerning Paris, France, so I can stay informed about ongoing health issues, policies, or any significant medical advancements in that region? I prefer receiving this information in French to maintain accuracy and to study the original reports for my research purposes.",
+    "Lately, I've been following the entertainment industry and am quite intrigued by what's happening in Los Angeles, CA, given it's the entertainment capital. Would you be able to find the most up-to-date entertainment news stories emanating from Los Angeles, CA? I'm especially interested in developments regarding movies, celebrities, or cultural events. Please provide these news reports in English so I can share some highlights with my group of friends."
+  ]
+}

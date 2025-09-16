@@ -1,0 +1,58 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'n' exactly 7 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "n",
+      "N": 7,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn27__0__nature_reserve_find_nearby",
+    "description": "Locate nearby nature reserves based on specific criteria such as amenities and proximity.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "The city where you want to locate a nature reserve. The argument value must contain the letter 'n' exactly 7 times. Case does not matter."
+        },
+        "amenities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Preferred amenities in the nature reserve.",
+            "enum": [
+              "Picnic Tables",
+              "Public Restrooms",
+              "Playgrounds",
+              "Biking Trails",
+              "Hiking Trails",
+              "Camping Grounds"
+            ]
+          }
+        },
+        "proximity": {
+          "type": "integer",
+          "description": "The radius within which to look for nature reserves in kilometers."
+        }
+      },
+      "required": [
+        "location",
+        "proximity",
+        "amenities"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I've been planning a day out with the family and we're considering visiting a nearby nature reserve. We live in Seattle and we're searching for a place that’s within 20 kilometers of us. It's important that the location offers amenities such as picnic tables where we can have our lunch and a playground for the kids to release their energy. Also, restrooms would be vital for convenience, especially if we spend the whole day there. Could you suggest a few nearby places that meet these criteria?",
+    "Hello! I’m trying to organize a weekend trip for my hiking group. We’re based in Denver, and we want to find a nature reserve that is within a 15-kilometer radius from the city. We're really keen on a place that features extensive hiking trails, as we are planning a whole day of exploring the natural terrain. We'd also like the reserve to have public restrooms since that would make our visit more comfortable. Can you help us locate such a spot?",
+    "Hi there, I'd love some help finding a nature reserve because I'm interested in going camping next weekend. I'm currently in Austin and looking for a place not too far away, ideally within a 50-kilometer distance. What I absolutely need at the location are camping grounds where overnight stays are possible and biking trails because a couple of friends and I love cycling through scenic routes. Also, having picnic tables would be a huge plus since we plan on packing our food. Can you suggest any nearby reserves with these features?",
+    "Hey! I'm on the lookout for a nearby nature reserve that would make for a perfect outdoor escape this weekend. I live in Miami and I'm hoping to find a spot that’s within a 30-kilometer radius. It would be great if the location has amenities like playgrounds, as I want to bring my nephews along, and public restrooms for convenience. Having biking trails would also be wonderful as I plan to ride my bike around. Could you assist me by finding some options that fit these criteria?",
+    "Greetings! I'm trying to plan a day trip to a nature reserve for my family, including my young cousins. We’re located in San Francisco and need to find a reserve that is close by, ideally within 25 kilometers. Important amenities would include picnic tables for us to have lunch, playgrounds so the kids can play, and hiking trails because we enjoy scenic walks as a family activity. It’s essential that we also have access to public restrooms during our visit. Can you suggest any places nearby that have these facilities?"
+  ]
+}

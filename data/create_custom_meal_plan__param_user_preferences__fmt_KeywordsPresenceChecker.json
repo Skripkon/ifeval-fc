@@ -1,0 +1,62 @@
+{
+  "chosen_param": "user_preferences",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must include the keywords: ['mobile', 'young', 'normal']. Each keyword must appear at least once, in any order. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "mobile",
+        "young",
+        "normal"
+      ],
+      "must_include": true
+    }
+  },
+  "fn_schema": {
+    "name": "create_custom_meal_plan",
+    "description": "Generates a personalized meal plan based on user preferences, dietary restrictions, and health goals.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_preferences": {
+          "type": "string",
+          "description": "Free-form text including user preferences such as cuisine types, favorite foods, or particular eating habits. The input must include the keywords: 'mobile', 'young', and 'normal', each appearing at least once in any order. Keyword capitalization is not important."
+        },
+        "dietary_restrictions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Specific dietary restrictions the user has.",
+            "enum": [
+              "vegetarian",
+              "vegan",
+              "gluten-free",
+              "nut-free",
+              "dairy-free",
+              "halal",
+              "kosher"
+            ]
+          },
+          "description": "List of dietary restrictions to consider for the meal plan."
+        },
+        "health_goals": {
+          "type": "string",
+          "description": "The user's health goals such as weight loss, muscle gain, or maintenance."
+        }
+      },
+      "required": [
+        "user_preferences",
+        "dietary_restrictions",
+        "health_goals"
+      ]
+    }
+  },
+  "user_queries": [
+    "I’ve found myself falling into the same eating patterns, and I’d really love your help putting together a meal plan that would shake things up. I adore Mediterranean and Japanese dishes, and I particularly enjoy meals that feature rice, grilled vegetables, and seafood (but I do avoid beef and pork). I am vegetarian and I also avoid all forms of gluten and dairy, so I’d need the plan to be strictly vegetarian, gluten-free, and dairy-free. My main health goal is to safely lose weight while making sure I’m getting all my nutrients. Can you create a meal plan tailored to these preferences and restrictions?",
+    "I’m looking for a detailed meal plan that fits my lifestyle and helps me achieve some important health ambitions. My favorite foods revolve around Italian and Middle Eastern cuisines, and I really enjoy dishes with lots of legumes, tomatoes, and olive oil. I follow a vegan, nut-free, and halal diet, so nothing with any animal products, nuts, or non-halal ingredients. My goal right now is to build muscle mass in a healthy, sustainable way. Could you provide a carefully composed meal plan that incorporates all of these requirements?",
+    "Could you please help me by crafting a custom meal plan for the next week? I tend to gravitate towards Asian and Mexican flavors, and my eating habits involve having small, frequent meals rather than three large ones. Additionally, I have to strictly avoid all dairy products and nuts, so please make the meal plan dairy-free and nut-free. I am hoping to maintain my current weight while making sure my energy stays high for my athletic training. Please take all this into account and create a suitable plan for me.",
+    "I'm struggling to stay on track with healthy eating, especially since my tastes are quite varied. My preferences are for fresh, seasonal produce, and I love experimenting with recipes from South American and Indian cuisines. I must stick to a strictly kosher and gluten-free diet for medical and religious reasons. My health goal is to lose a few kilograms and maintain stable blood sugar levels. Can you put together a personalized meal plan that reflects these preferences, restrictions, and goals?",
+    "I want to overhaul my eating habits and I’m hoping for your guidance in building a personalized meal plan. I absolutely love dishes that are spicy and full of bold flavors, with lots of vegetables and plant-based proteins, and I enjoy trying out new recipes from Thai and Moroccan cuisines. My dietary restrictions are vegan (no animal products at all), as well as halal and nut-free, so please make sure everything is suitable for those needs. My number one goal is to maintain my current healthy weight and support overall wellness. Can you design a plan with all of this information?"
+  ]
+}

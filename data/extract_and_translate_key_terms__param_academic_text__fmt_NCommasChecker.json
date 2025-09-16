@@ -1,0 +1,51 @@
+{
+  "chosen_param": "academic_text",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at most 3 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at most",
+      "N": 3
+    }
+  },
+  "fn_schema": {
+    "name": "extract_and_translate_key_terms",
+    "description": "Extracts key terms from a text and translates them into a specified language.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "academic_text": {
+          "type": "string",
+          "description": "Text from which key terms are to be extracted and translated. The argument value must contain at most 3 commas, which may appear anywhere in the value."
+        },
+        "target_language": {
+          "type": "string",
+          "description": "The language code into which the key terms will be translated (e.g., 'es' for Spanish)."
+        },
+        "discipline": {
+          "type": "string",
+          "enum": [
+            "biology",
+            "mathematics",
+            "history",
+            "literature"
+          ],
+          "description": "Academic discipline related to the text to help improve term extraction."
+        }
+      },
+      "required": [
+        "academic_text",
+        "target_language",
+        "discipline"
+      ]
+    }
+  },
+  "user_queries": [
+    "I have a lengthy article here that I need some help with. It's about gene expression and CRISPR technology, and it's primarily intended for biology students. Could you please go through the following text, extract the most important key terms, and then translate those terms into French for me? This will help me create a glossary for my French-speaking classmates. Here's the text: \"Recent advancements in gene editing technologies, such as CRISPR-Cas9, have revolutionized the field of molecular biology. By enabling targeted modifications of genetic material, researchers are able to study gene function with unprecedented precision. However, ethical considerations regarding germline editing continue to spark global debates...\"",
+    "I'm studying history and need your assistance. Could you extract the key terms from this passage and translate them into Italian? The text is: \"The Treaty of Versailles, signed in 1919, formally ended World War I between Germany and the Allied Powers. The treaty imposed severe reparations and territorial losses on Germany, which many historians argue contributed to the rise of National Socialism. Provisions regarding disarmament and the League of Nations were also significant outcomes of the negotiation process.\" The discipline is history.",
+    "I need to prepare study materials for my friends who are learning mathematics in Spanish. Could you take this mathematical explanation, identify the main key terms, and translate them all into Spanish? The text is: \"Calculus is a branch of mathematics focused on the study of rates of change and accumulation. Fundamental concepts include limits, derivatives, integrals, and infinite series. Differentiation and integration are central to calculus and have applications in physics, engineering, and economics.\" Please note the discipline is mathematics.",
+    "I'm working on an English literature research paper and I want to create a glossary for some Korean classmates. Can you help me by extracting the key terms from this excerpt and translating them into Korean? The discipline is literature. Here’s the passage: \"William Shakespeare’s play Hamlet is a complex exploration of themes such as revenge, madness, and political intrigue. The question of Hamlet’s sanity, the symbolism of the ghost, and the role of fate versus free will have been subject to scholarly debate for centuries.\"",
+    "I’m required to submit a list of main concepts from my biology paper translated to Portuguese for an international conference. The paper discusses cell membrane structure and function. Please extract the essential key terms from this text and translate them into Portuguese, considering the discipline is biology: \"The cell membrane, composed primarily of a phospholipid bilayer, is responsible for regulating the movement of substances into and out of the cell. Embedded proteins serve diverse roles, including transport, signaling, and structural support. The fluid mosaic model describes the dynamic arrangement of these molecules within the membrane.\""
+  ]
+}

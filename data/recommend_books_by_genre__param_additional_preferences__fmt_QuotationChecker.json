@@ -1,0 +1,45 @@
+{
+  "chosen_param": "additional_preferences",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in double quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "double"
+    }
+  },
+  "fn_schema": {
+    "name": "recommend_books_by_genre",
+    "description": "Recommends a list of books based on a user's interest in a particular genre, including additional preferences.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "preferred_genre": {
+          "type": "string",
+          "description": "The primary genre of interest for which book recommendations are sought."
+        },
+        "additional_preferences": {
+          "type": "string",
+          "description": "Extra information regarding preferences such as author style, length of books, or themes. The argument value must be wrapped in double quotation marks, with no additional characters appearing outside the quotes."
+        },
+        "max_recommendations": {
+          "type": "integer",
+          "description": "The maximum number of book recommendations to return.",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "preferred_genre",
+        "additional_preferences",
+        "max_recommendations"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been really interested in exploring new science fiction books lately, especially ones that focus on complex world-building and thought-provoking ideas about the future of technology and human society. I'm not a big fan of overly long novels, so I'd prefer medium-length books, and I love when the author has a witty writing style with unique character development. Could you suggest up to 7 book titles that match my interests in this particular genre and these preferences?",
+    "I'm looking to dive into the historical fiction genre because I enjoy stories set in different eras, especially those that focus on strong female protagonists and rich, detailed settings. I also prefer books that are not part of a series and have a conclusive ending. If possible, I'd love for the books to have some underlying mystery elements or involve real historical events. Please recommend a maximum of 5 books that would suit my tastes.",
+    "Could you please recommend 10 mystery books that have intricate plot twists and a dark, atmospheric tone? I also appreciate stories written by international authors, preferably those from non-English speaking countries, and I tend to enjoy shorter books that can be finished over a weekend. I don't mind if the themes are a bit gritty, as long as the storytelling is immersive and compelling.",
+    "I want to find some fantasy novels to read, but I’m quite particular about my preferences. I’m looking for modern fantasy rather than classic, and I would rather the books have strong character-driven plots with diverse casts and explore themes of belonging or identity. It would be great if the writing style is poetic or lyrical, and I’m okay with longer books. Can you provide me with up to 6 recommendations that align with these preferences?",
+    "I'm hoping you can suggest 3 romance books that are set in small towns and focus on slow-burn relationships rather than 'love at first sight.' I typically enjoy contemporary settings, prefer authors who write with humor and wit, and like when there are themes of personal growth or healing in the stories. Please give me your top picks that best match these requirements."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "chosen_param": "type",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'n' exactly 7 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "n",
+      "N": 7,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn175__0__find_instrument",
+    "description": "Search for a musical instrument within specified budget and of specific type.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "budget": {
+          "type": "number",
+          "description": "Your budget for the instrument."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the instrument. The argument value must contain the letter 'n' exactly 7 times, regardless of case."
+        },
+        "make": {
+          "type": "string",
+          "description": "Maker of the instrument, Optional parameter. Default is ''"
+        }
+      },
+      "required": [
+        "budget",
+        "type"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there, I'm really interested in finally starting to learn how to play the guitar. I have been thinking about it for quite some time and I believe now is the right moment to invest in this hobby. My budget isn't huge though, as I've saved up only around 300 dollars for it. I understand there are many kinds of guitars and it can be quite overwhelming for a beginner like me. Ideally, I would want something that offers quality sound without breaking the bank. Could you help me find a guitar within my budget? I guess acoustic would be the way to go for starters. Any guidance would be greatly appreciated!",
+    "Hi! So, I've developed a keen interest in drumming recently and I'm thinking of buying my first drum set. I've saved around 800 dollars for this purchase, and I was hoping to get something that will last for a while as well as help me learn effectively. I’ve looked into various types of drums and beginner advice tends to suggest sticking with acoustic drums rather than electronic ones, for a more authentic experience. Could you help me search for an acoustic drum set that fits within my budget? Moreover, if you had any particular recommendations or brands in mind, that would be extremely helpful!",
+    "Hello, I hope you’re doing well! I am an aspiring violinist and I’ve been saving up to buy a good quality violin to kickstart my music journey. With my budget capped at around 500 dollars, I’m looking for something that balances great sound quality and durability. I would really love a violin that is well-suited for a beginner yet hopefully can accommodate my skills as I improve. I’ve done some research and it seems there are so many options available, making it all the more challenging to decide. Could you assist me in finding a violin that meets these criteria within my budget? Thank you so much!",
+    "Hi! I’ve recently developed a fascination with the beautiful sound of the saxophone and I'm eager to learn how to play it. I’ve budgeted around 1000 dollars for my first saxophone. Although I’m aware there are different types of saxophones out there, I am mostly drawn toward the alto saxophone due to its versatile and rich sound. As this is quite an investment, I want to make sure I choose a saxophone that provides good quality and value for money. Could you assist me in finding an alto saxophone that fits within my budget? I’d really appreciate some guidance on this.",
+    "Good day! I am planning to invest in a piano since music has always been a big part of my life and I’ve decided to nurture this passion further. My budget is around 1500 dollars, and while I know it’s not a huge amount for pianos, I am hopeful to find a digital piano that offers admirable sound quality and features that cater to both beginners and advanced players alike. I understand how overwhelming this search can be with the multitude of options and different brands available in the market. Could you possibly help me locate a digital piano that would fall within my financial plan? Your help would be appreciated immensely!"
+  ]
+}

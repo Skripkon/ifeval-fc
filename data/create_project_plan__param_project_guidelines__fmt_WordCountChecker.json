@@ -1,0 +1,49 @@
+{
+  "chosen_param": "project_guidelines",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have at most 8 words. Longer responses are not allowed.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 8,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "create_project_plan",
+    "description": "Generates a detailed project plan with tasks, deadlines, and assignees based on the provided guidelines.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "project_guidelines": {
+          "type": "string",
+          "description": "Detailed guidelines for the project, including objectives, expected outcomes, and any specific instructions. The input must not exceed 8 words; longer responses are not allowed."
+        },
+        "deadline": {
+          "type": "string",
+          "description": "The final completion date for the project in YYYY-MM-DD format."
+        },
+        "team_members": {
+          "type": "array",
+          "description": "List of team members assigned to the project.",
+          "items": {
+            "type": "string",
+            "description": "Name of a team member."
+          }
+        }
+      },
+      "required": [
+        "project_guidelines",
+        "deadline",
+        "team_members"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I need your help putting together a comprehensive project plan for our upcoming marketing campaign. The project guidelines are as follows: We need to increase brand awareness in our target demographic (women aged 18-34) by at least 20% over the next quarter. The campaign should include both digital marketing strategies (social media posts, influencer partnerships, Google Ads) and offline activities (pop-up events, collaborations with local businesses). Expected outcomes include at least 2 viral social media posts, partnerships with at least 3 influencers, and organizing 4 pop-up events. All content should follow our brand voice guidelines and must be approved by our creative director before going live. The final completion date for this campaign is 2024-09-30. The team members involved will be: Jessica Thomas, Mark Rivera, Priya Singh, Daniel Cho, and Emily Zhang. Please create a detailed project plan assigning tasks and deadlines accordingly.",
+    "I'm working on launching a new mobile app at my company and need a thorough project plan based on the following guidelines: The app should support both iOS and Android, offer a seamless onboarding experience, and integrate with our existing backend APIs. Key objectives are to achieve a smooth user experience, ensure strong security protocols, and hit a beta launch readiness state before final release. All user data must be encrypted. We expect code reviews every two weeks and at least one user testing round prior to launch. The final deadline for the app go-live is 2024-12-15. Team members responsible are Alex Harris, Sophia Martinez, Olivia Lee, Carlos Gutierrez, and Fatima Al-Mansour. Could you prepare a step-by-step project plan detailing tasks, deadlines, and who should do what?",
+    "For our upcoming environmental sustainability initiative, we need a detailed project plan that incorporates these guidelines: Our goal is to develop and roll out a recycling awareness program in our community, targeting local schools, businesses, and households. The expected outcome is to increase recycling rates by 15% in the next six months. Activities should include educational workshops, social media campaigns, and partnerships with local waste management companies. Every team member should have clear responsibilities and periodic check-ins must be scheduled. We want bi-weekly progress reports and all materials designed should be accessible for people with disabilities. The project must be completed by 2024-11-01. The team members participating are: Michael O'Brien, Sarah Wong, Leo Robinson, and Hannah Kim. Please generate a complete project plan that respects these instructions.",
+    "I need a structured and detailed plan for our internal software migration project. Here are the project guidelines: We have to migrate our legacy CRM system to Salesforce, ensuring no loss of customer data and minimum downtime for sales operations. Objectives include thorough data backup, sandbox testing, user training sessions before switchover, and decommissioning of old servers. All migration processes must comply with our data protection policies, and updates need to be communicated to stakeholders weekly. The project should be concluded by 2024-08-31. The team members who will be working on this are: Anthony Brown, Rachel Green, Steve Miller, and Linda Park. Can you draft an extremely detailed project plan with a timeline, task breakdown, deadlines, and team assignments?",
+    "We're embarking on a company rebranding effort and I’d like you to generate a full project plan according to the following specifications: The project guidelines state that we must develop a new visual identity (logo, color scheme, typography), update our website and marketing materials, and communicate the brand refresh both internally and externally with clear messaging. The expected outcomes are to boost our brand recognition and align our image with our company vision. Every asset created has to be reviewed by the legal and compliance team before release, and we should get feedback from employees through surveys. The deadline for completing all work is 2024-10-20. The team members responsible will include: Rebecca Allen, Nicholas Hayes, Maria Silva, Kevin Patel, and Jessica Chen. Please generate a detailed project plan, dividing up the activities and assigning owners and deadlines."
+  ]
+}

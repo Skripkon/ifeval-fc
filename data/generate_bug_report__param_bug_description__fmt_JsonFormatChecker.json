@@ -1,0 +1,47 @@
+{
+  "chosen_param": "bug_description",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "generate_bug_report",
+    "description": "Generates a comprehensive bug report including detailed analysis and recommendations.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "bug_description": {
+          "type": "string",
+          "description": "A detailed description of the bug provided by the user. The argument value must be a valid JSON object; the JSON must be syntactically correct and parseable."
+        },
+        "report_format": {
+          "type": "string",
+          "enum": [
+            "PDF",
+            "Word",
+            "HTML"
+          ],
+          "description": "The desired format for the generated bug report."
+        },
+        "include_logs": {
+          "type": "boolean",
+          "description": "Indicates whether diagnostic logs should be included in the report."
+        }
+      },
+      "required": [
+        "bug_description",
+        "report_format",
+        "include_logs"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm currently experiencing a recurring issue with our application where, whenever I try to upload image files larger than 5MB using the dashboard interface, the upload process gets stuck at 80% and never completes. The spinning loader remains indefinitely, and if I try to refresh or restart, the browser sometimes gives a network error message. I first noticed this behavior after our last update, and it happens in both Chrome and Firefox on Windows 10. Could you please analyze this bug and generate a thorough bug report for me in PDF format? Also, I want to make sure that the diagnostic logs are included in the report to help the development team.",
+    "There is a problem with the mobile version of the project management app: when users attempt to add new tasks, the app intermittently crashes without saving their changes. This seems to occur more often when multiple tags or attachments are added to a new task, producing an immediate force-close on Android devices running version 11 and 12. The crash logs frequently reference a NullPointerException, but I don't have any more technical details. I would like a comprehensive bug report created in HTML format, and please include all relevant diagnostic logs in the report for further debugging.",
+    "Ever since I updated the online learning platform to the latest version, I've noticed that the quiz timer behaves erratically. Sometimes it counts down too quickly and can even go negative, forcing students to submit incomplete answers. This error only seems to affect edge cases where users have unstable internet connections, according to student feedback. Can you please provide a detailed bug report on this issue for me in Word document format, but do not include any diagnostic logs this time? I want to share this report with our education partners.",
+    "I'm trying to generate a bug report about a strange behavior in our internal inventory system: after approving a shipment, the system sends duplicate approval emails to all recipients listed in the order. In some cases, people are getting as many as six identical emails for a single event. This problem began after we migrated our email server last week, and it has led to significant confusion among our warehouse staff. Please create a thorough bug report in PDF format and make sure you do not include diagnostic logs.",
+    "We have a critical defect in our HR portal: the employee leave calendar fails to display all upcoming holidays when accessed from the Safari browser on MacOS Monterey. Every other browser seems to load the holiday events without issue, but in Safari, those fields are entirely blank, regardless of cache clearing or incognito mode. I'd like a very detailed bug report covering this scenario, and could you generate it in HTML format, including the diagnostic logs in your findings? This needs to be escalated to our IT department."
+  ]
+}

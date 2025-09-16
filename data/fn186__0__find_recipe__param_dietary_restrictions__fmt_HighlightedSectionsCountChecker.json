@@ -1,0 +1,46 @@
+{
+  "chosen_param": "dietary_restrictions",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain at most 2 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "at most",
+      "N": 2
+    }
+  },
+  "fn_schema": {
+    "name": "fn186__0__find_recipe",
+    "description": "Find a recipe based on the dietary restrictions, recipe type, and time constraints.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dietary_restrictions": {
+          "type": "string",
+          "description": "Dietary restrictions e.g. vegan, vegetarian, gluten free, dairy free. The argument value must contain at most 2 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**), and each section must not be empty."
+        },
+        "recipe_type": {
+          "type": "string",
+          "description": "Type of the recipe. E.g. dessert, main course, breakfast."
+        },
+        "time": {
+          "type": "integer",
+          "description": "Time limit in minutes to prep the meal."
+        }
+      },
+      "required": [
+        "dietary_restrictions",
+        "recipe_type",
+        "time"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I have a family member coming over for brunch who follows a strict gluten free diet, and I want to make something special for them. Could you please suggest a breakfast recipe that is gluten free and can be prepared in under 30 minutes? I really want it to be delicious and appropriate for someone who avoids gluten, and I do not want the preparation to take too long as I have other things to get ready. Ideally, something that the whole family would enjoy.",
+    "I'm planning to host a dinner party this weekend, and one of my guests is vegan. I need to impress them with a tasty vegan main course, but I also don't want to spend the whole day in the kitchen, so I'm hoping to find a recipe that takes 45 minutes or less from start to finish. Can you recommend a suitable vegan main course recipe that fits within this 45-minute time frame and will make my dinner party a success?",
+    "I’m trying to incorporate more vegetarian meals into my diet, and I’m craving something sweet. I also don’t have a lot of time on my hands today. Could you help me find a vegetarian dessert recipe that can be made in 20 minutes or less? I’m open to any kind of dessert as long as it’s quick to prepare and strictly vegetarian.",
+    "As someone who is lactose intolerant, I have to avoid all dairy products in my meals. I’d really like to cook a dairy free breakfast tomorrow morning, but I only have about 15 minutes before I need to leave for work. Could you find me a breakfast recipe that is completely dairy free and doesn’t take more than 15 minutes to prepare? I would appreciate something fast, easy, and satisfying.",
+    "My friend and I are looking to cook something together, but she follows a pescatarian diet and is really short on time today because of her busy schedule. Can you provide us with a pescatarian main course recipe that can be prepared in 25 minutes or less? We want something quick yet flavorful that accommodates her dietary restrictions."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "chosen_param": "dietary_preferences",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have exactly 4 words. No less, no more.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 4,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "provide_dietary_advice",
+    "description": "Offers dietary advice based on user input, considering dietary restrictions and health goals.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dietary_preferences": {
+          "type": "string",
+          "description": "Description of dietary preferences, restrictions, or goals such as vegan, gluten-free, or weight loss. The argument value must contain exactly 4 words—no more, no less."
+        },
+        "current_health_conditions": {
+          "type": "array",
+          "description": "List of current health conditions affecting dietary choices.",
+          "items": {
+            "type": "string",
+            "description": "Specific health condition affecting the diet."
+          }
+        },
+        "include_recipe_suggestions": {
+          "type": "boolean",
+          "description": "Whether to include recipe suggestions in the dietary advice. Defaults to False."
+        }
+      },
+      "required": [
+        "dietary_preferences",
+        "current_health_conditions",
+        "include_recipe_suggestions"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've recently been trying to transition to a vegetarian diet, but I also have some health conditions that I need to keep in mind, namely type 2 diabetes and high cholesterol. I'm not entirely sure which foods to focus on or avoid, and I would love some practical guidance about how to structure my meals to help manage these health issues while sticking to vegetarian options. Additionally, I love cooking, so please include recipe suggestions as part of your advice to make this new lifestyle enjoyable and sustainable.",
+    "Can you help me out with some dietary advice? I am aiming for weight loss, and I want to focus on a high-protein, low-carb diet. I have a few health conditions that impact my dietary needs: hypothyroidism and a mild gluten intolerance. Could you provide some specific tips about what foods to choose or avoid based on these factors? Also, I would really appreciate it if you could give me detailed recipe suggestions as well, since I’m always looking for new meal ideas to add to my weekly rotation.",
+    "My doctor recently told me to reduce my sodium intake due to having hypertension, and I am trying to follow a Mediterranean-style diet. I also suffer from irritable bowel syndrome, which complicates things because certain foods can trigger my symptoms. With those concerns in mind, can you offer tailored dietary advice for balancing Mediterranean eating with my health issues? Please include recipe suggestions that are both low in sodium and suitable for someone with IBS, as I need practical examples to get started.",
+    "I'm looking for help organizing my diet because I was recently diagnosed with celiac disease and rheumatoid arthritis. I want to eat gluten-free and focus on anti-inflammatory foods that might help manage my arthritis symptoms. I'm interested in cruelty-free eating, so a vegan diet is appealing as well. Could you provide detailed dietary advice that considers my gluten-free, anti-inflammatory, and vegan preferences along with my health conditions? Please do not include recipe suggestions for now; I would prefer just the dietary advice.",
+    "My goal is to build muscle while following a pescatarian diet, but I struggle since I’m also lactose intolerant and have a family history of high blood pressure. Could you give me comprehensive dietary recommendations taking all of this into account? My main priorities are making sure I get enough protein from allowable sources without compromising my health. Also, I’d like to get recipe suggestions to help me plan my meals for the week, so please include those in your advice."
+  ]
+}

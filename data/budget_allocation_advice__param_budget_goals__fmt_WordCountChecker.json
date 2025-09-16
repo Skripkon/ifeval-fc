@@ -1,0 +1,50 @@
+{
+  "chosen_param": "budget_goals",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have at most 2 words. Longer responses are not allowed.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 2,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "budget_allocation_advice",
+    "description": "Provides advice on budget allocation based on user financial goals and constraints.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "budget_goals": {
+          "type": "string",
+          "description": "Description of the user's financial goals, priorities, and any specific constraints. The response must be no longer than 2 words; longer responses are not permitted."
+        },
+        "total_income": {
+          "type": "number",
+          "description": "The total income available for budget allocation."
+        },
+        "risk_tolerance": {
+          "type": "string",
+          "description": "The user's risk tolerance level.",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      },
+      "required": [
+        "budget_goals",
+        "total_income",
+        "risk_tolerance"
+      ]
+    }
+  },
+  "user_queries": [
+    "My husband and I have a combined monthly income of $7,500, and we're trying to figure out the best way to allocate our budget to meet several goals over the next five years. We want to prioritize saving for our children's college fund, paying down our remaining student loans, and still have enough for annual family vacations. We also have a mortgage and would like to pay it off as quickly as possible, but we don't want to sacrifice our current lifestyle too much or take on excessive financial risk, so our risk tolerance is medium. Could you advise on how we should structure our budget given these objectives and constraints?",
+    "I earn a net income of $3,200 each month, and I'm really looking to optimize how I budget my finances. My main goals are to save for a down payment on a house within the next three years, continue contributing to my retirement account, allocate money for regular travel, and maintain an emergency fund for unexpected expenses. I do not want to invest in anything too volatile, so my risk tolerance is low. Can you help me with recommendations for dividing up my income to accomplish all these goals while keeping my financial stability?",
+    "Every month I bring in $6,000, and I need help coming up with a solid plan for allocating my budget. I want to prioritize aggressively paying down my credit card debt, building a sizable safety net in my savings, and starting a side investment fund for potential business ventures. I am open to a high-risk strategy for potential high returns but would like guidance on how much I should be putting toward each of these goals and any considerations I need to think about in terms of constraints like my existing debt. Could you provide your advice based on my financial objectives and appetite for risk?",
+    "I'm reaching out because I recently started a new job, and now my monthly total income is $4,700. My financial goals include maintaining a comfortable lifestyle without overspending, saving steadily for retirement, setting aside some funds for leisure activities like concerts and dining out, and ensuring I still have enough left over to handle medical expenses for my aging parents. My risk tolerance is medium, as I can handle moderate fluctuations but want to avoid risky choices. Could you suggest an effective way to allocate my budget across these different priorities and constraints?",
+    "With a monthly income of $5,500, I need some expert advice on dividing my budget to align with my current goals and limitations. I am intent on saving up to start my own business in a few years, but I also need to continue paying off my car loan, cover my living expenses, and put a portion aside for travel and hobbies. I am fairly comfortable with financial risks and would describe my risk tolerance as high. Given these priorities and my willingness to take on higher risk for potentially better outcomes, what would you recommend for allocating my budget?"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'n' exactly 7 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "n",
+      "N": 7,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn15__0__get_current_weather",
+    "description": "Retrieves the current weather conditions for a specified city and state. If using state, then use short form like CA.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "The location for which to get the weather, in the format of 'City, State', such as 'San Francisco, CA' if State for the city exists. 'City, Country' if State for the city doesn't exist. The argument value must contain the letter 'n' exactly 7 times, regardless of case."
+        },
+        "unit": {
+          "type": "string",
+          "description": "The unit of temperature for the weather report.",
+          "enum": [
+            "celsius",
+            "fahrenheit"
+          ]
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there! I've been planning this trip and right now, I'm trying to sort out what the weather is like in a couple of my stopover locations. Can you fetch the current weather conditions for me in Miami, FL? I need to know if it's suitable for sightseeing. Also, I'm setting my preferences to primarily use celsius as the temperature unit since I've been doing a lot of traveling lately and want to keep everything consistent.",
+    "Hello! I'm organizing a virtual event for people across different parts of the world. It's quite exciting, but requires some logistical considerations. One thing I absolutely need right now is the current weather condition in Cape Town, South Africa, in celsius. Knowing what the weather is like will help us coordinate better with local participants and make informed decisions about scheduling and planning for any weather-related disruptions. I've gotta make sure we are well-prepared no matter what comes our way.",
+    "Good afternoon! I'm in charge of preparing a comprehensive weather analysis for our project, and I need some precise data for a start. Could you assist me by getting the latest weather update for Paris, France? It's crucial that you provide the temperature in degrees celsius, as our team uses metric system measurements for our reporting. This will be particularly useful for our current segment on European climates and help us draw comparisons accurately across different regions.",
+    "Hi! My friend is hosting this amazing outdoor party in Austin, TX, and I'm in charge of being the unofficial weather consultant! It's quite the responsibility, and I could really use some help here. Can you tell me what the current weather situation is there? Of course, since I'm the one supposed to be providing precise info, I'd really appreciate it if you could give me the temperature in fahrenheit. It will help us determine what potential weather conditions party-goers might have to deal with today.",
+    "Greetings! I'm looking into a few places where I might want to move next year and trying to get a feel for their current climate. One city that's caught my interest is Sydney, Australia. Before I delve further into my research, it would be great to get the current weather report from there. Please present the temperature in celsius for me since I've always used this measurement in all my evaluations. This information will be invaluable as I consider all the factors involved in making a move like this."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "chosen_param": "user_details",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at least 6 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at least",
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "craft_job_application",
+    "description": "Generates a tailored job application including cover letter and resume based on user-provided details.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_details": {
+          "type": "string",
+          "description": "Detailed background information about the user, including skills, experience, and employment history. The argument value must contain at least 6 commas, which may appear anywhere in the value."
+        },
+        "job_description": {
+          "type": "string",
+          "description": "The job description provided by the employer outlining required skills and responsibilities."
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "pdf",
+            "doc"
+          ],
+          "description": "Format in which the application documents should be generated."
+        },
+        "highlight_areas": {
+          "type": "array",
+          "description": "Specific areas or achievements the user wants to highlight in the application.",
+          "items": {
+            "type": "string",
+            "description": "An area or achievement to highlight."
+          }
+        }
+      },
+      "required": [
+        "user_details",
+        "job_description",
+        "format"
+      ]
+    }
+  },
+  "user_queries": [
+    "I am hoping to apply for a marketing manager position and I would like your help in preparing a complete job application package, specifically a cover letter and resume, in PDF format. My background includes 7 years of experience in digital marketing, with a focus on social media campaigns and email marketing automation. I previously worked for Xylem Media, where I increased engagement by 45%, and at Draco Advertising, where I led a team to deliver a successful rebranding project. The job I’m targeting is with Lightbeam Ltd, and their description states they want someone with proven leadership, excellent communication skills, and the ability to drive brand growth in competitive environments. Could you also make sure to emphasize my campaign management expertise, my award for best digital strategy in 2022, and my leadership on the rebranding project throughout the application?",
+    "I need a tailored job application created for a software developer opening. Please generate both a cover letter and a resume in DOC format. Here are my details: I have five years of experience working at TechSprint as a full-stack developer, proficient in React, Node.js, and Python, with particular expertise in designing scalable cloud applications and leading small agile teams. The job description provided by the company specifies they are looking for a developer with experience in cloud technologies, strong teamwork, and agile methodologies. Please make sure to highlight my leadership on the migration to AWS at TechSprint, my successful completion of the company hackathon, and my ability to mentor junior developers.",
+    "I'm interested in applying for an executive assistant position and need a complete application package, including a cover letter and resume in PDF. My background: I’ve spent six years in administrative roles, most recently as senior executive assistant to the CEO of Concordia Enterprises, with experience in calendar management, event coordination, confidential correspondence, and travel logistics. The job description mentions the need for excellent organizational skills, discretion, and the ability to support multiple executives. Please be sure to bring out my proficiency with complex scheduling software, my recognition for outstanding service in 2021, and my role in organizing the company's annual summit to distinguish me in the application.",
+    "Could you please help me by creating a comprehensive job application for the role of sales director at Equipron Tools? I need both the cover letter and resume formatted as DOC files. My background information: I have twelve years of progressive experience in sales and business development roles, most recently managing a regional team at Industrial Hardware Inc. Achievements include exceeding quarterly sales targets for nine consecutive quarters and successfully launching a new product line that grew revenue by 30%. The Equipron Tools job description emphasizes strategic planning, team leadership, and account management expertise. Within my application, I would appreciate it if you could highlight my leadership in launching the product line, achievement of sales targets, and my mentoring of new sales representatives.",
+    "I'd like your assistance in putting together a job application for a graphic designer opening—both a resume and cover letter, and I require the documents to be in PDF format. My background: I hold a BFA in Visual Communication and have worked as a graphic designer at Sunlit Studios for four years, specializing in brand identity, UX/UI projects, and print media. At Sunlit Studios, I led the redesign of the company’s main product line, which resulted in a 25% increase in customer engagement. The job description for the position states they want someone with experience in both digital and print design, a strong portfolio, and the ability to collaborate with marketing teams. Please be sure to feature my brand identity projects, the user interface redesigns I have worked on, and any awards I’ve received for design excellence."
+  ]
+}

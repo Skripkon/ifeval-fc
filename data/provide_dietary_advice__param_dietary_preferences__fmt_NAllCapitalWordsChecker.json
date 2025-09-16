@@ -1,0 +1,49 @@
+{
+  "chosen_param": "dietary_preferences",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain exactly 4 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 4
+    }
+  },
+  "fn_schema": {
+    "name": "provide_dietary_advice",
+    "description": "Offers dietary advice based on user input, considering dietary restrictions and health goals.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dietary_preferences": {
+          "type": "string",
+          "description": "Description of dietary preferences, restrictions, or goals such as vegan, gluten-free, or weight loss. The argument value must contain exactly 4 words written entirely in capital (uppercase) letters."
+        },
+        "current_health_conditions": {
+          "type": "array",
+          "description": "List of current health conditions affecting dietary choices.",
+          "items": {
+            "type": "string",
+            "description": "Specific health condition affecting the diet."
+          }
+        },
+        "include_recipe_suggestions": {
+          "type": "boolean",
+          "description": "Whether to include recipe suggestions in the dietary advice. Defaults to False."
+        }
+      },
+      "required": [
+        "dietary_preferences",
+        "current_health_conditions",
+        "include_recipe_suggestions"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi there, I’ve recently decided to switch to a vegan diet because I want to improve my overall health and help the environment. However, I have a couple of health issues I’m concerned about: I have type 2 diabetes and mild hypertension that I’d like to manage better through dietary changes. With these conditions in mind, could you please give me personalized dietary advice that fits a vegan lifestyle and also helps address my specific health conditions? And if possible, I’d love it if you could also include some recipe suggestions to make this transition easier.",
+    "I’ve been following a gluten-free diet for years due to celiac disease, but I’m struggling to lose weight and also have high cholesterol. My doctor suggested I focus on eating healthier, and I’d like some tailored advice on how I can adjust my gluten-free diet to address my goals of weight loss and cholesterol management, keeping celiac in mind. Please include as many recipe suggestions as possible so I can try new meals that fit all these requirements and support my health journey.",
+    "I am currently trying to transition to a Mediterranean diet since I’ve read it’s good for heart health. However, I have chronic kidney disease and osteoarthritis, which makes meal planning tricky as I need to balance protein, potassium, and sodium intake. Could you give me detailed dietary recommendations taking into account these preferences and health challenges? Also, I would really appreciate it if you could share some recipe suggestions that I can try at home to help manage these conditions.",
+    "I have recently discovered that I am lactose intolerant, and I’ve also been diagnosed with irritable bowel syndrome (IBS). I’d like to adopt a low-FODMAP diet that’s free from all dairy products. At the same time, I want to make sure I’m getting enough nutrients and not missing out on important food groups. Can you provide guidance on a suitable diet for me that accommodates these preferences and health conditions, and please include some recipe ideas that cater to both lactose intolerance and IBS?",
+    "After a recent visit to my doctor, I learned that I have both hypothyroidism and prediabetes. I’m interested in following a paleo diet to see if it might help with my symptoms and energy levels. Could you give me comprehensive dietary advice that aligns with a paleo approach while taking my hypothyroidism and prediabetes into account? And I would love for you to include some recipe suggestions in your response, since I’m new to paleo cooking and need some inspiration."
+  ]
+}

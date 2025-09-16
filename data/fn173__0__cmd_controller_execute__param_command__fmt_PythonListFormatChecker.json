@@ -1,0 +1,33 @@
+{
+  "chosen_param": "command",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn173__0__cmd_controller_execute",
+    "description": "Executes a given command using the os.system() function specifically for Windows operating systems. For multiple commands, separate them with '&&'. For complex tasks, create and run a .bat file.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string",
+          "description": "The Windows command line instruction(s) to be executed. Use '&&' between commands for multiple instructions. For complex sequences, encapsulate the logic within a .bat file and provide the execution command here. The argument value must be a valid python list of strings, and the list must be syntactically correct and parseable with ast.literal_eval()."
+        }
+      },
+      "required": [
+        "command"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there, could you possibly help me out with something on my Windows computer? I've got a few tasks that I'd like to automate, and I'm thinking about using the command line. Specifically, I'd like to run some commands sequentially. The first one is to navigate to my project's directory using 'cd C:\\Users\\JohnDoe\\Documents\\Projects'. After that, I want to compile my Java program using 'javac MyProgram.java'. Once that's done, I'd like to execute it with 'java MyProgram'. I'm considering putting all these commands together so they execute one after another. Could you take care of that for me?",
+    "Hello! I've got a little project that I need to tackle on my Windows system using command line operations. What I want to do is start by cleaning up some temporary files to free up space. First, can you delete all .tmp files in the temp directory with 'del C:\\Temp\\*.tmp'? Then, I'd like to clear the system cache. After that, it would be great if you could list all the installed programs by executing 'wmic product get name'. It's all about tidying up my digital workspace, so let me know if you can manage these commands in a sequence.",
+    "Hi assistant, I'm trying to automate a process for my computer at work, and I'm hoping you could lend a hand. I've got a list of Windows commands that I want to run in one go. I'd start with 'ipconfig /release' followed by 'ipconfig /renew' to reset my internet connection. Subsequently, I'd like to check the current IP configuration using 'ipconfig /all'. Lastly, it would be really helpful if you can back up my registry with 'reg export HKLM\\Software\\MyCompany C:\\Backup\\RegistryBackup.reg'. Can you put all these together and execute them for me?",
+    "Greetings! I'm looking to streamline something on my Windows PC and I think a batch of commands run together could do the trick. I'd like to begin by setting my system time accurately using 'time /t', followed by setting the date with 'date /t'. After that, it would be fantastic to perform a quick system health check using 'sfc /scannow'. To wrap it up, please end with 'shutdown /r' so my system restarts after completing these tasks. Could you orchestrate this sequence into one seamless operation for me?",
+    "Hello there, I hope you can help me with a few tasks I need executed via the Windows command line. Firstly, I need to check for updates with 'wuauclt /detectnow'. Right after that, I'd like to defragment my main hard drive with 'defrag C: /O'. Upon completion, it would be great to verify the disk health by executing 'chkdsk C: /F'. To finalize everything, it would help me greatly if you could copy a set of files 'copy C:\\NewFiles\\*.* D:\\Backup\\'. Is it possible for you to execute this series of commands in succession?"
+  ]
+}

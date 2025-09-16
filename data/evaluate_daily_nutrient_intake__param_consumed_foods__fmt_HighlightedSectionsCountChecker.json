@@ -1,0 +1,57 @@
+{
+  "chosen_param": "consumed_foods",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain exactly 6 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "evaluate_daily_nutrient_intake",
+    "description": "Evaluates the daily nutrient intake based on a given list of foods consumed, comparing it to recommended daily values.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "consumed_foods": {
+          "type": "string",
+          "description": "Free-form text describing the foods consumed by the user in a day. The argument value must contain exactly 6 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**), and each section must not be empty."
+        },
+        "age_group": {
+          "type": "string",
+          "description": "The age group of the user to determine appropriate nutrient recommendations.",
+          "enum": [
+            "child",
+            "teen",
+            "adult",
+            "senior"
+          ]
+        },
+        "activity_level": {
+          "type": "string",
+          "description": "The user's regular physical activity level.",
+          "enum": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active"
+          ]
+        }
+      },
+      "required": [
+        "consumed_foods",
+        "age_group",
+        "activity_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Here's what I ate today, can you evaluate how my daily nutrient intake compares to the recommended values? For breakfast, I had a bowl of oatmeal with almond milk, a banana, and a cup of black coffee. Lunch consisted of a turkey sandwich with whole grain bread, lettuce, tomato, and a side of carrot sticks. As a snack, I had Greek yogurt with strawberries. For dinner, I ate grilled salmon, brown rice, steamed broccoli, and a small green salad with olive oil dressing. I am a 32-year-old adult and would say my activity level is moderate as I go for a 45-minute walk most days.",
+    "I’m trying to improve my diet and would appreciate it if you could analyze my nutrient intake for today. I’m a senior and lead a mostly sedentary lifestyle since I retired. For breakfast, I had two slices of whole wheat toast with butter and jam, a hard-boiled egg, and orange juice. Lunch was vegetable soup with crackers, and a small apple. For dinner, I had chicken stew with potatoes, peas, and carrots, with a slice of apple pie for dessert. Could you evaluate how this compares with recommended daily values for my age and activity level?",
+    "Can you assess whether my daily food choices are giving me the right balance of nutrients? I'm a teen who is pretty active—I play basketball after school almost every day. Today I had scrambled eggs and whole wheat toast for breakfast; at school, I ate a ham and cheese sandwich, some potato chips, and a banana for lunch; after basketball practice, I had a granola bar; and for dinner, we had spaghetti with meat sauce, a side salad, and garlic bread. Please tell me how this stacks up nutritionally for someone my age and activity habit.",
+    "I've been tracking my meals as I'm trying to ensure I'm meeting my nutritional needs. Today, as a lightly active adult, I had the following: breakfast was Greek yogurt with honey and mixed berries plus a cup of green tea. Lunch was grilled chicken breast, quinoa, and steamed spinach. I had almonds and an apple for a snack. Dinner was beef stir-fry with bell peppers, broccoli, served over brown rice. Can you evaluate whether my intake matches daily recommended nutrients for my age group and activity level?",
+    "Could you review my food intake for today and tell me how well I’m meeting the recommended nutrient targets? I’m a child and my activity level is moderate since I play outside for about an hour after school. For breakfast, I had a bowl of cereal with milk and an orange. For lunch, I ate a peanut butter and jelly sandwich, carrot sticks, and a granola bar. My afternoon snack was a cheese stick. Dinner was baked chicken tenders, mashed potatoes, green beans, and a slice of watermelon for dessert. Please provide insight on my nutrition based on these details."
+  ]
+}

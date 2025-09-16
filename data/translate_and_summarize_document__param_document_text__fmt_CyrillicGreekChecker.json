@@ -1,0 +1,44 @@
+{
+  "chosen_param": "document_text",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Greek letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "greek"
+    }
+  },
+  "fn_schema": {
+    "name": "translate_and_summarize_document",
+    "description": "Translates a document from one language to another and provides a summary.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "document_text": {
+          "type": "string",
+          "description": "The document to be translated and summarized in free-form text. The argument value must be written entirely in Greek letters; no letters from other scripts are allowed."
+        },
+        "source_language": {
+          "type": "string",
+          "description": "The language code of the source text, e.g., 'en' for English."
+        },
+        "target_language": {
+          "type": "string",
+          "description": "The language code into which the document should be translated, e.g., 'fr' for French."
+        }
+      },
+      "required": [
+        "document_text",
+        "source_language",
+        "target_language"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently finished reading a research paper written in German (de) about the effects of urbanization on local bird populations, and I would love to share its core findings with my French (fr) colleagues who don't speak German. Here's the original document: \"Die Auswirkungen der Urbanisierung auf lokale Vogelpopulationen wurden über einen Zeitraum von zehn Jahren untersucht. Die Ergebnisse zeigten, dass bestimmte Arten, darunter der Haussperling und die Amsel, signifikante Rückgänge erlebten, während andere, wie die Ringeltaube, sich besser an die veränderten Bedingungen anpassen konnten. Hauptursachen hierfür waren der Verlust von Brutplätzen sowie Veränderungen im Nahrungsangebot aufgrund der zunehmenden Versiegelung von Böden und dem Rückgang städtischer Grünflächen.\" Could you translate this text from German to French and also provide a concise summary of its main points for me?",
+    "I've got a lengthy company policy document that's currently in Spanish (es), and I need it translated into English (en) for our international team. The text is as follows: \"La política de la empresa sobre el uso de dispositivos electrónicos establece que todos los empleados deben proteger la información confidencial. No se permite el uso de dispositivos personales para acceder a datos de la empresa sin autorización previa. Además, el incumplimiento de estas normas puede resultar en sanciones disciplinarias, incluyendo la terminación del empleo.\" Can you translate this document from Spanish to English and summarize the main guidelines so I can brief my colleagues effectively?",
+    "I need some help with an academic article I found on Japanese (ja) education reforms, originally written in Japanese. My professor wants to see both an English (en) translation and a short summary. The document text is: \"日本の教育改革は過去数十年にわたり進行しており、学習指導要領の改訂やICTの導入、教師の研修制度の改善などが行われています。これらの取り組みは、学生の主体的な学びと21世紀型スキルの育成を目指していますが、課題も残されています。\" Please translate this to English and provide an overview of its main arguments.",
+    "I'm working on a grant proposal and need some information from a French (fr) report translated into Italian (it), along with a succinct summary for my partners. Here is the report segment: \"Le rapport souligne l'importance du développement durable dans les politiques urbaines. Il met en avant des stratégies comme l'utilisation accrue d'énergies renouvelables, la réduction des déchets et la promotion des transports publics pour améliorer la qualité de vie des citoyens. Les obstacles identifiés incluent le manque de financement et la résistance au changement.\" Could you translate this passage from French to Italian and also give me a summary in Italian?",
+    "There is a Russian (ru) historical document I want to share with my American classmates in English (en), but I’m also supposed to summarize its contents. The original text is: \"В ходе реформ Александра II в 1861 году в России было отменено крепостное право. Это событие стало поворотным моментом в истории страны, приведя к значительным социальным и экономическим изменениям. Новые законы способствовали формированию сельских общин и развитию капиталистических отношений.\" Please provide an English translation of this Russian text and a short summary that I can include in my class presentation."
+  ]
+}

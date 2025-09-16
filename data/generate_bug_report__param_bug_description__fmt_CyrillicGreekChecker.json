@@ -1,0 +1,49 @@
+{
+  "chosen_param": "bug_description",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Cyrillic letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "cyrillic"
+    }
+  },
+  "fn_schema": {
+    "name": "generate_bug_report",
+    "description": "Generates a comprehensive bug report including detailed analysis and recommendations.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "bug_description": {
+          "type": "string",
+          "description": "A detailed description of the bug provided by the user. The value must be written entirely in Cyrillic letters, with no letters from other scripts allowed."
+        },
+        "report_format": {
+          "type": "string",
+          "enum": [
+            "PDF",
+            "Word",
+            "HTML"
+          ],
+          "description": "The desired format for the generated bug report."
+        },
+        "include_logs": {
+          "type": "boolean",
+          "description": "Indicates whether diagnostic logs should be included in the report."
+        }
+      },
+      "required": [
+        "bug_description",
+        "report_format",
+        "include_logs"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've encountered a major issue in our application where, after updating to version 4.2.1, the user login process stalls indefinitely on the loading spinner. When checking the network requests, the authentication call returns a 500 error and there are console errors referencing a missing environment variable. Users are reporting that this prevents access to any accounts. Could you please prepare a thorough bug report on this incident, complete with analysis and improvement suggestions, and generate it for me in PDF format? Also, please make sure the report includes complete diagnostic logs for context.",
+    "In our project management dashboard, every time someone tries to add a new task under an existing project, the UI freezes and sometimes throws an 'Unhandled Exception' error referencing TaskManager.js:157. This started happening after the database schema update last night. Employees can no longer assign or modify tasks, impacting workflow. Please create a detailed bug report on this, outlining the root cause, impact, and recommendations, and generate the report as a Word document. Also, I’d like to include logs from the last 24 hours with the report.",
+    "After deploying the recent security patch, I'm noticing that API calls to /v1/payments/transactions intermittently fail with a timeout error, resulting in failed payment processing for several users. The error isn't consistent, but has been reported by multiple clients, affecting their ability to use the system. Could you draft a comprehensive bug report describing this phenomenon, its possible causes, and any corrective actions required, and provide this report in HTML format? By the way, there's no need to attach diagnostic logs to the report.",
+    "I'm facing a strange issue where the mobile app crashes as soon as I attempt to upload an image in the chat feature. The app closes without any warning or error message, and this happens both on Android and iOS. It's critical since image sharing is a key feature for our users. Would you be able to generate a full bug report that examines this problem and offers solutions? Please give me the final report as a PDF file and include all associated diagnostic logs with it.",
+    "There's a defect in the customer review section of our e-commerce website: when users try to leave a review, pressing the submit button does nothing — there’s no confirmation, error, or indication that their review was processed or rejected. This seems to occur in both Chrome and Safari browsers, but not in Firefox. Please create a detailed bug report covering possible reasons and recommended fixes for this, and let me have the report in a Word document. I'd prefer if the diagnostic logs are not incorporated in this particular report."
+  ]
+}

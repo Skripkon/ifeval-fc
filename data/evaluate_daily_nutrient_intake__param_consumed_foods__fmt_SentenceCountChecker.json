@@ -1,0 +1,57 @@
+{
+  "chosen_param": "consumed_foods",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at least 5 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 5,
+      "comparison_option": "at least"
+    }
+  },
+  "fn_schema": {
+    "name": "evaluate_daily_nutrient_intake",
+    "description": "Evaluates the daily nutrient intake based on a given list of foods consumed, comparing it to recommended daily values.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "consumed_foods": {
+          "type": "string",
+          "description": "Free-form text describing the foods consumed by the user in a day. The argument value must have at least 5 sentences, and each sentence should be properly punctuated."
+        },
+        "age_group": {
+          "type": "string",
+          "description": "The age group of the user to determine appropriate nutrient recommendations.",
+          "enum": [
+            "child",
+            "teen",
+            "adult",
+            "senior"
+          ]
+        },
+        "activity_level": {
+          "type": "string",
+          "description": "The user's regular physical activity level.",
+          "enum": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active"
+          ]
+        }
+      },
+      "required": [
+        "consumed_foods",
+        "age_group",
+        "activity_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I'd really appreciate it if you could analyze my nutrition for today and tell me how it compares to what's generally recommended for someone like me. I'm an adult with a moderate level of physical activity—I do a brisk 30-minute walk daily and some light yoga. Food-wise, today I had oatmeal with honey and sliced bananas for breakfast, a turkey and cheese sandwich with lettuce and tomato on whole wheat for lunch alongside an apple, a snack of yogurt and almonds in the afternoon, and salmon with roasted sweet potatoes and green beans for dinner. Also, I drank two cups of coffee and lots of water. Can you tell me how my nutrient intake stacks up?",
+    "Could you evaluate my daily diet and see if I'm hitting the necessary nutrients for someone my age and activity? I'm a senior, and although my lifestyle is generally sedentary—I mostly read, watch TV, and take occasional short walks—I try to eat well. Today, I started my day with whole grain toast and scrambled eggs, had tomato soup with crackers and a small salad for lunch, snacked on a banana in the afternoon, and dinner was baked chicken breast, mashed potatoes, peas, and a glass of milk. Please provide feedback based on these foods.",
+    "I'm trying to make sure my teenager is getting all the right nutrients, especially since she has a pretty active schedule, participating in after-school soccer practice almost every weekday. Today, for breakfast she had a bowl of cereal with milk and some strawberries, for lunch she packed a peanut butter and jelly sandwich, carrot sticks, a granola bar, and an orange. After practice, she had a smoothie made with spinach, banana, and yogurt. Dinner was pasta with marinara sauce, grilled chicken, steamed broccoli, and some garlic bread. Could you review her daily nutrient intake for her age group and activity level?",
+    "As a light activity child—meaning I play outside for about 30 minutes each day but spend most of my time reading or doing homework—I wanted to know if what I ate today meets the necessary nutrition standards. For breakfast, I had pancakes with maple syrup and a glass of orange juice. At lunch, I ate a ham and cheese sandwich, a handful of grapes, and some baby carrots. During the afternoon, I snacked on crackers and cheese. For dinner, I had spaghetti with meatballs, a small green salad, and vanilla pudding for dessert. Can you let me know if this was a balanced day based on my age and activity?",
+    "I'm working towards a healthier adult lifestyle and usually keep a moderate activity level, going to the gym three times a week and taking daily walks. Could you please review my diet today and see if it's nutritionally adequate? My meals were as follows: breakfast was a spinach and feta omelet with whole grain toast and black coffee; mid-morning snack included a handful of walnuts; lunch was grilled chicken Caesar salad with extra veggies and a water bottle; in the afternoon I had a protein bar; dinner was grilled shrimp tacos with cabbage slaw, guacamole, and a side of brown rice; and dessert was a small cup of Greek yogurt with blueberries. How does my intake align with recommended values?"
+  ]
+}

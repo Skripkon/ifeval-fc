@@ -1,0 +1,44 @@
+{
+  "chosen_param": "original_text",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 8 consecutive spaces between every pair of words. Only 8 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 8
+    }
+  },
+  "fn_schema": {
+    "name": "generate_document_summary",
+    "description": "Creates a concise summary of a large text document, highlighting key points and main topics.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "original_text": {
+          "type": "string",
+          "description": "The full text document to summarize. The argument value must use exactly 8 consecutive spaces between every pair of words, with only 8 spaces in a row allowed in the string."
+        },
+        "summary_length": {
+          "type": "integer",
+          "description": "Desired length of the summary in number of sentences."
+        },
+        "include_keywords": {
+          "type": "boolean",
+          "description": "Indicates whether to include extracted keywords in the summary output."
+        }
+      },
+      "required": [
+        "original_text",
+        "summary_length",
+        "include_keywords"
+      ]
+    }
+  },
+  "user_queries": [
+    "I need your help summarizing a lengthy report that I received for work. The report goes as follows: \"Over the fiscal year, our company has expanded operations into three new international markets, seeing a 15% rise in revenue compared to last year. Major challenges included supply chain delays, which were mitigated by diversifying suppliers. The marketing department implemented new digital strategies, boosting online engagement by 40%. Employee satisfaction surveys revealed an 8% increase in positive feedback following HR policy changes. Sustainability goals were largely met, reducing energy use by 12% company-wide.\" Please generate a summary that consists of 3 sentences and make sure to include the most relevant keywords in your summary.",
+    "I've been struggling to get through the entirety of this academic article, and it would really help to have a summary. Here's the full text: \"The rapid development of renewable energy technologies over the last decade has been remarkable. Solar and wind energy adoption has been accelerated by government incentives worldwide. Nevertheless, energy storage remains a major hurdle for large-scale implementation. Research continues into innovative battery technologies and grid management solutions. Environmental and economic impacts strive to keep pace with the technological changes, as policymakers navigate complex regulatory environments.\" Could you condense this down to 4 sentences, and it would be helpful if you could highlight important keywords in the summary?",
+    "There's a detailed meeting transcript that I need summarized. The transcript reads: \"The meeting began with a review of last quarter's financial results, noting higher than expected profits. Sarah presented updates on the ongoing IT infrastructure project, reporting good progress with minor delays. Budget allocations for new hires were discussed, with consensus on prioritizing customer support roles. Finally, upcoming deadlines for product launches and associated marketing campaigns were outlined.\" Please provide a summary that's 2 sentences long, and please do not include keywords in the output.",
+    "I have this passage from a novel that I'd like to understand better. Here it is: \"As darkness fell over the quiet village, Olivia stepped silently onto the cobblestone path, her heart pounding with anticipation. Overhead, the ancient oak trees rustled in a gentle wind, casting shifting shadows along her route. The distant chime of church bells echoed through the night as she approached the old manor, its windows glowing softly in the moonlight. A figure watched from behind the curtains inside, waiting for her arrival with a letter in hand.\" Can you distill the main points into a concise summary of just 2 sentences? And please include the important keywords.",
+    "I've pasted below the full text of a news article I need to get a quick overview of: \"In response to the ongoing drought affecting the western part of the country, state officials have implemented new water restrictions. Households are now limited to watering lawns twice per week, and businesses must report monthly usage. Water conservation campaigns are being rolled out in schools and community centers. Officials emphasize the importance of preserving water resources as reservoir levels have reached historic lows.\" Could you produce a 3-sentence summary that does not include any extracted keywords?"
+  ]
+}

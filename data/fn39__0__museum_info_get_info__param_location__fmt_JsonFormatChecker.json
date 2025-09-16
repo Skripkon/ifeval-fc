@@ -1,0 +1,46 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn39__0__museum_info_get_info",
+    "description": "Retrieve specific details about museums, such as opening hours and ticket prices.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "City where the museum is located. The argument value must be a valid JSON object; the JSON must be syntactically correct and parseable."
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "List of details to retrieve about the museum.",
+            "enum": [
+              "Opening hours",
+              "Adult tickets",
+              "Child tickets"
+            ]
+          }
+        }
+      },
+      "required": [
+        "location",
+        "details"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm planning a trip to London soon and I'm really interested in exploring some of the city's most famous museums. However, I'd like to know ahead of time about their specific opening hours, as well as how much it would cost for both adults and children to enter. Could you please provide me with detailed information on the opening hours, adult ticket prices, and child ticket prices for museums located in London?",
+    "My family is visiting Paris next month and we'd love to spend a day visiting museums there. To plan our itinerary and budget accordingly, it would be incredibly helpful if you could gather and share the opening hours, adult ticket costs, and child ticket costs for museums in Paris. This way, we can choose which museums to visit based on the best fit for our schedule and budget.",
+    "I'm organizing a field trip for kids to museums in New York City, and I need to make sure we're informed about all logistics in advance. Could you help me by providing detailed information on the operating hours for museums in New York, as well as up-to-date ticket prices for both adults and children? Knowing both timings and ticketing details would be critical for our planning.",
+    "I want to surprise my parents with a cultural weekend in Rome, and part of the plan includes visiting several renowned museums. However, we have limited time and need to stick to a budget. Can you give me comprehensive information on the museums in Rome, specifically their opening hours and what the ticket prices are for adults and children?",
+    "For an upcoming school project focusing on the arts and history of Madrid, I need to gather detailed information for a local museum. Could you provide me with all relevant details about museums in Madrid, such as their daily opening hours, the price of admission for adult visitors, and also how much children are charged for tickets? This would greatly assist with my project planning."
+  ]
+}

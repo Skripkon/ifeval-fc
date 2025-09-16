@@ -1,0 +1,48 @@
+{
+  "chosen_param": "meeting_notes",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in single quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "single"
+    }
+  },
+  "fn_schema": {
+    "name": "summarize_meeting_notes",
+    "description": "Generates a summary of meeting notes based on the provided text and specified preferences.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "meeting_notes": {
+          "type": "string",
+          "description": "The detailed meeting notes which include dialog, decisions, and action points. The argument value must be wrapped in single quotation marks, with no additional characters outside the quotes."
+        },
+        "summary_length": {
+          "type": "string",
+          "enum": [
+            "short",
+            "medium",
+            "long"
+          ],
+          "description": "Length of the generated summary: short, medium, or long."
+        },
+        "include_decisions": {
+          "type": "boolean",
+          "description": "Indicates whether decisions made during the meeting should be included in the summary."
+        }
+      },
+      "required": [
+        "meeting_notes",
+        "summary_length"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I need your help summarizing the minutes from our latest project alignment meeting. Here are the meeting notes: 'John opened the session by welcoming everyone. Mary presented the latest updates on the client deliverables, emphasizing that the timeline has shifted by two weeks due to resource constraints. Alex suggested reallocating some team members to compensate. The group discussed and decided to prioritize feature A for the next sprint. Samantha volunteered to draft the updated schedule, and Carlos agreed to communicate the changes to the client. The meeting ended with a reminder to review the new Jira tickets by Friday.' Please provide a short summary, and make sure to include if any decisions were made.",
+    "I just finished transcribing the full audio recording from yesterday’s strategy meeting, and it's quite extensive. Can you help me create a detailed summary? Here's what was discussed: 'The meeting began with a review from Sarah about last quarter's revenue numbers. Discussions followed on marketing strategies for the next quarter, with Tom advocating for a stronger focus on digital channels. A lengthy debate ensued about budget allocations, with no final decisions reached on spending. Karen brought up new partnership opportunities with external vendors, and action items were recorded for the research team to present options next week. In closing, everyone agreed to share feedback on the proposal draft by Monday.' I would like a long summary that does not necessarily include the specific decisions taken.",
+    "Could you please generate a medium-length summary from these meeting notes? 'Today’s meeting covered several team updates. Lisa reported progress on the data migration project, mentioning that Phase 1 was completed ahead of schedule. Mike raised a concern about potential security issues, prompting a discussion on next steps. The group agreed that an internal audit is necessary before moving forward. Action points were assigned to both the IT and HR departments to coordinate schedules. Closing the meeting, everyone reaffirmed the key deliverables for this quarter.' Please include any decisions that were made during the session.",
+    "I have the following detailed notes from our recent monthly review meeting: 'Paul kicked things off by acknowledging the sales team's achievements. Emily highlighted challenges faced by the support staff, including increased ticket volume and slower response times. The group discussed adopting a new ticketing system, and after some debate, agreed to trial the system next month. Marketing shared their plans to launch a social media campaign focused on product updates. Tasks were delegated to various departments to support the launch. Paul concluded by reminding everyone about next week’s offsite workshop.' I need a summary that's on the medium side and it’s important to highlight all decisions made in the meeting.",
+    "Here are the full notes from today’s operations meeting: 'The team went over last week’s tasks, and several members provided updates on outstanding issues. Jake described delays in the supply chain but noted solutions are underway. Mia presented her workflow optimization suggestions, which sparked productive feedback. After a round of discussion, the group decided to implement two of Mia’s suggestions starting next quarter. Paul was assigned to monitor the implementation process and report on metrics at the next meeting. The session wrapped up with a broad review of current objectives.' Please create a short summary for me, focusing on the main points and make sure to include all major decisions."
+  ]
+}

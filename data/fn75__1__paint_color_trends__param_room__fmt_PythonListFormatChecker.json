@@ -1,0 +1,43 @@
+{
+  "chosen_param": "room",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn75__1__paint_color_trends",
+    "description": "Find the most popular paint color for a specific area in the home.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "room": {
+          "type": "string",
+          "description": "Type of the room e.g. Living room, Bathroom etc. The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval()."
+        },
+        "period": {
+          "type": "string",
+          "description": "The period over which to check the paint color trend. Default 'Daily'",
+          "enum": [
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Yearly"
+          ]
+        }
+      },
+      "required": [
+        "room"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I've been thinking a lot about redecorating my dining room because it's been the same shade of off-white for the past few years, and it's become quite lackluster and uninspiring. I'm curious about the trends out there when it comes to paint colors for dining rooms, and I'd love to know what's currently considered popular. I'm particularly interested in finding out which shade or color is trending this month because I want to make sure that whatever choice I make is both timely and fashionable. Could you provide me with the most popular paint color for dining rooms that has been trending this month? It would really help me gain perspective and make a decision that is both contemporary and appealing.",
+    "I have decided to give my living room area a fresh coat of paint to revitalize the space, which seems to be losing its charm with the current color scheme. I heard that paint color trends can vary from week to week, and I want to ensure I am choosing something that's currently in vogue. Could you assist me by revealing what the trending color for living room spaces this week is? I'm aiming to keep my home relevant and in style, just like the chic modern homes that everyone admires. Having this information would help me choose a color that resonates with current design aesthetics and impresses my guests.",
+    "The bathroom in my house could really use a makeover, especially the paint which has started to look a bit dated. I've seen so many people on social media talking about how they're keeping up with paint color trends, and I want to do the same. Can you tell me what the trendiest paint color for bathrooms is at the moment? I'm really interested in understanding which shades have gained popularity recently so that I can make an informed and stylish choice. Ideally, I'd love to know which color has been trending daily because I want my bathroom to have a modern and fresh feel that aligns with the latest and greatest design trends.",
+    "I've been thinking about transforming the attic into a cozy reading nook, and the first step would obviously be selecting the perfect paint color to set the right mood. Since I have no idea what colors are currently popular for attics, especially over the longer term, I could really use some guidance regarding what the yearly trends suggest. What color has been the most popular for attics over the past year? This information will serve as my inspiration to create a unique yet trendy reading space that reflects not only my personality but aligns with current design preferences, ensuring the attic becomes the perfect retreat from everyday life.",
+    "I'm renovating my kitchen and am at the stage where I'm considering the paint colors, which are crucial because they can completely change the space's vibe and energy. I want to ensure that I select a color that is currently trending and will add some contemporary flair to the area. Could you please let me know what the most popular paint color for kitchens has been in the past yearly trend? This would provide me with the insight I need to choose an on-trend and stylish color. Knowing the yearly paint color trend could help me create a kitchen space that's not only functional but also inspirational and inviting, resonating with the home design blogs and magazines I love to read."
+  ]
+}

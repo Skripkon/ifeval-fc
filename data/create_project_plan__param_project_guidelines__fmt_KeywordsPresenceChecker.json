@@ -1,0 +1,53 @@
+{
+  "chosen_param": "project_guidelines",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must not include the keywords: ['normal', 'short', 'minor']. None of these words should appear anywhere in the value. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "normal",
+        "short",
+        "minor"
+      ],
+      "must_include": false
+    }
+  },
+  "fn_schema": {
+    "name": "create_project_plan",
+    "description": "Generates a detailed project plan with tasks, deadlines, and assignees based on the provided guidelines.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "project_guidelines": {
+          "type": "string",
+          "description": "Detailed guidelines for the project, including objectives, expected outcomes, and any specific instructions. The guidelines must not include the keywords: 'normal', 'short', or 'minor'—none of these words should appear anywhere in the value, regardless of case."
+        },
+        "deadline": {
+          "type": "string",
+          "description": "The final completion date for the project in YYYY-MM-DD format."
+        },
+        "team_members": {
+          "type": "array",
+          "description": "List of team members assigned to the project.",
+          "items": {
+            "type": "string",
+            "description": "Name of a team member."
+          }
+        }
+      },
+      "required": [
+        "project_guidelines",
+        "deadline",
+        "team_members"
+      ]
+    }
+  },
+  "user_queries": [
+    "I need some help generating a comprehensive project plan for our upcoming marketing campaign. Here are the guidelines: the main objective is to launch a new product line by creating social media buzz, engaging influencers, and preparing promotional materials within the next two months. We must ensure that all content aligns with our brand voice, explore at least three social channels, and report analytics weekly. The expected outcomes are increased brand awareness and a measurable rise in social engagement. Please include detailed tasks, assign appropriate team members, and keep in mind that the final deadline is 2024-09-30. The team members are: Alice Johnson, Marco Lee, and Priya Patel.",
+    "I’m working with my team on a new software development project and would appreciate it if you could put together a detailed project plan. The guidelines specify that we need to develop a mobile app for health tracking, follow strict Agile methodology, hold bi-weekly sprint reviews, integrate user feedback after every sprint, and ensure all code is reviewed before merging. Our ultimate goal is to have an MVP ready for internal testing. Please organize the tasks, set realistic deadlines, and assign them to my team. The deadline for project completion is 2024-08-15, and the team members are Lucas Martinez, Sarah O’Connor, Kevin Wong, and Emily Smith.",
+    "I'm managing the office relocation for our company, and I need a structured project plan to guide this transition. Our guidelines are as follows: minimize downtime during the move, coordinate with vendors for new office equipment, notify all employees at every stage, ensure IT infrastructure is up and running before employees move in, and complete all moving activities during weekends to avoid business disruption. Objectives include a seamless transition with zero data loss and minimal impact on workflow. Can you create a detailed task list, assign responsibilities, and make sure everything is completed by 2024-07-22? The team members are: Dana Bali, Steven Choi, and Grace Kim.",
+    "We are kicking off a rebranding initiative and I’d like a thorough project plan that covers all aspects. The project guidelines are: audit all existing branding materials, develop a new logo and brand style guide, align all digital assets with the new branding, and ensure internal and external communications happen smoothly. Expected outcomes include refreshed company visuals and consistent branding across all platforms. Please break down the process into specific tasks, assign them to the right people, and set reasonable deadlines. The deadline for the full rollout is 2024-10-15, and the following people are involved: Antonio Delgado, Fiona Chen, Melody Park, and Thomas Wright.",
+    "Could you help me outline a step-by-step project plan for organizing a corporate training event? The project guidelines are as follows: secure a venue with AV equipment, coordinate with trainers, develop a training schedule, ensure participant registration and feedback collection, and create post-event reports. The objective is to have all staff trained on new compliance standards and measure knowledge improvements. Please specify individual tasks, deadlines, and assignments for each stage, with everything finalized by 2024-06-30. The team members in charge are Rina Desai, Omar Khalid, and Jenna Fox."
+  ]
+}

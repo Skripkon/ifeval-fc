@@ -1,0 +1,50 @@
+{
+  "chosen_param": "extracted_user_problem",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at least 6 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at least",
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "diagnose_technical_issue",
+    "description": "Diagnoses and provides solutions for technical issues described by the user.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "extracted_user_problem": {
+          "type": "string",
+          "description": "Detailed description of the technical issue reported by the user. The argument value must contain at least 6 commas, which may appear anywhere in the value."
+        },
+        "device_type": {
+          "type": "string",
+          "description": "Type of device where the issue is occurring, such as 'mobile', 'computer', or 'tablet'."
+        },
+        "urgency_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "User-specified urgency level of the issue."
+        }
+      },
+      "required": [
+        "extracted_user_problem",
+        "device_type",
+        "urgency_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I'm reaching out because my laptop has suddenly started freezing every time I try to open large files, especially when using Photoshop and other resource-intensive applications. The cursor moves but then the entire screen becomes unresponsive, and occasionally, I have to do a hard shutdown to get things working again. This started a few days ago after a recent Windows update. I'm worried that this persistent crashing might cause me to lose important work or even damage the computer further. Can you help me figure out what's causing this and how I can resolve it as soon as possible? The urgency is high since I rely on this computer for my freelance projects.",
+    "Lately, my Android mobile phone has been acting really strange. Every time I try to make a call or use certain apps, the screen suddenly goes black and it either restarts on its own or stays unresponsive until I hold the power button to restart it manually. I have tried clearing the cache and uninstalling some apps, but nothing seems to work. This has been happening for about a week and it's causing a lot of inconvenience because I use the phone for work and personal communication. The issue is quite frustrating and urgent, so I would rate the urgency as medium. Please advise what steps I should take to diagnose and fix this problem.",
+    "My iPad, which I primarily use for reading and note-taking for school, is experiencing a persistent problem where the battery drains incredibly fast—even when in standby mode. I used to get several days of battery life, but now it goes from 100% to 10% in just a few hours without much use. I have already tried lowering the brightness, turning off background app refresh, and updating iOS, but the issue persists. Could you help me identify any possible causes and solutions? I would consider the urgency to be low, as I have other devices to use in the meantime, but I’d appreciate a thorough diagnosis and advice.",
+    "I'm contacting you because the desktop computer in my home office has been showing frequent blue screen errors with various stop codes like 'MEMORY_MANAGEMENT' and 'IRQL_NOT_LESS_OR_EQUAL'. These crashes seem to happen randomly and I haven't installed any new hardware, but I did update some drivers recently. The system sometimes also fails to reboot properly and gets stuck on the loading screen. This is a high urgency issue for me, as I depend on this computer for daily office work and can't afford these interruptions. I'd like a step-by-step guide to identify and fix whatever is causing these blue screens.",
+    "For the past couple of months, my tablet (Samsung Galaxy Tab S6) has had issues with its touch screen not responding properly. Sometimes, entire sections of the screen don't register my taps or gestures, while other times random phantom touches seem to occur, opening apps or typing random letters. This makes it very difficult to use for drawing and note-taking, which are my main activities on this tablet. I've already restarted the device, checked for software updates, and booted it in safe mode, but the problem is still there. The urgency for me is medium, as I use this tablet for my art hobby and online classes. Can you help determine what’s wrong and how to fix it?"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "chosen_param": "current_habit",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'y' at most 8 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "y",
+      "N": 8,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "recommend_sustainable_alternatives",
+    "description": "Recommends sustainable product or practice alternatives based on current user habits.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "current_habit": {
+          "type": "string",
+          "description": "Detailed description of the user's current habit or product usage for which they seek sustainable alternatives. The description must contain the letter 'y' no more than 8 times, regardless of case."
+        },
+        "preference": {
+          "type": "string",
+          "enum": [
+            "affordable",
+            "premium",
+            "DIY"
+          ],
+          "description": "User's preference for the type of sustainable alternative they are looking for."
+        },
+        "impact_factor": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "Desired level of environmental impact reduction."
+        }
+      },
+      "required": [
+        "current_habit",
+        "preference",
+        "impact_factor"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been using single-use plastic water bottles every day because it's more convenient for me when I'm out and about for work or traveling. However, I'm increasingly aware of how much waste I'm generating and I'm looking for more environmentally friendly options. Ideally, I'm interested in an affordable solution that still allows me to easily carry water on the go and would like suggestions with a high level of environmental impact reduction, so I can really make a difference with this change. What would you recommend for someone like me?",
+    "Currently, I do almost all my weekly grocery shopping with standard plastic bags from the store, which I just throw away after a single use. I'm really trying to be more eco-conscious, and I'm willing to invest in something nicer if it makes a meaningful difference. Could you please advise me on some premium sustainable alternatives to my current plastic bag usage, and I’d prefer options that offer a high environmental impact reduction as part of my shift towards a greener lifestyle?",
+    "For years, I've relied on regular store-bought chemical cleaning agents for everything in my house, from the kitchen to the bathroom, without really considering their environmental footprint. Lately, I’ve been thinking about switching things up to reduce my household’s environmental impact, but I need to keep costs down. I'd like to get some affordable recommendations for sustainable cleaning alternatives, and my goal is to achieve a medium level of impact without complicating my cleaning routine too much. What options should I consider?",
+    "I have a habit of buying new fast fashion clothing every season from popular chain stores, mostly because it's cheap and I like keeping up with trends. I'm aware this isn't the best choice for the planet, and I'm interested in making a change. I’m open to exploring some do-it-yourself methods for creating a more sustainable wardrobe, as long as they can make a significant difference in environmental impact. Could you offer some detailed DIY alternatives to my fast fashion shopping that would help me achieve a high level of environmental improvement?",
+    "Every morning, I brew my coffee using single-use coffee pods because it's fast and convenient before work, but I'm sure this is not very eco-friendly. I want to reduce my environmental footprint and am willing to pay a little more for a better solution. Can you recommend some premium sustainable alternatives to using single-use coffee pods, preferably those that can have a medium impact in terms of reducing waste and environmental harm?"
+  ]
+}

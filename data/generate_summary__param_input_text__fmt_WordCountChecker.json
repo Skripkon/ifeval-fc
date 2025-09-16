@@ -1,0 +1,45 @@
+{
+  "chosen_param": "input_text",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have exactly 1 word. No less, no more.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "generate_summary",
+    "description": "Generates a concise summary of a given text.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "input_text": {
+          "type": "string",
+          "description": "The text that needs to be summarized. The argument value must have exactly 1 word—no less, no more."
+        },
+        "max_length": {
+          "type": "integer",
+          "description": "The maximum length of the summary in terms of the number of words."
+        },
+        "include_keywords": {
+          "type": "boolean",
+          "description": "Whether to include key phrases in the summary. Defaults to false."
+        }
+      },
+      "required": [
+        "input_text",
+        "max_length",
+        "include_keywords"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I recently read an article about the evolution of electric vehicles and their impact on the global auto industry. The article covered the history of EV technology, the recent advancements in battery efficiency, government regulations promoting clean energy, and how traditional automakers are adapting to the shifting demand. I'd like a concise summary of this article, but please make it no longer than 120 words. Also, could you ensure that key phrases and main ideas are included in the summary so I can remember the important points later?",
+    "Could you help me summarize the following passage? \"In recent years, climate change has become an urgent issue, with data showing increased greenhouse gas emissions and more frequent extreme weather events. Governments around the world are now implementing stricter environmental policies, investing heavily in renewable energy sources like wind and solar, and encouraging the adoption of electric vehicles. However, there is still a pressing need for global cooperation and innovation to achieve meaningful progress.\" I'm looking for a summary with a maximum length of 60 words, and I'd appreciate it if you could include the main keywords or phrases from the original text.",
+    "I've copied a long report below about the impact of social media on mental health among teenagers. The report details several studies, discusses both positive aspects like access to support networks, and negative effects such as cyberbullying and anxiety, and makes recommendations for parents and educators. Could you please give me a summary that's no more than 100 words and be sure to include any key phrases or terms that are central to the report's findings? Here is the text: Social media has brought about significant changes in how young people communicate and form relationships...",
+    "Can you take this long excerpt from a book about urban planning and summarize it for me? The text explains how city design affects residents' wellbeing, covers the evolution of transportation systems, and explores challenges in balancing green spaces with development. It also highlights successful case studies from various countries. I'd like the summary to be as short as possible, no more than 80 words, but please make sure to retain and highlight major key phrases or concepts found in the passage. Here is the excerpt: \"Urban environments have evolved dramatically...",
+    "I’m working on a project and just finished reading a detailed analysis on the global coffee trade, which explores historical roots, economic implications, major exporters and importers, supply chain complexities, and changing consumer trends. The text also addresses fair trade practices and environmental sustainability. Could you create a concise summary for me—in 75 words max—that captures all the main ideas? Please ensure that you include the key phrases and concepts from the original text in your summary to help me recall the essential information."
+  ]
+}

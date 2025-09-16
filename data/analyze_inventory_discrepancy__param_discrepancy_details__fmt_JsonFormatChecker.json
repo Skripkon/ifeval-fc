@@ -1,0 +1,42 @@
+{
+  "chosen_param": "discrepancy_details",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "analyze_inventory_discrepancy",
+    "description": "Examines and reports discrepancies between recorded and actual inventory stock levels.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "discrepancy_details": {
+          "type": "string",
+          "description": "Description of the inventory discrepancy, including possible reasons or observations. The argument value must be a valid JSON object that is syntactically correct and parseable."
+        },
+        "warehouse_id": {
+          "type": "string",
+          "description": "Unique identifier for the warehouse where the discrepancy was observed."
+        },
+        "product_sku": {
+          "type": "string",
+          "description": "Stock Keeping Unit of the product associated with the discrepancy."
+        }
+      },
+      "required": [
+        "discrepancy_details",
+        "warehouse_id",
+        "product_sku"
+      ]
+    }
+  },
+  "user_queries": [
+    "I need help analyzing a discrepancy we found in our inventory for product SKU 987654321 at warehouse location WAREHOUSE-14B. During our latest inventory count, our system recorded 200 units on hand, but the physical count revealed only 165 units present. We've noticed shrinkage before, but this time it seems higher than usual, and there’s no indication of outbound transfers or recent theft reports. The warehouse staff mentioned some recent confusion with incoming shipments and possible mis-scanning of items. Please examine this situation further and provide a detailed report on what could be causing this inconsistency.",
+    "Could you please look into a problem we have with our inventory at the main distribution center, warehouse_id WH-002? The stock records for product SKU A123BC456 indicate 350 items in stock, but our most recent manual audit only counted 320 units. Some possible reasons for this discrepancy might include outdated records after a returns processing backlog and some recently identified labeling mistakes. We are particularly concerned since this product is a high-value item and we need to maintain tight inventory control. Please analyze the issue in detail and suggest what actions we might take.",
+    "I'm reaching out regarding an inventory discrepancy that was reported yesterday at warehouse warehouse_id_7X. The product in question is SKU ZX45TY98. According to our inventory management software, there should have been 520 units on the shelf, but after a full cycle count, only 498 units were found. We double-checked the receiving logs, and it doesn’t appear that anything is missing from the last delivery, so our team suspects possible misplacement or an error in digital stock adjustments. Could you examine and provide insights into this discrepancy?",
+    "During our monthly review in warehouse 101-DEN, we found a significant discrepancy regarding product SKU LMN-99021. The system logged 600 items, but our team only physically located 588. Discrepancy details include a recent layout change in the storage aisle, and some team members reported confusion during the relocation process. Other possible reasons under consideration are counting errors, misplaced items, or unlogged damages. Please thoroughly analyze this discrepancy in our warehouse and give us an understanding of what might have gone wrong.",
+    "I’d appreciate it if you could investigate an issue for product SKU 4455-QWER, which we store at warehouse WHC-333. The recorded inventory as per our last system update was 157 units, but when we performed the latest physical reconciliation, we could only account for 141 units. The discrepancy may be due to a recent staff changeover, potential miscounts during shift handovers, or even errors during previous restocking events. Can you please analyze and report back on this discrepancy, including possible causes and next steps?"
+  ]
+}

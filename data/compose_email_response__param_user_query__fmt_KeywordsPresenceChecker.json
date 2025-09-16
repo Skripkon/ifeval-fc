@@ -1,0 +1,54 @@
+{
+  "chosen_param": "user_query",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must include the keywords: ['below', 'urban']. Each keyword must appear at least once, in any order. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "below",
+        "urban"
+      ],
+      "must_include": true
+    }
+  },
+  "fn_schema": {
+    "name": "compose_email_response",
+    "description": "Composes an automatic email response based on the user's query and specified parameters.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_query": {
+          "type": "string",
+          "description": "The user's original email query or request needing a response. The input must include the keywords 'below' and 'urban', each appearing at least once in any order. These keywords are case-insensitive."
+        },
+        "response_tone": {
+          "type": "string",
+          "enum": [
+            "formal",
+            "informal",
+            "concise",
+            "detailed"
+          ],
+          "description": "Desired tone of the email response."
+        },
+        "include_attachments": {
+          "type": "boolean",
+          "description": "Indicator if the response should include attachments. Defaults to False."
+        }
+      },
+      "required": [
+        "user_query",
+        "response_tone",
+        "include_attachments"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hey, I recently received the following email from my manager: 'Hi, could you please share an update on the progress of the quarterly report and let me know if you are facing any issues or require assistance from the finance department?' I would like to compose a reply that's concise in tone and doesn’t need to include any attachments. Can you help me draft a suitable response to this email so I can send it back to my manager?",
+    "I just got a message from a customer: 'Dear support, I've been having trouble logging into my account since yesterday. I keep getting an error message, and resetting my password hasn’t worked. Could you please look into this and advise on how to resolve it?' Please help me write a detailed reply to this customer and please don't include any attachments in the response.",
+    "My colleague emailed me: 'Hey, are you available for a meeting next Thursday to discuss the client presentation? If so, let me know your preferred time.' I want to send back an informal response and I do need to include attachments because I’ll be sharing some slides. Could you draft an informal email reply to this query and ensure I’m attaching the necessary files?",
+    "I received the following request from HR: 'Hello, could you confirm your attendance for the upcoming annual employee training session scheduled for September 15th? If you have any dietary restrictions for the event, please let us know.' Please help me send a formal response to this HR email, and I don't want to include any attachments.",
+    "Here's a message that came in from a vendor: 'Hi, we would like to check the status of our last invoice payment. Could you please confirm if payment has been processed or if there are any issues?' Can you draft me a detailed and formal reply to this vendor’s inquiry and make sure the email response includes relevant attachments like the payment confirmation document?"
+  ]
+}

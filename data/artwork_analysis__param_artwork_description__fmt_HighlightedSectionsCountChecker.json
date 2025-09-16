@@ -1,0 +1,45 @@
+{
+  "chosen_param": "artwork_description",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain at least 1 section highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "at least",
+      "N": 1
+    }
+  },
+  "fn_schema": {
+    "name": "artwork_analysis",
+    "description": "Analyzes a piece of artwork to provide insights on artistic style, technique, and historical context.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "artwork_description": {
+          "type": "string",
+          "description": "A detailed description of the artwork including visual elements, colors, and composition. The description must contain at least one section highlighted using markdown syntax (for example, *highlighted section* or **highlighted section**), and each highlighted section must not be empty."
+        },
+        "artist_name": {
+          "type": "string",
+          "description": "The name of the artist who created the artwork."
+        },
+        "year_created": {
+          "type": "integer",
+          "description": "The year in which the artwork was created."
+        }
+      },
+      "required": [
+        "artwork_description",
+        "artist_name",
+        "year_created"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently came across a painting by Claude Monet that was created in 1872, and I’d love to get a deeper understanding of it. The artwork depicts a tranquil harbor at sunrise, with soft orange and blue hues dominating the sky and the water. There are boats gently floating in the foreground, while the background features barely defined industrial silhouettes shrouded in morning mist. The brushstrokes are loose and visible, giving an impression of fleeting light and atmosphere. Can you analyze this piece by Monet and explain its artistic style, techniques, and historical context for me?",
+    "Could you provide a thorough analysis of a painting I adore by Georgia O’Keeffe called 'Red Canna', which she crafted in 1924? The artwork features vibrant, close-up views of a canna lily’s petals, filling almost the entire canvas with undulating red, orange, and yellow shapes. The composition feels abstract, but it is rooted in the organic forms of the flower, with subtle blending and transitions between warm hues and occasional green shadows. The painting’s curves are sensual and the perspective is intensely magnified. I’d like insights into the painting’s style, O’Keeffe’s techniques, and its art historical context.",
+    "I’m curious about an artwork painted by Jackson Pollock in 1950. The piece is an enormous canvas covered with layers of seemingly chaotic drips and splatters of white, black, and gray paint, overlaid with trails of tan and delicate hints of yellow and blue. The paint covers the surface in an intricate web, creating a sense of motion and depth without any recognizable figures or forms. The lines tangle, but there's a certain rhythm and overall balance. Could you please analyze Pollock's painting for me, focusing on its visual elements, technique, and its place in art history?",
+    "Can you analyze a painting by Leonardo da Vinci from 1503? The artwork depicts a woman with a subtle, enigmatic smile, sitting against a misty, dreamlike landscape with snaking rivers and distant mountains. The colors are soft and muted, with careful blending and delicate modeling of her face and hands. Her brown hair falls gently over her shoulders and she wears a dark, simple dress with a veil. The composition is balanced and serene, and the background seems almost ethereal. I would like a detailed assessment of the artistic style, techniques used, and the historical significance of this da Vinci masterpiece.",
+    "I recently viewed a painting by Pablo Picasso created in 1937, and I’m fascinated by its intense imagery. The piece features a chaotic arrangement of distorted figures, screaming faces, and mournful animals like horses and bulls, all rendered in harsh blacks, whites, and grays. The background is full of sharp, angular shapes, and the absence of color gives the work a stark, emotional intensity. The composition appears fractured, and the scene is filled with anguish and violence. Can you provide a comprehensive analysis of this artwork by Picasso, including its visual style, techniques, and place in history?"
+  ]
+}

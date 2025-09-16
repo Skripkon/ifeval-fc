@@ -1,0 +1,59 @@
+{
+  "chosen_param": "notification_description",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain at least 5 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "at least",
+      "N": 5
+    }
+  },
+  "fn_schema": {
+    "name": "plan_event_notifications",
+    "description": "Plans the schedule and content for event notifications based on the description, date, and type.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "notification_description": {
+          "type": "string",
+          "description": "Content and intent of the notification to be sent to participants. The argument value must contain at least 5 words written entirely in capital (uppercase) letters."
+        },
+        "event_date": {
+          "type": "string",
+          "description": "Date of the event in ISO 8601 format."
+        },
+        "notification_type": {
+          "type": "string",
+          "enum": [
+            "reminder",
+            "follow-up",
+            "cancellation"
+          ],
+          "description": "The type of notification to be sent."
+        },
+        "notification_frequency": {
+          "type": "string",
+          "enum": [
+            "once",
+            "daily",
+            "weekly"
+          ],
+          "description": "Frequency at which the notifications should be sent."
+        }
+      },
+      "required": [
+        "notification_description",
+        "event_date",
+        "notification_type"
+      ]
+    }
+  },
+  "user_queries": [
+    "I am organizing a virtual workshop for our remote employees about effective time management techniques, which will take place on June 28th, 2024. I would like to ensure everyone remembers to attend, so could you please help me create a notification that will remind all participants about the event, mentioning that it is mandatory and includes a Q&A at the end? Please set it up as a one-time reminder notification for that date.",
+    "Our fundraising gala is scheduled for July 12th, 2024, and I want to make sure attendees receive regular notifications about any changes or important details leading up to the event. I need a daily notification sent out that provides a summary of the gala's activities, including the dinner, silent auction, and keynote speaker. Can you set up these notifications as reminders?",
+    "Following up on our recent company town hall meeting that was held on May 15th, 2024, I’d like to send a message to all employees summarizing the key points discussed, such as updates on company goals, new benefits, and the Q&A session. Can you draft and schedule a follow-up notification for the participants of that event, with the message being sent out once?",
+    "Due to unforeseen circumstances, we need to inform all registered guests that the product launch event initially set for August 20th, 2024 has been cancelled. Please create a cancellation notification that will let attendees know the event has been called off and explain that they will be contacted with rescheduling information soon. I’d like this message to go out only one time.",
+    "Our weekly leadership meetings happen every Monday, and the next one is on July 1st, 2024. I want to set up a notification to remind all managers and team leads each week about the meeting details, such as the time, agenda topics, and login link for the video call. Could you help me by scheduling a recurring weekly reminder notification that contains this information?"
+  ]
+}

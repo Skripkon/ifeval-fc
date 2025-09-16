@@ -1,0 +1,47 @@
+{
+  "chosen_param": "unit",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'universal' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "universal",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn151__0__geometry_area_triangle",
+    "description": "Calculate the area of a triangle.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "type": "integer",
+          "description": "The length of the base of the triangle."
+        },
+        "height": {
+          "type": "integer",
+          "description": "The height of the triangle from the base."
+        },
+        "unit": {
+          "type": "string",
+          "description": "The measurement unit for the area. Defaults to square meters. The argument value must contain the word 'universal' exactly once, in any position within the string and regardless of case."
+        }
+      },
+      "required": [
+        "base",
+        "height",
+        "unit"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm working on my home renovation project and I came across a triangular piece of land that I want to put grass on. The base of the triangle measures 12 meters and the height running perpendicular from the base is 20 meters. Could you please help me figure out the exact area of this triangular plot in square meters? I need this information so that I can purchase the correct amount of sod.",
+    "For a geometry assignment, I need to determine the total area of a triangular-shaped garden bed. The base of the triangle is 15 feet long, and the height from the base to the topmost point is 9 feet. Can you calculate the area in square feet for me? I want to make sure I'm getting the answer right before I submit my homework.",
+    "As part of an architectural design, I have a triangular section on the floor plan where the base of the triangle is 250 centimeters and the vertical height from the base is 120 centimeters. Could you tell me what the total area would be in square centimeters? I need the precise measurement for fitting in custom tiles.",
+    "While planning a section in my backyard, there's a triangular patio area I'm going to pour concrete into. The base of the triangle is exactly 8 yards and the height from the base up is 15 yards. Can you please calculate the exact area in square yards so I know how much concrete to order?",
+    "I'm organizing a community fair and one of the booths is going to be set up on a triangular tarp. The tarp has a base that measures 30 inches and the height from the base straight up is 25 inches. Could you please calculate the area in square inches so I can be certain the booth will fit on it comfortably?"
+  ]
+}

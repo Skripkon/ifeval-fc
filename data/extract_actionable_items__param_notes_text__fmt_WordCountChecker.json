@@ -1,0 +1,50 @@
+{
+  "chosen_param": "notes_text",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have at most 8 words. Longer responses are not allowed.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 8,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "extract_actionable_items",
+    "description": "Extracts actionable items and tasks from the given meeting notes.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "notes_text": {
+          "type": "string",
+          "description": "The full text of meeting notes from which to extract action items. The argument value must have at most 8 words; longer responses are not allowed."
+        },
+        "priority_level": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "description": "The priority level to assign to the extracted action items."
+        },
+        "deadline_in_days": {
+          "type": "integer",
+          "description": "The number of days from now when the tasks should be completed."
+        }
+      },
+      "required": [
+        "notes_text",
+        "priority_level",
+        "deadline_in_days"
+      ]
+    }
+  },
+  "user_queries": [
+    "Could you help me go through the meeting notes from today's project sync and list out all the actionable items and tasks that were discussed? Here are the notes: 'Agenda: Review Q2 milestones. Discussion: Sarah to prepare the marketing presentation by next week. John will follow up with suppliers regarding outstanding invoices within 5 days. Emily is to draft the client email by Thursday. Decisions: Move product launch to July. Assignments: Ralph to coordinate with the design team for new banners.' Please focus only on high-priority tasks and set a deadline for all tasks to be completed within 3 days from now.",
+    "I've just finished updating the minutes from our strategy meeting, and I need some help extracting the key tasks everyone needs to handle. The notes are as follows: 'Kickoff at 10 AM. Budget review delayed to next month. Maria promised to submit the revised budget proposal this week. Technical: Lucas to oversee server migration. Anna will schedule a client call. IT to set up VPN for remote staff.' I want you to identify the action items, consider them as medium priority, and make sure the tasks are to be completed within the next 7 days.",
+    "I'm overwhelmed after today's management meeting, and I need a summary of all actionable steps we agreed on. Here's the full meeting note: 'Opening: Review on Q1 sales - negative growth. Task allocation: Victor to prepare follow-up report by Friday. HR: Nia to update the hiring policy. Operations: Michael to coordinate office maintenance next week. All: Review action points at next huddle.' Please extract all the action points, treat them as low priority, and set a deadline of 14 days for completion.",
+    "I'd appreciate if you could analyze our department meeting notes and list every relevant task and responsibility that was mentioned. Here's the entire transcript: 'Introductions. Marketing: Rachel to revamp campaign materials by March 5. Laurent is responsible for vendor negotiations. IT: Pablo tasked with reviewing cybersecurity protocols. All to submit project updates by Friday.' Extract the actionable items, assign a high priority, and require that everything is done within 5 days.",
+    "Please read through these notes from our product team session and identify all follow-up items and tasks assigned: 'Product update: Beta release planned. Engineering: Olivia to address user feedback issues. QA: Mark to create new test scenarios. Design: Fiona to update mobile UI mockups by next Monday. Marketing to prepare launch assets.' I want to treat all extracted items as medium priority, and make sure the tasks should be finalized in 10 days."
+  ]
+}

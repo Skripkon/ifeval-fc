@@ -1,0 +1,41 @@
+{
+  "chosen_param": "command",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn153__0__cmd_controller_execute",
+    "description": "Executes a system-level command using os.system() on Windows operating systems. It can execute single or multiple commands chained with '&&'.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string",
+          "description": "The system command to be executed. To execute multiple commands, separate them with '&&'. Additionally, the argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed). For example, 'dir && echo done'."
+        },
+        "unit": {
+          "type": "string",
+          "description": "The unit of measurement for the command execution time, such as 'seconds' or 'milliseconds'",
+          "enum": [
+            "seconds",
+            "milliseconds"
+          ]
+        }
+      },
+      "required": [
+        "command"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey, can you please open the Windows command prompt and run the following command for me? I want you to display all the files and folders in the C:\\Users directory and then, right after that, print a message saying 'All files listed successfully.' Basically, run 'dir C:\\Users && echo All files listed successfully.'. Also, could you measure how long this whole command takes to finish, in seconds?",
+    "I am troubleshooting an issue on my Windows computer and need your help to execute some system commands. Could you please run the command 'ipconfig /all && echo Network configuration fetched' for me and let me know when it's done? Additionally, can you also report back the execution time using milliseconds as the unit so I can compare it with previous runs?",
+    "I would like you to perform a system-level operation on my Windows PC by executing some commands. Please run 'tasklist && echo Tasks Ended' using the command prompt. Also, it’s important for me to know precisely how long this takes, so please provide the duration in seconds upon completion.",
+    "Can you execute the following command on my Windows machine for diagnostics: 'systeminfo && echo System info collected'? Please ensure that the time taken to execute this command is measured, and let me know the duration in milliseconds for a more detailed log.",
+    "I’m trying to automate some maintenance tasks and need you to run multiple commands in sequence. Please execute this: 'chkdsk && echo Disk check complete' through the Windows command prompt. Also, could you let me know how much time it takes by reporting the duration in seconds?"
+  ]
+}

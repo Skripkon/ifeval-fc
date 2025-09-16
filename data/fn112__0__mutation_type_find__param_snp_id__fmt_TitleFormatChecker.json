@@ -1,0 +1,37 @@
+{
+  "chosen_param": "snp_id",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn112__0__mutation_type_find",
+    "description": "Finds the type of a genetic mutation based on its SNP (Single Nucleotide Polymorphism) ID.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "snp_id": {
+          "type": "string",
+          "description": "The ID of the Single Nucleotide Polymorphism (SNP) mutation. The value must contain a title wrapped in double angle brackets, such as <<poem of joy>>; everything except for the title is allowed."
+        },
+        "species": {
+          "type": "string",
+          "description": "Species in which the SNP occurs, default is 'Homo sapiens' (Humans)."
+        }
+      },
+      "required": [
+        "snp_id"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm currently analyzing a list of genetic mutations, and I came across the SNP identifier rs1801133. I would like to know what type of mutation this particular SNP represents. Could you provide detailed information about the mutation type for rs1801133? Please tell me whether it's a missense, nonsense, silent, or any other kind of mutation, and explain it if possible.",
+    "While researching gene variants related to lactose intolerance, I found references to a mutation labeled as rs4988235. Could you help me determine the exact type of mutation associated with this SNP ID? I want to understand what molecular change is indicated and what category of mutation this falls under according to genetic classification.",
+    "I'm working on a genetics project and I need some clarification regarding SNPs. Specifically, I'm interested in the SNP with ID rs429358. Can you find out for me what type of mutation this is? I would appreciate an explanation describing the mutation type and its general implications if possible.",
+    "My lab results mentioned a Single Nucleotide Polymorphism identified as rs334, but I am uncertain what category of mutation this SNP corresponds to. Could you look up the mutation type for the SNP ID rs334 and explain briefly what kind of change it causes at the genetic level?",
+    "In an article I am reading about cardiovascular disease risk factors, the SNP rs662 features prominently, but the mutation type is not clear to me. Can you tell me what type of mutation is represented by SNP ID rs662, including any classification like missense, nonsense, or silent mutation and any other details you can provide?"
+  ]
+}

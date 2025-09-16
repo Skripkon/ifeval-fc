@@ -1,0 +1,68 @@
+{
+  "chosen_param": "symptoms_description",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at least 7 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 7,
+      "comparison_option": "at least"
+    }
+  },
+  "fn_schema": {
+    "name": "identify_plant_disease",
+    "description": "Analyzes plant symptoms and environmental conditions to identify potential diseases affecting the plant.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "symptoms_description": {
+          "type": "string",
+          "description": "Detailed description of the symptoms observed in the plant, such as leaf discoloration, wilting, etc. The description must consist of at least 7 sentences, each properly punctuated."
+        },
+        "plant_type": {
+          "type": "string",
+          "description": "The type of plant being diagnosed, e.g., rose, tomato, fern."
+        },
+        "environment_conditions": {
+          "type": "object",
+          "properties": {
+            "soil_moisture": {
+              "type": "string",
+              "enum": [
+                "dry",
+                "moist",
+                "wet"
+              ],
+              "description": "Current soil moisture condition."
+            },
+            "temperature": {
+              "type": "number",
+              "description": "Current temperature in degrees Celsius."
+            },
+            "humidity": {
+              "type": "number",
+              "description": "Current humidity percentage."
+            }
+          },
+          "required": [
+            "soil_moisture",
+            "temperature",
+            "humidity"
+          ]
+        }
+      },
+      "required": [
+        "symptoms_description",
+        "plant_type",
+        "environment_conditions"
+      ]
+    }
+  },
+  "user_queries": [
+    "I need help figuring out what might be wrong with my tomato plant. For the past couple of weeks, I've noticed that the leaves are developing brown spots, some yellowing is occurring around the edges, and a few leaves look like they are wilting and curling inwards. It's also started to drop a few of the lower leaves prematurely. I measured the current soil conditions; the soil feels quite moist to the touch, and when I checked earlier this morning, the temperature in the greenhouse was about 23 degrees Celsius. The humidity is usually pretty high here, and today it was around 80%. Can you tell me what disease could be affecting my tomato plant based on these symptoms and environmental conditions?",
+    "Could you diagnose what's going on with my rose bush? Lately, the blooms have been smaller than usual and the leaves are developing a powdery white coating, especially on the upper sides. Along with that, I've also seen some leaves turning yellow and falling off. The soil is fairly dry right now, and the ambient temperature this afternoon was approximately 28 degrees Celsius. According to my weather monitor, humidity outside was 55%. Given these observations, do you have any idea what disease might be impacting my roses?",
+    "I'm worried about my indoor fern—over the last week, I've noticed several fronds turning brown at the tips and the plant overall looks droopy and lifeless, even after I trimmed a few unhealthy-looking leaves. There is also a pattern of yellow spots forming before the leaves turn brown. The potting soil is wet at the moment since I watered it yesterday, and the room temperature is holding around 21°C. The humidifier keeps humidity at about 65% in the room. Can you help me identify what disease might be causing these issues with my fern? I want to know the cause so I can treat it properly.",
+    "Can you help me figure out what disease might be affecting my zucchini plants? I've seen that the leaves have odd, light-colored patches and some shriveling at the edges. Also, the stems are growing mushy and soft to the touch. It's been quite hot lately, and my garden thermometer indicated 30 degrees Celsius today. The relative humidity is about 60%, and despite the high temperature, the soil remains moist because I've been watering daily. What do you think the problem could be based on these symptoms and the environmental conditions?",
+    "My basil plant is not doing well, and I'm not sure what the problem is. The leaves are turning black at the edges and developing small holes; some are curling under, looking almost burnt. The plant has also stopped producing new healthy leaves, and growth overall seems stunted. The soil is wet because I may have overwatered it, the temperature in my kitchen where I keep it stays around 25 degrees Celsius, and humidity is close to 70%. What disease might be causing these symptoms in my basil plant, given these environmental conditions?"
+  ]
+}

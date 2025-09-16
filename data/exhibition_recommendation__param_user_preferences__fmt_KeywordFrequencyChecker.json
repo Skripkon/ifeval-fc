@@ -1,0 +1,46 @@
+{
+  "chosen_param": "user_preferences",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'poor' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "poor",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "exhibition_recommendation",
+    "description": "Provides recommendations for art exhibitions based on the user's preferences and location.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_preferences": {
+          "type": "string",
+          "description": "User's preferences regarding types of art or artists they are interested in. The value must include the word 'poor' exactly once, in any position and case-insensitive."
+        },
+        "location": {
+          "type": "string",
+          "description": "The current location or preferred city of the user for attending exhibitions."
+        },
+        "time_frame": {
+          "type": "string",
+          "description": "The time frame within which the user wants to visit exhibitions, e.g., 'next month', 'this weekend'."
+        }
+      },
+      "required": [
+        "user_preferences",
+        "location",
+        "time_frame"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm planning a cultural weekend in Berlin and I'm really interested in contemporary art, especially works by female artists and immersive installations. Could you suggest some art exhibitions that match these preferences in Berlin that I can attend during the next two weeks? I'd love recommendations for places where I can also experience interactive exhibits and meet other art enthusiasts.",
+    "I would love to spend some time exploring art exhibitions focusing on Impressionist painters, particularly Monet and his contemporaries. My upcoming trip will take me to Chicago, and I'll be there from the 10th to the 16th of August. Could you recommend the best exhibitions in Chicago during that period that cater to my interest in Impressionism and classical paintings?",
+    "Could you help me find upcoming art exhibitions in Kyoto? I'm specifically interested in traditional Japanese art forms, such as ukiyo-e prints and calligraphy, as well as any events featuring emerging Japanese artists. I'll be available to attend exhibitions any weekend in September, so please let me know which ones would fit my interests and schedule.",
+    "I'm moving to Toronto soon and want to explore the city's art scene, particularly modern sculpture, digital art, and avant-garde installations. Could you recommend some must-see exhibitions in Toronto that will be open over the next month? I’m especially interested in opportunities to see works by local Canadian artists and participate in any related workshops if available.",
+    "I'm trying to plan some cultural outings with my partner, and we're both fascinated by Renaissance art, with a focus on Italian masters like Leonardo da Vinci and Michelangelo. We'll be in Florence for the first week of May. Could you provide suggestions for exhibitions happening in Florence during that time that highlight Renaissance art and offer guided tours or educational sessions?"
+  ]
+}

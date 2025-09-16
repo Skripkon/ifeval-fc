@@ -1,0 +1,52 @@
+{
+  "chosen_param": "academic_text",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'day' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "day",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "extract_and_translate_key_terms",
+    "description": "Extracts key terms from a text and translates them into a specified language.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "academic_text": {
+          "type": "string",
+          "description": "Text from which key terms are to be extracted and translated. The text must contain the word 'day' exactly once, in any position and case."
+        },
+        "target_language": {
+          "type": "string",
+          "description": "The language code into which the key terms will be translated (e.g., 'es' for Spanish)."
+        },
+        "discipline": {
+          "type": "string",
+          "enum": [
+            "biology",
+            "mathematics",
+            "history",
+            "literature"
+          ],
+          "description": "Academic discipline related to the text to help improve term extraction."
+        }
+      },
+      "required": [
+        "academic_text",
+        "target_language",
+        "discipline"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm currently preparing for a presentation on genetics and came across the following paper discussing the role of epigenetics in gene expression: 'Epigenetic modifications such as DNA methylation and histone acetylation play a pivotal role in regulating gene expression without altering the nucleotide sequence. These modifications can be heritable and are influenced by environmental factors, leading to phenotypic diversity among individuals. Recent studies highlight the significance of non-coding RNAs in orchestrating chromatin remodeling, thereby affecting gene activity.' Could you please extract the main biological terms from this excerpt and translate them into French (language code 'fr')? I am focusing on biology for this request.",
+    "Can you help me with a mathematics-related task? I have the following passage from a textbook: 'The fundamental theorem of calculus links the concept of the derivative of a function with the concept of its integral. This theorem forms the foundation for many areas of mathematical analysis, including differential equations and numerical integration techniques. Understanding limits, continuity, and differentiability is essential to grasp the applications of this theorem.' I would like to have the key mathematical terms identified and translated into Italian (language code 'it'). The relevant discipline here is mathematics.",
+    "As part of my research on 19th-century European history, I am analyzing this excerpt: 'The Congress of Vienna in 1815 was instrumental in redrawing the continent’s political map, aiming to restore stability after the Napoleonic Wars. The principle of legitimacy and the balance of power doctrine were central themes, influencing diplomatic relations throughout the century.' Please extract the important historical terms from the above text and translate them into German (language code 'de'). The discipline is history.",
+    "For my comparative literature class, we are studying narrative techniques in modernist fiction. I have this section from Virginia Woolf’s work: 'Stream of consciousness is employed to depict the continuous flow of a character’s thoughts and feelings. This literary technique, along with unreliable narration and shifting perspectives, creates a multifaceted portrayal of interiority and self-awareness.' I want to get all the key literary terms from this text and have them translated into Portuguese (language code 'pt'). Please treat this as a literature assignment.",
+    "I'm preparing a bilingual biology glossary and need assistance. Here's a segment from an academic review: 'Photosynthesis is the cellular process by which plants, algae, and some bacteria convert light energy into chemical energy, producing glucose and oxygen as end products. Chlorophyll pigments absorb specific wavelengths, facilitating light-dependent reactions and the Calvin cycle. The efficiency of these physiological mechanisms is influenced by environmental factors including light intensity and carbon dioxide concentration.' Could you extract the essential biological terms from this passage and translate them into Japanese (language code 'ja')? The discipline is biology."
+  ]
+}

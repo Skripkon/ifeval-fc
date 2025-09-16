@@ -1,0 +1,51 @@
+{
+  "chosen_param": "current_location",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in single quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "single"
+    }
+  },
+  "fn_schema": {
+    "name": "locate_nearby_services",
+    "description": "Finds nearby services or amenities based on a user-defined search radius and service type.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "current_location": {
+          "type": "string",
+          "description": "User's current location in free-form text format, such as an address, landmark, or descriptive text. The argument value must be wrapped in single quotation marks, with no additional characters appearing outside the quotes."
+        },
+        "service_type": {
+          "type": "string",
+          "enum": [
+            "restaurant",
+            "hospital",
+            "gas_station",
+            "hotel",
+            "atm"
+          ],
+          "description": "Type of service or amenity the user is searching for."
+        },
+        "search_radius": {
+          "type": "integer",
+          "description": "Radius in meters within which to search for the specified service type."
+        }
+      },
+      "required": [
+        "current_location",
+        "service_type",
+        "search_radius"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm currently staying at 245 North Main Street, right next to the old city library, and I'm looking for places to eat within walking distance. Could you help me find any restaurants located within a 700-meter radius of my current location? Please provide options that are close by so I can decide where to go for lunch.",
+    "I'm driving on Interstate 95, just about to take the exit near Maple Grove Shopping Center in Springfield, and my fuel light just came on. Could you find me any gas stations within a 1500 meter radius of my current location so I can refuel before continuing my trip?",
+    "I'm currently at the Grand Central Terminal in New York City and am looking for the nearest hotels, preferably within a 500-meter radius, as I don't want to walk too far with my luggage. Can you locate any hotels around here so I can check availability and book a room?",
+    "I'm in the Central Park area, right at the Bethesda Fountain, and my friend just got injured. I urgently need information about hospitals that are within 1000 meters of my location. Could you please help me find nearby hospitals within that distance so we can get immediate medical attention?",
+    "I'm standing at the corner of 5th Avenue and Broadway, near the famous Flatiron Building in Manhattan. I need some cash urgently, so can you locate any ATMs that are within a 300-meter radius of my current position? The closer, the better since I need it quickly."
+  ]
+}

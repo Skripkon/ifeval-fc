@@ -1,0 +1,50 @@
+{
+  "chosen_param": "extracted_complaint",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 6 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "process_customer_complaint",
+    "description": "Processes a customer complaint to provide an appropriate response.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "extracted_complaint": {
+          "type": "string",
+          "description": "Detailed description of the customer's complaint or issue. The argument value must contain exactly 6 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "customer_id": {
+          "type": "string",
+          "description": "Unique identifier of the customer submitting the complaint."
+        },
+        "priority_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "Priority level of the complaint indicating urgency."
+        }
+      },
+      "required": [
+        "extracted_complaint",
+        "customer_id",
+        "priority_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hello, my name is Emily Stevens, and my customer ID is CUST20230987. I would like to file a high-priority complaint regarding an issue I've been having with my recent laptop order. After waiting for two weeks for the device to arrive, I received a completely different model than the one I ordered, and it was missing the accessories that were supposed to be included. Additionally, when I reached out to customer support last week, my emails were not answered promptly, and I feel that's unacceptable given the high cost and urgency of my situation. Please treat this with urgency and help resolve it.",
+    "I am writing on behalf of customer number 7814562, James Rodriguez. We are extremely dissatisfied with the service we received on our last invoice. The complaint is that despite repeated assurances from your team, our order shipped two weeks late without any updates, causing severe disruption to our operations. Furthermore, the package was damaged upon delivery, and several items were missing. We expect immediate action and compensation for these repeated failures. Due to the consequences, kindly consider this complaint as high priority.",
+    "This is customer 99881177. I want to express my frustration with a recurring problem: for the past three months, I have been charged twice for my phone subscription, and every time I call to resolve it, I am told the issue will be fixed, but it never is. My bank account reflects these double charges, and it is causing financial strain as well as inconvenience. I consider this a medium priority because the payments are manageable but it needs to be resolved soon. Please look into this complaint and provide a permanent solution.",
+    "My customer ID is CLIENT-50123, and I would like to raise a low-priority complaint about the delivery process for my recent book order. The delivery person left the package at the wrong building, and I only found it after my neighbor contacted me. While nothing was damaged and I did eventually get my books, this is not the first time this has happened. I wanted to let you know so your team can improve delivery accuracy, but it’s not urgent as I have received my order safely.",
+    "Good afternoon, my name is Linda Park and my customer ID is A34422. I am submitting a complaint that I would categorize as medium priority. I recently visited your pharmacy to fill a prescription, and not only was my medication out of stock unexpectedly, but I was also not notified until I arrived, despite signing up for text alerts. This caused an unnecessary trip and delay in my treatment. I expect better communication from your staff regarding inventory issues. Please review and address this concern appropriately."
+  ]
+}

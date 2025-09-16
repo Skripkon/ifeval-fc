@@ -1,0 +1,51 @@
+{
+  "chosen_param": "style",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn156__0__generate_architecture_plan",
+    "description": "Generate a custom architecture plan for a building based on given parameters.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "type": "string",
+          "description": "The architecture style, e.g. Gothic, Roman. The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval()."
+        },
+        "building_type": {
+          "type": "string",
+          "description": "The type of the building e.g. Church, Residential."
+        },
+        "extra_features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Additional features to be added in the design.",
+            "enum": [
+              "Pool",
+              "Garage",
+              "Garden",
+              "Elevator"
+            ]
+          }
+        }
+      },
+      "required": [
+        "style",
+        "building_type"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there, I'm in the beginning phases of planning an exciting new project and need a bit of assistance. I'm looking to have an architecture plan generated for a building that will serve as a residential property. In terms of style, I am very much drawn to the timeless elegance and intricate detailing of the Gothic style; I think it will give the place a unique character and charm that's hard to find in modern constructions. Additionally, I have some extra features in mind. It would be fantastic to incorporate a pool for relaxation and leisure, and a garden that adds a touch of natural beauty. These features are really important to my vision for the property. Could you help me make this a reality?",
+    "I'm working on a new building project and I need a custom architecture plan, but I want to make sure that the design really stands out and has a rich historical flair. So, the style I'm most interested in is Roman, known for its classic and majestic elements. This project is for a public structure, specifically a grand church that can accommodate a large congregation. I've got some ideas for additional features that could enhance the site's functionality and user experience. I think including an elevator would greatly improve access for everyone, especially those with mobility challenges, and a garage to provide adequate parking space for staff and visitors. Could you create a plan that caters to these requirements?",
+    "Greetings! I am embarking on an ambitious project to build a new type of residential complex, and I need an exceptional architecture plan that leans into a bold and recognizable style. I've always admired the grand and powerful look of Roman architecture, so I'd like the complex to reflect this style. The building will be primarily residential, but I'd like it to include some luxurious conveniences. Specifically, a private swimming pool for the residents would be a perfect touch for relaxation. Additionally, a beautifully landscaped garden where they can enjoy nature would be amazing. Can you assist me in crafting an architecture plan that incorporates these elements?",
+    "Good day! I hope you can assist me with a fascinating architectural project I'm planning. I intend to create an innovative space that harmonizes with historical design principles. I'm envisioning a commercial building that features the exquisite and rich characteristics of the Gothic architectural style, which I believe will bring a sense of grandeur and historic gravitas to the environment. The building will be primarily an office complex, and I hope to elevate its functionality and appeal with some modern enhancements. I'm thinking of including a garage for convenient parking, and a lush garden area that offers a tranquil escape for employees during breaks. How can we make this vision come to life through an architecture plan?",
+    "Hello! I'm in the conceptual phase of designing a new residential building and am eager to incorporate a design style that has a bit of historical flavor combined with modern utility. I find the Gothic style incredibly appealing because of its dramatic and ornate features. The building will serve a residential purpose and I'm intrigued by the idea of adding some extra features that would enhance the lifestyle of its occupants. I'm particularly interested in a garden where residents can unwind in a natural setting, and a state-of-the-art garage facility for vehicle safety and convenience. With these ideas in mind, I'm seeking a detailed architecture plan that brings my vision to fruition. Could you provide expert guidance on this?"
+  ]
+}

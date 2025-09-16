@@ -1,0 +1,50 @@
+{
+  "chosen_param": "start_location",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 6 consecutive spaces between every pair of words. Only 6 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "fn188__0__get_traffic_info",
+    "description": "Retrieve current traffic conditions for a specified route.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "start_location": {
+          "type": "string",
+          "description": "The starting point of the route. The argument value must use exactly 6 consecutive spaces between every pair of words; only 6 spaces in a row are allowed in the string."
+        },
+        "end_location": {
+          "type": "string",
+          "description": "The destination of the route."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Preferred method of transportation, default to 'driving'.",
+          "enum": [
+            "driving",
+            "walking",
+            "bicycling",
+            "transit"
+          ]
+        }
+      },
+      "required": [
+        "start_location",
+        "end_location"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hi there, I'm planning to meet a friend this evening and want to make sure I pick the fastest route considering current traffic. Could you please check the latest traffic conditions for a trip starting at 2901 Main Street, Springfield and ending at 1520 Riverside Avenue, Centerville? Also, if you could include any relevant details about delays or accidents on the way, that would be really helpful because I want to avoid long traffic jams if possible.",
+    "I'm thinking about cycling to my office today for a change and would like to know what the traffic is like along my usual route. My starting point is 480 Greenhill Road, and I'm heading to 950 Market Plaza, both in Oakwood City. Could you provide information on the current traffic situation for bicycling between these two locations so I can decide if it's a good idea to ride my bike or not?",
+    "Could you please give me a detailed update of the current traffic conditions for a trip I'm planning later today? I need information on the route from 142 West Elm Street, Brooksville to 3721 Sunnybrook Lane, Lakeside City. I will be walking this distance, so I'm interested in anything that might affect pedestrians, such as road closures or construction detours along the way. Thanks so much for your help!",
+    "As someone who relies on public transportation for my daily commute, I need to know how the traffic is looking right now for my journey from 67 North Park Avenue, Willowbrook to 7890 Crescent Drive, Midtown. I typically use transit for this route, so if you could provide the latest information about delays, congestion, or any incidents on the route for transit, I’d appreciate it. This will help me plan when to leave.",
+    "Can you check and tell me what the current traffic situation is from the entrance of Grand Central Station in New York City to 20 Pine Street, in the Financial District? I’ll be driving today, and I’d really appreciate a summary of any congested areas, accidents, or anything that could impact my trip so that I can adjust my departure time and possibly choose an alternate route if necessary."
+  ]
+}

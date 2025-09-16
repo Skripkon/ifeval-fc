@@ -1,0 +1,48 @@
+{
+  "chosen_param": "url",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn133__0__requests_get",
+    "description": "Sends a GET request to a specified URL to retrieve recommendation details for an advisory.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL endpoint to send the GET request to. This should include the path to the recommendations resource and be in the format 'https://{hostname}/path'. The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>>; everything except for the title is allowed."
+        },
+        "params": {
+          "type": "object",
+          "properties": {
+            "advisoryId": {
+              "type": "string",
+              "description": "Unique identifier for the advisory for which recommendations are being requested."
+            },
+            "ip": {
+              "type": "string",
+              "description": "The IP address or hostname of the API server. This will be used to construct the URL if it is not provided explicitly in the 'url' parameter."
+            }
+          },
+          "description": "Query parameters to be sent with the GET request. Include 'advisoryId' for the specific advisory's recommendations and 'ip' for the API server."
+        }
+      },
+      "required": [
+        "url",
+        "params"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm working on auditing our security advisories and need to review the recommendation details for advisory number ADV-2314. Could you please retrieve the latest recommendations by sending a GET request to the endpoint at https://api.cybersec-platform.com/recommendations/info? Make sure to use advisoryId ADV-2314 and connect via the server with IP address 192.0.2.15. I need a full report on the suggestions and remediation steps associated with this specific advisory so we can proceed with our patching process today.",
+    "For our organization's upcoming compliance check, I'd like to obtain all the recommendation details related to advisory ID SEC-00987. Please send a GET request to the following URL: https://security.example.org/advisories/recommendation-details. Include the parameters advisoryId with value SEC-00987 and use the API server at hostname security-api.example.org. I want to review the recommendations thoroughly so we can determine what actions are necessary to address this advisory before our next audit deadline next month.",
+    "Can you please fetch the comprehensive list of recommendations associated with advisoryId CVE2024-0780 by making a GET request to https://adviser.mycorp.com/v1/recommendations? Be sure to provide the advisory ID CVE2024-0780 in the parameters and use the IP address 203.0.113.225 as the server to connect to. I need all the recommendations, best practices, and preventive steps mentioned in the advisory so I can share them with my team for immediate implementation.",
+    "I'd like to get all the detailed recommendation notes for the advisory with the identifier ALERT-556123. Please access the API endpoint located at https://opsalerts.net/api/v3/recommendations/details and pass along the advisoryId ALERT-556123 in the request parameters as well as the API server IP 198.51.100.8. We are planning our incident response and need to fully understand the recommendations provided in connection with this particular advisory before making any decisions.",
+    "Could you help me by pulling the recommendation details for advisory ID PATCH-1122? The information should be located at the following endpoint: https://patchmgmt.services.io/recommendations/lookup. Please include advisoryId as PATCH-1122 in the parameters, and use patches.api.internal as the hostname for the API server. It's crucial that I review all remediation steps and strategic advice linked to this advisory to ensure our systems remain secure and compliant."
+  ]
+}

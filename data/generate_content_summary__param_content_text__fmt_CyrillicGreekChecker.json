@@ -1,0 +1,44 @@
+{
+  "chosen_param": "content_text",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Greek letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "greek"
+    }
+  },
+  "fn_schema": {
+    "name": "generate_content_summary",
+    "description": "Generates a concise summary of a given text content, highlighting key points.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "content_text": {
+          "type": "string",
+          "description": "The full text content that needs to be summarized. The argument value must be written entirely in Greek letters, with no letters from other scripts allowed."
+        },
+        "summary_length": {
+          "type": "integer",
+          "description": "The desired length of the generated summary, in number of sentences."
+        },
+        "highlight_keywords": {
+          "type": "boolean",
+          "description": "Whether to highlight key terms and phrases in the summary."
+        }
+      },
+      "required": [
+        "content_text",
+        "summary_length",
+        "highlight_keywords"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've recently read this comprehensive article about climate change and its global impact, and I need a summary to better understand the main ideas. The text is: \"Climate change refers to long-term shifts in temperatures and weather patterns, primarily caused by human activities, especially the burning of fossil fuels. These changes have resulted in rising sea levels, more frequent extreme weather events, changes in precipitation patterns, and threats to biodiversity worldwide. Scientists warn that urgent action is needed to reduce greenhouse gas emissions and transition to renewable energy sources. Governments, organizations, and individuals all have a role to play in mitigating these effects and adapting to new environmental realities.\" Can you summarize this article into just 3 sentences, and please make sure that important keywords and phrases stand out?",
+    "I have this passage that discusses the evolution of artificial intelligence: \"The rapid advancement of artificial intelligence over the past decade has led to numerous breakthroughs in fields like natural language processing, computer vision, and robotics. AI technologies are increasingly being integrated into everyday life, from smart assistants to autonomous vehicles. While AI offers tremendous potential for societal benefits, it also raises ethical and privacy concerns that must be addressed. Regulatory frameworks and responsible development practices are essential for maximizing the positive impact of AI while minimizing risks.\" I'd like a summary that's 2 sentences long. Also, can you highlight the key terms for me in the summary?",
+    "Here's an excerpt from a business report that I need to review: \"Company XYZ experienced a 20% increase in revenue in the first quarter of 2023, driven by strong sales in the technology sector. International expansion contributed to growth, especially in emerging markets across Asia and South America. Despite increased operating costs, net profits remained steady due to cost-cutting measures and efficient supply chain management. Looking ahead, the company plans to invest in R&D to maintain its competitive edge in the market.\" Please provide a summary in 4 sentences and emphasize any significant keywords or important concepts in the summary.",
+    "I have to write a brief summary for the following book introduction: \"In this groundbreaking work, Dr. Jane Smith explores the psychological effects of social media on young adults. The book delves into issues such as self-esteem, online peer pressure, and digital addiction, using real-life case studies and the latest research to highlight both positive and negative outcomes. Smith also offers practical advice for healthy technology use and strategies for parents and educators.\" Can you give me a 3-sentence summary, and make sure you highlight the main keywords and phrases when you generate the summary?",
+    "I'm preparing for a debate and, for reference, I need a concise summary of this scientific article: \"Recent studies on renewable energy have shown significant advancements in solar and wind power efficiency. Researchers have developed new materials that increase energy conversion rates and lower production costs. Governments are investing in large-scale infrastructure projects to facilitate the transition to clean energy sources. These efforts are expected to reduce carbon emissions globally and support sustainable economic growth.\" Please summarize the main points in 2 sentences and highlight the essential terms and phrases in the summary."
+  ]
+}

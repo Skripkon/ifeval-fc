@@ -1,0 +1,49 @@
+{
+  "chosen_param": "text_content",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 7 consecutive spaces between every pair of words. Only 7 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "extract_key_information",
+    "description": "Extracts key information and facts from a given text to provide an organized summary.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text_content": {
+          "type": "string",
+          "description": "The text content from which key information needs to be extracted. The argument value must use exactly 7 consecutive spaces between every pair of words, and only 7 spaces in a row are allowed in the string."
+        },
+        "information_type": {
+          "type": "string",
+          "enum": [
+            "facts",
+            "figures",
+            "names"
+          ],
+          "description": "The type of information to extract from the text."
+        },
+        "include_references": {
+          "type": "boolean",
+          "description": "Whether to include references or sources of the extracted information. Defaults to False."
+        }
+      },
+      "required": [
+        "text_content",
+        "information_type",
+        "include_references"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently read an article titled \"The Rise of Renewable Energy in Europe,\" and I would like some help extracting the most important facts from it. Here is the article text: \"The European Union has pledged to reduce greenhouse gas emissions by 55% by 2030, according to a 2020 agreement by member states. Germany, France, and Spain have all increased solar investments since 2019, with Germany producing over 40 gigawatts of solar power in 2022. The International Energy Agency reported that Europe saw the fastest growth in wind energy installations worldwide last year. New policies encourage electric vehicle use and energy efficiency in homes. Investment by private firms has reached 50 billion Euros annually. Economists predict renewable energy jobs in the EU could reach 2 million by 2025.\" I would like you to extract the key factual information, and please include any references or sources mentioned.",
+    "Could you help me by going through the following report and extracting the main figures for me? The report says: \"In 2021, the company's revenue increased by 25% compared to 2020, reaching a total of $10.5 billion. Their workforce grew from 8,000 to 10,500 employees in the same period, and over 150 new product lines were introduced. According to market analysis by FinStat Solutions, the profit margin was 18%. Sales in Europe contributed 60%, while North America contributed 30% of total revenue. The company invested $500 million in research and development. Annual shareholder dividends rose to $2.25 per share for the first time. These statistics are based on the company's annual financial statements and verified by KPMG.\" Please include all references with the figures you extract.",
+    "I need your assistance with summarizing a scientific paper for me. Here is the full text: \"The study conducted by Dr. Elena Torres and her colleagues at Stanford University in 2022 analyzed the migration patterns of monarch butterflies. The researchers tagged 2,500 butterflies, tracking their 3,000-mile journey from Canada to central Mexico. The research, funded by the National Science Foundation, found that 87% of tagged butterflies survived the migration, a significant increase from previous years. Collaborators included experts from Cornell University and the University of Toronto. The full paper was published in the journal Nature Ecology. Major findings suggest climate change has positively influenced migration success rates, and Dr. Torres was awarded the Environmental Scientist of the Year prize.\" Please extract all the names mentioned and don't forget to include the references or sources provided in the text.",
+    "I've been reading this long and complex news story and want to distill it to just the key facts. Here's the news article: \"On June 10, 2023, a significant cybersecurity breach occurred at TechCore Solutions. Hackers infiltrated the company's servers and accessed personal data from over 500,000 customers, including names, email addresses, and purchase histories. The breach was discovered by a third-party security firm, CyberCheck Inc., who immediately notified TechCore and law enforcement. The company released an official statement on June 12, confirming the breach and promising compensation for affected users. According to a report by CyberCheck Inc., the breach exploited vulnerabilities in outdated server software. Investigations are ongoing, and more information will be released as it becomes available.\" Please extract just the facts and make sure to include any references or sources that are mentioned in the article.",
+    "I would appreciate your help in pulling out important figures from this speech transcript I have. Here is the speech: \"Esteemed guests, in 2022 our city saw record growth. Our annual budget increased to $2.3 billion, up 15% from the prior year. We built 2,000 new affordable housing units, lowered unemployment to 3.6%, and invested $120 million in green infrastructure projects. Over 25,000 new jobs were created across diverse sectors. Our crime rate fell by 8%—the lowest in a decade, as reported by the City Police Department. These achievements would not be possible without the tireless work of our civil servants and the support of voters, as highlighted by the local newspaper, City Times.\" Please extract all the figures from the speech and include any references mentioned."
+  ]
+}

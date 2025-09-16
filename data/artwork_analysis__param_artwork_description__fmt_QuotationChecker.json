@@ -1,0 +1,44 @@
+{
+  "chosen_param": "artwork_description",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in single quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "single"
+    }
+  },
+  "fn_schema": {
+    "name": "artwork_analysis",
+    "description": "Analyzes a piece of artwork to provide insights on artistic style, technique, and historical context.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "artwork_description": {
+          "type": "string",
+          "description": "A detailed description of the artwork including visual elements, colors, and composition. The argument value must be wrapped in single quotation marks, and no additional characters should appear outside the quotes."
+        },
+        "artist_name": {
+          "type": "string",
+          "description": "The name of the artist who created the artwork."
+        },
+        "year_created": {
+          "type": "integer",
+          "description": "The year in which the artwork was created."
+        }
+      },
+      "required": [
+        "artwork_description",
+        "artist_name",
+        "year_created"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm really intrigued by this painting I saw at the museum yesterday. The artwork shows a serene landscape with rolling green hills under a vibrant, swirling sky filled with various shades of blue, purple, and rose gold. There's a lone figure standing on one of the hills, dressed in flowing robes, looking contemplatively at the horizon. The brushstrokes are expressive, almost impressionistic, and the composition leads the eye from the foreground to the dramatic sky. The painting is by Alice Thornton and was created in 1893. Could you analyze this artwork and provide some insights into its style, the techniques employed, and its possible historical context?",
+    "I recently came across an artwork by Leonardo da Vinci from the year 1503, and I'm fascinated by its composition. The piece features a woman with an enigmatic smile sitting in a three-quarter pose, her hands gracefully folded in her lap. The background includes winding roads and a misty landscape with distant mountains, painted with very soft edges and subtle transitions between colors. The palette is dominated by earthy browns and muted greens, with a delicate use of light to highlight the subject's face. Could you please give me a deep analysis of this painting, exploring the artistic techniques, style, and the historical factors that may have influenced it?",
+    "I'd like your help in understanding the artistry behind a painting made by Maria Gonzalez in 2008. The work is a large, abstract canvas filled with geometric shapes—primarily triangles and rectangles—in bold primary colors like red, blue, and yellow. The shapes overlap and intersect, creating a sense of movement and complexity. The background is a stark white, allowing the colored shapes to really stand out. Thick black lines separate each shape, adding sharp definition. Could you provide an in-depth analysis explaining the artistic style, the possible technique she used to achieve these effects, and any historical or cultural context relevant to this 2008 painting?",
+    "I'm researching a sculpture created by Michael Chen in 1985. The sculpture is a life-size bronze figure of a man reaching upwards, with intricate details emphasizing muscle tension and dynamic posture. The texture is finely rendered, even down to the veins on the hands, and the patina gives it a warm, golden-brown hue. The base is rough and unfinished, making it look as if the figure is emerging from the raw material. The overall impression is both realistic and dramatic, conveying a sense of aspiration or yearning. Could you please analyze this piece for me, focusing on the techniques, stylistic choices, and historical context for Michael Chen's 1985 creation?",
+    "I recently viewed a watercolor painting by Sarah Lee that dates back to 1972. The scene depicts an urban park in the midst of autumn, with trees rendered in delicate washes of orange, red, and yellow. Small figures stroll along winding paths, while a pond reflects the subtle gray of an overcast sky. There's a dreamy, almost impressionistic quality to the work, with soft edges, gentle color transitions, and a focus on capturing the light and mood rather than precise details. I'm curious to know more about the painting's artistic style, techniques used, and what kind of art trends or historical events might have influenced Sarah Lee in 1972. Could you provide a thorough analysis?"
+  ]
+}

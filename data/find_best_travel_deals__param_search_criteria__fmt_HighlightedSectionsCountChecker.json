@@ -1,0 +1,45 @@
+{
+  "chosen_param": "search_criteria",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain at most 1 section highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "at most",
+      "N": 1
+    }
+  },
+  "fn_schema": {
+    "name": "find_best_travel_deals",
+    "description": "Finds the best travel deals available for flights and accommodations at a specified destination.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "search_criteria": {
+          "type": "string",
+          "description": "Criteria specified by the user to find the best travel deals, including budget constraints and preferences. The argument value must contain at most one section highlighted using markdown syntax (such as *highlighted section* or **highlighted section**), and each highlighted section must not be empty."
+        },
+        "destination": {
+          "type": "string",
+          "description": "The destination for which travel deals are being searched."
+        },
+        "departure_date": {
+          "type": "string",
+          "description": "The date of departure for the travel in YYYY-MM-DD format."
+        }
+      },
+      "required": [
+        "search_criteria",
+        "destination",
+        "departure_date"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm planning a trip to Rome and I want to find the absolute best travel deals available for both flights and hotels. My main criteria are that I would like a round-trip flight departing on 2024-09-15, and I'm hoping to keep the total cost under $1,200. I prefer direct flights if possible, and for accommodations, I would like to stay in a hotel with at least 4 stars and breakfast included. Can you help me find the most attractive options based on these preferences for my Rome adventure?",
+    "I'm looking for help finding the top travel deals for a vacation to Bangkok. I want to leave on 2024-11-03, and my budget for the entire trip (flight and accommodation) is $2,000. I don't mind a stopover flight as long as the layover isn't more than 4 hours. I'd also love it if the accommodation is near the city center and offers free Wi-Fi. Could you search for any packages or deals that fit all these criteria for my upcoming trip?",
+    "Could you assist me in finding the best deals for travel to New York City? I need to depart on 2024-07-10, and my search parameters include flights that leave in the evening, ideally after 5 PM, and I'd like to stay at a hotel rated at least 3 stars with access to a gym. My maximum total budget is $1,500. I'm not loyal to any specific airline or hotel, but I do care about good reviews and free cancellation. Please suggest the best options fulfilling my requirements.",
+    "I'm considering a vacation in Sydney and want to find the top-value offers available for both flights and hotels. I'm planning to travel on 2024-12-20. My search criteria are as follows: the total cost should not exceed $2,500, I require a window seat on the flight, and the hotel should have a swimming pool and be child-friendly, since I'll be traveling with my family. Please help me discover the best deals that meet all these needs for my Sydney trip.",
+    "Can you help me discover the best possible travel deals for Tokyo? I plan to depart from my location on 2024-10-05. For my search preferences, I want the cheapest flights possible, even if they're basic economy, and I'm happy to stay at hostels or budget hotels as long as they're within 2 kilometers of major train stations. My budget for both airfare and accommodation should be no more than $900. Please find options that best align with these details."
+  ]
+}

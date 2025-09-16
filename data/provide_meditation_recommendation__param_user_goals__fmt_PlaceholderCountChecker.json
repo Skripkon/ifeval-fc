@@ -1,0 +1,50 @@
+{
+  "chosen_param": "user_goals",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 3 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 3
+    }
+  },
+  "fn_schema": {
+    "name": "provide_meditation_recommendation",
+    "description": "Offers personalized meditation recommendations based on user preferences, goals, and experience level.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_goals": {
+          "type": "string",
+          "description": "Description of the user's meditation goals such as stress reduction, improved focus, or better sleep. The argument value must contain exactly 3 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "experience_level": {
+          "type": "string",
+          "enum": [
+            "beginner",
+            "intermediate",
+            "advanced"
+          ],
+          "description": "The user's experience level in meditation practice."
+        },
+        "preferred_duration": {
+          "type": "integer",
+          "description": "Preferred duration of the meditation session in minutes."
+        }
+      },
+      "required": [
+        "user_goals",
+        "experience_level",
+        "preferred_duration"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm looking to improve my focus and concentration, as I often find myself easily distracted at work and unable to stay on task for long periods of time. I've been practicing meditation for a couple of years now, so I would say I fall into the intermediate level in terms of experience. Ideally, I would like recommendations for meditation sessions that last about 20 minutes. Could you suggest some practices that would suit my goals and capabilities?",
+    "I've started meditating primarily to help with stress management because my daily routine has become overwhelming, and I struggle to relax after work. I am a beginner when it comes to meditation, as I have only tried a few guided sessions before. My preferred meditation session duration is roughly 10 minutes, since I don’t have much free time. Can you provide me with some personalized recommendations tailored to these preferences?",
+    "I want to find meditation techniques that can specifically aid me in achieving better and more restful sleep, as I've been having trouble falling and staying asleep at night. My level of experience in meditation is advanced; I've been practicing regularly for over five years and have tried several different styles. I usually like my meditation sessions to last around 30 minutes. What would you recommend for someone like me?",
+    "Could you recommend a meditation routine for me? My main goal is to develop greater emotional resilience and handle negative emotions more effectively in my daily interactions. I consider myself an intermediate meditator—I have been practicing consistently for about one year. I also prefer meditation sessions that are about 15 minutes long, as that fits well into my daily schedule.",
+    "I'm hoping to use meditation as a way to support my creativity, since I've read that mindfulness can help with generating new ideas and staying inspired in my work as an artist. I am a beginner, meaning I haven't done much meditation before, and I'm looking to start with short sessions, say around 5 minutes each. What personalized meditation practices would you suggest with these objectives and experience level in mind?"
+  ]
+}

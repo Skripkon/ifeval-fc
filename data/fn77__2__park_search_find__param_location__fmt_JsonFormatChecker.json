@@ -1,0 +1,41 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn77__2__park_search_find",
+    "description": "Search for parks based on facilities and location.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "facilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "List of facilities in the park."
+          }
+        },
+        "location": {
+          "type": "string",
+          "description": "Location or city where the park is. The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable."
+        }
+      },
+      "required": [
+        "facilities",
+        "location"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there! I'm planning a weekend outing with my family and we're looking for a park in the vicinity of San Francisco where we can have a great picnic. It's important for us that the park has facilities like picnic tables or benches, as well as restroom facilities because we'll have kids with us. A playground would be a huge bonus, but not strictly necessary. We're hoping to find a place that's lush and green, yet has these couple of conveniences to make our day out enjoyable. Could you help me find just the right park that meets these requirements, preferably within or close to the San Francisco area?",
+    "Good day! I've moved to New York City recently and am trying to explore some nice parks in the area. I am particularly interested in parks that have a running track since I'm an avid runner and I'd like to keep up with my training routine. Having locker rooms nearby would be quite handy as well. I would also appreciate it if the park had a nice scenic view which could make my runs more enjoyable. Could you suggest a park or parks around New York City that fit this description and have the facilities I'm looking for?",
+    "Hello! My friends and I are planning an evening hangout in Los Angeles and we'd love to find a park where we can have some fun activities like outdoor sports. We're interested in parks with wide open spaces that can accommodate soccer or frisbee games, but it'd also be fantastic if there are biking trails around because some of us are enthusiastic cyclists. Being able to grab a nearby coffee or snack would be ideal after these activities. Can you help us identify some parks in the Los Angeles area that have these kinds of facilities?",
+    "Hi there! I'm on the lookout for a pet-friendly park in Chicago where I can take my dog for a walk. It's essential that the park has open spaces where dogs are allowed, preferably off-leash to give my dog a chance to roam freely. Additionally, facilities like dog waste stations would be a plus, as would water fountains for both dogs and humans. We usually enjoy parks that are not just pet-friendly but also have walking trails where we can have a peaceful stroll. Could you assist with finding parks in Chicago that cater to these needs?",
+    "Hey! I'm a resident of Miami, and with the hot weather, I'm really inclined towards finding a park that has a water feature or splash pads where kids can cool off. I'm also hoping the park has picnic areas with plenty of shaded spots because when the sun gets intense, it helps to have some place cool to sit and relax. Another facility that would be helpful is a nearby café or vendor for drinks and snacks. Do you think you can guide me to some parks in Miami that meet these descriptions and have the facilities I'm looking for?"
+  ]
+}

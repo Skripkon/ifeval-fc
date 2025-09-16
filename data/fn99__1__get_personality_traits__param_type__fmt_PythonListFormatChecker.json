@@ -1,0 +1,44 @@
+{
+  "chosen_param": "type",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn99__1__get_personality_traits",
+    "description": "Retrieve the personality traits for a specific personality type, including their strengths and weaknesses.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The personality type. The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval()."
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "List of traits to be retrieved, default is ['strengths', 'weaknesses'].",
+            "enum": [
+              "strengths",
+              "weaknesses"
+            ]
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I've been reading about different personality types and I'm specifically interested in understanding the strengths and weaknesses of someone who is classified under the INFJ personality type. They seem to possess unique characteristics that I would like to learn more about, including their approach to problem-solving, emotional intelligence, and interpersonal skills. How do these typically manifest in their daily interactions and what are some potential challenges they might face due to their personality traits? Could you provide me with an in-depth analysis of these aspects for the INFJ individual?",
+    "I was having this fascinating conversation with a friend who identifies as an ENTP personality type and it got me curious about what really makes them tick. What are some of the core personality traits that define an ENTP, particularly focusing on their strengths and weaknesses? I'm interested in how these characteristics influence their career choices, relationships, and social interactions, as well as any potential pitfalls they might encounter. Could you give me a detailed overview of this personality type's main attributes?",
+    "In my psychology class, we're currently studying different personality frameworks and I'd love to gain a deeper insight into the personality type known as INTJ. Specifically, I'm interested in learning about their defining characteristics, especially their key strengths and weaknesses. I would like to know how these traits typically influence their behavior in professional settings, as well as in personal relationships. How do these traits contribute to their overall worldview and approach to life? Could you provide me with detailed information on the INTJ's personality traits?",
+    "I'm doing some research on personality types for a project and I need to gather detailed information on what makes an ENFJ personality type unique. In particular, I'm looking to understand the strengths and weaknesses associated with this type. How do these traits play a role in their leadership style, communication abilities, and conflict resolution skills? Additionally, what challenges might they face because of these traits? I'm aiming to compile comprehensive profiles for each personality type, so could you offer an exhaustive overview covering these aspects for the ENFJ?",
+    "My partner recently took a personality test and discovered they have an ISFP personality type. I'm curious about what specific strengths and weaknesses are associated with this type, as it might help me better understand their behavior and preferences. What are the typical characteristics that define ISFPs, especially in terms of their emotional responses, creativity, and value systems? Also, how might these traits impact their relationships and personal growth? Could you provide me with a detailed breakdown of the ISFP personality traits, including any potential challenges and advantages they experience?"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "chosen_param": "claim_text",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "verify_claim",
+    "description": "Verifies the authenticity of a claim made in a given text, providing a verification result and the source used for verification.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "claim_text": {
+          "type": "string",
+          "description": "The text containing the claim that needs to be verified. The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "verification_source": {
+          "type": "string",
+          "description": "The primary source or methodology used to verify the claim."
+        },
+        "confidence_level": {
+          "type": "integer",
+          "description": "A percentage representing the confidence level in the verification result.",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "claim_text",
+        "verification_source",
+        "confidence_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "I came across this claim in an article I was reading and I want to make sure it's authentic before I share it with my friends. The statement says: \"Drinking two cups of green tea every day significantly reduces the risk of heart disease by 40% in adults over 50.\" According to the article, this information was based on a study published in the Journal of Medical Nutrition. I would like you to verify the truthfulness of this claim using the Journal of Medical Nutrition as the main source, and let me know your confidence in the verification result. On a scale of 0 to 100, I would like you to operate with a confidence level of 85%.",
+    "Can you please fact-check the following claim for me: \"The Great Wall of China is the only man-made structure visible from space.\" I heard this statement on a science podcast and they said NASA had confirmed it, but I want to be sure that's accurate. For your verification, please use official NASA documentation as your primary source or methodology. Also, since this is often debated, I'd appreciate it if you could provide your assessment with a confidence level of 95% in the result.",
+    "I read somewhere online that \"The COVID-19 vaccine alters your DNA and can cause permanent genetic changes.\" This claim was supposedly backed by a report from the Centers for Disease Control and Prevention (CDC). I am very concerned about the accuracy of such health-related information. Could you check this claim for me and verify it using the CDC's official guidelines or publications as your primary method? Please provide your verification result with a confidence level of 99%.",
+    "I heard this statement at a recent seminar: \"Switching to a vegetarian diet can save up to 50% on yearly food expenses compared to a typical omnivorous diet.\" The speaker said this was based on a cost analysis by the U.S. Department of Agriculture. Before making any dietary changes, I'd really like to know if this claim is authentic. Can you verify this using data from the U.S. Department of Agriculture as the main source and let me know how confident you are in your result, using a confidence level of 90%?",
+    "A friend told me that \"Lightning never strikes the same place twice\" and said this was confirmed by a documentary aired on National Geographic. I'm not sure if that statement is true, so could you please check it for me and use National Geographic's documentary as your verification source? I would appreciate it if you could provide your finding with a confidence level of 80%."
+  ]
+}

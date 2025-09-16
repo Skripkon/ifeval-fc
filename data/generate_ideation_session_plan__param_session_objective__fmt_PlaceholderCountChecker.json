@@ -1,0 +1,45 @@
+{
+  "chosen_param": "session_objective",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "generate_ideation_session_plan",
+    "description": "Generates a detailed plan for a brainstorming or ideation session based on provided criteria.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "session_objective": {
+          "type": "string",
+          "description": "The main goal or objective of the brainstorming session. The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "participant_count": {
+          "type": "integer",
+          "description": "The number of participants expected in the session."
+        },
+        "tools_needed": {
+          "type": "string",
+          "description": "List of tools or resources required for the session."
+        }
+      },
+      "required": [
+        "session_objective",
+        "participant_count",
+        "tools_needed"
+      ]
+    }
+  },
+  "user_queries": [
+    "I am planning to host a brainstorming session next week for my marketing team, and our main goal is to come up with creative strategies to increase our brand's social media engagement over the next quarter. We expect about 12 participants, including our content creators, social media managers, and a couple of designers. For this session, we'll need whiteboards, sticky notes, a projector, markers, and laptops for everyone, as well as access to online collaboration tools like Miro or Google Jamboard. Could you provide me with a comprehensive step-by-step plan for structuring and conducting this ideation session?",
+    "Our product development department is organizing an ideation workshop where the primary objective is to generate innovative features for our next version of the mobile app focused on health and wellness tracking. There will be 8 participants attending, including software developers, UI/UX designers, and product managers. The tools and resources we'll need for this session are flip charts, colored pens, Post-It notes, laptops, access to Figma for collaborative design, and a timer. Can you create a detailed agenda and planning guide for this brainstorming session addressing our specific needs?",
+    "At our nonprofit organization, we are looking to hold a collaborative ideation meeting with the objective of identifying new fundraising event ideas for the upcoming year. We anticipate having 15 participants, which will include staff members, volunteers, and a couple of board members. In terms of tools, we will require a large conference room, plenty of markers and notepads, a digital whiteboard, Zoom for remote attendees, and a camera to record the session for those who cannot attend. Could you outline a detailed plan for this brainstorming session so we cover all necessary aspects?",
+    "I'm tasked with organizing a creative thinking workshop for our engineering team, with the key goal being to develop out-of-the-box solutions for improving our production line’s efficiency. Expecting a total of 10 people, including engineers from different departments, maintenance technicians, and a couple of process managers. We'll need several laptops, projectors, access to Trello for task management, index cards, colored markers, and a quiet breakout space. I'd appreciate it if you could generate a thorough plan that details the session structure, icebreakers, and ideation activities to achieve this objective.",
+    "Could you help me design an agenda for an ideation session that aims to brainstorm sustainable packaging ideas for our new food product line? We anticipate having a group of 7 employees, which includes packaging designers, sustainability consultants, and marketing professionals. The session will require large sheets of paper, sketching pencils, an interactive whiteboard, reference samples of sustainable materials, and access to video conferencing software for our remote expert. Please generate a detailed session plan, including timings, activity breakdowns, and the best use of these resources."
+  ]
+}

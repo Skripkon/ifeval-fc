@@ -1,0 +1,44 @@
+{
+  "chosen_param": "user_feedback",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 7 consecutive spaces between every pair of words. Only 7 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "evaluate_learning_progress",
+    "description": "Evaluates the user's progress in their learning journey and suggests areas for improvement.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_feedback": {
+          "type": "string",
+          "description": "User's personal feedback on their learning experience and challenges faced. The argument value must use exactly 7 consecutive spaces between every pair of words, and only 7 spaces in a row are permitted in the string."
+        },
+        "completed_modules": {
+          "type": "integer",
+          "description": "Number of learning modules or units the user has completed."
+        },
+        "time_spent_learning": {
+          "type": "number",
+          "description": "Total time in hours that the user has spent on learning activities."
+        }
+      },
+      "required": [
+        "user_feedback",
+        "completed_modules",
+        "time_spent_learning"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been working hard on my learning program and wanted to get an evaluation of how I'm doing so far. To give you some context, I've completed 10 modules up to this point. Altogether, I've devoted about 14.5 hours to studying, which I mostly spread over evenings and weekends. My biggest challenge has been staying motivated when the content gets difficult, and sometimes I feel like I'm not retaining everything as well as I'd like. I'd appreciate some feedback on my progress and suggestions on areas I might focus on next.",
+    "Could you please review my learning progress based on my recent efforts? I have finished 7 entire modules in the curriculum, and I've spent a total of 9 hours working through the materials, quizzes, and assignments. My own feeling is that I'm understanding most concepts, but I struggle with time management and sometimes fall behind on assignments. I notice that I tend to get stuck on more complex topics without realizing when to ask for help. I'd like to know how I'm doing and what I should work on to improve further.",
+    "I'm hoping you can assess how my learning is going and tell me what I can do to improve from here. So far, I've completed 15 modules in my course over the past few weeks. I've dedicated 22 hours in total to my learning, trying to stay consistent. Reflecting on my experience, I've found that I learn best through hands-on exercises, but still find theoretical topics a bit overwhelming. My challenge is finding the best way to review and remember key information. What advice do you have for me, and where should I be focusing my efforts next?",
+    "I'd like some insight on my educational journey. Up to now, I've made it through 5 modules and have invested 6 hours working through all the content, including interactive lessons and readings. In terms of feedback, I've noticed it's easy for me to understand practical applications, but I'm not as confident about the foundational theories. Sometimes I get distracted and fall behind, making it tough to catch up. Please evaluate my progress and let me know which areas I should work on or if you have strategies to help me improve.",
+    "Can you help me understand how I’m progressing with my studies and guide me on what to focus on next to improve? I’ve completed 12 modules so far, and I have tracked a cumulative 18.75 hours of active learning time, including reviewing notes and taking quizzes. Personally, I feel that my comprehension has improved, but I often get discouraged when I score low on assessments and get confused by some of the advanced concepts. My main challenge has been maintaining confidence and balancing my study schedule. Please analyze my progress and recommend which skills or modules I should prioritize."
+  ]
+}

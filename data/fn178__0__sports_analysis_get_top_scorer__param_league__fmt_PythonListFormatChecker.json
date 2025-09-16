@@ -1,0 +1,42 @@
+{
+  "chosen_param": "league",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn178__0__sports_analysis_get_top_scorer",
+    "description": "Retrieves the player with most goals in a specific football league",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string",
+          "description": "The football league name. Eg. Premier League. The argument value must be a valid python list of strings, syntactically correct and parseable with ast.literal_eval()."
+        },
+        "season": {
+          "type": "string",
+          "description": "The season in format yyyy/yyyy. Eg. 2020/2021"
+        },
+        "team": {
+          "type": "string",
+          "description": "Optionally the specific team to consider. Eg. Liverpool"
+        }
+      },
+      "required": [
+        "league",
+        "season"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there, I'm trying to settle a bet with a friend, and I wonder if you could help me out. We were discussing the standout performances in La Liga and specifically who the top scorer was during the 2019/2020 season. I remember that season being particularly exciting, but I can't quite recall who netted the most goals. It would be great if you could give me the details. While you're at it, if you happen to know which players were really shining in their roles in the lead-up, that would be fantastic, but the main thing is identifying that top scorer from that season. Many thanks!",
+    "Hi! I'm curious about the performance metrics from the Bundesliga, specifically for the 2018/2019 season. It was a remarkable year with impressive displays of talent, but what's slipped my mind is who led the goal-scoring charts for the entire league during that time. I've been reminiscing about the goals, assists, and overall play, but that one detail escapes me. Could you find out who the player was with the most goals scored that season? Additionally, any brief highlights of their standout matches, if available, would be appreciated, though I'm mostly keen on that top scorer stat.",
+    "Hello! I was having a chat with some friends about top footballers, and we began discussing the French Ligue 1. I've been trying to recall who was the leading goal scorer in the 2020/2021 season. I know it was a thrilling season with some high-flying games and unbelievable goals, but my memory's failing me on who really stole the show by scoring the most goals across the league. Could you help clarify this for me? Additionally, if any of that player's sensational performances made headlines, it would be interesting to hear as well, though my main focus is identifying that prolific scorer.",
+    "Hi there, I'm doing some personal research on football players, and I'm focused on Serie A for the 2021/2022 season. It's important for my project to know who managed to score the highest number of goals during that league campaign. There were so many exciting games that I watched and recorded notes for, yet I forgot to capture who the top scorer was that year. If you have access to detailed records, could you let me know who achieved that top goal-scoring spot? Any additional context around their matches or form would be useful, too, but my main need is that top scorer's name and goal tally.",
+    "Greetings! I've been reflecting on past football seasons and came across some footage from the Eredivisie. This piqued my interest, and now I'm eager to find out who was the most prolific scorer during the 2017/2018 season. That time was filled with riveting matches and standout performance highlights, but I can't pinpoint who dominated the goal-scoring charts. Could you possibly uncover for me who ended up being the top scorer of that season? Also, if the data allows, a brief recap of some key games where they scored crucial goals would add color to my recollection, although it's that main scoring figure that I'm after."
+  ]
+}

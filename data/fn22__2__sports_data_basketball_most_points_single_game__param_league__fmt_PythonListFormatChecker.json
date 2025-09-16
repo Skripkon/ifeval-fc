@@ -1,0 +1,33 @@
+{
+  "chosen_param": "league",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn22__2__sports_data_basketball_most_points_single_game",
+    "description": "Returns the record for the most points scored by a single player in one game of NBA, including the player name, points scored, and game date.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string",
+          "description": "The specific basketball league for which to fetch the record. In this case, 'NBA'. The argument value must be a valid Python list of strings, which should be syntactically correct and parseable with ast.literal_eval()."
+        }
+      },
+      "required": [
+        "league"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm really curious about basketball records, and specifically, I want to know about the individual accomplishments in the game's history. Can you tell me about the record for the most points scored by a single player in one game during NBA history? I mean, who was the player who managed to put up the most points in a single match, the total number of points they scored, and on what date this phenomenal achievement took place? It's such a fascinating statistic, and I'd love to get all the specific details of this incredible performance in the NBA.",
+    "As an avid basketball fan, I'm delving into some of the most legendary moments and performances within the NBA. Can you give me detailed information on who holds the record for the most points scored by a player in a single NBA match? I'm interested in knowing which player accomplished this feat, the exact number of points he scored, and the specific date on which this extraordinary game occurred. I'm compiling these records for a personal project, so any comprehensive details you can provide about the highest-scoring performance in NBA history would be incredibly helpful.",
+    "I've always been fascinated by records in sports, particularly those in basketball as it's one of my favorite sports. I'd love to learn more about some standout individual NBA performances. Can you inform me about the record for the most points scored by a basketball player in a single game within the NBA? I'm eager to know the name of the player who set this record, the amount of points he scored, and the date this record was set. These details are really interesting and I'd like to have a bit of historical knowledge about this remarkable NBA game.",
+    "Basketball history is filled with incredible individual achievements, and I'm particularly interested in scoring records. Can you tell me which NBA player scored the most points in one game, the number of points he scored, and the specific date of this game? I'm adding this to my collection of fascinating NBA facts, so a full account of this record-breaking performance would be very much appreciated. It's amazing how some players can single-handedly change the course of a game with their scoring ability, and I want to know about the best example of such a feat in NBA history.",
+    "From time to time, I enjoy exploring the rich history of the NBA and the amazing feats accomplished by the players. I'm currently seeking information on the highest individual scoring performance in an NBA game. Can you provide details about who the player was that holds this record, the exact number of points scored, and the date on which this historic game was played? This kind of information helps deepen my understanding of the game and its legendary moments. A full recounting of this top scoring NBA achievement would be both interesting and informative."
+  ]
+}

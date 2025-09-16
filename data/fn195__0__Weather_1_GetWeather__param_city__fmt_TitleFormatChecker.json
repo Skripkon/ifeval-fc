@@ -1,0 +1,37 @@
+{
+  "chosen_param": "city",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn195__0__Weather_1_GetWeather",
+    "description": "Retrieves the weather forecast for a specified city on a particular date.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The name of the city for which weather information is requested. The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>>; everything except for the title is allowed."
+        },
+        "date": {
+          "type": "string",
+          "description": "The date for which weather information is requested, in the format of 'YYYY-MM-DD'. If not provided, the current date is used."
+        }
+      },
+      "required": [
+        "city"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hi there, I’m making plans to meet up with some friends this weekend and I’d like to know what the weather will be like in New York City on 2024-07-13. Could you please provide a detailed forecast for that day, including any chance of rain, temperature highs and lows, and whether it will be sunny or cloudy? I want to make sure we’re prepared for whatever Mother Nature has in store, so as much information as you can provide about the weather conditions in NYC for that specific date would be really helpful!",
+    "I’m traveling to Paris next week and I need to pack accordingly, but I have no idea what the weather will be like. Could you give me a detailed weather forecast for Paris on the date 2024-06-18? Please include information about temperature, precipitation, wind speed, and anything else relevant. I want to make sure I bring proper clothing and don’t get caught unprepared if there’s rain or unusually hot or cold temperatures!",
+    "Could you help me plan my day in San Francisco for tomorrow, which is 2024-06-17? I’d like to know the expected weather forecast for San Francisco on that specific date. Will it be foggy in the morning as usual, is there any chance of rain, and what are the expected high and low temperatures? It would be great if you could also let me know about the wind conditions, as I’ll be spending quite a bit of time outdoors.",
+    "I'm organizing an outdoor birthday party for my child in Chicago, and I want to be sure that the weather will cooperate on 2024-07-20. Could you please provide a comprehensive weather forecast for Chicago on that date? It would be extremely helpful to know about temperature, humidity, possible precipitation, and whether it will be sunny, cloudy, or windy, so I can make the necessary arrangements and have a backup plan if needed.",
+    "I have a business trip to Tokyo scheduled for 2024-06-25, and I'd like to check what the weather will be like in Tokyo on that day. Can you provide a detailed forecast for Tokyo on 2024-06-25, including expected temperature, likelihood of rain, or any special weather advisories? I need to decide whether I’ll need an umbrella or warmer clothing and if I need to account for weather-related travel delays."
+  ]
+}

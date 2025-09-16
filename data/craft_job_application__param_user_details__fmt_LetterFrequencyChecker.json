@@ -1,0 +1,58 @@
+{
+  "chosen_param": "user_details",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'h' at most 3 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "h",
+      "N": 3,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "craft_job_application",
+    "description": "Generates a tailored job application including cover letter and resume based on user-provided details.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_details": {
+          "type": "string",
+          "description": "Detailed background information about the user, including skills, experience, and employment history. The argument value must contain the letter 'h' at most 3 times, regardless of case."
+        },
+        "job_description": {
+          "type": "string",
+          "description": "The job description provided by the employer outlining required skills and responsibilities."
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "pdf",
+            "doc"
+          ],
+          "description": "Format in which the application documents should be generated."
+        },
+        "highlight_areas": {
+          "type": "array",
+          "description": "Specific areas or achievements the user wants to highlight in the application.",
+          "items": {
+            "type": "string",
+            "description": "An area or achievement to highlight."
+          }
+        }
+      },
+      "required": [
+        "user_details",
+        "job_description",
+        "format"
+      ]
+    }
+  },
+  "user_queries": [
+    "I need help putting together a professional job application tailored for a software engineering role I found at Tech Innovators Inc. The job description says they are looking for someone with at least five years of experience in full-stack development, strong knowledge of React and Node.js, experience leading small teams, and a proven track record of delivering high-quality products on time. As for my background, I have a Bachelor’s in Computer Science, eight years of experience as a full-stack developer (primarily using React, Node.js, and MongoDB), three years managing a team of five developers, and significant achievements like reducing project delivery times by 30% at my last company. Please create a resume and cover letter in PDF format that fits this job. Could you specifically highlight my project leadership and time-saving improvements?",
+    "I’m preparing to apply for a marketing manager position, and I want a cover letter and resume specifically targeted to this opportunity. Here’s the job description: the employer is seeking someone with expertise in digital campaigns, content creation, brand strategy, and data analytics, along with at least six years of experience in the marketing sector. My background includes a Master’s in Marketing, seven years as a digital marketing specialist where I managed Facebook and Google ad campaigns, developed brand voice guidelines for three new product launches, and consistently exceeded ROI goals by at least 20%. I’d like the documents generated in Word (.doc) format, and please make sure to emphasize my strong data-driven campaign successes and brand development achievements.",
+    "Can you help me generate a tailored application for a senior accountant opening I’m interested in? The job description details that the role requires someone proficient in GAAP, financial statement preparation, internal audits, and tax planning, also mentioning at least five years of accounting experience in the corporate sector. For my background: I have a CPA license, an MBA in accounting, and I’ve spent the last six years working at a Fortune 500 company where I led the quarterly closing processes, facilitated successful external audits each year, and identified cost-saving measures that reduced expenses by $100,000 annually. I’d like all files in PDF, and it would be great to highlight my cost-saving initiatives and audit management skills.",
+    "Please assist me by creating a job application package for the following HR business partner role. The job description indicates they need someone skilled in employee relations, organizational development, change management, and HR analytics, with at least eight years’ HR experience. Regarding my experience, I have a BA in Human Resources, worked for ten years in various HR roles (including five years as an HR business partner), pioneered a diversity and inclusion program adopted company-wide, and led seamless restructuring projects that improved staff retention by 15%. I want both a cover letter and resume in Word format, and could you spotlight my experience with organizational change management and diversity programs?",
+    "I’d like you to draft a customized job application including a cover letter and resume for a senior graphic designer position at Design Collective. The employer’s job description requests a candidate with proficiency in Adobe Creative Suite, outstanding portfolio, team collaboration skills, and five or more years’ relevant experience, with additional emphasis on branding projects. My professional background: I hold a BA in Graphic Design, have seven years’ experience designing for digital and print media, led the re-branding of two major companies (increasing their market recognition by 40%), and have won three regional design awards. Please generate the application in PDF format and make sure to emphasize my award-winning projects and branding expertise."
+  ]
+}

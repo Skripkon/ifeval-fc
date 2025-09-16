@@ -1,0 +1,56 @@
+{
+  "chosen_param": "stress_description",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have at most 2 words. Longer responses are not allowed.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 2,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "assess_stress_levels",
+    "description": "Assesses the user's stress levels based on various factors and provides a summary.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "stress_description": {
+          "type": "string",
+          "description": "Description of experiences or situations that are contributing to the user's stress. The response must be concise, using at most 2 words; longer responses are not allowed."
+        },
+        "frequency_of_stress": {
+          "type": "number",
+          "description": "Number of times per week the user feels stressed."
+        },
+        "physical_symptoms": {
+          "type": "array",
+          "description": "List of physical symptoms experienced due to stress.",
+          "items": {
+            "type": "string",
+            "description": "Individual physical symptom.",
+            "enum": [
+              "headache",
+              "fatigue",
+              "insomnia",
+              "muscle tension",
+              "nausea"
+            ]
+          }
+        }
+      },
+      "required": [
+        "stress_description",
+        "frequency_of_stress",
+        "physical_symptoms"
+      ]
+    }
+  },
+  "user_queries": [
+    "Lately, I've been feeling extremely overwhelmed at work due to tight deadlines and my manager constantly assigning me new tasks even when I haven't finished the previous ones. On top of that, my personal life has been hectic because I'm juggling taking care of my parents and my kids, which is leaving me with almost no free time. As a result, I typically feel stressed about five times a week. Physically, I frequently experience headaches, persistent fatigue, trouble sleeping at night (insomnia), and sometimes muscle tension in my neck and shoulders. Can you analyze my current stress levels and let me know your thoughts?",
+    "I need help understanding just how stressed I might be right now. For the past month, my main source of stress is trying to balance attending university classes, studying for exams, and working a part-time job to cover expenses. These combined pressures are making it very hard for me to relax. I would say that I feel this kind of stress about seven times each week, sometimes even more. When I'm stressed, I often develop headaches, struggle with insomnia, and end up feeling fatigued. Occasionally, I'll feel nauseous too. Could you evaluate my stress level and offer some feedback?",
+    "My stress has been mounting due to ongoing financial problems, escalating arguments with my spouse, and worry about my child's health issues, which have all been hitting me at the same time. It's been extremely tough to cope these last several weeks. In a given week, I notice myself feeling stressed around six times, maybe even more depending on what's happening. When I get this way, I often deal with headaches, muscle tension in my shoulders and back, and sometimes insomnia makes it really tough for me to get a full night's sleep. Can you help assess my current level of stress based on this?",
+    "I would like to get an assessment of my stress because these past two months have been particularly tough due to moving to a new city, starting a new job, and trying to make new friends. All these major life changes are piling up. I experience stress about four times each week. When I am stressed, I notice physical symptoms such as nausea, headaches, and a general feeling of fatigue that often lingers the next day. Can you provide me with an evaluation of my stress levels, given these experiences?",
+    "Could you please analyze my stress level? Recently, the primary contributors have been my heavy academic workload, combined with preparing for an important sports competition. This has resulted in frequent late nights and constant pressure to perform well in both areas. Typically, I feel stressed six times per week. When the stress hits, I mostly experience fatigue, insomnia that prevents me from getting enough rest, and sometimes muscle tension in my shoulders and neck. Let me know what you think about my current stress situation based on all this."
+  ]
+}

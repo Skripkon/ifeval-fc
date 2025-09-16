@@ -1,0 +1,62 @@
+{
+  "chosen_param": "stress_description",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must not include the keywords: ['curved', 'fast', 'initial', 'main', 'dim']. None of these words should appear anywhere in the value. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "curved",
+        "fast",
+        "initial",
+        "main",
+        "dim"
+      ],
+      "must_include": false
+    }
+  },
+  "fn_schema": {
+    "name": "assess_stress_levels",
+    "description": "Assesses the user's stress levels based on various factors and provides a summary.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "stress_description": {
+          "type": "string",
+          "description": "Description of experiences or situations that are contributing to the user's stress. The argument value must not include the keywords: curved, fast, initial, main, or dim. None of these words should appear anywhere in the value, regardless of case."
+        },
+        "frequency_of_stress": {
+          "type": "number",
+          "description": "Number of times per week the user feels stressed."
+        },
+        "physical_symptoms": {
+          "type": "array",
+          "description": "List of physical symptoms experienced due to stress.",
+          "items": {
+            "type": "string",
+            "description": "Individual physical symptom.",
+            "enum": [
+              "headache",
+              "fatigue",
+              "insomnia",
+              "muscle tension",
+              "nausea"
+            ]
+          }
+        }
+      },
+      "required": [
+        "stress_description",
+        "frequency_of_stress",
+        "physical_symptoms"
+      ]
+    }
+  },
+  "user_queries": [
+    "Lately, I have been feeling extremely overwhelmed at work because my workload has tripled in the past two months. There are constant distractions at the office, and I am afraid of making mistakes as my deadlines are always pressing. I find myself unable to relax even when I get home, as I keep thinking about unfinished tasks. This sense of stress tends to occur at least five times per week, especially when a new project starts or when supervisors suddenly assign urgent work. Physically, I've noticed I often get headaches, have trouble sleeping at night (insomnia), and my muscles, particularly in my neck and shoulders, are constantly tense. Can you help me assess my current stress levels based on this situation?",
+    "I've noticed I'm unusually stressed because I'm juggling my final exams at university with a part-time job, and relationship issues keep adding to the tension. The stress really hits me especially before big tests or when I come back home late from work, which happens about four times each week. The main physical symptoms I've been experiencing are persistent fatigue, frequent headaches that last the whole day, and almost nightly insomnia where I can't fall asleep no matter how tired I am. Could you evaluate what my stress level might be and any recommendations for coping?",
+    "I find myself dealing with a lot of anxiety and stress due to managing my children's schedules alongside my full-time remote job. Nearly every day, there’s something urgent—either a missed appointment or a pressing deadline at work. The stress is a daily affair—so I would say around seven times per week. As a result, I experience muscle tension in my shoulders and neck, have recurrent headaches, and sometimes feel nauseous, particularly in the mornings before the day starts. Please help me understand my stress levels and whether this is something I should be worried about.",
+    "Over the last two months, constant arguments with my roommate and money troubles have really made me feel on edge and stressed out more than I can remember. The feeling of stress pops up at least six times a week, sometimes multiple times in a single day, especially around bill payment deadlines or after heated conversations. Because of this, I'm almost always fatigued, I get headaches frequently, and there's been a noticeable difficulty in sleeping lately, suggesting insomnia. I’d really like to know what my stress levels are and what steps I might take to mitigate them.",
+    "With major changes at work—including a new boss and team restructure—as well as family health issues, I've frequently felt stressed and anxious. The feeling arises about five times a week, particularly during long meetings or after difficult phone calls with family. The main physical symptoms I’m facing are muscle tension, especially in my back, trouble falling asleep (insomnia), and occasional nausea when things get particularly overwhelming. Could you assess how stressed I might be based on these details, and maybe guide me on what I should do next?"
+  ]
+}

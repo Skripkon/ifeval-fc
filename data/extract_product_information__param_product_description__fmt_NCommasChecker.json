@@ -1,0 +1,57 @@
+{
+  "chosen_param": "product_description",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at least 4 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at least",
+      "N": 4
+    }
+  },
+  "fn_schema": {
+    "name": "extract_product_information",
+    "description": "Extracts detailed product information from a given product description text.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "product_description": {
+          "type": "string",
+          "description": "Detailed textual description of the product. The value must contain at least 4 commas, which may appear anywhere in the text."
+        },
+        "include_price": {
+          "type": "boolean",
+          "description": "Indicates whether to extract price information from the text."
+        },
+        "fields_to_extract": {
+          "type": "array",
+          "description": "List of specific fields to extract, such as 'dimensions', 'weight', 'materials'.",
+          "items": {
+            "type": "string",
+            "description": "A specific field to extract.",
+            "enum": [
+              "dimensions",
+              "weight",
+              "materials",
+              "brand",
+              "model",
+              "color"
+            ]
+          }
+        }
+      },
+      "required": [
+        "product_description",
+        "include_price",
+        "fields_to_extract"
+      ]
+    }
+  },
+  "user_queries": [
+    "I have this product description for a laptop that I need you to analyze: \"The Dell XPS 15 features a 15.6-inch 4K OLED display, is constructed with an aluminum chassis and carbon fiber palm rest, and comes in a sleek platinum silver color. Weighing just 4 pounds, it's easy to carry. It is powered by an Intel Core i7 processor, 16GB RAM, and a 512GB SSD. The dimensions are 13.6 x 9.1 x 0.7 inches.\" Can you extract the brand, model, weight, dimensions, color, and materials for me? Please also tell me if you find any price information in the description.",
+    "Here’s a detailed product description I found online: \"Introducing the Nike Air Zoom Pegasus 38, designed for runners seeking comfort and style. This shoe is made with a lightweight mesh upper and features a durable rubber sole. The color offered is Midnight Black with electric red accents. Model number BQ9646-002. It weighs approximately 10 ounces and measures 11 x 4 x 5 inches.\" I want you to extract everything regarding brand, model, color, weight, materials, and dimensions, and also include the price if there is any listed in the text.",
+    "Please help me analyze the following product description: \"The Samsung QN90A Neo QLED TV boasts extraordinary 4K picture quality, with a slim design made from brushed titanium. The TV comes in graphite silver, and the brand is clearly identified as Samsung. Model code is QN65QN90AAFXZA. Its dimensions are 56.9 x 32.7 x 1.1 inches, and the weight without stand is 53.6 lbs.\" I am interested in knowing the brand, model, dimensions, weight, color, and materials. Also let me know if any price info is provided.",
+    "I'd like you to extract detailed information from this product description: \"The KitchenAid Artisan Series 5-Quart Stand Mixer, available in Empire Red, is constructed from die-cast metal and features a stainless steel bowl. The appliance weighs 26 pounds and measures 14 x 9 x 14 inches. Model number KSM150PSER. Renowned for its durability and powerful motor, the Artisan Series comes from the trusted KitchenAid brand.\" Could you pull out the brand, model, materials, color, weight, and dimensions for me? If a price is mentioned, please include that too.",
+    "Can you please extract specific information from this product write-up: \"The Patagonia Nano Puff Jacket combines lightweight warmth with eco-conscious materials, featuring a recycled polyester shell and insulation. The jacket is navy blue, and its brand is Patagonia. The model is Nano Puff. Weight is about 11 ounces, and it packs down small. Dimensions when folded are approximately 8 x 4 x 4 inches.\" I need details for brand, model, color, materials, weight, and dimensions, and let me know if the text mentions any price as well."
+  ]
+}

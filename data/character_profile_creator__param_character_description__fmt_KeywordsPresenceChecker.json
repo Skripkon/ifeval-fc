@@ -1,0 +1,65 @@
+{
+  "chosen_param": "character_description",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must not include the keywords: ['past', 'love', 'sweet', 'bound']. None of these words should appear anywhere in the value. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "past",
+        "love",
+        "sweet",
+        "bound"
+      ],
+      "must_include": false
+    }
+  },
+  "fn_schema": {
+    "name": "character_profile_creator",
+    "description": "Creates detailed profiles for characters based on given traits and role in the story.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "character_description": {
+          "type": "string",
+          "description": "Detailed description including appearance, personality, and backstory. The value must not include the keywords: 'past', 'love', 'sweet', or 'bound'—none of these words should appear anywhere in the description, regardless of case."
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "protagonist",
+            "antagonist",
+            "sidekick",
+            "mentor",
+            "love interest"
+          ],
+          "description": "Role of the character in the story."
+        },
+        "age": {
+          "type": "integer",
+          "description": "Age of the character."
+        },
+        "strengths": {
+          "type": "array",
+          "description": "List of character strengths or positive traits.",
+          "items": {
+            "type": "string",
+            "description": "A positive trait or strength of the character."
+          }
+        }
+      },
+      "required": [
+        "character_description",
+        "role",
+        "age"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm working on a new fantasy novel and need help fleshing out my main character. She's a tall, athletic woman with striking green eyes and short, tousled brown hair. Her personality is a mix of stubbornness and compassion; she's fiercely loyal to friends but has trouble trusting strangers due to a difficult childhood spent in poverty. She eventually became a skilled thief before discovering a magical ability that set her on the path to becoming a leader. Could you develop a detailed profile for her as the protagonist? She's 27 years old and some of her strengths are quick thinking, bravery, and resourcefulness.",
+    "I have this idea for an antagonist in my science fiction story. The character is a middle-aged man, perhaps a bit overweight, always sharply dressed, with salt-and-pepper hair and piercing blue eyes. He projects charm but hides a ruthless, manipulative side, and he uses his intellect to control others to get what he wants. He was born into wealth but lost everything in a corporate coup, fueling his desire for revenge. The role he plays is definitely the villain. He's 45, and his strengths include intelligence, charisma, and strategic planning. Can you help me create a detailed profile for him?",
+    "I’m developing a supporting character to act as the mentor in my coming-of-age adventure. She’s a petite woman with silver hair tied back in a braid and deep smile lines. She’s known for her endless patience and gentle humor, nurturing young adventurers who seek her guidance. Born in a small village, she lost her family and dedicated her life to helping others avoid the same fate. She’s 62 and some of her key strengths are wisdom, empathy, and resilience. Can you help me build a full character profile for her in her mentor role?",
+    "I'm creating a love interest for my story. The character is a handsome, athletic young man, with curly black hair, warm brown skin, and expressive eyes. He's shy at first but has a great sense of humor once comfortable, with a strong moral compass rooted in his upbringing in a close-knit family. After the death of his mother, he became fiercely protective of those he cares about. He's 25 years old and I've noted his strengths as honesty, loyalty, and emotional intelligence. Can you generate a detailed character profile for him in the role of love interest?",
+    "Can you help me develop a sidekick character? She’s 19 years old, short with a bob haircut dyed electric blue, freckled skin, and always wears oversized sweaters. Her personality is quirky, upbeat, and she always finds humor in tough situations, though she hides her own fears. She grew up on the streets before befriending the protagonist and has stayed loyally by their side ever since. Her key strengths are optimism, adaptability, and creativity. Please make a detailed profile for her, specifying her role as the sidekick."
+  ]
+}

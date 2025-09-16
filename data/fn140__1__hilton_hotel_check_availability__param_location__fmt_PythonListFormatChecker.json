@@ -1,0 +1,52 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn140__1__hilton_hotel_check_availability",
+    "description": "Check hotel availability for a specific location and time frame.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "The city where you want to check hotel availability. The argument value must be a valid Python list of strings that is syntactically correct and parseable with ast.literal_eval()."
+        },
+        "check_in_date": {
+          "type": "string",
+          "description": "The check-in date in the format YYYY-MM-DD."
+        },
+        "check_out_date": {
+          "type": "string",
+          "description": "The check-out date in the format YYYY-MM-DD."
+        },
+        "no_of_adults": {
+          "type": "integer",
+          "description": "The number of adults for the hotel booking."
+        },
+        "hotel_chain": {
+          "type": "string",
+          "description": "The hotel chain where you want to book the hotel."
+        }
+      },
+      "required": [
+        "location",
+        "check_in_date",
+        "check_out_date",
+        "no_of_adults"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I've got a business trip coming up and I need to make some hotel reservations. Could you check the availability of hotels in New York City? I'll be traveling with my colleague, so that makes it two adults. Our plan is to check in on 2023-11-15 and we'll be checking out on 2023-11-18. We'd prefer to stay at a Hilton hotel due to its consistent service, but I'm open to other options if it's more convenient.",
+    "We're planning a family visit to San Francisco in a couple of months. Could you help us find a hotel? We are specifically looking to stay at a Hilton hotel because we have some reward points we'd like to use. There will be two of us, both adults, and the journey is set from 2024-05-10 to 2024-05-15. We hope to confirm availability soon, as we want to make the most of our trip and enjoy the sights.",
+    "My partner and I are looking to get away for a little romantic retreat, and we thought Hilton hotels would be the perfect choice for our stay. We're thinking of heading to Paris, enjoying the city of light. The plan is to check in on 2023-12-20 and check out on 2023-12-27, enjoying a beautiful Christmas together in France. Could you check the availability for us so we can plan this special occasion?",
+    "I'm organizing a getaway vacation and need some assistance with hotel reservations. We'll be visiting Los Angeles, and there will be two adults traveling for this holiday. Our potential staying period is from 2024-03-01 to 2024-03-06. I'd love it if you could assist in finding availability, preferably at one of the Hilton hotels because they have excellent amenities that we enjoy. It's important to nail down the best option early, as these dates tend to fill up quickly.",
+    "We've got an exciting trip to Miami planned and need to sort out our accommodation. It'll be two of us, and we're definitely looking at Hilton hotels due to their comforting hospitality. The dates for our stay are from 2023-11-25 to 2023-11-30. Could you help us by checking the availability of rooms during this period? This trip is really important to us, as we've never been to Miami and want to ensure everything is in place before we head down there."
+  ]
+}

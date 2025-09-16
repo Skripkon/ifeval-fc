@@ -1,0 +1,49 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn26__0__court_case_find",
+    "description": "Locate details of court cases based on specific parameters like case number and case type.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "The city and court where the lawsuit is filed. The argument value must be a valid JSON object; it should be syntactically correct and parseable as JSON."
+        },
+        "case_number": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "The unique case numbers of the lawsuits."
+          }
+        },
+        "case_type": {
+          "type": "string",
+          "description": "Type of the court case.",
+          "enum": [
+            "Civil",
+            "Criminal"
+          ]
+        }
+      },
+      "required": [
+        "location",
+        "case_number"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hi, could you help me find all the information available about the lawsuit with the case number A12345B that was filed in the New York City Supreme Court? I'm trying to get as many details as possible about this particular case, and I believe the filing took place at the Supreme Court in Manhattan. Please focus on this location and case number, and let me know everything you can uncover about this court case.",
+    "I am currently researching case number 2022-CR-56789 for the Los Angeles County Superior Court. Can you provide a comprehensive overview of the case details, including any recent updates or filings? I just know that the suit was filed in Los Angeles at their Superior Court under the case number I gave. Please look up this specific case for me and share everything relevant that you find.",
+    "Could you please look up detailed information on multiple lawsuits for me? The case numbers are 19CV0001, 19CV0002, and 19CV0003, all of which were submitted to the Chicago District Court. I'm interested in understanding the background, status, and any notable developments in these cases, so if you can provide as much detail as possible, that would be extremely helpful.",
+    "I'm in need of details for a particular case that was filed in the Boston Municipal Court. The case number is BM2023-00987. If you could locate every piece of relevant data or updates about this court case using the city and court as Boston Municipal Court and that exact case number, I'd really appreciate it. Please ensure the information is accurate and up to date.",
+    "For the San Francisco County Superior Court, could you find all public records or summaries related to the following lawsuits: SF2020-555, SF2020-556, and SF2020-557? I'm especially interested since all of these cases are very important to my research and were all filed in San Francisco's Superior Court, so please use these case numbers and this location to pull up everything you can."
+  ]
+}

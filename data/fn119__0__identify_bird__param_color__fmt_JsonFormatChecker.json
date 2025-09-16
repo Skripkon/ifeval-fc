@@ -1,0 +1,47 @@
+{
+  "chosen_param": "color",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn119__0__identify_bird",
+    "description": "Identify a bird species based on certain characteristics.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "Color of the bird. The argument value must be a valid JSON object, which should be syntactically correct and parseable."
+        },
+        "habitat": {
+          "type": "string",
+          "description": "Habitat of the bird."
+        },
+        "size": {
+          "type": "string",
+          "description": "Size of the bird.",
+          "enum": [
+            "small",
+            "medium",
+            "large"
+          ]
+        }
+      },
+      "required": [
+        "color",
+        "habitat"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Yesterday while hiking through the dense woodlands near my hometown, I spotted a bird with bright red plumage perched on a low branch. Its vibrant coloring made it stand out against the green foliage. I'm trying to figure out what species it could be—can you help identify a bird that is red in color and tends to inhabit forested or woodland areas like the one I visited?",
+    "I've noticed a bird around my local pond with striking black feathers. This bird is usually seen wading along the edges of the water, sometimes diving for food or standing still among the reeds. It's not very big, probably on the small side compared to ducks or swans. Could you tell me what kind of bird it might be if it's black and lives in wetland or freshwater habitats?",
+    "During my recent trip to the countryside, I encountered a large bird that was predominantly white. It was soaring over open fields and seemed to prefer rural grassland habitats far from the city. Given that it was white in color and favored open countryside or grassy areas, do you have any idea what species this bird could be?",
+    "There's a lovely blue-colored bird I keep seeing in the park near my office. It often hops around the manicured lawns and landscaped gardens, occasionally perching on the benches or shrubs. I'd describe it as medium-sized—not too small, but not one of the big birds either. Can you help me identify a bird that has blue feathers and is commonly found in urban or garden settings?",
+    "While visiting the mountains last weekend, I observed a small bird with bright yellow feathers. It was flitting among the high-altitude alpine meadows, seeming well adapted to rocky, mountainous terrain. Based on its yellow coloring and preference for alpine or mountainous habitats, could you assist me in identifying what bird this might be?"
+  ]
+}

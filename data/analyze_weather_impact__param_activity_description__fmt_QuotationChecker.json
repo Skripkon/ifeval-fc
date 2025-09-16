@@ -1,0 +1,56 @@
+{
+  "chosen_param": "activity_description",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in single quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "single"
+    }
+  },
+  "fn_schema": {
+    "name": "analyze_weather_impact",
+    "description": "Analyzes the potential impact of specific weather conditions on various activities or events.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "activity_description": {
+          "type": "string",
+          "description": "Free-form description of the activity or event being assessed for weather impact. The argument value must be wrapped in single quotation marks, with no additional characters outside the quotes."
+        },
+        "weather_conditions": {
+          "type": "array",
+          "description": "The weather conditions to consider for the impact analysis.",
+          "items": {
+            "type": "string",
+            "description": "A specific weather condition to analyze.",
+            "enum": [
+              "rain",
+              "snow",
+              "clear",
+              "cloudy",
+              "wind",
+              "storm"
+            ]
+          }
+        },
+        "location": {
+          "type": "string",
+          "description": "The location where the activity will take place, in standard format."
+        }
+      },
+      "required": [
+        "activity_description",
+        "weather_conditions",
+        "location"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm planning to hold a birthday picnic for my daughter next Saturday at Central Park in New York City. The plan is to set up blankets on the grass, have some outdoor games, and set up a small tent for food. I'm worried about how different weather conditions like rain, wind, and cloudy skies might affect this event. Could you provide an analysis of how these specific weather scenarios could impact our picnic activities in Central Park? I want to make sure the day goes smoothly and need to know what to expect.",
+    "For my company's annual outdoor team-building event, we're organizing a series of sports and collaborative activities in Hyde Park, London, including a scavenger hunt, relay race, and an outdoor lunch. The activities are scheduled for mid-March, and I've been told there is a possibility of snow, clear skies, and wind during that period. Please analyze the potential impact of each of these weather conditions on the overall event experience and logistics in Hyde Park. How should we plan accordingly for these possibilities?",
+    "I'm considering hosting an outdoor open-air film screening at the Santa Monica Pier this coming Saturday. The event will involve setting up a large projector, seating for up to two hundred people, and a concession stand. I'd like to understand how various weather conditions such as storm, rain, and clear weather could potentially affect this film screening at the Santa Monica Pier, both in terms of safety and audience comfort. Could you provide a detailed analysis for each scenario?",
+    "Our family reunion will be taking place this July at Millennium Park in Chicago, and we have organized multiple outdoor activities, including a barbecue, lawn games, and a group photo session. Given the unpredictable weather in Chicago, I am particularly concerned about the potential for cloudy or windy days. Can you analyze the possible impacts that the weather conditions of cloudy and wind could have on these family reunion activities planned at Millennium Park? I want to prepare as much as possible.",
+    "I'm participating in a charity marathon that is scheduled to run through the streets of Paris, starting at the Eiffel Tower and ending at the Louvre. The event will last most of the day and involves thousands of runners and spectators. The weather forecast mentions possible rain, snow, and clear skies during the race. Could you analyze how each of these specific weather conditions might impact the marathon, including runner safety, attendance, and event procedures in Paris?"
+  ]
+}

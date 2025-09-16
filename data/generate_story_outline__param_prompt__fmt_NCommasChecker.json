@@ -1,0 +1,66 @@
+{
+  "chosen_param": "prompt",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain exactly 5 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 5
+    }
+  },
+  "fn_schema": {
+    "name": "generate_story_outline",
+    "description": "Generates a basic outline for a story based on given parameters and genre.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "prompt": {
+          "type": "string",
+          "description": "Creative prompt or idea around which the story will be based. The value must contain exactly 5 commas, which may appear anywhere within the provided prompt."
+        },
+        "genre": {
+          "type": "string",
+          "enum": [
+            "fantasy",
+            "science fiction",
+            "mystery",
+            "romance",
+            "horror",
+            "thriller"
+          ],
+          "description": "Genre of the story to guide the tone and style of the outline."
+        },
+        "length_preference": {
+          "type": "string",
+          "enum": [
+            "short",
+            "medium",
+            "long"
+          ],
+          "description": "Preferred length of the story, determines the complexity of the outline."
+        },
+        "main_characters": {
+          "type": "array",
+          "description": "List of main characters to be included in the story.",
+          "items": {
+            "type": "string",
+            "description": "Name and brief description of each main character."
+          }
+        }
+      },
+      "required": [
+        "prompt",
+        "genre",
+        "main_characters"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been thinking about an exciting story concept where a group of friends discovers an ancient artifact that can manipulate time, but they soon realize that altering the past has severe consequences for their future. Can you help me sketch out a detailed story outline for this idea? I want it to fit within the science fiction genre. The main characters I'd like to include are: Lila, a brilliant but impulsive physics student; Marcus, her cautious best friend who is wary of the artifact's power; and Dr. Yuan, a mysterious professor with hidden motives. Ideally, I'm looking for a medium-length storyline that explores their evolving relationships and ethical dilemmas.",
+    "I'd really appreciate your assistance in creating the structure for a horror story. The concept I have in mind centers around a remote mountain village where, every year, the townsfolk participate in a chilling ritual to appease an unseen forest entity, but this year, something goes horribly wrong. For the main characters, I want to include: Evelyn, a skeptical journalist seeking the truth behind the ritual; Mateo, a village elder who tries to protect his people; and Sofia, a teenager desperate to escape the village's dark traditions. Please base the outline on this prompt and horror as the genre. I'd prefer if the outline could accommodate a long, complex plot.",
+    "Could you please generate a basic outline for a fantasy story for me? The story prompt centers on an orphaned apprentice who discovers they are the last descendant of a legendary line of dragon tamers, placing them at the center of a brewing war between warring kingdoms. The main characters I want to include are: Arin, the orphaned apprentice with hidden powers; Sir Cedric, a loyal knight who mentors Arin; and Elira, a rogue dragon trying to survive the conflict. I’d like the genre to be fantasy, and am open to either a short or medium-length story, perhaps something that doesn’t get too sprawling but covers the core adventure.",
+    "I've always wanted to write a romance about two people from rival culinary backgrounds who must team up to win a prestigious cooking competition, forcing them to confront their biases and past heartbreaks. Could you come up with a story outline for this idea, focusing on the romance genre? The main characters should be: Sophia Alvarez, a passionate pastry chef from Spain; Luca Romano, a perfectionist Italian chef with a guarded past; and Priya Mehra, their witty and supportive sous-chef. I'd love the outline to be for a medium-length story, with plenty of emotional development and culinary drama.",
+    "I'm looking to outline a thrilling mystery involving a high-stakes art heist that takes place during a major international exhibition in Paris. The unique twist is that the stolen painting is rumored to hold secrets leading to a treasure lost during World War II. For the main characters, I want: Detective Isabelle Moreau, a relentless Parisian investigator; Adrian Black, an enigmatic art thief with a personal vendetta; and Camille Dubois, a young art historian drawn into the case. Could you base the outline on this prompt within the mystery genre? Please let me know if you can make it a long, detailed story structure."
+  ]
+}

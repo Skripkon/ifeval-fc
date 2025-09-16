@@ -1,0 +1,45 @@
+{
+  "chosen_param": "location",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'universal' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "universal",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn14__0__get_current_weather",
+    "description": "Retrieves the current weather conditions for a specified city and state. If using state, then use short form like CA.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "The location for which to get the weather, in the format of 'City, State (abbr)', such as 'San Francisco, CA' if State for the city exists. 'City, Country' if State for the city doesn't exist. Additionally, the argument value must contain the word 'universal' exactly once (case insensitive), appearing anywhere in the string."
+        },
+        "unit": {
+          "type": "string",
+          "description": "The unit of temperature for the weather report.",
+          "enum": [
+            "celsius",
+            "fahrenheit"
+          ]
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hi there! I'm planning a little day trip and was hoping you could help me check the current weather. Specifically, I'd like to know what's happening right now in Seattle, WA, since I'm considering visiting a few local sites. I want to make sure to dress appropriately and maybe prepare for rain. Could you give me the current weather update for Seattle, WA, and let me know whether it's best to bring an umbrella or some sunglasses?",
+    "Before I head out for my afternoon jog, I’d love to get a detailed update on the present weather conditions in Austin, TX. Please provide information about the temperature, humidity, and any potential storms if you can. It would also be great if you could let me know whether I should prepare for heat or cooler weather today. The current weather for Austin, TX would really help me decide what running gear to pick.",
+    "I have a business trip scheduled to Toronto, Canada tomorrow, and I'm trying to finalize my packing list. Could you give me current weather conditions for Toronto, Canada so I know whether I need to pack warm clothing or if lighter layers will suffice? Also, if you can let me know about precipitation and general outdoor conditions lately, I would appreciate it.",
+    "I'm organizing an outdoor picnic this afternoon with friends in Miami, FL, and want to make sure we won't get rained out. Would you be able to provide me with the most recent weather conditions for Miami, FL? Please let me know if it's sunny, cloudy, or if there's a chance of rain so I can plan accordingly. I'd like the report as up-to-date as possible.",
+    "Could you please help me out by telling me the current weather in Paris, France? I’m about to hop on a video call with a friend who lives there, and I’d love to know what the weather is like so I can ask her. Details about whether it’s warm or chilly, raining or sunny, would be fantastic. Thanks so much in advance!"
+  ]
+}

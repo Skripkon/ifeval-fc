@@ -1,0 +1,50 @@
+{
+  "chosen_param": "article_text",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at most 1 sentence.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 1,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "summarize_news_article",
+    "description": "Summarizes the content of a news article to capture main points and key information.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "article_text": {
+          "type": "string",
+          "description": "The full text of the news article that needs to be summarized. The argument value must have at most 1 sentence."
+        },
+        "summary_length": {
+          "type": "string",
+          "enum": [
+            "short",
+            "medium",
+            "long"
+          ],
+          "description": "Indicates the desired length of the summary: short, medium, or long."
+        },
+        "include_keywords": {
+          "type": "boolean",
+          "description": "Whether to include key terms and phrases in the summary. Defaults to false."
+        }
+      },
+      "required": [
+        "article_text",
+        "summary_length",
+        "include_keywords"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I just read this article and it's pretty lengthy. Here is the full text: \"In a landmark decision today, the Supreme Court ruled 6-3 in favor of expanding digital privacy rights for all Americans. The case, which has been closely watched by legal experts, centered on whether law enforcement must obtain a warrant before accessing historical cell phone records. Chief Justice Roberts, writing for the majority, stated that digital data deserves the same protection as physical property, reiterating the importance of the Fourth Amendment. Dissenting justices argued that the ruling places undue burden on investigators. The landmark verdict is expected to have wide-reaching implications for both law enforcement practices and individual privacy. Politicians and advocacy groups have already started voicing opinions on social media, with civil liberty organizations applauding the decision, while some law enforcement groups express concern over potential increases in bureaucratic hurdles. Experts predict a flurry of new privacy-related cases in upcoming years as a direct result of this judgment.\" Could you please give me a short summary and make sure you include key terms and phrases?",
+    "I've got this rather complex news article I'm trying to grasp the essentials of, and I’d really appreciate your help. The article reads: \"After months of negotiations, leaders of several G7 nations have announced a new global climate initiative. The main points of the agreement involve a commitment to reduce greenhouse gas emissions by 45% within the next decade, investment in renewable energy across participating countries, and the establishment of a multi-billion dollar fund supporting vulnerable communities affected by climate change. The leaders highlighted the importance of international cooperation, with France and Germany taking lead roles in pushing for stricter timelines. While environmental groups are generally positive, they caution that enforcement and transparency will be critical. The initiative faces opposition from some sectors, notably in countries reliant on fossil fuels, where industry groups have voiced concerns about job losses and economic impact.\" Could you please provide a long summary and also include the most significant keywords from the article?",
+    "I was reading the following news report and found some parts confusing: \"Scientists at the University of Cambridge have developed a groundbreaking new vaccine technology that could revolutionize the way infectious diseases are treated. The new mRNA-based platform, which underwent trials in three European countries, has demonstrated unprecedented efficacy and safety, resulting in a 95% decrease in disease transmission rates. Healthcare officials are optimistic about the results, which could lead to global distribution within a year. The study’s authors note that while the vaccine is still pending regulatory approval, initial feedback from authorities like the EMA has been positive. Further research is underway to evaluate its effectiveness against emerging variants. The announcement has generated international media attention and prompted calls for increased funding into vaccine research worldwide.\" Could you summarize this article for me with a medium-length summary that also highlights key phrases and terminology used?",
+    "Here's the entire text of a news article I found: \"The mayor of Springfield announced an ambitious plan to overhaul the city's aging public transportation system. Over the next five years, the city will invest over $500 million to expand bus routes, improve train reliability, and introduce a fleet of electric buses aimed at reducing emissions. City officials are partnering with technology firms to implement real-time tracking and cashless payment systems. While officials hope these measures will ease traffic congestion and benefit commuters, critics argue the plan doesn’t allocate enough resources to underserved neighborhoods. The city council is set to vote on the plan next month, with public hearings scheduled in the meantime.\" Can you give me a short summary and please include all the key terms and topics mentioned?",
+    "I've just read this lengthy article and want some help understanding it better. The text is as follows: \"The global semiconductor shortage, triggered by pandemic-related factory shutdowns and an unprecedented surge in demand for electronics, has had widespread effects across industries from automotive to consumer tech. Major car manufacturers such as Ford and Toyota have reported production delays, while smartphone and gaming console releases have been pushed back. Industry analysts point to supply chain disruptions, labor shortages, and geopolitical tensions as key contributors. Efforts to boost manufacturing capacity are underway, with governments in the US and Europe announcing multi-billion dollar investments in domestic chip production. Experts say it could take several years for supply and demand to rebalance. In the meantime, companies and consumers alike are grappling with higher prices and limited availability of key products.\" Can you provide a medium summary for me and include keywords and important phrases from the article?"
+  ]
+}

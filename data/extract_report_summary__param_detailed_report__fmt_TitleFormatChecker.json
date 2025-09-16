@@ -1,0 +1,46 @@
+{
+  "chosen_param": "detailed_report",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "extract_report_summary",
+    "description": "Extracts a concise summary from a detailed report, highlighting main points and conclusions.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "detailed_report": {
+          "type": "string",
+          "description": "The full text of a report including abstract, body, and conclusions from which a summary is to be extracted. The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>>; all other content apart from the title is permitted."
+        },
+        "include_sections": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "The names of main sections to be included in the summary, such as introduction, methods, results, and discussion."
+          },
+          "description": "Specific sections from the report to include in the summary."
+        },
+        "language": {
+          "type": "string",
+          "description": "The language in which the summary should be provided, specified using language code (for example, 'en' for English, 'es' for Spanish)."
+        }
+      },
+      "required": [
+        "detailed_report",
+        "include_sections",
+        "language"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently completed a comprehensive research report on renewable energy adoption in urban centers, and I need your help to make a concise summary. Here’s the entire text of my report, which includes the abstract, the full body with all detailed subsections, and the conclusion:\n\n\"Abstract: Urban centers are increasingly adopting renewable energy solutions to meet growing energy demands. ... [long detailed report body continues, including sections: Introduction, Literature Review, Methodology, Results, Discussion, Conclusion] ... Conclusion: This study demonstrates significant potential for solar energy in downtown areas.\"\n\nFor the summary, please include the following sections: Introduction, Results, and Conclusion. Provide the summary in English (en).",
+    "I wrote a detailed report about the impact of social media on adolescent mental health, and it is around 25 pages long. I would appreciate it if you could generate a precise summary based on the original text. The entire report is as follows:\n\n\"Abstract: This report explores how various social media platforms affect mental well-being among teenagers. ... [report contains sections: Background, Methods, Findings, Analysis, Future Research, References, Appendices, Discussion] ... Discussion: Implications for parents, educators, and policy makers are explored.\"\n\nCan you give me a summary focusing only on the Methods, Findings, and Discussion sections? Please write the summary in Spanish (es).",
+    "I have this extensive report titled 'Advancements in Artificial Intelligence for Medical Diagnostics,' and it's quite detailed. Here is the complete text:\n\n\"Abstract: Artificial Intelligence (AI) is revolutionizing medical diagnostics by improving accuracy and efficiency. ... (full report includes sections: Introduction, Methodology, Data Analysis, Results, Conclusion, Recommendations, Limitations) ... Recommendations: AI integration strategies for healthcare systems.\"\n\nI want a concise summary that includes the Abstract, Data Analysis, and Recommendations sections, and I need it prepared in French (fr).",
+    "Below is the full text of a business report analyzing quarterly financial performances for a multinational corporation, including the abstract, all main body sections, and the conclusion:\n\n\"Abstract: This quarter’s financial analysis reviews performance across global divisions. ... (Sections: Executive Summary, Financial Overview, Market Trends, SWOT Analysis, Key Findings, Conclusion) ... Conclusion: The corporation has maintained steady growth amid market challenges.\"\n\nKindly extract a concise summary highlighting the Financial Overview, Market Trends, and Key Findings sections. Please provide the summary in German (de).",
+    "I recently finished compiling a technical report on climate change adaptation strategies for coastal cities. Here is the entire report text, covering the abstract, the body, and the conclusions:\n\n\"Abstract: Coastal cities face unique threats from rising sea levels and increased storm intensity. ... (sections include: Introduction, Literature Review, Proposed Strategies, Case Studies, Results, Discussion, Conclusion) ... Conclusion: Proactive adaptation measures reduce long-term risks.\"\n\nCan you create a summary based on the Proposed Strategies, Case Studies, and Conclusion sections? I’d like the summary in English (en)."
+  ]
+}

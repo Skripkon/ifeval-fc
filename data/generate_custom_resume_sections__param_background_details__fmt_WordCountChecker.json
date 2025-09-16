@@ -1,0 +1,51 @@
+{
+  "chosen_param": "background_details",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have exactly 4 words. No less, no more.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 4,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "generate_custom_resume_sections",
+    "description": "Generate customized sections for a resume based on user's background and job requirements.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "background_details": {
+          "type": "string",
+          "description": "Detailed information about the user's background, including education, experience, and skills. The argument value must have exactly 4 words—no less, no more."
+        },
+        "job_requirements": {
+          "type": "string",
+          "description": "Details about the job requirements for the position the user is applying for."
+        },
+        "section_type": {
+          "type": "string",
+          "enum": [
+            "summary",
+            "experience",
+            "skills",
+            "education"
+          ],
+          "description": "The section of the resume to generate."
+        }
+      },
+      "required": [
+        "background_details",
+        "job_requirements",
+        "section_type"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm working on applying for a Product Manager position at a tech startup and want to make my resume stand out. Here's a bit about my background: I graduated with a Bachelor's in Computer Science from NYU, then worked as a Software Engineer at Google for two years focusing on user experience design, and spent the last three years managing a small product team at a fintech company where we launched two successful apps. My skills include project management, Agile methodologies, Python, teamwork, and leadership. The job requires someone with strong product management experience, ability to lead cross-functional teams, knowledge of Agile frameworks, and excellent communication skills. Could you generate a compelling resume summary section for me based on this information and the job requirements I just described?",
+    "I'm updating my resume to apply for a Senior Data Analyst role at a large healthcare company, and I need help crafting the experience section. Background details: I received my Master's in Statistics from the University of Chicago, worked as a Junior Data Analyst at Blue Med Analytics for one year, then as a Data Analyst at HealthPro Insights for three years where I focused on predictive modeling, data visualization, and working closely with clinicians to implement data-driven solutions. My technical skills include R, Python, SQL, Tableau, and communication with non-technical stakeholders. The job I'm applying for requires at least three years of experience analyzing complex healthcare data, building machine learning models, collaborating with clinical staff, and presenting findings to executive leadership. Can you generate the experience section for my resume that aligns with these job requirements and my background?",
+    "I want to create a strong skills section for my resume. Here's my background: I completed a Bachelor's in Business Administration from UCLA, followed by internships in marketing at Johnson & Johnson and a year as a Marketing Associate at a digital agency where I specialized in social media campaigns, email marketing, and analytics. I also just completed a certification in Google Analytics and HubSpot Inbound Marketing. The job I'm applying for is a Marketing Manager position, which asks for expertise in digital marketing, campaign management, analytics tools experience, creativity, and the ability to drive results in a fast-paced environment. Can you help me generate a list of relevant skills for my resume that aligns with my background and those job requirements?",
+    "I'm preparing my resume for a Software Engineering role at a cybersecurity company and would like a strong education section. My background: I hold a Bachelor’s degree in Computer Engineering from Georgia Tech, graduated magna cum laude, and completed a minor in cybersecurity. I also participated in an honors research project on encryption algorithms, and attended several workshops on ethical hacking and network security. The job I’m interested in requires a bachelor’s degree in a relevant field, coursework in cybersecurity or information assurance, and demonstrated academic excellence. Could you help me craft an education section for my resume that highlights my background and fits the position requirements?",
+    "I need to revise my resume to better match the requirements for a Human Resources Specialist opening at a large corporation. Here are my background details: I have a Bachelor's degree in Psychology from the University of Michigan, two years of experience as an HR Assistant at a staffing agency where I helped coordinate new hire onboarding, employee training sessions, and handled benefits administration. I’ve also completed professional certifications in HR management (SHRM-CP) and am skilled in conflict resolution, organizational communication, and HR software like Workday and ADP. The HR Specialist role I’m targeting requires experience with employee relations, knowledge of HRIS, benefits administration, and excellent communication skills. Please generate a customized resume summary section for me given my background and the requirements for this job."
+  ]
+}

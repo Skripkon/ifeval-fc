@@ -1,0 +1,50 @@
+{
+  "chosen_param": "recipe_text",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'wise' exactly 2 times. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "wise",
+      "N": 2,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "extract_ingredient_list",
+    "description": "Extracts a list of ingredients from a given recipe text.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "recipe_text": {
+          "type": "string",
+          "description": "The complete recipe text from which ingredients need to be extracted. The value must contain the word 'wise' exactly 2 times, appearing anywhere in the string and in any letter case."
+        },
+        "include_quantities": {
+          "type": "boolean",
+          "description": "Include the quantities of each ingredient in the list. Defaults to true."
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "list",
+            "csv"
+          ],
+          "description": "The format for the output list of ingredients."
+        }
+      },
+      "required": [
+        "recipe_text",
+        "include_quantities",
+        "format"
+      ]
+    }
+  },
+  "user_queries": [
+    "I found this great recipe for carrot cake online but I’m having trouble organizing the ingredients for my shopping list. Here is the full recipe text: 'For the cake, you’ll need: 2 cups all-purpose flour, 2 teaspoons baking soda, 1/2 teaspoon salt, 2 teaspoons ground cinnamon, 1-1/2 cups vegetable oil, 1-1/2 cups granulated sugar, 1/2 cup packed brown sugar, 4 large eggs, 3 cups grated carrots, 1 cup coarsely chopped pecans, 1/2 cup raisins. For the cream cheese frosting: 8 ounces cream cheese, softened, 1/2 cup unsalted butter, softened, 4 cups powdered sugar, 1 teaspoon vanilla extract'. Can you please provide me with a CSV file listing all the ingredients, but I don’t need the quantities, just the names of the ingredients?",
+    "I recently came across this chicken parmesan recipe, and I want to make sure I have all the ingredients handy before I start cooking. The recipe is as follows: 'Ingredients: 4 boneless, skinless chicken breasts, 1/2 cup flour, 2 large eggs, beaten, 1 cup Italian-style breadcrumbs, 1/2 cup grated parmesan cheese, 2 cups marinara sauce, 1-1/2 cups shredded mozzarella cheese, 2 tablespoons olive oil, Salt and pepper to taste. Instructions: Preheat oven to 400°F, dredge chicken etc.' Can you extract just the complete list of all ingredients including their amounts and give it back to me in a bulleted list format?",
+    "I need help organizing the ingredients for a recipe I want to cook this weekend. Here's the recipe text: 'Vegetarian Chili: 2 tablespoons olive oil, 1 large onion, chopped, 2 bell peppers (any color), diced, 3 cloves garlic, minced, 2 carrots, diced, 2 cans diced tomatoes (14.5 ounces each), 2 cans black beans, drained and rinsed, 1 can corn (15 ounces), 2 tablespoons chili powder, 1 teaspoon cumin, 1 teaspoon smoked paprika, Salt and pepper to taste, Chopped cilantro for garnish.' I really just need the ingredient names, not the quantities, and could you present them in CSV format so I can copy them easily into my grocery app?",
+    "I'm planning my grocery shopping for the week and came across this pasta carbonara recipe in a cookbook. The recipe reads: '12 ounces spaghetti, 2 large eggs, 1 cup grated pecorino romano cheese, 1/2 cup pancetta, diced, 2 cloves garlic, minced, Freshly ground black pepper, Salt to taste, 2 tablespoons chopped fresh parsley.' Could you help me out by extracting a list of all the ingredients including their precise quantities, and present it as a checklist or bulleted list so I can tick them off while shopping?",
+    "Could you please go through the following recipe and list all the ingredients for me in a CSV file, including the amounts as well? The recipe is: 'Pumpkin Bread: 1-3/4 cups all-purpose flour, 1 teaspoon baking soda, 1/2 teaspoon baking powder, 3/4 teaspoon salt, 1/2 teaspoon ground cinnamon, 1/4 teaspoon ground nutmeg, 1/4 teaspoon ground cloves, 1/2 cup vegetable oil, 1-1/2 cups granulated sugar, 2 large eggs, 1 cup canned pumpkin puree, 1/3 cup water, 1 teaspoon vanilla extract.' I need this so I can quickly import the ingredient list into my meal planning spreadsheet."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "chosen_param": "user_notes",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 10 consecutive spaces between every pair of words. Only 10 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 10
+    }
+  },
+  "fn_schema": {
+    "name": "prioritize_tasks",
+    "description": "Organizes and prioritizes a list of tasks based on urgency and importance, optimizing productivity.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "task_list": {
+          "type": "array",
+          "description": "A list of tasks that need prioritization.",
+          "items": {
+            "type": "string",
+            "description": "Each task description."
+          }
+        },
+        "deadline_dates": {
+          "type": "array",
+          "description": "Corresponding deadlines for each task, aligning by index.",
+          "items": {
+            "type": "string",
+            "description": "Deadline for the task in ISO date format."
+          }
+        },
+        "ongoing_projects": {
+          "type": "array",
+          "description": "List of projects that each task may be associated with.",
+          "items": {
+            "type": "string",
+            "description": "Name of the project related to the task."
+          }
+        },
+        "user_notes": {
+          "type": "string",
+          "description": "Additional notes from the user regarding task prioritization. The value must use exactly 10 consecutive spaces between every pair of words, with only 10 spaces in a row allowed anywhere in the string."
+        }
+      },
+      "required": [
+        "task_list",
+        "deadline_dates",
+        "user_notes"
+      ]
+    }
+  },
+  "user_queries": [
+    "I have quite a few things piling up on my to-do list, and I really need help figuring out the best order to tackle them. Here's what I've got so far: 1) Finish the quarterly budget review, 2) Call the plumber about the kitchen leak, 3) Submit the team survey results, 4) Prepare slides for Friday's marketing meeting, and 5) Book flights for the conference. Their deadlines are: budget review due 2024-06-15, plumber call must be made by 2024-06-10, survey submission is due 2024-06-12, slides need to be ready by 2024-06-14, and flights must be booked by 2024-06-11. I want to make sure I'm focusing on tasks that are both urgent and important. Some of these are related to our \"Q2 Financial Review\" and \"Marketing Strategy 2024\" projects. Keep in mind that I tend to procrastinate on admin work, so any advice on overcoming that while prioritizing would be helpful.",
+    "I'm feeling overwhelmed with several responsibilities that have close deadlines, and could really use your assistance in prioritizing them. My tasks for the week include: writing a report on customer feedback, scheduling interviews for the new developer position, updating the project management software, and following up with the vendor about our supply chain issue. The report is due by 2024-06-13, interviews need to be scheduled by 2024-06-10, software update should be completed by 2024-06-12, and the vendor follow-up must happen no later than 2024-06-14. The report and software update are part of our \"Customer Experience Initiative\", while the interviews and vendor issues relate to \"Operations Expansion\". Please prioritize these for me, considering that I'm short on time and that the report might affect other departments if delayed.",
+    "Can you help me organize my upcoming tasks in terms of what's most urgent and important? Here's the list: 1) Review and approve design mockups, 2) Submit expense reimbursement form, 3) Draft the press release for the new product launch, 4) Confirm attendance at the industry webinar, and 5) Send birthday cards to team members. The deadlines are as follows: design review by 2024-06-09, reimbursement form by 2024-06-15, press release draft by 2024-06-11, webinar confirmation by 2024-06-08, and birthday cards by 2024-06-07. The design, expense form, and press release are part of the \"New Product Launch\" project, while the webinar falls under \"Professional Development\". I generally prefer to tackle more creative tasks before administrative ones, so please take that into account when prioritizing.",
+    "I'm struggling to manage my workload and could use your help to prioritize my tasks based on their urgency and importance to improve my productivity. Here is what I've got lined up: revise the project timeline, prepare the training manual, follow up on outstanding invoices, organize a team-building activity, and update our social media profiles. The respective deadlines are 2024-06-10 for timeline revision, 2024-06-13 for the training manual, 2024-06-11 for invoices, 2024-06-15 for the team activity, and 2024-06-12 for the social profiles. The timeline and training manual are tied to \"Project Delta\", the invoices to \"Finance Overhaul\", and the rest are for \"Team Engagement\". Keep in mind that the invoice follow-ups have been delayed a few times already, so avoiding further delay is important. Please help me set these priorities.",
+    "I've got five major things on my plate and need advice on which to tackle first so I don't miss anything crucial. Here’s my task list: 1) Finish the presentation deck for Monday's client pitch, 2) Arrange maintenance for the office printer, 3) Research SEO options for our website, 4) Sign the engagement letter for our new consultant, 5) Compile the monthly newsletter. Their deadlines are: presentation by 2024-06-10, printer maintenance by 2024-06-13, SEO research by 2024-06-12, engagement letter by 2024-06-11, and newsletter by 2024-06-14. The presentation and newsletter relate to the \"Client Success\" project, SEO research is part of \"Web Presence Boost\", the engagement letter is for \"Consultant Onboarding\", and printer maintenance is just administrative. Please keep in mind that client-facing tasks might have higher stakes. Let me know the optimal order I should address these."
+  ]
+}

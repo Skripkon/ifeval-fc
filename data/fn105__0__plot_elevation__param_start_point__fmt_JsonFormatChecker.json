@@ -1,0 +1,42 @@
+{
+  "chosen_param": "start_point",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn105__0__plot_elevation",
+    "description": "Plots the elevation profile along a route.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "start_point": {
+          "type": "string",
+          "description": "The start point of the route. The argument value must be a valid JSON object that is syntactically correct and parseable."
+        },
+        "end_point": {
+          "type": "string",
+          "description": "The end point of the route."
+        },
+        "resolution": {
+          "type": "string",
+          "description": "The resolution of the elevation data, 'High', 'Medium', or 'Low'. Default is 'Medium'."
+        }
+      },
+      "required": [
+        "start_point",
+        "end_point"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there! I'm planning a great hiking adventure from Los Angeles, California, all the way to San Francisco, California. I want to make sure that I'm well-prepared for the types of terrain I'll encounter along the way. Could you do me a huge favor and generate a detailed elevation profile for this route? I'm interested in seeing how the elevation changes as you travel between these two points. Also, I’m not too concerned about getting the highest accuracy data, so even if it's plotted in medium resolution that’s perfect for me. Thanks a million!",
+    "Hello! I'm organizing a cycling tour from New York City to Washington D.C., and I'd love to get a better understanding of the elevation changes along the route. This will really help us pace ourselves better throughout the trip, especially since not everyone in the group is an experienced cyclist. Could you please generate a plot of the elevation profile for this route? I'm not too fussy about the resolution, so whatever standard medium resolution you have would be just fine. Looking forward to seeing how the landscape varies!",
+    "Good day! I’m in the process of planning a road trip and need some information on the elevation profile between Seattle, Washington, and Portland, Oregon. We're trying to estimate fuel consumption and account for any steep climbs that may affect our journey. Would you be able to help us out by plotting the elevation profile for this entire route? If you can present it in a high resolution, that would be really helpful as we want all the data we can get to ensure our trip is perfectly planned. Much appreciated!",
+    "Hi there! My friend and I are pondering an epic trek from the Grand Canyon in Arizona to Monument Valley in Utah. We both share a love of nature and unique landscapes, but want to make sure we’re prepared for any particularly challenging sections. Could you provide us with a complete elevation profile for this route? It doesn’t need to be in high definition, just a medium resolution should serve our needs perfectly. Understanding the elevation variances will be extremely beneficial for our planning purposes. Thanks!",
+    "Greetings! I'm planning a family road trip from Miami, Florida, to Atlanta, Georgia, and am curious about the elevation changes we might experience as we make this journey. This information will be incredibly useful for managing travel fatigue and ensuring we rest appropriately. Can you create an elevation profile for the entire route for us? I'd appreciate any data, even if it's just in medium resolution, so we can adequately prepare and adjust our travel plans if necessary. Thank you so much in advance for your assistance!"
+  ]
+}

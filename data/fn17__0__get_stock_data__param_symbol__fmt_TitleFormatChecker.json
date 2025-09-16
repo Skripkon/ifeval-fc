@@ -1,0 +1,45 @@
+{
+  "chosen_param": "symbol",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn17__0__get_stock_data",
+    "description": "Retrieve the most recent trading day's closing price and volume for a specified stock.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "description": "The stock symbol of the company. The value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed)."
+        },
+        "data_points": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "The type of data you want to retrieve for the stock. This can include closing price, opening price, volume, etc.",
+            "enum": [
+              "price",
+              "volume"
+            ]
+          }
+        }
+      },
+      "required": [
+        "symbol",
+        "data_points"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hi, I'm interested in finding out how the stock market performed recently, specifically for Tesla. Could you provide me with the most up-to-date information you have regarding Tesla's trading? In particular, I'm looking for the latest closing price as well as the trading volume for the past trading day. The stock symbol for Tesla is TSLA. I'd appreciate the details so I can analyze how the stock is trending and decide whether it might be a good time to invest or not.",
+    "Could you please look up the most recent trading day's information for Apple Inc.? I'm really keen to know both the closing price and the volume of shares traded for Apple, whose ticker symbol is AAPL. I am tracking their performance closely for my portfolio review, so the specific data I need is yesterday’s closing price along with the trading volume. Please give me these details for the AAPL stock symbol as soon as possible.",
+    "I would like to get the latest financial trading data for Microsoft Corporation, specifically with a focus on two key data points: the most recent closing price and the volume of shares traded. The symbol for Microsoft is MSFT. Please retrieve these two values so I can update my financial models and better understand how the MSFT stock is currently performing based on the most recent market activity.",
+    "Can you help me retrieve some current market information for Alphabet, the parent company of Google? I'm particularly interested in viewing the closing price from the last trading session along with the total volume of trades that occurred. I'm aware the stock ticker for Alphabet is GOOGL. Please provide me with both the closing price and volume for GOOGL from the latest trading day for my investment analysis.",
+    "I'm compiling a report on several tech stocks and I need the latest key trading data for Amazon. Could you give me the information for the AMZN stock symbol, focusing specifically on the closing price and the total volume traded during the most recent market session? Both these data points are important for my research, so please provide the most updated figures possible for Amazon (AMZN)."
+  ]
+}

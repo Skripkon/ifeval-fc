@@ -1,0 +1,50 @@
+{
+  "chosen_param": "notes_text",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain exactly 3 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 3
+    }
+  },
+  "fn_schema": {
+    "name": "extract_actionable_items",
+    "description": "Extracts actionable items and tasks from the given meeting notes.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "notes_text": {
+          "type": "string",
+          "description": "The full text of meeting notes from which to extract action items. The argument value must contain exactly 3 words written entirely in capital (uppercase) letters."
+        },
+        "priority_level": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "description": "The priority level to assign to the extracted action items."
+        },
+        "deadline_in_days": {
+          "type": "integer",
+          "description": "The number of days from now when the tasks should be completed."
+        }
+      },
+      "required": [
+        "notes_text",
+        "priority_level",
+        "deadline_in_days"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi there! I just finished our weekly team meeting, and I need some help organizing the action items so nothing gets missed. Here are the meeting notes: 'We discussed the upcoming product launch timeline. Sarah is to finalize the UI designs by Friday, and Tom will prepare the marketing materials. John mentioned that QA should start testing next week. The team also agreed to set up a meeting with the legal department before proceeding. Lisa will draft the initial outreach email to partners.' Can you extract all the actionable tasks from these notes, assign them high priority, and set the deadline for completion as 5 days from today?",
+    "I've got the notes from our last project sync meeting that I'd like to process for clarity. The notes are: 'Paul will coordinate with the vendors to confirm delivery schedules. Mary is tasked to update the project plan with new milestone dates. Everyone needs to submit their weekly report by Thursday. James will follow up with finance about the budget increase.' Please extract every actionable item from this set of meeting notes, give them a medium priority, and set a completion deadline of 7 days from now.",
+    "Please review the following meeting notes and identify all the tasks that need follow-up: 'Jane will review the new contract terms. Steve is supposed to arrange a call with the client. Cynthia must update the risk log by Friday. The team discussed hosting a workshop, but no one was assigned to organize it yet.' I would like you to mark all the extracted action items as low priority and assign a deadline of 3 days from today for their completion.",
+    "Could you help me by extracting the actionable items from these meeting minutes? Here is what was recorded: 'Mike was asked to set up the next team meeting. Anna is to prepare the first draft of the quarterly report. Sophie volunteered to assemble the survey results. Everyone should review the codebase for deprecated functions.' Once you've extracted the tasks and action points, please categorize them as high priority and ensure the deadline for each is set to 10 days from now.",
+    "I need assistance reviewing these meeting notes for tasks that we need to follow up on: 'Tim is responsible for updating the software documentation. Alice should arrange the client demo session by next week. The support team will analyze customer feedback. David needs to create a project status presentation.' Please extract all actionable items, set their priority level to medium, and assign a completion deadline of 4 days from now."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chosen_param": "discrepancy_details",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain at least 2 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "at least",
+      "N": 2
+    }
+  },
+  "fn_schema": {
+    "name": "analyze_inventory_discrepancy",
+    "description": "Examines and reports discrepancies between recorded and actual inventory stock levels.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "discrepancy_details": {
+          "type": "string",
+          "description": "Description of the inventory discrepancy, including possible reasons or observations. The argument value must contain at least 2 words written entirely in capital (uppercase) letters."
+        },
+        "warehouse_id": {
+          "type": "string",
+          "description": "Unique identifier for the warehouse where the discrepancy was observed."
+        },
+        "product_sku": {
+          "type": "string",
+          "description": "Stock Keeping Unit of the product associated with the discrepancy."
+        }
+      },
+      "required": [
+        "discrepancy_details",
+        "warehouse_id",
+        "product_sku"
+      ]
+    }
+  },
+  "user_queries": [
+    "We recently observed an issue at our main distribution center, Warehouse01A, where the physical count of product SKU XJH2345 does not match the amount recorded in our system. According to the system, we should have 1,500 units in stock, but during our last audit, we only counted 1,430 units. The discrepancy of 70 units could be due to mislabeled shipments received last month, or a possible error during shelving or picking processes. Could you analyze this discrepancy and provide a detailed report or insights?",
+    "I need help understanding a problem we just discovered in warehouse location WARE_4007 concerning SKU 7K9LP33. The inventory record says that there should be 800 pieces on hand, but after a comprehensive manual count, only 792 were found. There were no recent theft reports, but we did have a system outage a week ago which might have caused the numbers to be off. There’s also a possibility that some units were damaged and disposed of without proper documentation. Can you examine this inventory discrepancy and tell me what might be going on?",
+    "Please investigate an entry for our warehouse labeled WHSE-BETA-02 for product SKU RTB1120. The inventory log indicates that there are 420 units, but the actual count from the physical inventory conducted yesterday was 448 units, giving us a surplus of 28 units. Observations from the team suggest that a returned shipment might have been restocked but not logged in the system. There’s also a chance of clerical error during last month’s stock reconciliation process. Can you analyze this discrepancy and generate a report?",
+    "During a recent review at warehouse identifier W019, we encountered a mismatch involving item SKU PQRS-4458. Our records suggest 2,300 units on hand, but our latest count showed only 2,275. The 25 missing units could've been misplaced in another section or might be the result of an unrecorded transfer to a different facility. The receiving logs last week were incomplete, and some packing slips were missing, which is suspicious. I’d appreciate your help investigating and reporting on this inventory discrepancy.",
+    "Can you take a look at an inventory issue that was logged at warehouse AE16, related to SKU 9988ZX? The system expects 62 pieces, but our physical inspection documented just 59. The missing items might have been shipped out with the wrong package during a busy sales day, or perhaps there was a mistake while unloading the latest inbound shipment. The shipping team also reported some barcode scanner malfunctions last Thursday. Please analyze the details and summarize the findings regarding this discrepancy."
+  ]
+}

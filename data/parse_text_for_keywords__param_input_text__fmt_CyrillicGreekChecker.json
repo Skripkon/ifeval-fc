@@ -1,0 +1,60 @@
+{
+  "chosen_param": "input_text",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Greek letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "greek"
+    }
+  },
+  "fn_schema": {
+    "name": "parse_text_for_keywords",
+    "description": "Extracts keywords from a given text and categorizes them based on predefined themes.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "input_text": {
+          "type": "string",
+          "description": "A paragraph or document from which keywords need to be extracted. The argument value must be written entirely in Greek letters; no letters from other scripts are allowed."
+        },
+        "language": {
+          "type": "string",
+          "description": "The language of the input text.",
+          "enum": [
+            "English",
+            "Spanish",
+            "French",
+            "German"
+          ]
+        },
+        "themes": {
+          "type": "array",
+          "description": "A list of themes to categorize extracted keywords.",
+          "items": {
+            "type": "string",
+            "description": "A single theme category.",
+            "enum": [
+              "technology",
+              "health",
+              "science",
+              "finance"
+            ]
+          }
+        }
+      },
+      "required": [
+        "input_text",
+        "language",
+        "themes"
+      ]
+    }
+  },
+  "user_queries": [
+    "I have recently read the following article and I am very interested in understanding what the most important keywords are within this text, especially as they relate to technology and finance. The article, written in English, is as follows: \"In the ever-evolving world of artificial intelligence, major technology companies are investing billions in research and development. This investment is not only transforming the way products are designed but also impacting global financial markets. Startups specializing in machine learning and data analytics are securing significant venture capital funding, and established firms are expanding their cloud computing infrastructure to support new business models.\" Please analyze this text, extract the main keywords, and categorize them under technology and finance.",
+    "I need your help analyzing a French document I received. I'm trying to see which health and science-related keywords are present in this text because I'm preparing a report. The document says: \"Les récentes découvertes en thérapie génique ouvrent de nouvelles perspectives pour le traitement des maladies rares. De nombreux chercheurs collaborent à travers des laboratoires internationaux pour améliorer les protocoles cliniques et développer des solutions innovantes dans le secteur de la santé.\" Could you go through this and extract important keywords, categorizing them into health and science themes?",
+    "Could you please examine the following Spanish paragraph and pull out all the key concepts and terms, organizing them under the themes of finance and technology? Here is the text: \"El mercado financiero global ha experimentado una transformación radical con la inclusión de tecnologías como blockchain y la inteligencia artificial. Los bancos tradicionales ahora están invirtiendo en soluciones tecnológicas para mejorar la eficiencia y aumentar la seguridad en las transacciones.\" I'm looking to understand how these two themes are represented in the paragraph.",
+    "I've got this German excerpt from a recent magazine discussing both health and finance advancements, and I want to know what the main keywords are in each category. The excerpt is: \"Im digitalen Zeitalter entwickeln Unternehmen innovative Gesundheitslösungen, die durch finanzielle Unterstützung von Investoren vorangetrieben werden. Mobile Gesundheitsapps und telemedizinische Services erweitern das Angebot im Gesundheitssektor und sind für viele Menschen zugänglicher geworden.\" Can you extract significant keywords for both health and finance categories from this passage?",
+    "I'm conducting research and need to analyze the major themes present in the following English text, specifically focusing on science and technology. The text reads: \"Recent breakthroughs in quantum computing are expected to revolutionize numerous scientific disciplines. Researchers are utilizing powerful simulations to solve complex problems in physics and chemistry, while technology companies are racing to build more reliable quantum processors.\" Please extract the crucial keywords and categorize them into science and technology for me."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "chosen_param": "type",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'universal' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "universal",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn102__1__poker_game_winner",
+    "description": "Identify the winner in a poker game based on the cards.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Names of the players in a list."
+          }
+        },
+        "cards": {
+          "type": "object",
+          "properties": {},
+          "description": "An object containing the player name as key and the cards as values in a list."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of poker game. Defaults to 'Texas Holdem'. The argument value must contain the word 'universal' exactly one time, in any position within the string. Occurrences may be anywhere, and case does not matter."
+        }
+      },
+      "required": [
+        "players",
+        "cards",
+        "type"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I’m hosting a poker night and we just finished a hand, but we aren’t sure who won—it got a little confusing at the end! There are five players: Sarah, Mike, Jason, Emily, and Chris. Sarah had 8 of hearts and 9 of diamonds, Mike had Ace of clubs and King of hearts, Jason had Jack of spades and Jack of hearts, Emily had 10 of clubs and 7 of clubs, and Chris had Queen of diamonds and Queen of spades. We're playing Texas Holdem, and the community cards on the table are 2 of hearts, 4 of clubs, 10 of hearts, King of spades, and 6 of diamonds. Can you help us figure out which player wins this round?",
+    "During our poker game tonight, we had a close call and everyone thinks they might be the winner! The players in the hand are Laura, Ben, Tanya, and Steve. Laura had 4 of hearts and 5 of hearts, Ben had Ace of spades and Ace of diamonds, Tanya had Queen of clubs and 9 of spades, and Steve had Jack of diamonds and 2 of clubs. The type of poker game we were playing is Texas Holdem. The community cards that were dealt on the table are 3 of hearts, Ace of hearts, 10 of clubs, King of diamonds, and 7 of spades. Can you determine who actually won?",
+    "Can you tell me who the winner is from our latest poker hand? The players were Angela, Lewis, Priya, Ethan, and Sam. Angela held King of clubs and 7 of clubs, Lewis held 10 of hearts and Jack of hearts, Priya had 2 of diamonds and 2 of spades, Ethan had 5 of spades and 6 of diamonds, and Sam had Ace of clubs and 3 of hearts. We played Texas Holdem, and the cards on the table were 3 of diamonds, 4 of clubs, 5 of hearts, 6 of hearts, and 7 of spades. Based on all these cards, who takes the pot?",
+    "We just wrapped up an intense hand and need help deciding the winner. The players still in are Simon, Claire, Lily, Victor, and George. Simon was dealt 6 of hearts and 6 of spades, Claire has King of hearts and Jack of clubs, Lily had 3 of clubs and 2 of hearts, Victor got Queen of diamonds and Queen of clubs, and George received 8 of diamonds and 8 of spades. The type of game is Texas Holdem. The community cards on the table are 6 of clubs, King of spades, 10 of hearts, 10 of diamonds, and Ace of spades. Please help us figure out who won this hand!",
+    "Could you please help us determine which player won in our last round of poker? The participants were Martin, Olivia, and Sienna. Martin had 7 of diamonds and 5 of clubs, Olivia had 9 of hearts and 8 of spades, and Sienna had Ace of spades and 10 of clubs. We were playing a Texas Holdem game. The community cards on the table were 4 of spades, 6 of hearts, 8 of clubs, 9 of clubs, and Ace of diamonds. Based on these cards, can you calculate the winner for this round?"
+  ]
+}

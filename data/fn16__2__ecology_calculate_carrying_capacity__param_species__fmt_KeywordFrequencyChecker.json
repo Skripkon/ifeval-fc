@@ -1,0 +1,47 @@
+{
+  "chosen_param": "species",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'universal' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "universal",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn16__2__ecology_calculate_carrying_capacity",
+    "description": "Calculate the maximum population size of the species that the environment can sustain indefinitely.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "habitat_area": {
+          "type": "number",
+          "description": "The area of the habitat in square kilometers."
+        },
+        "species": {
+          "type": "string",
+          "description": "The species of animal. The argument value must contain the word 'universal' exactly once, in any part of the string and regardless of case."
+        },
+        "productivity": {
+          "type": "number",
+          "description": "The biological productivity of the habitat in animals per square kilometer per year."
+        }
+      },
+      "required": [
+        "habitat_area",
+        "species",
+        "productivity"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm working on a research project about African elephants and I'm trying to figure out the maximum population size that a specific environment can sustainably support over time. The habitat in question covers around 4,000 square kilometers, and based on recent ecological studies, the biological productivity of this area has been estimated to be 0.25 elephants per square kilometer each year. Given this information, could you help me determine what the carrying capacity would be for African elephants in this particular habitat, using these values?",
+    "I’m interested in understanding how many grizzly bears could be supported in a remote wilderness reserve if we know certain key details about the environment. The preserve's total area is approximately 1,500 square kilometers, and according to wildlife reports, the productivity of this habitat is about 0.08 grizzly bears per square kilometer per year. Can you assist me in calculating the largest sustainable population size for grizzly bears that this environment can indefinitely maintain, using these specifics?",
+    "Could you help me estimate the carrying capacity for gray wolves in a region I am studying? The habitat area spans 2,200 square kilometers, and local ecological surveys indicate the productivity is roughly 0.1 wolves per square kilometer per year. I'm trying to find out the maximum population size of gray wolves that this habitat could sustain year after year based on those figures. What would the carrying capacity be for gray wolves given this habitat area and productivity?",
+    "I’m preparing a conservation plan and need to determine the sustainable population limit for snow leopards living in a mountainous area that is about 3,100 square kilometers in size. The available data suggests that this ecosystem can support about 0.012 snow leopards per square kilometer per year due to its specific productivity rates. Could you figure out the maximum population of snow leopards that can be supported in this particular area considering these parameters?",
+    "For a report on bison management in the Great Plains, I need to calculate the largest possible population of bison that can be maintained without degrading the environment. The grassland where they live is 5,500 square kilometers, and studies indicate that the habitat’s productivity is approximately 0.3 bison per square kilometer per year. With these numbers, could you help me compute the theoretical carrying capacity for bison in this grassland ecosystem?"
+  ]
+}

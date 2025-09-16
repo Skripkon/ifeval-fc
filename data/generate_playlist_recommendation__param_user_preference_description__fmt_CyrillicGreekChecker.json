@@ -1,0 +1,54 @@
+{
+  "chosen_param": "user_preference_description",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Greek letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "greek"
+    }
+  },
+  "fn_schema": {
+    "name": "generate_playlist_recommendation",
+    "description": "Generates a personalized playlist recommendation for the user based on their preferences and recent activity.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_preference_description": {
+          "type": "string",
+          "description": "A detailed description of the user's music preferences and goals for the playlist. The value must be written entirely in Greek letters; no letters from other scripts are allowed."
+        },
+        "include_recent_listens": {
+          "type": "boolean",
+          "description": "Whether to include songs from the user's recent listening history in the recommendation. Defaults to False."
+        },
+        "mood_filter": {
+          "type": "string",
+          "enum": [
+            "happy",
+            "sad",
+            "energetic",
+            "calm"
+          ],
+          "description": "Filter playlist recommendation by mood."
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "description": "The desired duration of the playlist in minutes."
+        }
+      },
+      "required": [
+        "user_preference_description",
+        "include_recent_listens",
+        "mood_filter"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been looking for some new music to listen to during my afternoon walks, and I wanted to get a playlist that truly fits my tastes. I really enjoy indie rock bands, mellow singer-songwriters, and occasionally some upbeat pop tunes. Lately, I've been in a very good mood, so I'd love for the general feeling of the playlist to be happy and positive. Could you make me a playlist that reflects these preferences, and please incorporate some of the songs I've been listening to recently? Also, I’d like it to be about 90 minutes long for when I go on longer walks.",
+    "I'm planning a small gathering with close friends and would appreciate a playlist that sets a chilled and laid-back vibe. I tend to prefer acoustic tracks, lo-fi beats, and anything that feels relaxed and introspective. Please don't include songs from my recent listening history since I'd like to be surprised with completely new recommendations. I'm feeling calm and want the mood to reflect that. Can you design a playlist with these qualities and make it last for about 120 minutes?",
+    "It's been a rough week for me, and I'm in need of some music that channels a more melancholic or introspective atmosphere. My preference leans towards alternative, folk, and soft rock songs that encapsulate a sad, emotionally resonant mood. Could you generate a playlist for me, making sure it includes some of the tracks I've been playing frequently lately? The playlist doesn't need to be too long; around 60 minutes would be ideal. I want it to help me process my feelings but still introduce some new songs as well.",
+    "I am searching for a workout playlist that will keep me energized throughout my training sessions. I typically like high-tempo pop, electronic dance music, and powerful hip-hop anthems. For this playlist, I’d like to skip anything from my recent music history, since I want to refresh my workout jams. The mood I’m after is definitely energetic, to give me that extra push. Can you create a playlist that hits these marks and runs for approximately 45 minutes?",
+    "I'm getting ready for a road trip and would love a playlist perfect for driving with a mix of classic rock, upbeat country, and summery pop hits. I’m generally interested in songs that lift my spirits and keep the journey lively, so a happy mood filter would be ideal. Please mix in some of my favorite songs from my recent listens too, since those always get me singing along. Let’s aim for a nice long playlist that lasts about 180 minutes to keep us going through the drive. Thank you!"
+  ]
+}

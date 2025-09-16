@@ -1,0 +1,52 @@
+{
+  "chosen_param": "code",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'end' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "end",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "debug_program_code",
+    "description": "Analyzes and debugs the provided program code to identify and fix errors.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "The program code which needs to be debugged. The value must contain the word 'end' exactly once, anywhere in the string, regardless of case."
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "Python",
+            "JavaScript",
+            "Java",
+            "C++",
+            "Ruby"
+          ],
+          "description": "The programming language used for the code."
+        },
+        "provide_solution": {
+          "type": "boolean",
+          "description": "Whether to provide a solution or fix along with the debug analysis. Defaults to True."
+        }
+      },
+      "required": [
+        "code",
+        "language"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been struggling to figure out why my Python script to process CSV files keeps throwing an error when I try to read the data. Here's the relevant part of my code:\n\nimport csv\nwith open('data.csv', 'r') as file:\n    reader = csv.reader(file)\n    for row in reader:\n        print(row[0] + row[1])\n\nIt seems like everything should work but I get an index error on some rows. Could you please go through the code, identify what’s wrong, provide an explanation, and suggest what I should fix to make it work correctly?",
+    "I'm building a simple to-do app in JavaScript, but when I try to remove an item from the list, it sometimes removes the wrong one or nothing at all. Here's the code managing the removal:\n\nfunction removeItem(index) {\n    todoList.splice(index, 1);\n    renderList();\n}\n\nThe todoList is an array of task objects, and renderList() updates the display. Can you look over the code and tell me if there's a bug, and if so, help me fix it? I'm not sure what I'm missing.",
+    "I have this Java code snippet that’s supposed to calculate the factorial of a number, but it doesn’t seem to work properly for inputs larger than 10. Can you analyze it and let me know what errors or issues might be present, and if possible, provide a corrected version?\n\npublic int factorial(int n) {\n    int result = 1;\n    for (int i = 1; i <= n; i++) {\n        result = result * i;\n    }\n    return result;\n}\n\nThe language is Java. Thanks for your help!",
+    "Can you check this C++ code I've written? It's intended to reverse the contents of an array in place, but the output doesn’t always match my expectations, especially with arrays of odd length. Here's the function:\n\nvoid reverseArray(int arr[], int size) {\n    for (int i = 0; i < size / 2; i++) {\n        int temp = arr[i];\n        arr[i] = arr[size - 1 - i];\n        arr[size - 1 - i] = temp;\n    }\n}\n\nThe code is written in C++. Please tell me if there are any bugs or logic errors and show me the correct way to do it if changes are needed.",
+    "I wrote a Ruby script to loop over a list of names and print a greeting for each, but it's throwing an undefined variable error. Here's the code:\n\nnames = ['Alice', 'Bob', 'Carol']\nfor name in names\n    puts 'Hello, ' + names\nend\n\nCan you examine this Ruby code, explain why it's failing, and if you identify any issues, provide the corrected code? I need to understand exactly what’s wrong and how to resolve it."
+  ]
+}

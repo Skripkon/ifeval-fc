@@ -1,0 +1,48 @@
+{
+  "chosen_param": "loc",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn113__2__walmart_purchase",
+    "description": "Retrieve information of items from Walmart including stock availability.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "loc": {
+          "type": "string",
+          "description": "Location of the nearest Walmart. The argument value must be a valid JSON object that is syntactically correct and parseable."
+        },
+        "product_list": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Items to be purchased listed in an array."
+          }
+        },
+        "pack_size": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "description": "Size of the product pack if applicable. The size of the array should be equal to product_list. Default is empty array."
+          }
+        }
+      },
+      "required": [
+        "loc",
+        "product_list"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there, I'm planning a big family gathering this weekend in Austin, Texas, and I need some help checking if certain items are available at the Walmart near 1234 Main Street, Austin, TX 78701. Could you please tell me if they have the following products in stock: 20 pounds of boneless chicken breast, two large containers of Tide laundry detergent, five packs of Bounty paper towels, and three bottles of Dawn dish soap? If you can, specify how many of each are available and if there are any bulk package options for these items. Thanks!",
+    "I'm in Los Angeles, specifically near the Walmart at 4101 Crenshaw Blvd, Los Angeles, CA 90008. Before I head over, could you check for me if they have the following products available: a box of Honey Nut Cheerios cereal, a family-size bag of Lay's Classic Chips, a bottle of Pantene shampoo, and a carton of Silk Almond Milk? If possible, also let me know the available pack sizes for each so I can decide how much to buy.",
+    "Hello, can you help me find out whether the Walmart store located at 5555 Wonderland Rd, Columbus, OH 43214 has the following groceries in stock right now: 2 gallons of whole milk, 3 loaves of Sara Lee classic white bread, a package of Kraft singles, and a dozen large eggs? I need this information so I can plan my grocery trip and avoid going to multiple stores. Please include details about different pack sizes or bulk options if they have those.",
+    "I'm about to run errands and I'm thinking of stopping by the Walmart at 2001 West 95th St, Chicago, IL 60643. Beforehand, could you tell me if they have any Clorox disinfecting wipes, a case of Aquafina water bottles, Sensodyne toothpaste, and a bag of Purina One dry cat food? Please check these products for availability and advise if they offer different pack sizes or quantity options for any of them, as I might want to stock up.",
+    "I'm staying temporarily at 8500 Shoal Creek Blvd, Austin, TX 78757 and need to restock some household items. Could you check at the Walmart nearby if they carry and have in stock the following: a four-pack of AA Energizer batteries, a 12-roll pack of Charmin Ultra toilet paper, a value pack of Dove body wash, and a three-pack of Colgate toothbrushes? Please let me know what's available, whether there are multiple pack size choices, and if so, how many items come in each pack."
+  ]
+}

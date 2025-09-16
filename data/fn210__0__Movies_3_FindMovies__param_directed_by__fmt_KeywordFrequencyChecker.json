@@ -1,0 +1,63 @@
+{
+  "chosen_param": "directed_by",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'universal' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "universal",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn210__0__Movies_3_FindMovies",
+    "description": "Retrieves a list of movies based on the director, genre, and cast specified by the user.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "directed_by": {
+          "type": "string",
+          "description": "Director of the movie. The argument value must contain the word 'universal' exactly once, in any position within the string; case is not important. Use 'dontcare' if the director is not a specific search criterion."
+        },
+        "genre": {
+          "type": "string",
+          "description": "Genre of the movie. Use 'dontcare' to include all genres or genre is not specified by user",
+          "enum": [
+            "Offbeat",
+            "Fantasy",
+            "World",
+            "Mystery",
+            "Thriller",
+            "Comedy",
+            "Comedy-drama",
+            "Horror",
+            "Animation",
+            "Sci-fi",
+            "Cult",
+            "Drama",
+            "Anime",
+            "Family",
+            "Action",
+            "dontcare"
+          ]
+        },
+        "cast": {
+          "type": "string",
+          "description": "Names of leading actors or actresses in the movie. Use 'dontcare' if the cast is not a specific search criterion."
+        }
+      },
+      "required": [
+        "directed_by"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm working on a film studies project and I need to compile a comprehensive list of movies directed by Christopher Nolan. If possible, I'm specifically interested in those films that fall under the thriller genre, as I'm examining his approach to suspense and storytelling. Additionally, I'd like to focus on the ones that feature Leonardo DiCaprio or Christian Bale as part of the main cast, since their performances often add a unique dimension to his movies. Could you help me find all the movies that meet these criteria, directed by Christopher Nolan, in the thriller genre, starring those actors?",
+    "Could you help me find all the films directed by Sofia Coppola? I'm particularly looking for movies that are classified as drama, since I'm gathering material for a women's studies seminar focusing on female-directed dramas. Also, if you could narrow it down to films featuring Scarlett Johansson or Bill Murray in the cast, that would be great, as their performances have a special resonance in Coppola's work. Please provide a list including all pertinent details you can find.",
+    "I'm searching for a list of action movies directed by James Cameron. I've been a huge fan of his blockbuster films, especially those featuring Arnold Schwarzenegger or Linda Hamilton in leading roles. Can you provide a detailed list of all the action genre movies helmed by James Cameron where either Arnold Schwarzenegger or Linda Hamilton had a starring role? This is for a movie marathon I'm planning with friends who love classic action films.",
+    "I need your help finding every anime film directed by Hayao Miyazaki, but I am not particular about the actors providing voices in these movies. For a cultural analysis assignment, I'm compiling films from a specific director in the anime genre. Could you please give me a comprehensive list of all anime genre movies directed by Hayao Miyazaki, regardless of who is in the cast?",
+    "Can you provide a list of family genre movies directed by Chris Columbus? I'm particularly interested in titles that feature Daniel Radcliffe or Emma Watson in the cast, as my kids are big fans of those actors. We're looking to organize a family movie week and need suggestions that fit this criteria—movies suitable for all ages, directed by Chris Columbus, and starring either of those two actors."
+  ]
+}

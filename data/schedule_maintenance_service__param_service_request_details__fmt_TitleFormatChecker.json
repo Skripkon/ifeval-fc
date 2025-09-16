@@ -1,0 +1,42 @@
+{
+  "chosen_param": "service_request_details",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "schedule_maintenance_service",
+    "description": "Schedules a maintenance service appointment for the user’s home.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "service_request_details": {
+          "type": "string",
+          "description": "Details of the maintenance service requested by the user, including any specific issues they are experiencing. The value must contain a title wrapped in double angle brackets, such as <<poem of joy>>; everything except for the title is allowed."
+        },
+        "preferred_date": {
+          "type": "string",
+          "description": "The preferred date for the maintenance service appointment in YYYY-MM-DD format."
+        },
+        "contact_number": {
+          "type": "string",
+          "description": "The user's contact phone number for appointment confirmation and updates."
+        }
+      },
+      "required": [
+        "service_request_details",
+        "preferred_date",
+        "contact_number"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hello, I'd like to set up a maintenance appointment at my home because I've been experiencing an issue with my heating system—the heater is making loud clanking noises and it's not warming up the house adequately, which has been persistent for about a week now. I would prefer the service to be scheduled on 2024-07-15 if possible. If you need to reach me for confirmation or additional information, my phone number is 555-123-7890. Please let me know if this date works for your team or if I need to select another.",
+    "I’ve noticed that the garbage disposal under my kitchen sink is leaking and making a strange humming sound, and I’d like to arrange for a professional to take a look and hopefully repair it soon. Could you please schedule a maintenance service for this issue? I’m hoping for an appointment on 2024-08-01, as that’s my day off. You can contact me at 312-555-2048 to confirm the appointment or if further details are necessary. Thank you for helping me get this resolved.",
+    "I need to book a maintenance service because my bathroom's exhaust fan has stopped working completely and there's a lingering moisture problem that's affecting the ceiling paint. I'd appreciate it if someone could come to inspect and fix the fan. My preferred date for the service would be 2024-06-30. For any follow-up or appointment confirmation, please contact me at 646-789-1223. Let me know if you need additional information about the issue before the visit.",
+    "I am writing to request a maintenance appointment to address several electrical outlets in my living room that suddenly stopped working yesterday, causing inconvenience with my devices. I'd like to have an electrician come to check this as soon as they're available. My ideal date for the appointment would be 2024-07-05, since I’ll be home all day then. Feel free to call me at 800-444-0099 to coordinate details or follow up about the booking. Looking forward to your confirmation.",
+    "Could you please help me arrange a visit from a plumber to fix a persistent dripping faucet in my kitchen? It’s been leaking for a few weeks now despite my attempts to tighten it, and I’m concerned about water wastage. I would appreciate it if the maintenance appointment could be set for 2024-07-20. My contact number is 975-555-0304; please use it to reach out if you need any additional information or to confirm the appointment. Thank you very much in advance."
+  ]
+}

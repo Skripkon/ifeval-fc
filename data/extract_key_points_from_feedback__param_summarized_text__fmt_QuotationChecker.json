@@ -1,0 +1,49 @@
+{
+  "chosen_param": "summarized_text",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in single quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "single"
+    }
+  },
+  "fn_schema": {
+    "name": "extract_key_points_from_feedback",
+    "description": "Extracts key points, issues, and features from user feedback for product improvement purposes.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "summarized_text": {
+          "type": "string",
+          "description": "Original user feedback that needs to be analyzed to extract key points. The argument value must be wrapped in single quotation marks, with no additional characters outside the quotes."
+        },
+        "feedback_type": {
+          "type": "string",
+          "enum": [
+            "positive",
+            "negative",
+            "neutral"
+          ],
+          "description": "The overall type of feedback provided by the user."
+        },
+        "product_version": {
+          "type": "string",
+          "description": "The version of the product about which feedback is provided."
+        }
+      },
+      "required": [
+        "summarized_text",
+        "feedback_type",
+        "product_version"
+      ]
+    }
+  },
+  "user_queries": [
+    "I just wanted to share my recent experience with version 4.2.1 of your mobile app. Overall, I am really pleased with the performance improvements and the new night mode feature, as they have made using the app much more enjoyable. I also noticed that the app launches faster than before, which is a huge plus. One suggestion I have is to consider adding more customization options for notifications, as sometimes I receive alerts I don’t need. But in general, I’m very happy with the changes in this latest update and look forward to more improvements. I’d classify my feedback as positive.",
+    "After using your desktop software, version 10.0, for about two weeks, I’d like to offer some feedback. The main issue I’m encountering is that the export function keeps crashing, especially when exporting large files. Additionally, there is a noticeable lag when switching between tool panels, which interrupts my workflow quite a bit. On the plus side, I appreciate the new UI design—it’s cleaner and easier to navigate. Please use this negative feedback to help identify key areas for improvement.",
+    "I recently downloaded your web browser, version 3.5, and overall my experience has been pretty neutral. The startup time is acceptable, and the basic browsing features work as expected. However, I didn't notice much difference between this update and the previous version, apart from some minor design tweaks. There are no major problems, but nothing particularly excites me either. Could you analyze my feedback and extract the main points for product development purposes?",
+    "Here is my feedback regarding the latest release of your project management tool, version 7.1.2. I genuinely enjoy the enhanced team chat functionality, which makes it much easier to coordinate with colleagues. However, I am disappointed with the new calendar integration—it seems buggy and sometimes misses scheduled events. Also, importing tasks from external sources is not as seamless as advertised. Overall, my impression is mixed, so I would categorize my feedback as neutral. Please help identify and summarize the key points and issues from my review.",
+    "I am extremely satisfied with version 2.0 of your fitness tracking app! The addition of personalized workout plans has been a game-changer for me, and the interface improvements make everything so much easier to use. I also love how the app now syncs seamlessly with my smartwatch, allowing real-time updates on my progress. There’s honestly nothing negative I can say about this update. My feedback is definitely positive, and I hope you continue to build on these enhancements in future versions."
+  ]
+}

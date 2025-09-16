@@ -1,0 +1,48 @@
+{
+  "chosen_param": "project_guidelines",
+  "format": {
+    "name": "CyrillicGreekChecker",
+    "description": "The argument value must be written entirely in Cyrillic letters. No letters from other scripts are allowed.",
+    "group": "LANGUAGE",
+    "args": {
+      "script": "cyrillic"
+    }
+  },
+  "fn_schema": {
+    "name": "create_project_plan",
+    "description": "Generates a detailed project plan with tasks, deadlines, and assignees based on the provided guidelines.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "project_guidelines": {
+          "type": "string",
+          "description": "Detailed guidelines for the project, including objectives, expected outcomes, and any specific instructions. The argument value must be written entirely in Cyrillic letters; no letters from other scripts are allowed."
+        },
+        "deadline": {
+          "type": "string",
+          "description": "The final completion date for the project in YYYY-MM-DD format."
+        },
+        "team_members": {
+          "type": "array",
+          "description": "List of team members assigned to the project.",
+          "items": {
+            "type": "string",
+            "description": "Name of a team member."
+          }
+        }
+      },
+      "required": [
+        "project_guidelines",
+        "deadline",
+        "team_members"
+      ]
+    }
+  },
+  "user_queries": [
+    "We are planning to launch a new community outreach program aimed at increasing environmental awareness in local schools. The main objectives are to develop educational workshops, distribute informational material, and organize school competitions about sustainability. Expected outcomes include a measurable increase in recycling efforts and student participation. Specific instructions: workshops must be interactive, all materials should be printed by mid-project, and competitions must have prizes approved by management. Please create a comprehensive project plan, laying out the specific tasks to be completed, suggested deadlines for each task, and assignments for our team members: Sophia Lin, Michael Nguyen, and Priya Kumar. The project needs to be fully completed by 2024-10-01.",
+    "I need a detailed project plan for our upcoming internal audit. The guidelines require us to review all financial transactions from the last fiscal year, ensure compliance with company policies, and identify any discrepancies or areas for improvement. The expected outcome is a report summarizing our findings and recommendations. It's important to prioritize payroll and vendor payments in the audit process, and confidential data safety protocols must be followed at every stage. The team members who will be working on this are Carlos Rodriguez, Emma Walters, and Jack Morrison. The final deadline to have everything wrapped up, including the report, is 2024-08-15. Could you provide tasks, deadlines, and team assignments?",
+    "Can you help develop a thorough project plan for launching our new mobile app? Here are the guidelines: The project aims to design, develop, test, and deploy a weather forecasting application with real-time alerts. The app should be user-friendly and support both Android and iOS platforms. Expected outcomes: complete functional app, successful deployment on both stores, and at least 1,000 user downloads within the first month. Special instructions: conduct at least two rounds of user testing, ensure GDPR compliance, and deliver regular progress updates to stakeholders. The project should be finished by 2024-12-31. The team members are Alicia Brown, Steven Clark, and Rashid Ahmed.",
+    "Please assist by generating a structured project plan for our upcoming employee onboarding revamp. Our project guidelines state that we must update all onboarding materials, introduce a mentorship program, conduct orientation sessions, and gather feedback from new hires throughout the process. The aim is to enhance the onboarding experience and reduce new employee turnover. It is crucial to work closely with HR and department heads during this project, and all materials must be accessible and inclusive. We expect to complete this project by 2024-07-20. The core team assigned includes Maya Patel, Ben Thompson, and Julia Edwards.",
+    "Our department is tasked with leading a marketing campaign for our latest product launch, and I need a detailed project plan. The project’s guidelines are to create promotional content for social media, organize a virtual launch event, coordinate with influencers, and develop email newsletters. The expected outcome is increased product awareness and at least a 20% growth in online engagement during the campaign period. Please ensure that the plan includes allocating tasks for writing content, designing graphics, event logistics, and tracking campaign analytics. The team members working on this project are Hannah Lee, Marcus Dillard, and Fiona Zhang, and it must be completed by 2024-09-17."
+  ]
+}

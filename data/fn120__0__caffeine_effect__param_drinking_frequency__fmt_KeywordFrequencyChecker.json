@@ -1,0 +1,46 @@
+{
+  "chosen_param": "drinking_frequency",
+  "format": {
+    "name": "KeywordFrequencyChecker",
+    "description": "The argument value must contain the word 'universal' exactly 1 time. The occurrences may be anywhere in the string. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "keyword": "universal",
+      "N": 1,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn120__0__caffeine_effect",
+    "description": "Provide potential neurological impact of caffeine, mainly from coffee, on human brain.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "caffeine_content": {
+          "type": "number",
+          "description": "The amount of caffeine contained in coffee in milligrams."
+        },
+        "drinking_frequency": {
+          "type": "string",
+          "description": "How often the individual drinks coffee in a day. The value must include the word 'universal' exactly once, in any position. Letter case is not important."
+        },
+        "drinking_duration": {
+          "type": "integer",
+          "description": "For how long the individual has been drinking coffee. Default: 100"
+        }
+      },
+      "required": [
+        "caffeine_content",
+        "drinking_frequency"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I've recently started paying more attention to my daily habits, especially around my coffee consumption. Every day, I have about three cups of coffee, and each cup, according to the packaging, contains approximately 100 milligrams of caffeine, so that's about 300 mg per day. I tend to space them out evenly throughout the day, with one cup in the morning, one around lunchtime, and one mid-afternoon. Can you tell me what kind of neurological effects I might expect from this caffeine intake, given that I typically follow this routine every single day?",
+    "I drink coffee quite religiously, probably more than I should, but it's just a part of my day now. My usual is two large mugs every day, and each mug has around 150 milligrams of caffeine, so that's 300 milligrams a day for me. I want to understand the possible effects this amount of caffeine could have on my brain, especially since I'm consistent with drinking it every day. Are there any neurological changes, good or bad, that I should be aware of from this regular caffeine intake?",
+    "For the past several years, I've had the habit of drinking coffee regularly. Right now, my daily routine consists of drinking one cup of coffee that contains about 80 milligrams of caffeine, and I never miss a day. I’m curious to know what potential impacts this practice could have on my brain, considering how routine it’s become for me to have coffee daily with that level of caffeine. What neurological effects should I be aware of based on this frequency and dosage?",
+    "Every day without fail, I consume coffee because it helps me stay awake and focused during work. My favorite blend has a caffeine content of 200 milligrams per serving, and I typically only have one serving per day, keeping that frequency pretty consistent for the past year or so. I'm wondering, with this pattern of caffeine consumption, what are some possible neurological impacts I should know about? Is there any risk to my brain health based on this daily intake?",
+    "Lately, I’ve been concerned about how my coffee drinking habits might be affecting my brain. I drink coffee twice every single day, and each cup contains around 120 milligrams of caffeine, totaling 240 milligrams per day. I've been following this routine for about 5 years now. Could you explain what possible neurological changes or effects this level and frequency of caffeine intake might have on the human brain, considering how regularly I consume it?"
+  ]
+}

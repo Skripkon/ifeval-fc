@@ -1,0 +1,45 @@
+{
+  "chosen_param": "article_text",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at most 3 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at most",
+      "N": 3
+    }
+  },
+  "fn_schema": {
+    "name": "summarize_academic_article",
+    "description": "Summarizes an academic article to provide a concise overview of its main points.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "article_text": {
+          "type": "string",
+          "description": "Full text of the academic article to be summarized. The argument value must contain at most 3 commas, which may appear anywhere in the value."
+        },
+        "word_limit": {
+          "type": "integer",
+          "description": "Maximum number of words for the summary."
+        },
+        "include_references": {
+          "type": "boolean",
+          "description": "Whether to include references in the summary. Defaults to False."
+        }
+      },
+      "required": [
+        "article_text",
+        "word_limit",
+        "include_references"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi there, I'm working on a literature review and I have this academic article that I'd like to get a summarized version of. The article is titled 'The Impact of Climate Change on Coastal Biodiversity,' and its full text is as follows: 'In recent decades, climate change has increasingly affected coastal ecosystems, leading to shifts in species distribution, population declines, and loss of biodiversity. Coastal habitats such as mangroves, salt marshes, and coral reefs are particularly vulnerable. Researchers have identified rising sea levels, ocean acidification, and increasing temperatures as key factors driving these changes. Several case studies across continents demonstrate the cascading effects of ecosystem changes on both flora and fauna. Management strategies focus on habitat restoration, policy interventions, and community engagement to mitigate impacts. The article concludes with recommendations for further research and international collaboration. Reference list: Smith et al. (2019), Thomas & Lee (2020), Roberts (2018).' For my work, could you provide a summary of this article in no more than 200 words, and please make sure to include the references from the article in your summary?",
+    "I'm prepping for a conference presentation and really don't have time to read this full paper right now. The title is 'Innovations in Quantum Computing Algorithms,' and here's the entire text: 'Quantum computing has evolved rapidly, with novel algorithms such as Shor's for factoring and Grover's for search challenging classical paradigms. Recent advances focus on variational quantum eigensolvers and hybrid models, pushing the boundaries of computational efficiency. Theoretical developments are complemented by experimental realizations, though noise and error correction remain challenges. Researchers are optimistic about applications in cryptography, simulation, and optimization. The landscape is swiftly shifting as industry leaders invest heavily in research and development.' Since I only have a few minutes to spare, could you summarize the main points of the article for me in no more than 100 words, without including any references in the summary?",
+    "I need your help digesting an article for my thesis. The article, which I am including in full here, is titled 'Socioeconomic Impacts of Artificial Intelligence Adoption in Developing Countries.' Here is the article: 'Artificial intelligence (AI) has begun to transform economies globally, including in developing nations. AI can boost productivity and create new jobs, but it may also exacerbate income inequality and lead to significant workforce displacements. Policies to support education, reskilling, and inclusive economic growth are critical to ensure equitable benefits. The article reviews several government initiatives in Latin America and Southeast Asia, highlighting best practices in upskilling and supporting transition industries. The conclusion urges international cooperation and a focus on human capital development for sustainable AI integration.' Please provide a detailed summary in up to 250 words, and I’d appreciate it if you could include all references from the article within the summary.",
+    "Can you help me get the gist of this academic article in a concise form? I'm pasting the complete article text here: 'Recent empirical analysis in behavioral economics explores how cognitive biases affect financial decision-making among retail investors. The article describes experimental studies showing that anchoring, overconfidence, and herd behavior influence investments. Practical implications are discussed, including applications in financial advising and regulatory policy. Key findings highlight the importance of investor education and disclosure policy. Data tables and figures elaborate on the behavioral patterns observed.' Please summarize this article for me in no more than 120 words, and I do not need the references included in your summary.",
+    "I have a rather lengthy journal article and need a summarized version for my class assignment. The article is about 'The Evolution of Renewable Energy Policy in the European Union.' Here is the full text: 'This paper traces the historical development of renewable energy policy frameworks in the EU from the early 1990s to the present. Key directives, funding mechanisms, and technological advancements are reviewed in detail. The challenges of integrating renewables into existing grids, member state disparities, and policy harmonization are examined. Success stories from Germany and Denmark are compared with lagging adopters. The analysis concludes with future prospects amid global climate objectives. References include: Green & Black (2015), Larson (2019), EU Energy Report (2022).' Please give me a summary limited to 180 words and make sure to include all references mentioned in the article."
+  ]
+}

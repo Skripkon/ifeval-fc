@@ -1,0 +1,65 @@
+{
+  "chosen_param": "text",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must include the keywords: ['separate', 'odd', 'bad', 'usual', 'sudden']. Each keyword must appear at least once, in any order. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "separate",
+        "odd",
+        "bad",
+        "usual",
+        "sudden"
+      ],
+      "must_include": true
+    }
+  },
+  "fn_schema": {
+    "name": "fn228__0__text_to_speech_convert",
+    "description": "Converts a given text string into spoken words in an audio format.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "The text content to be converted into speech. The argument value must include the keywords: 'separate', 'odd', 'bad', 'usual', and 'sudden', with each keyword appearing at least once in any order; case does not matter."
+        },
+        "language": {
+          "type": "string",
+          "description": "The language in which the text is written, use default if nothing specified",
+          "enum": [
+            "en-US",
+            "es-ES",
+            "de-DE",
+            "fr-FR",
+            "it-IT"
+          ]
+        },
+        "gender": {
+          "type": "string",
+          "description": "The gender of the voice used for the text-to-speech conversion, use default if nothing specified",
+          "enum": [
+            "male",
+            "female"
+          ]
+        },
+        "speed": {
+          "type": "number",
+          "description": "The speed at which the speech is narrated, ranging from 0.5 (slow) to 2.0 (fast), use default if nothing specified"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey there, I need help creating an audio version of the following passage for my language learning group: 'Learning a new language can be a challenging but rewarding experience. Consistency and practice are key to mastering vocabulary and grammar. Listening to native speakers can greatly enhance your pronunciation and understanding.' Can you convert this text into spoken words? I would prefer if the narration is in a clear male voice and at a moderate speed, and since my group studies English, please use an American English accent.",
+    "Could you please turn the following paragraph into an audio clip? Here is the text: 'En la vida, cada día es una oportunidad para aprender algo nuevo y crecer como persona. La perseverancia y la dedicación nos acercan a nuestros objetivos.' I would like the speech to be in Spanish from Spain (es-ES) and, if possible, spoken by a female voice. I am preparing a podcast for my Spanish class and need the speech pace to be somewhat slower than normal, perhaps around 0.7 speed.",
+    "For my German class, I need a spoken version of this text: 'Die Entwicklung moderner Technologien hat unser Leben in vielerlei Hinsicht verändert. Wir kommunizieren schneller und haben Zugang zu mehr Informationen als je zuvor.' Please make sure the audio uses a German accent (de-DE), and I would appreciate it if the voice is male. Also, could you make the narration a bit faster than normal to simulate a real conversation speed, maybe around 1.5 times the regular rate?",
+    "I'm working on a project to teach French pronunciation, and I would love it if you could produce an audio file from this passage: 'La beauté de la langue française réside dans sa richesse lexicale et sa mélodie. Apprendre à bien prononcer chaque mot est essentiel pour communiquer efficacement.' Please use a French accent (fr-FR) with a female voice, and keep the speaking speed at the default rate so my students can follow along easily.",
+    "I have a text I want to share with my Italian grandparents in audio form since it's easier for them to listen than read. Here is the message: 'La famiglia è il pilastro della società italiana. I valori tradizionali e l’amore per la cucina uniscono le generazioni.' Could you convert this into spoken Italian (it-IT)? I don't have a preference for the gender or speed, so default options are fine."
+  ]
+}

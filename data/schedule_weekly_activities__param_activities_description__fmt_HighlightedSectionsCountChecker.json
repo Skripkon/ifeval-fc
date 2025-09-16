@@ -1,0 +1,58 @@
+{
+  "chosen_param": "activities_description",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain exactly 7 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "schedule_weekly_activities",
+    "description": "Organizes and schedules activities or meetings for the week based on user input.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "activities_description": {
+          "type": "string",
+          "description": "Description of activities or meetings planned for the week. The argument value must contain exactly 7 sections, each highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**), and each section must not be empty."
+        },
+        "days_of_week": {
+          "type": "array",
+          "description": "Days of the week for which the activities are being planned.",
+          "items": {
+            "type": "string",
+            "description": "A day of the week",
+            "enum": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ]
+          }
+        },
+        "recurring": {
+          "type": "boolean",
+          "description": "Indicates whether the activities are recurring weekly."
+        }
+      },
+      "required": [
+        "activities_description",
+        "days_of_week",
+        "recurring"
+      ]
+    }
+  },
+  "user_queries": [
+    "I need help creating a structured schedule for my weekly fitness routine. Every Monday, Wednesday, and Friday, I want to do a 45-minute cardio session at 7 AM, focusing on running or cycling. On Tuesdays and Thursdays, I plan to dedicate an hour to strength training in the evenings, and on Saturdays, I want to take a yoga class in the morning. Can you organize these activities for me, and also, please set it so that this plan recurs every week?",
+    "I'm looking to organize my week by setting up regular team meetings and project update sessions. Please schedule our main team meeting on Monday mornings, a quick check-in on Wednesdays, and a project review session every Friday afternoon. I want these meetings to occur at the same time every week. Can you draft a weekly schedule for these activities for Monday, Wednesday, and Friday and make sure it's set as a recurring routine?",
+    "Could you please help me plan out a weekly schedule for my kids’ extracurricular activities? They have soccer practice on Tuesday afternoons, piano lessons every Thursday evening, and swimming lessons on Saturday mornings. I want to make sure these are neatly organized and happen every single week without forgetting. Can you set up this recurring plan for Tuesdays, Thursdays, and Saturdays and include a description for each activity?",
+    "I am trying to ensure my self-care and social interaction time is properly scheduled throughout the week. I want to block out an hour every Sunday for meditation and relaxation, and meet with my friends for coffee every Wednesday afternoon. Both of these should repeat weekly. Can you help me organize these recurring activities and provide a structured view of what my Wednesdays and Sundays look like?",
+    "Let’s get my workweek a bit more efficient by planning out my recurring tasks. I need a reminder to do my administrative paperwork every Monday, review progress with my supervisor every Thursday, and submit weekly reports each Friday. These activities have to happen on the same days each week without fail. Can you schedule these activities for Monday, Thursday, and Friday and make sure it's set up as a recurring schedule?"
+  ]
+}

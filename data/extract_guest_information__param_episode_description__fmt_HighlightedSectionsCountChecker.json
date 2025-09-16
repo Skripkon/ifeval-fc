@@ -1,0 +1,44 @@
+{
+  "chosen_param": "episode_description",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain at most 2 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "at most",
+      "N": 2
+    }
+  },
+  "fn_schema": {
+    "name": "extract_guest_information",
+    "description": "Extracts information about guests on a podcast episode.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "episode_description": {
+          "type": "string",
+          "description": "Description of the podcast episode containing details about the guests. The value must contain at most 2 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**), and each section must not be empty."
+        },
+        "guest_count": {
+          "type": "integer",
+          "description": "The number of guests to extract information for."
+        },
+        "include_social_media_handles": {
+          "type": "boolean",
+          "description": "Whether to include social media handles of the guests if available."
+        }
+      },
+      "required": [
+        "episode_description",
+        "guest_count"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi there! I just listened to the latest episode of the \"Innovators in Tech\" podcast, and I'm interested in learning more about the guests who were featured. Here's the episode description: \"In this engaging conversation, host Maria Bell sits down with leading figures in artificial intelligence: Dr. Jamie Thompson, CTO of NeuralNet Labs; Priya Sethi, co-founder of Code4Good; and Malik Hassan, author of 'AI for Everyone'. They discuss AI ethics, recent breakthroughs, and share personal stories from their careers.\" Could you please extract information about all 3 guests for me? Also, let me know if you can provide their social media handles.",
+    "I have a podcast episode summary and would like to know more about two particular guests. Here is the episode description: \"Episode 58 introduces global financial minds to the audience. Liz Tran, investment strategist and Forbes 30 Under 30 honoree, joins Jeremy Rios, host of 'Market Moves', to talk with Brian Ortega, fintech entrepreneur, and Dr. Eleanor Vance, blockchain analyst.\" Can you give me detailed information on Brian Ortega and Dr. Eleanor Vance, the two guests featured in this episode?",
+    "I'm currently summarizing podcast episodes for my newsletter, and for the following description I need information about four of the guests. Here is the description: \"This week on The Wellness World, host Erica Liu speaks with nutritionist Dr. Elena Ruiz, marathon runner Tom Harker, wellness app developer Sierra Kim, and meditation coach Daniel O'Brien. The discussion covers healthy habits, new tech in wellness, and mental health strategies.\" Could you please help me extract guest details for all four of them? Please do not include social media handles.",
+    "Could you analyze this podcast episode for me? Here’s the episode description: \"On episode 123 of 'Writers’ Block', the hosts welcome Pulitzer Prize-winning journalist Sarah Lin and bestselling novelist Amanda Crowe. The guests delve into their approaches to storytelling and engage in a Q&A from the audience.\" I would like information about both guests (2), and if possible, please include any social media handles that might be mentioned.",
+    "I'm putting together speaker bios for an upcoming email and need info on the three guests from the following show. The podcast episode description goes: \"Join host Rajiv Menon on 'Future Leaders' as he interviews Mimi Tan, CEO of BioTech Advance; Erik Schultz, venture capitalist specializing in green tech; and Dr. Samantha Lee, epidemiologist and vaccine researcher. They discuss career paths, innovation, and leadership in science and business.\" Extract guest details for all three of them, and include their social media handles if available."
+  ]
+}

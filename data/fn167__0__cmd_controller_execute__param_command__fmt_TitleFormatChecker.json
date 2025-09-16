@@ -1,0 +1,33 @@
+{
+  "chosen_param": "command",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn167__0__cmd_controller_execute",
+    "description": "Executes a given command using the os.system() function specifically for Windows operating systems. For multiple commands, separate them with '&&'. For complex tasks, create and run a .bat file.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string",
+          "description": "The Windows command line instruction(s) to be executed. Use '&&' between commands for multiple instructions. For complex sequences, encapsulate the logic within a .bat file and provide the execution command here. The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>>; all other content is allowed except for the title formatting requirement."
+        }
+      },
+      "required": [
+        "command"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I need you to execute the following sequence of commands on my Windows machine: first, go to the C:\\Projects directory, then pull the latest code from GitHub using 'git pull', and afterward start the local development server with 'npm run start'. Please make sure each step is executed only if the previous one succeeds, and use the appropriate Windows commands combined if needed.",
+    "Could you please run a command that will clear all files from the temp folder located at C:\\Windows\\Temp and then immediately after that, open Notepad for me? I'm looking to first remove all temporary files to free up space, and then just quickly verify with Notepad if the operation is successful. Please do whatever is needed in the Windows command line to accomplish this.",
+    "I'm troubleshooting some network issues so I want you to execute multiple network diagnostics on my Windows system. Please first run 'ipconfig /all', then 'ping google.com', and after that 'tracert google.com' so I can see all the outputs in sequence. Ensure these commands are chained together as needed for Windows.",
+    "There's an automation script I wrote inside C:\\Scripts\\automation.bat. I'd like you to execute this batch file via the Windows command line, making sure any output is displayed. Please run this .bat file so that all the processes it contains are started as expected.",
+    "I want to uninstall a program using the Windows command line, specifically the application called 'MyOldApp'. Please execute the command to remove this program, which I believe requires using 'wmic product where \"name='MyOldApp'\" call uninstall' on my system. Run this command and let me know if the uninstallation starts or if there are any errors."
+  ]
+}

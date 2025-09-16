@@ -1,0 +1,55 @@
+{
+  "chosen_param": "post_content",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain at least 5 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "at least",
+      "N": 5
+    }
+  },
+  "fn_schema": {
+    "name": "schedule_social_media_posts",
+    "description": "Schedules social media posts across multiple platforms.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "post_content": {
+          "type": "string",
+          "description": "The content of the social media post including text, hashtags, and mentions. The argument value must contain at least 5 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "scheduled_time": {
+          "type": "string",
+          "description": "The ISO 8601 formatted date and time when the post should be published."
+        },
+        "platforms": {
+          "type": "array",
+          "description": "List of social media platforms where the post should be published.",
+          "items": {
+            "type": "string",
+            "description": "Name of the social media platform.",
+            "enum": [
+              "facebook",
+              "twitter",
+              "instagram",
+              "linkedin"
+            ]
+          }
+        }
+      },
+      "required": [
+        "post_content",
+        "scheduled_time",
+        "platforms"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi there! I'd love to schedule a post for my upcoming product launch. Can you please set this message to go live on Facebook, Twitter, and Instagram on June 15, 2024 at 10:00 AM UTC? The post should read: \"Excited to unveil our latest innovation! 🚀 Check out our new product dropping soon. #ProductLaunch #Innovation @OurBrand\". Please make sure it goes out at the exact time I specified across all the selected platforms. Thank you!",
+    "Could you help me organize my company's social media rollout for tomorrow? I need to post the following message on LinkedIn and Facebook: \"Building a brighter future together! Join us for our sustainability webinar next week. Register now: [link] #Sustainability #Webinar @CompanyName\". Please have this scheduled to publish at 8:30 AM on June 12, 2024, in ISO 8601 format, preferably matching 2024-06-12T08:30:00Z. Let me know once it's set up on both platforms.",
+    "I want to queue up a special post for Instagram only. Can you schedule the following content to go out on July 4th, 2024, at 17:00 UTC? The post should announce our holiday sale: \"Stars, stripes, and savings! Enjoy 20% off all items this Independence Day. Shop now and celebrate with us! #July4th #Sale @yourbrand\". Please ensure it's formatted properly for Instagram and posted exactly at the specified date and time.",
+    "I'm looking to pre-schedule a promotional message across all my social media platforms for maximum reach. The content should say: \"Don't miss our midnight madness event starting tonight! Exclusive deals and surprises await you. For updates, follow us here. #MidnightMadness #Deals @ourshop\". I need this to be posted on Facebook, Twitter, Instagram, and LinkedIn right at midnight, which is 2024-06-30T00:00:00Z. Please set this up to publish simultaneously across all those channels.",
+    "Could you please help me schedule a post for my professional network? I'd like the following message to be published on LinkedIn on August 1st, 2024, at 9:00 AM UTC: \"Proud to announce our team's achievement in securing the top award at the industry conference! Thanks to everyone for your support. #Teamwork #Success @ourcompany\". Please make sure it is set to go out at the specified time and only on LinkedIn."
+  ]
+}

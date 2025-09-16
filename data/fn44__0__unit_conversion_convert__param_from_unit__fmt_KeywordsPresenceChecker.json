@@ -1,0 +1,52 @@
+{
+  "chosen_param": "from_unit",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must include the keywords: ['separate', 'odd', 'bad', 'usual', 'sudden']. Each keyword must appear at least once, in any order. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "separate",
+        "odd",
+        "bad",
+        "usual",
+        "sudden"
+      ],
+      "must_include": true
+    }
+  },
+  "fn_schema": {
+    "name": "fn44__0__unit_conversion_convert",
+    "description": "Convert a value from one unit to another.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "The value to be converted."
+        },
+        "from_unit": {
+          "type": "string",
+          "description": "The unit to convert from. The argument value must include the keywords: separate, odd, bad, usual, sudden. Each keyword must appear at least once, in any order. Case does not matter."
+        },
+        "to_unit": {
+          "type": "string",
+          "description": "The unit to convert to."
+        }
+      },
+      "required": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm trying to follow a recipe from a British cookbook, and it calls for 250 grams of flour, but all I have is a measuring cup with units in ounces. Could you please help me convert 250 grams to ounces so I know how much flour to use?",
+    "For a science experiment, I need to measure 3.5 liters of water, but my measuring instrument is marked only in gallons. Could you tell me what 3.5 liters is when converted to gallons so I can be accurate?",
+    "I have a fitness tracking app that measures my running distance in miles, but I'm more familiar with kilometers. For my morning run today, I covered 4.7 miles. Can you convert 4.7 miles into kilometers so I know exactly how far I ran?",
+    "While working on my home improvement project, I'm required to cut a piece of wood to be 120 centimeters long, but my tape measure uses inches. Could you convert 120 centimeters to inches for me so I can measure it out correctly?",
+    "I bought a large package of apples that weighs 10 pounds, but my recipe only calls for 4.5 kilograms of apples. Could you please convert 10 pounds into kilograms so I know if I have enough apples for my recipe?"
+  ]
+}

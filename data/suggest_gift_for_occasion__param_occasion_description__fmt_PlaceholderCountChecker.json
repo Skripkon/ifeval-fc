@@ -1,0 +1,51 @@
+{
+  "chosen_param": "occasion_description",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain at least 2 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "at least",
+      "N": 2
+    }
+  },
+  "fn_schema": {
+    "name": "suggest_gift_for_occasion",
+    "description": "Provides gift suggestions based on the occasion, recipient's age, and gender.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "occasion_description": {
+          "type": "string",
+          "description": "A detailed description of the occasion for which the gift is needed. The value must include at least two placeholders, each enclosed in square brackets (for example, [address])."
+        },
+        "recipient_age": {
+          "type": "integer",
+          "description": "The age of the recipient."
+        },
+        "recipient_gender": {
+          "type": "string",
+          "enum": [
+            "male",
+            "female",
+            "non-binary",
+            "prefer not to say"
+          ],
+          "description": "The gender of the recipient."
+        }
+      },
+      "required": [
+        "occasion_description",
+        "recipient_age",
+        "recipient_gender"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm looking for some thoughtful gift ideas for my younger brother's 18th birthday, which is coming up next month. The occasion is quite special because he's graduating from high school around the same time, and I want to find something that acknowledges both his birthday and this important milestone in his life. Could you please suggest a few gifts that would be appropriate for an 18-year-old male celebrating both his birthday and high school graduation?",
+    "I need help picking out a present for my coworker who is turning 40 soon. The occasion is her 40th birthday, and our office team is planning to celebrate with her at a special luncheon. She has been a great mentor to many of us, and we want to get her something meaningful and suitable for a woman who is 40 years old. Could you suggest some gift options for this occasion?",
+    "My child’s teacher is retiring after an amazing 30-year career in elementary education, and we’re organizing a farewell party for her. I want to give her a memorable gift to express our gratitude for all her dedication. She is a 62-year-old female teacher who has influenced generations of students. What kind of gifts would be fitting for her retirement celebration?",
+    "I’m searching for the perfect gift for my close friend who is non-binary and is about to celebrate their 25th birthday. The occasion is extra meaningful because they just got their first job out of college, and I want the gift to reflect both their age and this big transition in their life. They are turning 25 and identify as non-binary. What are some thoughtful gifts I could consider?",
+    "My cousin, who is 13 years old and prefers not to disclose their gender, is graduating from middle school soon, and the family is planning a small celebration to mark the occasion. I want to get them a present that acknowledges their hard work and this big step before starting high school. Could you provide gift ideas that would be appropriate for a 13-year-old who prefers not to say their gender, specifically for a middle school graduation?"
+  ]
+}

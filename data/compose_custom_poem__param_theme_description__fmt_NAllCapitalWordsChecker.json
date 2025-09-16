@@ -1,0 +1,57 @@
+{
+  "chosen_param": "theme_description",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain exactly 7 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "compose_custom_poem",
+    "description": "Creates a personalized poem based on user's input and preferences.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "theme_description": {
+          "type": "string",
+          "description": "A free-form explanation of the theme or subject for the poem. The argument value must contain exactly 7 words written entirely in capital (uppercase) letters."
+        },
+        "poetic_form": {
+          "type": "string",
+          "enum": [
+            "sonnet",
+            "haiku",
+            "free_verse",
+            "limerick"
+          ],
+          "description": "The specific poetic form to use in composing the poem."
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "romantic",
+            "melancholic",
+            "joyful",
+            "mysterious"
+          ],
+          "description": "The tone wanted for the poem."
+        }
+      },
+      "required": [
+        "theme_description",
+        "poetic_form",
+        "tone"
+      ]
+    }
+  },
+  "user_queries": [
+    "I’m planning a special gift for my partner and would love your help to make it truly unique. Could you please write a romantic poem in sonnet form, capturing the deep connection we share? The theme should revolve around the journey we've had together, from our very first meeting to the moments when we overcame challenges and how our love has grown stronger with time. I want the poem to convey the warmth, the support, and the beautiful adventure of our relationship. Please make it heartfelt and really focus on the sense of enduring love.",
+    "I have always been fascinated by the mysterious beauty of the ocean at night—the way moonlight dances on the waves, the haunting calls of nocturnal creatures, and the endless unknown that lies beneath the surface. Could you compose a mysterious haiku that captures the enigmatic atmosphere of a midnight seashore, filled with both calm and a sense of wonder about what might be hidden in the depths? I want the tone to evoke curiosity and awe, reflecting the allure and secrets of the nighttime sea.",
+    "I would like a poem that truly celebrates the simple joys of everyday life. Can you write a joyful limerick based on the theme of a neighborhood coming together for a festive block party, with laughter, games, delicious food, and children playing under the sun? Capture the vibrant energy, the sense of community, and the happiness of people sharing stories and making memories together. Please use a joyful tone throughout to make the reader feel like they’re experiencing the event.",
+    "Could you please help me by crafting a melancholic free verse poem? The theme I’d like you to explore is the solitude experienced in a bustling city, where a person feels isolated despite being surrounded by thousands. Touch on the feeling of longing for connection, the endless streets, and the quiet moments spent gazing out of a rainy window, watching people rush by. Bring out the bittersweet nature of being alone in such a vibrant place, using a melancholic tone to convey the depth of emotion involved.",
+    "I'm looking for a truly special poem to include in my friend’s graduation card. Could you compose a joyful sonnet that revolves around the theme of personal growth and the excitement for the future after years of dedication and hard work? Highlight the triumphs over obstacles, the friendships made along the way, and the hopeful anticipation of new beginnings. Please make the tone uplifting and joyful, capturing the spirit of achievement and optimism as my friend embarks on this next chapter."
+  ]
+}

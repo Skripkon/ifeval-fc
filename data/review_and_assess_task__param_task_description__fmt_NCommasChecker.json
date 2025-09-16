@@ -1,0 +1,45 @@
+{
+  "chosen_param": "task_description",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at most 1 comma. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at most",
+      "N": 1
+    }
+  },
+  "fn_schema": {
+    "name": "review_and_assess_task",
+    "description": "Reviews and assesses the completion status of a specific task and provides feedback based on the assessment.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "task_description": {
+          "type": "string",
+          "description": "A comprehensive description of the task being reviewed, including any context or specifications. The value must contain at most one comma, which may appear anywhere in the description."
+        },
+        "completion_status": {
+          "type": "integer",
+          "description": "The completion percentage of the task, ranging from 0 to 100."
+        },
+        "feedback_required": {
+          "type": "boolean",
+          "description": "Indicates whether detailed feedback is required after the assessment. Defaults to True."
+        }
+      },
+      "required": [
+        "task_description",
+        "completion_status",
+        "feedback_required"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been working on developing a comprehensive marketing plan for our new product launch, which involves conducting market research, identifying target audiences, crafting messaging strategies, and planning promotional activities across various channels. At this point, I've completed about 75% of the work, with only the final campaign calendar and budget allocation left to finalize. Could you please review the progress I've made so far, assess how close I am to completion, and provide me with detailed feedback on what I've done and what still needs improvement? I definitely want thorough feedback.",
+    "I'm managing a software development task that consists of designing, coding, and testing a new user authentication module for our mobile application. The project requirements include multi-factor authentication, password reset functionality, and integration with our existing user database. I've completed the architecture design and basic implementation, and the testing phase is approximately 60% done. Please evaluate the current status of this task and let me know, with as much feedback as possible, whether I'm on the right track and what should be improved. I require feedback.",
+    "Please review a specific assignment I've been working on: preparing and presenting a business proposal for a potential client, which should cover their requirements, our solution, projected outcomes, budget, and timeline in a detailed PowerPoint deck. I have completed 90% of this task—the deck is almost ready, and I've rehearsed the presentation, but I still want to polish the graphics and flow a bit. Based on a 90% completion status, give me thorough feedback on both what's been done and what I could enhance. I do want detailed feedback.",
+    "Could you assess my progress on creating and publishing a comprehensive online tutorial for beginners on how to use our company’s project management software? The task involves script writing, screen recording, editing, and uploading to our website. So far, I have finished recording and editing the first three modules, but the final module and uploading process remains. I estimate I have completed about 80% of the task. I would like a detailed assessment of my work thus far, along with specific feedback. I require your feedback.",
+    "I'm asking you to evaluate my ongoing task of writing a grant proposal for our department. The proposal needs to address the research background, objectives, methodology, expected outcomes, and budget justification, as well as include supporting documents. I've completed all sections but still need to review the methodology and double-check the budget, putting my completion at around 85%. Can you assess what I've done up to now and give me detailed feedback on both the content and organization? Please ensure feedback is provided."
+  ]
+}

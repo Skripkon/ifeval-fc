@@ -1,0 +1,45 @@
+{
+  "chosen_param": "current_setup",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at most 3 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at most",
+      "N": 3
+    }
+  },
+  "fn_schema": {
+    "name": "evaluate_energy_efficiency",
+    "description": "Evaluates the energy efficiency of a household based on user's input and provides suggestions for improvement.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "current_setup": {
+          "type": "string",
+          "description": "Detailed description of the current household energy setup and consumption patterns. The argument value must contain at most 3 commas; the commas may appear anywhere in the value."
+        },
+        "average_monthly_consumption": {
+          "type": "number",
+          "description": "Average monthly energy consumption in kilowatt-hours (kWh)."
+        },
+        "household_size": {
+          "type": "integer",
+          "description": "Number of people living in the household."
+        }
+      },
+      "required": [
+        "current_setup",
+        "average_monthly_consumption",
+        "household_size"
+      ]
+    }
+  },
+  "user_queries": [
+    "My home has central gas heating, and most of the lighting consists of traditional incandescent bulbs, although in the living room we've recently switched to LED. The kitchen runs on electric appliances like the stove, refrigerator (which is about 8 years old), and dishwasher. We don't have solar panels or any renewable energy sources installed. On average, we use about 540 kilowatt-hours of electricity each month. There are 3 people in the household, and someone is usually at home during the day since one of us works remotely. Could you please evaluate how energy efficient my household is and suggest improvements?",
+    "I would like a detailed assessment of my apartment's energy use. We live in a two-bedroom flat with double-glazed windows, a programmable thermostat, and mainly use energy-efficient appliances except for an old washing machine. We rely on electric heating and have an air conditioning unit that's used throughout summer. Our monthly energy usage hovers around 380 kWh. With 2 adults and 2 kids residing here (so a household size of 4), can you analyze our setup and give us advice on how to improve our energy efficiency?",
+    "Could you review the energy efficiency of my household based on the following information? We have a detached house equipped with solar panels that provide up to 20% of our needs, gas heating, and an electric oven. All the lighting is LED, and there are two refrigerators (one quite old). There's no insulation in the attic yet. Our average electricity consumption is 670 kilowatt-hours per month. Three people, including a child, live here. I'd appreciate specific suggestions on how to further reduce our energy consumption and make the house more environmentally friendly.",
+    "I’d like some assistance evaluating and improving my home’s energy efficiency. Currently, we have baseboard electric heaters in each room, and mostly CFL bulbs throughout the house. Our hot water heater is electric, and all our kitchen appliances are less than five years old. We don’t have smart thermostats or timers for anything. We do laundry about three times a week and tend to use the dryer often. Our average monthly energy consumption is 420 kWh, and we are a household of just 2 people. Can you provide an efficiency analysis and actionable suggestions?",
+    "I want to find ways to reduce my home's energy consumption based on our setup: the house is heated by a modern gas furnace, all of our lighting is LED, and we have Energy Star-rated appliances except the dryer, which is old. We cook most meals at home using an electric stove. Three people live here including myself, and our typical monthly energy use is around 580 kWh. Please give me an evaluation of my home’s current energy efficiency along with any improvements you recommend."
+  ]
+}

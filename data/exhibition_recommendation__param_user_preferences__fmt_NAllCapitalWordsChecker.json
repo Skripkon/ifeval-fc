@@ -1,0 +1,45 @@
+{
+  "chosen_param": "user_preferences",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain exactly 4 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 4
+    }
+  },
+  "fn_schema": {
+    "name": "exhibition_recommendation",
+    "description": "Provides recommendations for art exhibitions based on the user's preferences and location.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_preferences": {
+          "type": "string",
+          "description": "User's preferences regarding types of art or artists they are interested in. The argument value must contain exactly 4 words, each written entirely in uppercase letters."
+        },
+        "location": {
+          "type": "string",
+          "description": "The current location or preferred city of the user for attending exhibitions."
+        },
+        "time_frame": {
+          "type": "string",
+          "description": "The time frame within which the user wants to visit exhibitions, e.g., 'next month', 'this weekend'."
+        }
+      },
+      "required": [
+        "user_preferences",
+        "location",
+        "time_frame"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm a big fan of contemporary art, particularly installations and interactive media. I recently moved to Chicago and would love to attend some art exhibitions that match my interests. Can you recommend any exhibitions happening in the city during the next three weeks? I'm hoping to explore the local art scene as much as possible and would appreciate suggestions tailored to my tastes for experimental and innovative art forms.",
+    "I adore abstract expressionism, especially works by female artists, and I'm currently based in San Francisco. I'm planning to take some time for myself and visit art exhibitions this coming weekend. Could you suggest any exhibitions in San Francisco that cater to my love for abstract expressionist pieces and highlight women artists, specifically ones that are open or starting this weekend?",
+    "My favorite types of art are classic European paintings and Renaissance masterpieces. I'm traveling to New York City soon, so I'm interested in knowing about any art exhibitions related to those genres while I'm there. Could you provide a list of relevant exhibitions in New York City happening within the next month, as I'd like to plan my visit around such events?",
+    "I'm looking to immerse myself in street art and graffiti exhibits because that's a huge interest of mine, particularly works by emerging local artists. I'll be visiting Berlin, and I want to check out exhibitions within the city limits during my stay. Could you recommend suitable art exhibitions in Berlin focusing on street art and graffiti, available for visitors during the next two weeks?",
+    "Lately, I've become fascinated by Japanese woodblock prints and artists from the Edo period. Since I live in Los Angeles, I'm curious if there are any exhibitions about this kind of art coming up. I would love suggestions for exhibitions in Los Angeles featuring Japanese woodblock prints or Edo-period art that I can visit during the current month. Could you help with some relevant recommendations?"
+  ]
+}

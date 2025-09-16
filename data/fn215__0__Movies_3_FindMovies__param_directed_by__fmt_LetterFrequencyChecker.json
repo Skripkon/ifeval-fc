@@ -1,0 +1,63 @@
+{
+  "chosen_param": "directed_by",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'n' exactly 7 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "n",
+      "N": 7,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn215__0__Movies_3_FindMovies",
+    "description": "Retrieves a list of movies based on the director, genre, and cast specified by the user.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "directed_by": {
+          "type": "string",
+          "description": "Director of the movie. Use 'dontcare' if the director is not a specific search criterion. The argument value must contain the letter 'n' exactly 7 times; case does not matter."
+        },
+        "genre": {
+          "type": "string",
+          "description": "Genre of the movie. Use 'dontcare' to include all genres or genre is not specified by user",
+          "enum": [
+            "Offbeat",
+            "Fantasy",
+            "World",
+            "Mystery",
+            "Thriller",
+            "Comedy",
+            "Comedy-drama",
+            "Horror",
+            "Animation",
+            "Sci-fi",
+            "Cult",
+            "Drama",
+            "Anime",
+            "Family",
+            "Action",
+            "dontcare"
+          ]
+        },
+        "cast": {
+          "type": "string",
+          "description": "Names of leading actors or actresses in the movie. Use 'dontcare' if the cast is not a specific search criterion."
+        }
+      },
+      "required": [
+        "directed_by"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hey assistant, I'm really getting into films directed by Christopher Nolan and I appreciate the depth and complexity he brings to his movies. I've recently watched Inception and Interstellar and was absolutely blown away by them. I'm looking for more suggestions that have that unique Nolan touch. Honestly, I'm open to any genre that he directs because his work is just phenomenal, so the genre is not a constraint for me. However, I'm curious if there are any other great actors who have frequently collaborated with him besides the usual stars like Leonardo DiCaprio or Christian Bale. It would be great to discover more movies by him, regardless of the cast or the category, as his storytelling and cinematic style are more appealing to me than anything else. Could you help me find some films directed by him that might satisfy my craving for high-quality cinema?",
+    "Hello there, I'm on the lookout for some captivating films that have been directed by Greta Gerwig. I have recently developed an appreciation for her distinct style and the refreshing narratives she brings to the big screen. I find genres like Comedy or Drama particularly intriguing, but I am also willing to explore if she's ever ventured into something out of these. Additionally, I have a keen interest in movies featuring Saoirse Ronan or Timothée Chalamet, as they have delivered commendable performances in the past. If there are any films by Greta Gerwig that align with these preferences or star these incredible actors, I would be very interested in checking them out. Your assistance in identifying these movies based on the director and cast I am interested in would be much appreciated.",
+    "Hi, I'm compiling a list of films directed by Quentin Tarantino because his unique approach to filmmaking, along with his bold narrative choices, have always fascinated me. I especially enjoy the Mystery and Thriller genres, which tend to be intense and gripping, and I believe Tarantino excels in these areas. Although I enjoy his work due to the direction and the overall experience, I'm not particularly fussed about who stars in his films, as the story and direction typically capture my attention more than the cast does. That being said, if there happens to be any noteworthy collaborations with certain actors, I wouldn't mind knowing about them. Could you suggest some movies that align with these preferences, and provide an engaging cinematic experience as only Tarantino can?",
+    "Greetings! I am currently on a quest to watch more films directed by the talented Ang Lee. He has demonstrated an extraordinary range in his workmanship over the years, crafting compelling stories across various genres. Having enjoyed his take on narratives such as Life of Pi and Brokeback Mountain, I am particularly curious if he has delved into other genres or thematic styles that might provide a new perspective and appeal. I am indifferent about the specific actors in these films, as Ang Lee's direction typically prevails as the primary draw for me. Nevertheless, if there are remarkable performances by any particular cast members, I’d be interested in those details as well. Would you be able to recommend some Ang Lee films that are likely to enrich my viewing experience and complement my tastes?",
+    "Hello AI, I'm interested in expanding my cinematic knowledge by exploring films directed by the legendary Martin Scorsese. His work in showcasing raw and intricate storytelling has truly set a standard in the film industry. I enjoy a good mix of genres, but if I had to choose, I’d say Offbeat and Cult films would be intriguing as they tend to be unique and engaging, potentially offering a different viewing experience through Scorsese’s lens. I’m not too particular about who might be starring in these films, as I’m more focused on Scorsese’s directorial style and vision. However, if some frequent collaborators of his are involved, especially if they have had noteworthy performances, please include those as well. What Martin Scorsese films could you recommend that showcase his expertise and align with these aspects?"
+  ]
+}

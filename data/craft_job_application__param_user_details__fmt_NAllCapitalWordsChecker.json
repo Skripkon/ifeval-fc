@@ -1,0 +1,57 @@
+{
+  "chosen_param": "user_details",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain at most 1 word written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "at most",
+      "N": 1
+    }
+  },
+  "fn_schema": {
+    "name": "craft_job_application",
+    "description": "Generates a tailored job application including cover letter and resume based on user-provided details.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_details": {
+          "type": "string",
+          "description": "Detailed background information about the user, including skills, experience, and employment history. The argument value must contain at most 1 word written entirely in capital (uppercase) letters."
+        },
+        "job_description": {
+          "type": "string",
+          "description": "The job description provided by the employer outlining required skills and responsibilities."
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "pdf",
+            "doc"
+          ],
+          "description": "Format in which the application documents should be generated."
+        },
+        "highlight_areas": {
+          "type": "array",
+          "description": "Specific areas or achievements the user wants to highlight in the application.",
+          "items": {
+            "type": "string",
+            "description": "An area or achievement to highlight."
+          }
+        }
+      },
+      "required": [
+        "user_details",
+        "job_description",
+        "format"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm getting ready to apply for a Software Engineer role at a large technology company, and I would like your help generating both a cover letter and an updated resume tailored to their job description. My background: I have a Bachelor’s in Computer Science from the University of Washington (2016), and I’ve been working as a backend engineer at TechInnovate since 2017, focusing on Java, Spring Boot, and REST API development. My main accomplishments include leading the migration of our monolithic platform to microservices, improving backend response times by 25%, and mentoring two junior engineers. I also enjoy contributing to open-source projects. The job description states they are seeking a team player proficient in Java, experience migrating legacy systems, strong mentoring skills, and passionate about continuous learning and improvement. Please make the application documents in PDF format, and be sure to highlight my leadership in migration projects and my experience improving system performance.",
+    "I want to apply to this job I found for a Marketing Manager position at GreenWave Solutions. Here’s the job description: ‘Looking for a results-driven Marketing Manager to lead a dynamic team, plan campaigns, manage social media accounts, and drive B2B customer engagement. Must have experience with digital marketing strategies, analytics, budget oversight, and strong communication skills.’ For my background: I have 8 years of experience in marketing, currently managing a 5-person team at BlueSky Digital, where I launched a cross-platform campaign that increased lead gen by 40%. I’m Google Analytics certified, skilled in content marketing, and have a knack for building strong client relationships. Please provide both the resume and cover letter in DOC format. Please emphasize my team leadership experience and my record of successful campaign strategy.",
+    "Could you help me write a job application, including a new resume and cover letter, for this Project Coordinator opening at BuildRight Inc? The job description specifies that they need someone with strong organizational skills, experience coordinating multiple projects, excellent problem-solving, and familiarity with construction management software. I graduated in Civil Engineering from Ohio State in 2018, worked two years as an assistant at ConstructPro, then joined UrbanBuilders as a junior project coordinator, where I spearheaded scheduling for three major renovations and implemented a digital project tracking system. Please make these documents in PDF format, highlighting my expertise in digital project tracking and my initiative in scheduling complex projects.",
+    "I'm looking for assistance in preparing an application package for a new job as a Data Analyst at FinVista. The employer’s description says: ‘We need a data-driven professional who can develop dashboards, interpret complex data, visualize trends, and communicate findings to non-technical stakeholders. SQL, Python, and data visualization experience required. Finance industry background is a plus.’ My details: I have a Master’s in Data Science from UC Berkeley (2022), worked for 3 years as a Research Assistant using Python and Tableau, and recently finished a contract at QuickNumbers as a Junior Data Analyst, building SQL queries and Power BI dashboards for financial clients. Please prepare the resume and cover letter in DOC format, focusing on my technical proficiency with data visualization and experience presenting insights to non-technical teams.",
+    "I’m preparing to apply for a Human Resources Specialist position at New Horizons Inc., and I’d like you to create a tailored resume and cover letter for me. Here’s my professional background: I graduated from Michigan State in 2015, spent three years in recruitment at PeopleFirst Agency, and have since been an HR generalist at FutureGrowth Ltd., handling onboarding, benefits administration, and employee engagement initiatives. I hold a SHRM-CP certification and introduced a recognition program that improved staff retention by 15%. The employer’s listing includes ‘proven record in staff development, experience with HRIS systems, and designing employee engagement programs.’ Please generate the application documents in PDF format and make sure my leadership in employee engagement programs and retention improvement stand out."
+  ]
+}

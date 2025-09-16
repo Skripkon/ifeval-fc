@@ -1,0 +1,45 @@
+{
+  "chosen_param": "task_description",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 3 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 3
+    }
+  },
+  "fn_schema": {
+    "name": "review_and_assess_task",
+    "description": "Reviews and assesses the completion status of a specific task and provides feedback based on the assessment.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "task_description": {
+          "type": "string",
+          "description": "A comprehensive description of the task being reviewed, including any context or specifications. The argument value must contain exactly 3 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "completion_status": {
+          "type": "integer",
+          "description": "The completion percentage of the task, ranging from 0 to 100."
+        },
+        "feedback_required": {
+          "type": "boolean",
+          "description": "Indicates whether detailed feedback is required after the assessment. Defaults to True."
+        }
+      },
+      "required": [
+        "task_description",
+        "completion_status",
+        "feedback_required"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've been working on the quarterly report for our marketing department, which includes gathering data on all our campaigns over the last three months, analyzing conversion rates, and summarizing budget expenditures versus returns on investment. I have compiled around 90% of the required data, but there are a few graphs and the executive summary section that still need to be polished. Could you please review the progress of this task, considering it's about 85% complete, and let me know if my work so far meets the expected standards? Also, I would like to receive detailed feedback on areas for improvement.",
+    "Our team has been tasked with redesigning the main homepage for our company's website to improve user navigation, modernize the visual branding, and increase lead generation. So far, we've implemented the new navigation menus and updated the layout, but we're still missing some of the final touch-ups on graphics and haven't yet tested it thoroughly on mobile devices. Currently, I would estimate the completion status to be roughly 70%. Can you assess this project's progress and achievements? I do not require detailed feedback; a brief summary is sufficient.",
+    "I'm responsible for planning the annual company retreat this year, which involves booking the venue, arranging transportation, organizing team-building activities, and setting up catering for all attendees. At the moment, I have finished the venue selection and most transportation arrangements, but the activities schedule and catering menu are still under consideration. I would assess the completion status at about 60%. Can you review the efforts I’ve made on this task and provide complete, detailed feedback based on what has been achieved so far and what is left to be done?",
+    "I was assigned the task of migrating our shared drive files over to the new cloud-based storage system, making sure all important documents are organized and proper user access permissions are in place. Right now, I've transferred about 95% of the files and set up most of the permissions, although a few team folders still require review. If you could assess this project—which I estimate is 90% complete—and let me know how it's progressing as well as offer concise feedback, that would be appreciated. Please note that detailed feedback is not needed; a quick overview is enough.",
+    "My goal has been to create a comprehensive employee onboarding manual, covering all policies, benefits information, workflow procedures, and frequently asked questions. I have already drafted introductory sections, compiled most policies, and developed the benefits overview, but a few workflow diagrams and FAQ answers are still missing. The completion status would be at roughly 75%. Could you please review the onboarding manual task as it stands? I want to receive in-depth, detailed feedback about the overall quality, completeness, and anything I might have overlooked."
+  ]
+}

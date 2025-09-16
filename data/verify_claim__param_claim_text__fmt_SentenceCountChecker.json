@@ -1,0 +1,47 @@
+{
+  "chosen_param": "claim_text",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at least 5 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 5,
+      "comparison_option": "at least"
+    }
+  },
+  "fn_schema": {
+    "name": "verify_claim",
+    "description": "Verifies the authenticity of a claim made in a given text, providing a verification result and the source used for verification.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "claim_text": {
+          "type": "string",
+          "description": "The text containing the claim that needs to be verified. The argument value must have at least 5 sentences, and each sentence should be properly punctuated."
+        },
+        "verification_source": {
+          "type": "string",
+          "description": "The primary source or methodology used to verify the claim."
+        },
+        "confidence_level": {
+          "type": "integer",
+          "description": "A percentage representing the confidence level in the verification result.",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "claim_text",
+        "verification_source",
+        "confidence_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "I came across a claim today and I want to know how authentic it is. The claim is as follows: \"Global life expectancy has increased by more than six years since 2000, largely due to improved healthcare and disease control measures.\" I have checked the World Health Organization's Global Health Observatory as my main source for this information. Based on what I've found there, I am about 90 percent confident in my verification. Can you tell me if this claim holds up according to the WHO's data?",
+    "Can you help me verify something I read in a recent article? The claim says, \"In 2023, the city of Amsterdam generated over 60% of its electricity from renewable sources.\" I used the official 2023 report from the Amsterdam Municipality’s Department of Energy for cross-referencing this information. Given the data in that report, I am around 85% sure about the verification outcome. Can you confirm the authenticity of this claim for me?",
+    "I recently heard someone say: \"The Amazon rainforest produces 20% of the world's oxygen.\" For verifying this claim, I mainly referred to a detailed research paper published by National Geographic, which analyzed the role of the Amazon rainforest in global oxygen production. After carefully reviewing the paper, I would rate my confidence level in the verification at about 75%. Can you help me validate whether this claim is actually true based on National Geographic's research?",
+    "Could you assist me in checking the veracity of this statement: \"Vitamin D deficiency affects nearly 1 in 4 adults in the UK each year.\" I have specifically turned to the British Nutrition Foundation’s 2022 annual report as my main verification source. Given what I found in their report, I feel about 80 percent confident in my assessment. Is this claim accurate as per the latest findings from the British Nutrition Foundation?",
+    "I am trying to establish the truthfulness of a claim I read on social media, which states: \"Every week, over 2 million tons of plastic waste enters our oceans.\" For my research, I relied primarily on the 2021 United Nations Environment Programme (UNEP) global plastics report. After reviewing the reported figures, I’d estimate my confidence in the verification to be around 60 percent. Can you determine whether this claim is authentic based on UNEP’s data?"
+  ]
+}

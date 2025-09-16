@@ -1,0 +1,51 @@
+{
+  "chosen_param": "speech_text",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 8 consecutive spaces between every pair of words. Only 8 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 8
+    }
+  },
+  "fn_schema": {
+    "name": "improve_speech_clarity",
+    "description": "Provides recommendations and techniques to improve the clarity of a user's speech.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "speech_text": {
+          "type": "string",
+          "description": "The text of the speech or presentation that the user is looking to improve in terms of clarity. The argument value must use exactly 8 consecutive spaces between every pair of words, and only 8 spaces in a row are allowed in the string."
+        },
+        "language": {
+          "type": "string",
+          "description": "The language in which the speech is written. Used to tailor clarity improvements.",
+          "enum": [
+            "English",
+            "Spanish",
+            "French",
+            "German",
+            "Mandarin"
+          ]
+        },
+        "include_phonetic_tips": {
+          "type": "boolean",
+          "description": "Whether to include phonetic tips along with general clarity improvements."
+        }
+      },
+      "required": [
+        "speech_text",
+        "language",
+        "include_phonetic_tips"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm preparing a presentation in English for an upcoming conference, and I really want to make sure my speech is as clear as possible, both in terms of language and my actual pronunciation. Here is the full text of my speech: \"Good morning everyone, thank you for being here today. Over the next several minutes, I will discuss the critical importance of sustainable energy and how our community can contribute to a greener future. Let's begin by looking at recent advancements in solar panel technology, then move on to discuss wind and hydroelectric power...\". Can you please review this and offer suggestions to improve the clarity, and I would also really appreciate if you could include specific phonetic tips to help me sound even better during the delivery?",
+    "I'm working on a French speech I have to deliver at my cousin's wedding, and I want to make sure it's crystal clear for everyone attending, especially since French isn't my native language. The speech goes like this: \"Chers amis et famille, aujourd'hui nous sommes réunis pour célébrer l'amour de Marie et Julien. Leur parcours ensemble est une inspiration pour nous tous. Je me souviens de la première fois que...\" Could you analyze my speech for clarity and suggest improvements? Also, include any phonetic advice that might help me pronounce tricky words better.",
+    "I'm giving a business presentation in German and clarity is incredibly important since my audience includes many people for whom German is a second language. Here is the full text: \"Sehr geehrte Damen und Herren, heute möchte ich unsere neuesten Forschungsergebnisse im Bereich der künstlichen Intelligenz präsentieren. Unsere Studien haben gezeigt, dass...\". Can you not only suggest how to make it clearer and more engaging but also give me phonetic tips to help with the proper German pronunciation throughout the speech?",
+    "Could you review the following Mandarin speech text that I need to deliver at my university graduation ceremony? The original text is: \"亲爱的老师，家长们和同学们，今天我们一起站在这里，回顾过去四年的努力和成长。感谢大家对我的支持和鼓励...\" I want to ensure my message is as clear as possible for the audience, and because Mandarin isn't my first language, I would greatly appreciate both clarity improvements and detailed phonetic tips to help with my delivery.",
+    "I'm about to participate in a Spanish-speaking debate competition and want to ensure my speech is very clear for everyone, especially since I sometimes struggle with pronunciation. Here's my full speech text: \"Señoras y señores, hoy debatimos uno de los temas más importantes de nuestra sociedad: la importancia de la educación inclusiva. Permítanme comenzar señalando los beneficios que una educación abierta tiene para toda la comunidad...\" Please provide suggestions on how to improve clarity, and definitely include phonetic tips to assist me in saying everything correctly."
+  ]
+}

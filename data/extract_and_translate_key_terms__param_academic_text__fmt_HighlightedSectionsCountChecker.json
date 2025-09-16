@@ -1,0 +1,51 @@
+{
+  "chosen_param": "academic_text",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain exactly 4 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 4
+    }
+  },
+  "fn_schema": {
+    "name": "extract_and_translate_key_terms",
+    "description": "Extracts key terms from a text and translates them into a specified language.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "academic_text": {
+          "type": "string",
+          "description": "Text from which key terms are to be extracted and translated. The argument value must contain exactly 4 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**), and each section must not be empty."
+        },
+        "target_language": {
+          "type": "string",
+          "description": "The language code into which the key terms will be translated (e.g., 'es' for Spanish)."
+        },
+        "discipline": {
+          "type": "string",
+          "enum": [
+            "biology",
+            "mathematics",
+            "history",
+            "literature"
+          ],
+          "description": "Academic discipline related to the text to help improve term extraction."
+        }
+      },
+      "required": [
+        "academic_text",
+        "target_language",
+        "discipline"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm currently working on translating my biology research notes for an international collaboration. Here is a section from my paper: 'The process of photosynthesis involves the absorption of light by chlorophyll molecules, leading to the conversion of carbon dioxide and water into glucose and oxygen within the chloroplasts. Key steps involve the light-dependent reactions as well as the Calvin cycle.' Could you identify the main biological terms from this text and provide their translations into German? This would help me share the main concepts more effectively with my colleagues overseas.",
+    "I have a passage from a mathematics textbook that I'd like to extract important terms from and get them translated to Italian, for my students who are more comfortable in that language. The text is as follows: 'A function is a special relationship where each input has a single output. The domain of the function is the set of all possible inputs, and the range is the set of all possible outputs. Many functions can be graphed as curves on a coordinate plane.' Please focus on the mathematical concepts in your extraction and translation.",
+    "Could you please help me by pulling out the key historical terms from the following excerpt and giving me their equivalents in French? Here is the passage: 'The Treaty of Versailles, signed in 1919, officially ended World War I between Germany and the Allied Powers. The treaty imposed heavy reparations, territorial losses, and military restrictions on Germany, which later contributed to political and economic instability in the Weimar Republic.' The focus should be on the field of history.",
+    "I’m preparing study materials for students of literature whose first language is Spanish. Take the following passage: 'In William Shakespeare's play Macbeth, themes of ambition, power, and fate run throughout the narrative. Literary devices such as soliloquy and dramatic irony are prominent, and the characters are richly developed through dialogue and action.' Can you extract the key literary terms present in this paragraph and translate all of them into Spanish for me?",
+    "As part of a bilingual academic program, I need to identify and translate critical biology vocabulary from this text into Japanese: 'Cellular respiration is a fundamental metabolic process that converts biochemical energy from nutrients into adenosine triphosphate (ATP). This multi-step process involves glycolysis, the Krebs cycle, and the electron transport chain, all vital for energy production in living organisms.' Please focus on extracting important biological terms and provide their Japanese translations accordingly."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chosen_param": "resume_text",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain exactly 6 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "analyze_resume_content",
+    "description": "Analyze the content of a user's resume to provide feedback on structure, keywords, and areas needing improvement.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "resume_text": {
+          "type": "string",
+          "description": "The complete text of the user's resume. The argument value must contain exactly 6 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**), and each section must not be empty."
+        },
+        "industry": {
+          "type": "string",
+          "description": "The industry or field the resume is targeting."
+        },
+        "desired_role": {
+          "type": "string",
+          "description": "The specific job role the user is applying for."
+        }
+      },
+      "required": [
+        "resume_text",
+        "industry",
+        "desired_role"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm seeking some feedback on my resume before I apply for a marketing manager position in the consumer goods industry. Below is the full text of my resume:\n\nJohn Smith\n123 Main Street, Chicago, IL 60610\njohn.smith@email.com | (312) 555-0123\n\nProfessional Summary\nExperienced marketing professional with over 8 years in digital marketing, brand management, and team leadership. Proven record of increasing brand awareness and driving revenue growth for global brands.\n\nWork Experience\nSenior Marketing Specialist, Acme Corp (2019–Present)\n- Led a team of 5 in developing cross-platform digital campaigns that boosted lead generation by 40%.\n- Oversaw $1.2M advertising budget.\nMarketing Coordinator, Beacon Brands (2015–2019)\n- Launched social media strategy that grew followers by 300%.\n\nEducation\nB.A. in Marketing, University of Illinois, 2015\n\nSkills\nBrand Strategy, Digital Marketing, SEO, Data Analysis, Team Leadership\n\nCan you review its structure, let me know if it highlights the right keywords for this type of job, and suggest improvements?",
+    "I'm preparing my resume to apply for a full stack software engineer position at a fintech company, and would really appreciate your feedback. Here's my resume text:\n\nPriya Patel\n987 Hilltop Avenue, San Francisco, CA 94131\npriya.patel@email.com | (415) 555-0198\n\nProfessional Profile\nFull stack developer with 6 years of experience building scalable web applications using JavaScript, React, Node.js, and AWS. Adept in agile methodologies and collaborating with cross-functional teams.\n\nWork Experience\nSoftware Engineer, Finovest (2021–Present)\n- Built real-time financial data dashboards in React and D3.js\n- Implemented REST APIs and serverless microservices in Node.js and AWS Lambda\nSoftware Developer, WebGen (2018–2021)\n- Maintained legacy code, optimized API performance\n\nEducation\nM.S. Computer Science, UC Berkeley, 2018\n\nKey Skills\nReact.js, Node.js, AWS, JavaScript, Python, Agile Scrum\n\nPlease analyze it for structure, essential keywords, and anything I should change to improve my chances in this industry and for this particular role.",
+    "I am hoping to apply to a senior nurse manager position at a major hospital, specifically in the healthcare industry. Below you will find my resume in its entirety:\n\nMaria Gonzalez\n456 Oak Lane, Miami, FL 33133\nmaria.gonzalez@email.com | (305) 555-0432\n\nProfessional Summary\nRegistered Nurse with over 12 years of experience in pediatric and emergency care. Leadership experience managing staff and optimizing patient outcomes.\n\nExperience\nNurse Supervisor, Miami General Hospital (2017–Present)\n- Managed team of 30 nurses in pediatric department\n- Coordinated training and quality improvement initiatives\nRegistered Nurse, Broward Medical Center (2010–2017)\n- Provided patient care in ER and pediatrics\n\nEducation\nB.S. Nursing, University of Miami, 2010\n\nCertifications\nRN, PALS, CPR\n\nSkills\nStaff Leadership, Patient Advocacy, EHR Systems, Quality Assurance\n\nCan you please give me detailed feedback on my resume, especially about the structure, how well it suits the nurse manager role in healthcare, and what improvements are needed?",
+    "Before I apply for a graphic designer position at an advertising agency, I'd like expert feedback on my resume. Here is the complete text:\n\nIsaac Lee\n222 Market Street, New York, NY 10002\nisaac.lee@email.com | (212) 555-0654\n\nSummary\nCreative and detail-oriented graphic designer with 5 years of experience in print and digital media for leading brands. Strong background in visual storytelling and branding.\n\nExperience\nGraphic Designer, ColorWave Studios (2020–Present)\n- Designed campaigns for Fortune 500 clients\n- Developed brand guidelines and visual assets\nJunior Designer, BrightMedia (2018–2020)\n- Assisted in layout and conceptualization of ad materials\n\nEducation\nBFA, Graphic Design, Pratt Institute, 2018\n\nSkills\nAdobe Creative Suite, Typography, Illustration, Branding, UX/UI Basics\n\nCould you analyze the structure, key skills, and keywords in this resume and advise how to better tailor it for a graphic design role in the advertising field?",
+    "I am about to submit my application for a project manager role in the construction industry, and I want to ensure my resume is as strong as possible. Here is my full resume for your review:\n\nDavid Johnson\n789 Sunset Blvd, Los Angeles, CA 90028\ndavid.johnson@email.com | (818) 555-0786\n\nProfessional Profile\nProject manager with 10 years’ experience overseeing commercial and residential construction projects from conception to completion. Skilled at budgeting, scheduling, and leading cross-functional teams to successful outcomes.\n\nExperience\nProject Manager, UrbanBuild Co. (2016–Present)\n- Delivered two 20-story commercial builds on time and under budget\n- Coordinated teams of architects, engineers, and subcontractors\nAssistant Project Manager, SunWest Construction (2012–2016)\n- Tracked project schedules and cost estimates\n\nEducation\nB.S. Construction Management, Cal State LA, 2012\n\nSkills\nBudget Planning, Primavera P6, MS Project, Contract Negotiation, OSHA Compliance\n\nPlease review this resume for structure, industry-specific keywords, and any suggestions to help me improve it for the project manager position in construction."
+  ]
+}

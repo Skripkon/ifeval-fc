@@ -1,0 +1,46 @@
+{
+  "chosen_param": "additional_preferences",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at least 4 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 4,
+      "comparison_option": "at least"
+    }
+  },
+  "fn_schema": {
+    "name": "recommend_books_by_genre",
+    "description": "Recommends a list of books based on a user's interest in a particular genre, including additional preferences.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "preferred_genre": {
+          "type": "string",
+          "description": "The primary genre of interest for which book recommendations are sought."
+        },
+        "additional_preferences": {
+          "type": "string",
+          "description": "Extra information regarding preferences such as author style, length of books, or themes. The argument value must have at least 4 sentences, with each sentence properly punctuated."
+        },
+        "max_recommendations": {
+          "type": "integer",
+          "description": "The maximum number of book recommendations to return.",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "preferred_genre",
+        "additional_preferences",
+        "max_recommendations"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've really developed a passion for historical fiction novels lately, and I'm looking for some new book recommendations in this genre. My preferences are pretty specific: I enjoy immersing myself in stories with strong, complex female protagonists, and I love when the narrative weaves in actual historical events with vivid, atmospheric settings. Books that are around 400-500 pages long are perfect for me, as I like having something substantial to read. Could you suggest up to 7 books that would fit what I'm looking for?",
+    "Lately, I've been very interested in science fiction and would love to get some book recommendations in this genre. I prefer books that explore futuristic technology topics but are still character-driven, and I'm not a big fan of hard sci-fi that's too technical. Ideally, I'd like the books to be part of a series, so I can really dive into the world-building for a while. Please give me a list of 5 recommendations based on these preferences.",
+    "I'm in the mood to read some mysteries. I particularly enjoy cozy mysteries set in small towns with a quirky cast of recurring characters, and I'd love if the storylines have a bit of humor and aren't too graphic or violent. Shorter books, perhaps in the 250 to 350 page range, are best for me since I don't have much time to read. Can you recommend 3 books in this category that match what I'm looking for?",
+    "Could you recommend some fantasy books? I'm searching for titles that feature richly-built magical worlds with intricate lore, and I gravitate towards multi-perspective narratives with morally ambiguous characters. I prefer adult fantasy over young adult, and appreciate when the story incorporates themes of political intrigue. I'm willing to read long books, so don't worry about length. Please suggest up to 10 fantasy books that match these additional preferences.",
+    "I'm looking for some great romance novels to add to my reading list, and I have particular tastes I'd love you to consider. I enjoy contemporary romance with witty banter, slow-burn relationships, and happy endings, but I'd like to avoid love triangles or stories that rely too heavily on angst. Short to medium-length books are preferable, ideally under 400 pages. Could you recommend 4 books that fit these criteria?"
+  ]
+}

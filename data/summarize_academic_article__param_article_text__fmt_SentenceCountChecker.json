@@ -1,0 +1,45 @@
+{
+  "chosen_param": "article_text",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at least 4 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 4,
+      "comparison_option": "at least"
+    }
+  },
+  "fn_schema": {
+    "name": "summarize_academic_article",
+    "description": "Summarizes an academic article to provide a concise overview of its main points.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "article_text": {
+          "type": "string",
+          "description": "Full text of the academic article to be summarized. The argument value must have at least 4 sentences, and each sentence should be properly punctuated."
+        },
+        "word_limit": {
+          "type": "integer",
+          "description": "Maximum number of words for the summary."
+        },
+        "include_references": {
+          "type": "boolean",
+          "description": "Whether to include references in the summary. Defaults to False."
+        }
+      },
+      "required": [
+        "article_text",
+        "word_limit",
+        "include_references"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently downloaded a detailed academic article titled 'Effects of Climate Change on Arctic Wildlife Populations: Long-Term Observational Studies and Predictive Modeling,' authored by Dr. Melissa Carter and her research team. The paper begins with an introduction to recent changes in Arctic climates, reviews observational data from multiple sites over a 25-year timespan, and then delves into their statistical models that predict future species distribution. The methods section is quite technical, discussing data collection techniques and how they controlled for confounding variables. In the results, they present analyses on population trends, and in the discussion, they compare their findings to previous works. Finally, the article closes with key recommendations for policy and further research. Since I need to write a report for class, could you summarize this entire article for me in around 200 words and make sure to include references in the summary?",
+    "I'm working on a literature review and came across an academic article titled 'The Impact of Artificial Intelligence on Radiology Practice: Integrating Deep Learning with Traditional Imaging.' The article spans about 20 pages and starts with a comprehensive introduction about the advancements in AI, describes different deep learning models used in radiology, and reviews case studies illustrating improvements in diagnostic accuracy. It also assesses the challenges faced, such as data privacy concerns and the need for standardization. Then, it has a section on future prospects, where it discusses potential uses in clinical practice and medical education. To help me quickly understand the core arguments and findings, could you provide a detailed summary of this article, limiting it to 300 words, and also make sure all citations and references are included within the summary?",
+    "Here is the full text of an academic paper I need help with: 'Exploring the Socioeconomic Consequences of Remote Work Policies in Urban Environments,' by Katya Ivanova. The paper starts with a background on the shift toward remote work due to global events, and then explores changes in productivity, employee satisfaction, and city infrastructure. There are several tables and figures illustrating shifts in public transit usage, and the methods section details survey distribution and participant demographics. The discussion highlights the implications for policymaking and urban planning, and the conclusion presents recommendations for employers and city officials. I have to present a summary of this article in my seminar. Could you please condense the main points into a summary of no more than 150 words, and I don't need the references included in the summary.",
+    "I'm analyzing the following academic article for my thesis: 'Genetic Factors in Autism Spectrum Disorders: A Meta-Analysis of Twin and Family Studies,' by Dr. Leonard Brown. The article presents a comprehensive review of multiple genetic studies, beginning with an overview of autism spectrum disorders, family inheritance patterns, and then moving into a statistical analysis using data from several decades. There is a detailed comparison between monozygotic and dizygotic twins, and the discussion investigates environmental modifiers as well. Results are organized in tables summarizing heritability estimates, and the authors conclude with suggestions for future research directions. Can you write a summary for me that captures all the major findings, keeps it under 250 words, and includes the references used in the article?",
+    "I just finished reading a scholarly article called 'The Evolution of European Monetary Policy Since 2000,' authored by A. Dimitriou and colleagues. It provides a chronological overview, discusses the formation of the Eurozone, analyzes changes during the financial crisis of 2008, and examines recent quantitative easing initiatives. The authors assess the impact of policy decisions on economic stability, providing supporting data and case studies throughout. The paper concludes with a critical evaluation of ongoing challenges and potential reforms needed in the coming years. For my upcoming exam, I need a thorough summary of this article, approximately 180 words in length, and please exclude the references from the summary."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "chosen_param": "input_text",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have exactly 2 words. No less, no more.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 2,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "parse_text_for_keywords",
+    "description": "Extracts keywords from a given text and categorizes them based on predefined themes.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "input_text": {
+          "type": "string",
+          "description": "A paragraph or document from which keywords need to be extracted. The argument value must have exactly 2 words—no less, no more."
+        },
+        "language": {
+          "type": "string",
+          "description": "The language of the input text.",
+          "enum": [
+            "English",
+            "Spanish",
+            "French",
+            "German"
+          ]
+        },
+        "themes": {
+          "type": "array",
+          "description": "A list of themes to categorize extracted keywords.",
+          "items": {
+            "type": "string",
+            "description": "A single theme category.",
+            "enum": [
+              "technology",
+              "health",
+              "science",
+              "finance"
+            ]
+          }
+        }
+      },
+      "required": [
+        "input_text",
+        "language",
+        "themes"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm working on a research project and have written a lengthy paragraph summarizing recent trends in artificial intelligence and biotechnology. Could you help me extract the main keywords from this text and organize them according to the following themes: technology, science, and health? Here is the paragraph: 'Artificial intelligence has revolutionized not only the technology sector but also brought significant advancements in healthcare diagnostics and scientific research methodologies. The emergence of deep learning and machine learning has enabled automated data analysis, resulting in improved outcomes for patient care and efficiency in scientific discovery.' The text is in English.",
+    "I would appreciate your assistance in analyzing this Spanish document for keyword extraction and categorization. Please focus specifically on finance and technology as the main themes. The document in question reads: 'El reciente crecimiento de las criptomonedas ha captado la atención de los inversores, mientras las innovaciones en tecnología blockchain están transformando la industria financiera mundial. Los bancos tradicionales están adoptando nuevas estrategias digitales para mantenerse competitivos.' I want to understand the key ideas within these themes.",
+    "Could you process the following German paragraph, identify the most important keywords, and sort them into the health and science categories? The paragraph is: 'Die Entwicklung neuer Impfstoffe hat das öffentliche Gesundheitswesen weltweit gestärkt. Wissenschaftliche Forschung im Bereich der Genetik trägt dazu bei, personalisierte Therapien zu ermöglichen und Krankheiten effektiver zu bekämpfen.' I want the keywords to be neatly grouped by these themes for clarity.",
+    "I'm preparing a report and I need to highlight the core concepts from this French text, organizing extracted keywords according to technology, finance, and science themes. The passage is: 'La technologie numérique transforme le secteur financier grâce à l'intelligence artificielle et à l'automatisation. Les scientifiques explorent de nouvelles méthodes pour améliorer la sécurité des transactions et la transparence financière au sein des institutions bancaires.' Please analyze the passage in French.",
+    "Here is a detailed English article section I came across: 'Over the past decade, remarkable strides have been made in healthcare due to advances in wearable devices and remote patient monitoring. At the same time, scientific breakthroughs in genomics are shaping personalized medicine, while technology firms are collaborating with financial and healthcare providers to offer innovative digital health solutions.' I'm interested in extracting significant keywords from this section, categorized according to the following themes: science, technology, finance, and health."
+  ]
+}

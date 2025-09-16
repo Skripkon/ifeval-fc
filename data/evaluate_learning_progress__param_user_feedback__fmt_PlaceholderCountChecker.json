@@ -1,0 +1,45 @@
+{
+  "chosen_param": "user_feedback",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "evaluate_learning_progress",
+    "description": "Evaluates the user's progress in their learning journey and suggests areas for improvement.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "user_feedback": {
+          "type": "string",
+          "description": "User's personal feedback on their learning experience and challenges faced. The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "completed_modules": {
+          "type": "integer",
+          "description": "Number of learning modules or units the user has completed."
+        },
+        "time_spent_learning": {
+          "type": "number",
+          "description": "Total time in hours that the user has spent on learning activities."
+        }
+      },
+      "required": [
+        "user_feedback",
+        "completed_modules",
+        "time_spent_learning"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've just completed 10 modules in my online course and have spent around 25.5 hours studying overall. Personally, I feel like I'm making decent progress, but I noticed I struggle particularly with retaining information from earlier lessons. I also find it challenging to stay motivated and sometimes I skim through content just to get it done. Based on my experience and the time I've put in, can you analyze my learning progress and recommend areas I should focus on improving?",
+    "So far, I've finished 7 learning units, and I've devoted about 15 hours in total to studying. In terms of my personal feedback, I often find that while I understand new topics initially, I have a hard time applying them in practice, especially when the exercises get more complex. I also get distracted easily during the longer sessions. Could you evaluate how I'm doing in my learning journey and suggest what steps I could take to enhance my results?",
+    "I've worked through 12 modules, dedicating approximately 32 hours to studying up to now. My feedback is that although I manage to follow along with most lessons, I encounter difficulties whenever I try to summarize or teach back what I learned, which makes me feel like I might not be grasping the concepts deeply enough. I also sometimes feel overwhelmed by the amount of new material. Could you please assess my overall learning progress and tell me how I could get better?",
+    "Having completed 5 modules and spent about 8 hours on learning activities, I want to get some insight into my progress. My main challenges are staying engaged, as sometimes the content feels repetitive, and occasionally I miss key details that affect my understanding later on. I really want to know where I currently stand in my studies and how I could address these issues to improve my learning outcomes.",
+    "I just wrapped up my tenth module, with a total of 20 hours dedicated to my studies so far. My feedback is that while I've improved in some areas, I feel stuck with certain advanced topics and often have to revisit previous sessions to review. I also find myself losing track of my progress and sometimes doubt if I'm learning efficiently. Can you help me evaluate my current learning journey based on this information and offer advice on what I should focus on next?"
+  ]
+}

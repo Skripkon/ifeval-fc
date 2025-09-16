@@ -1,0 +1,21 @@
+# Development dependencies
+-r requirements.txt
+
+# Testing
+pytest>=6.0
+
+# Code formatting
+black>=22.0
+isort>=5.0
+
+# Linting
+pylint>=2.15
+
+# Type checking
+mypy>=1.0
+
+# Pre-commit hooks
+pre-commit>=2.20
+
+# Additional type stubs (commented out due to dependency conflicts)
+# types-all

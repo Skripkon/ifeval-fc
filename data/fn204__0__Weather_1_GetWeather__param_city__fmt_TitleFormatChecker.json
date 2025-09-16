@@ -1,0 +1,37 @@
+{
+  "chosen_param": "city",
+  "format": {
+    "name": "TitleFormatChecker",
+    "description": "The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed).",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn204__0__Weather_1_GetWeather",
+    "description": "Retrieves the weather forecast for a specified city on a particular date.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The name of the city for which weather information is requested. The argument value must contain a title wrapped in double angle brackets, such as <<poem of joy>> (everything except for the title is allowed)."
+        },
+        "date": {
+          "type": "string",
+          "description": "The date for which weather information is requested, in the format of 'YYYY-MM-DD'. If not provided, the current date is used."
+        }
+      },
+      "required": [
+        "city"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hi, I'm planning a trip to Paris soon and would really appreciate it if you could provide me with the detailed weather forecast for Paris on 2024-07-21. I want to know the temperature, chance of rain, and any other relevant weather details for that particular day, as I need to pack suitable clothing and plan some outdoor activities. Could you give me all the information you have about the weather in Paris for that specific date?",
+    "I'm organizing an outdoor charity event in New York City for August 14th, 2024, and I want to make sure we're prepared for any type of weather. Can you tell me what the weather forecast looks like for New York City on 2024-08-14? Please include as much information as possible, such as expected temperatures, precipitation, humidity, and anything else that might affect the event. Thank you!",
+    "Could you please pull up the weather forecast for Tokyo for tomorrow, which is 2024-06-25? I'm particularly interested in knowing whether there will be any rain and what the temperature range will be, as I have an early morning meeting in the city. Please include any additional weather warnings or advisories if available!",
+    "I have a hiking trip planned in Cape Town, and I'm a bit concerned about the weather conditions there. Could you provide the forecast for Cape Town on 2024-09-10? I’d love to know if there’s any chance of rain, the anticipated temperature, wind speed, and any other weather factors that could impact my hike on that day.",
+    "For my upcoming business trip, I'll be in Sydney, and I need to know what to expect weather-wise. Can you give me a comprehensive weather forecast for Sydney on 2024-10-05? Specifically, I’m interested in details like maximum and minimum temperatures, likelihood of showers, humidity levels, and any unusual weather phenomena that might occur on that date."
+  ]
+}

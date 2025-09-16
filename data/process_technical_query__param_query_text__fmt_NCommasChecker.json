@@ -1,0 +1,57 @@
+{
+  "chosen_param": "query_text",
+  "format": {
+    "name": "NCommasChecker",
+    "description": "The argument value must contain at least 5 commas. The commas may appear anywhere in the value.",
+    "group": "PUNCTUATION",
+    "args": {
+      "comparison_option": "at least",
+      "N": 5
+    }
+  },
+  "fn_schema": {
+    "name": "process_technical_query",
+    "description": "Processes a technical query to provide troubleshooting steps and resources.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query_text": {
+          "type": "string",
+          "description": "The natural language technical query or issue described by the user. The argument value must contain at least 5 commas, which may appear anywhere in the value."
+        },
+        "urgency_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "The urgency level of the technical issue to prioritize responses."
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "Windows",
+            "MacOS",
+            "Linux",
+            "Mobile",
+            "Web"
+          ],
+          "description": "The platform where the technical issue is occurring."
+        }
+      },
+      "required": [
+        "query_text",
+        "urgency_level",
+        "platform"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I’m experiencing an issue with my Windows laptop where every time I try to connect to my office VPN, the connection fails and gives me an error stating that the network adapter cannot be found. This just started happening after a recent Windows update and I’ve already tried restarting my computer and reinstalling the VPN software, but nothing seems to work. The problem is becoming quite urgent because I need access to our network resources to meet a looming deadline. Can you please provide troubleshooting steps or any relevant resources for this high-priority issue on Windows?",
+    "I'm having trouble logging into certain websites using my MacOS machine. Whenever I try to sign in with my credentials, I get a message saying 'invalid token' or sometimes the page just keeps reloading without any progress. This has been happening for about a week and it's starting to get in the way of my work. While it's not immediately critical, I would like to resolve it reasonably soon before it becomes a bigger annoyance. Could you guide me through some medium-urgency troubleshooting steps to solve this login problem on MacOS?",
+    "On my Linux system, I keep running into a recurring problem where the system freezes completely when I try to run heavy computational tasks, particularly when using certain Python scripts related to data processing. I've checked the resource monitor and noticed that both CPU and RAM usage spike right before the freeze. This issue is not disrupting urgent tasks but is slowing down my workflow quite a bit, so I'd classify the urgency as low for now. Could you assist me with detailed troubleshooting for this Linux performance issue?",
+    "My mobile phone is acting weird: whenever I try to open my banking app, it keeps crashing instantly without loading anything. I have restarted the device, cleared the app cache, and also checked for updates, but the problem persists. This is very urgent as I need to access my bank account to authorize some payments today. The platform is Mobile, and the urgency is definitely high. Can you please help me troubleshoot this crashing issue on my phone as soon as possible?",
+    "I've recently noticed that when accessing our company portal through my browser (specifically on the Web platform), some of the dashboard widgets fail to load properly and display an error message saying 'Failed to fetch data from server.' This is making it difficult to keep track of important metrics, though it's only a moderate inconvenience at the moment. The urgency could be considered medium. Could you suggest troubleshooting steps or provide relevant documentation for addressing data loading issues on web dashboards?"
+  ]
+}

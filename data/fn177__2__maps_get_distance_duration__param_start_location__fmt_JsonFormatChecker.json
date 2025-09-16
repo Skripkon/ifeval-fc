@@ -1,0 +1,42 @@
+{
+  "chosen_param": "start_location",
+  "format": {
+    "name": "JsonFormatChecker",
+    "description": "The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable.",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn177__2__maps_get_distance_duration",
+    "description": "Retrieve the travel distance and estimated travel time from one location to another via car",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "start_location": {
+          "type": "string",
+          "description": "Starting point of the journey. The argument value must be a valid JSON object. The JSON must be syntactically correct and parseable."
+        },
+        "end_location": {
+          "type": "string",
+          "description": "Ending point of the journey"
+        },
+        "traffic": {
+          "type": "boolean",
+          "description": "If true, considers current traffic. Default is false."
+        }
+      },
+      "required": [
+        "start_location",
+        "end_location"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "So, I've been thinking about taking a road trip from New York City to Los Angeles to visit some friends. I'm planning to drive across the country and I really want to get an idea of how long the travel time would be. Can you tell me what the distance is between these two cities when traveling by car? Also, I heard that traffic can really impact the travel time significantly, so could you let me know how long it might take to drive from New York City to Los Angeles considering current traffic conditions?",
+    "I was just looking at the map and contemplating a journey I've wanted to make for a while now, that is from my cozy hometown of Boston all the way down to the vibrant city of Miami. Driving there is something I'm considering quite seriously! What I need right now is some insights into the logistics of it all, specifically the travel distance and estimated driving duration. And if it's possible, could you also give me an idea of how much the current traffic conditions might alter my travel time between Boston and Miami?",
+    "I am considering a drive from Chicago to Denver because I've heard the road trip can be quite scenic, especially during this time of year with all the beautiful landscapes on the way. Before I set off on this adventure, it would be super helpful to have some information on the total distance I’d be covering and the likely time it would take me to reach Denver by car. It'd also be useful to know if traffic along this route could affect my journey time, so could you please provide me with these details including current traffic data?",
+    "Hey, I'm planning a car trip soon, from Seattle to San Francisco. I've been wanting to visit for a while and finally have the time to do it. However, I would like to have a detailed understanding of how much time I'm committing to - both in terms of the total number of miles and the expected driving time. Additionally, could you include the influence of traffic in relation to my itinerary? I need to figure this out well in advance to make the necessary arrangements and avoid unforeseen travel delays.",
+    "I really need some guidance on planning a trip I've been thinking about. The journey would start in Houston and take me all the way to the incredible city of Las Vegas. Given how long this drive is anticipated to be, having details like the precise distance and the estimated duration in my pocket would be incredibly helpful. Moreover, traffic can sometimes throw a wrench into the best laid plans. Therefore, if you could provide the travel time between Houston and Las Vegas, taking into account the current traffic conditions, I would greatly appreciate it."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chosen_param": "unit",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 6 consecutive spaces between every pair of words. Only 6 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "fn151__0__geometry_area_triangle",
+    "description": "Calculate the area of a triangle.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "type": "integer",
+          "description": "The length of the base of the triangle."
+        },
+        "height": {
+          "type": "integer",
+          "description": "The height of the triangle from the base."
+        },
+        "unit": {
+          "type": "string",
+          "description": "The measurement unit for the area. Defaults to square meters. The argument value must use exactly 6 consecutive spaces between every pair of words, and only 6 spaces in a row are allowed in the string."
+        }
+      },
+      "required": [
+        "base",
+        "height",
+        "unit"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm working on a construction project and need to find out the surface area of a triangular piece of land. The base of the triangle measures 50 meters exactly, and the height from that base to the topmost point is 30 meters. Could you please help me calculate the area using these dimensions and provide the answer in square meters? This will help me estimate the amount of materials needed for the job.",
+    "I'm helping my child with her geometry homework and we've come across a problem where we need to calculate the area of a triangle. The triangle has a base that is 12 centimeters long and a vertical height from the base to the opposite vertex of 9 centimeters. Can you tell me what the area of this triangle is in square centimeters? I'd like to show her how the math works if you have an explanation too.",
+    "I need to determine the area of a triangular plot in my backyard because I'm planning to put new sod down. The base of the triangle along the fence is 25 feet, and the perpendicular height from the base to the opposite corner is 17 feet. Could you please calculate the area and give it to me in square feet so I know how much sod to purchase?",
+    "For a school project, we have to calculate the area of various geometric shapes, and one of them is a triangle with a base of 8 inches and a height of 15 inches. Would you be able to provide the precise area in square inches? I want to make sure I get this calculation correct for my submission.",
+    "I'm designing a small triangular garden bed, and I want to know how much growing area I'll have. The side that will go against my house, which will serve as the base, is 7 meters long. The height from that base straight up to the farthest point is 4 meters. Can you figure out the area for me and express it in square meters so I can plan how many plants I can fit?"
+  ]
+}

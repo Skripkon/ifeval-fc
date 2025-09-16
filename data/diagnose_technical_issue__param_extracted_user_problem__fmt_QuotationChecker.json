@@ -1,0 +1,49 @@
+{
+  "chosen_param": "extracted_user_problem",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in double quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "double"
+    }
+  },
+  "fn_schema": {
+    "name": "diagnose_technical_issue",
+    "description": "Diagnoses and provides solutions for technical issues described by the user.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "extracted_user_problem": {
+          "type": "string",
+          "description": "Detailed description of the technical issue reported by the user. The argument value must be wrapped in double quotation marks, and no additional characters should appear outside the quotes."
+        },
+        "device_type": {
+          "type": "string",
+          "description": "Type of device where the issue is occurring, such as 'mobile', 'computer', or 'tablet'."
+        },
+        "urgency_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "User-specified urgency level of the issue."
+        }
+      },
+      "required": [
+        "extracted_user_problem",
+        "device_type",
+        "urgency_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I'm having a pretty serious problem with my laptop computer and I need your help urgently. For the past few days, whenever I try to turn it on, it makes a beeping noise and the screen stays completely black. I’ve tried removing the battery and plugging it back in, but nothing works. I really need my computer for work and I'm worried I might lose important files. Can you please diagnose what’s going on and suggest what I should do? I would rate the urgency as high because my job depends on getting this fixed as soon as possible.",
+    "Hello, I noticed something odd with my mobile phone lately and would appreciate your help. Over the last week, my phone has been freezing randomly, especially when I try to open certain apps or when multiple apps are running at once. Sometimes, it even restarts by itself. I have tried clearing the cache and uninstalling unused apps but the issue persists. It’s not stopping me from using my phone completely, but it’s becoming increasingly annoying. I would say the urgency is medium right now, but I want to avoid it getting worse. Could you please guide me on what steps I should take to resolve this?",
+    "I urgently need assistance with my tablet device. Yesterday, I attempted to update the operating system, but during the update, the tablet suddenly shut off and now it won't turn on no matter how long I press the power button. The charging indicator also doesn’t show up even after being plugged in for hours. I rely on this tablet for taking notes in my classes, and I have an important exam coming up. This is a high-priority issue for me. Can you help me figure out what might have happened and how I can possibly fix it as soon as possible?",
+    "For the past several days, I have been experiencing a recurring problem on my desktop computer at home. Every time I try to connect to the internet, the computer says there is no network connection even though other devices in the house are connected without any issues. I’ve tried restarting the computer, checking all the cables, and even resetting my router, but nothing seems to help. This problem is not urgent right now since I can use my phone as a temporary solution, so the urgency is low. Can you help me diagnose what could be causing this and how I might resolve it?",
+    "I’m reaching out because I have a persistent issue with my mobile device that I need help with. My phone frequently overheats, especially when I’m making video calls or playing games. Sometimes the device gets so hot that it automatically shuts down to protect itself. I have already removed the case, closed background apps, and limited usage, but the overheating continues. This isn’t an emergency yet, so I’d say the urgency is medium, but I’d like to prevent it from causing any permanent damage. What might be causing this and what steps can I take to fix the issue?"
+  ]
+}

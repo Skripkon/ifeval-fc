@@ -1,0 +1,56 @@
+{
+  "chosen_param": "article_content",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at most 2 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 2,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "extract_entities_from_article",
+    "description": "Extracts named entities from a news article, such as people, organizations, and locations.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "article_content": {
+          "type": "string",
+          "description": "The full text of the news article from which entities need to be extracted. The argument value must have at most 2 sentences, and each sentence should be properly punctuated."
+        },
+        "entity_types": {
+          "type": "array",
+          "description": "List of entity types to extract from the article.",
+          "items": {
+            "type": "string",
+            "description": "A type of named entity, such as person, organization, or location.",
+            "enum": [
+              "person",
+              "organization",
+              "location",
+              "date",
+              "event"
+            ]
+          }
+        },
+        "include_context": {
+          "type": "boolean",
+          "description": "Whether to provide context sentences for each entity. Defaults to false."
+        }
+      },
+      "required": [
+        "article_content",
+        "entity_types",
+        "include_context"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm doing some research on recent political events and I need your help to extract specific information from a news article. Here is the full text of the article: 'President Jane Doe addressed the nation on Tuesday from the White House, accompanied by several cabinet members. During her speech, she emphasized the importance of the upcoming Climate Summit scheduled for October 15th in Geneva. Representatives from the United Nations and the European Council were present, along with delegates from eco-friendly organizations. The event drew thousands of protesters who gathered outside the venue demanding urgent action on environmental policies.' Could you pull out the names of all people, organizations, locations, and events mentioned? Also, please provide context sentences for each of these entities.",
+    "Hi, I just read a very informative article and I want to analyze its entities for my project. The article text is: 'Tesla, Inc. announced on February 28, 2023, that it will be constructing a new gigafactory near Austin, Texas. Elon Musk revealed this decision in a press conference held at the company's headquarters. The announcement was attended by Texas Governor Greg Abbott, local officials, and media outlets. This event has been deemed significant for the state's economy and technological growth.' I’d like you to extract all person, organization, location, and date entities from it and include the context for where each was mentioned within the article.",
+    "Could you assist me in breaking down the following news article by identifying important entities? Here’s the article: 'On December 1st, 2022, the FIFA World Cup kicked off in Doha, Qatar. Teams from countries around the globe arrived, including Argentina, led by Lionel Messi, and France, managed by Didier Deschamps. Spectators packed the Lusail Stadium for the opening ceremony event, which was attended by representatives of FIFA and major sponsors like Coca-Cola and Adidas.' I need the full list of people, organizations, locations, dates, and events found within the article, with a snippet of the surrounding sentence for each entity, please.",
+    "I have the text of a news article and I’m interested in doing some entity analysis. Here’s the article content: 'Apple revealed the long-anticipated iPhone 15 during its September 12, 2023 launch event in Cupertino, California. CEO Tim Cook presented innovative features at the Steve Jobs Theater to reporters from the Wall Street Journal, Reuters, and CNN. Tech enthusiasts praised the event, highlighting the company's commitment to sustainability. Pre-orders opened the following Friday.' From this article, could you extract all the relevant people, organizations, locations, dates, and events, and for each, give me the context in which they appear?",
+    "Please help me identify key entities from the complete news article below. Article text: 'Hundreds of students gathered at Central Park in New York City on March 14th, 2024 to participate in a climate awareness march. The event, organized by EarthAction and supported by the City University of New York, featured speeches from climate activist Greta Thunberg and Mayor Eric Adams. Media outlets such as NBC and The New York Times covered the event extensively.' I would like you to extract every person, organization, location, date, and event mentioned in this article, and include the sentences surrounding the mentions for additional context."
+  ]
+}

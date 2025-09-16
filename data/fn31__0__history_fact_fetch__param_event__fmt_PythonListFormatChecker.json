@@ -1,0 +1,41 @@
+{
+  "chosen_param": "event",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn31__0__history_fact_fetch",
+    "description": "Retrieve facts about historical events or documents",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "event": {
+          "type": "string",
+          "description": "The historical event or document you want to know about. The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval()."
+        },
+        "depth": {
+          "type": "string",
+          "description": "The depth of information required. Choices are 'brief' or 'detailed'."
+        },
+        "year": {
+          "type": "integer",
+          "description": "The year of the event/document. default is 0"
+        }
+      },
+      "required": [
+        "event"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hi there! I'm working on a school project where I need to gather some fascinating details about significant events in world history to make my presentation stand out. I'm particularly interested in the signing of the Magna Carta. I recall it being a pivotal moment in the development of modern democracy but would like some expert insights to back up my findings. Could you provide me with a detailed account of this event, possibly including the main characters involved, like King John, and how it actually came to shape the political landscape of its time? Oh, and if you could, please make sure to touch upon the year when all this unfolded, as pinpointing the exact timeline is crucial for my report.",
+    "Hello! I am a high school history teacher preparing an in-depth lesson for my students about one of the most iconic speeches in American history. Yes, you guessed it, it's none other than the Gettysburg Address. I want to provide my students not only with the text of the speech but also a thorough understanding of its context. So, a detailed breakdown is essential. Please ensure to include the specific year this speech was delivered by Abraham Lincoln as it is often questioned in tests. Your assistance in equipping me with these insights would be tremendously valuable to my lesson plan.",
+    "Greetings! As a curious learner passionate about the unfolding of time, I'm diving deep into historical events that shook the world. Today, I'm focusing my lens on the French Revolution, which I understand redefined the sociopolitical landscape of not just France but the entire world. I believe a more detailed exploration into the timelines, the upheavals, and particularly the roles played by figures like Marie Antoinette and Robespierre would provide me with a complete picture. Would you be so kind to point me to a comprehensive account, and do include the key years like when the Bastille was stormed?",
+    "Good day! I'm currently writing a novel set in the early 20th century, and I need some factual historic inclusions to authenticate my storyline. The sinking of the Titanic is going to be a crucial plot point, given its dramatic impact and historical significance. I know it was a maritime disaster that captured the imagination of the entire world. What I'm looking for is not just the event itself but a detailed narration that covers the leads behind the ship's creation, the fateful voyage, and survivor testimonies. Can you also remind me of the specific year this tragic event took place?",
+    "Hey! I've been fascinated by space exploration and its history, and I'm currently focused on the landmark moment when humans first set foot on the moon. This event marked such a pivotal point in human and scientific achievement, and there's so much narrative out there. Could you help me gather a comprehensive collection of the facts about the Apollo 11 mission? I’m eager to understand every bit, from the launch to the moonwalk and safe return. Please include the precise year when this momentous event took place because getting the historical timeline right is key to my ongoing research."
+  ]
+}

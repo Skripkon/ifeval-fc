@@ -1,0 +1,38 @@
+{
+  "chosen_param": "country",
+  "format": {
+    "name": "PythonListFormatChecker",
+    "description": "The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval().",
+    "group": "DETECTABLE FORMAT",
+    "args": {}
+  },
+  "fn_schema": {
+    "name": "fn70__2__european_history_get_monarchs",
+    "description": "Provides a list of monarchs based on the specified country and century.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "Country name. The argument value must be a valid python list of strings. The list must be syntactically correct and parseable with ast.literal_eval()."
+        },
+        "century": {
+          "type": "integer",
+          "description": "Century as an integer. For example, for the 1700s, input '18'."
+        }
+      },
+      "required": [
+        "country",
+        "century"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hello there! I've been reading about European monarchies and their fascinating history, and I'm currently trying to better understand the different rulers and dynastic changes that took place over time in specific regions. Could you help me with a detailed list of all the monarchs who reigned in Spain during the 15th century? I'm curious to know not just the names but also if there were any significant shifts in power or remarkable historical events during their reigns that impacted the course of Spanish or even European history as a whole during that time.",
+    "Hi! I've been diving deep into the history of France and have become quite intrigued by the array of kings and queens who have sat on the throne throughout the ages. Could you help by providing a comprehensive list of all the French monarchs who ruled during the 12th century? I'm especially interested in understanding who they were and any major political developments or battles that occurred under their rule, as well as how their governance might have shaped the country's future trajectory.",
+    "Greetings! I'm currently working on a research project focused on the shifts in monarchy and leadership styles across Europe during different periods. Right now, I'm collecting information about Italy and how its monarchical structure evolved during the 16th century. Could you provide me with an exhaustive list of every monarch who ruled in Italy during this century? I am particularly interested in their backgrounds, key policies they implemented, and how their leadership may have influenced both Italian society and its role within the broader European context at the time.",
+    "Hey there! I'm looking into the fascinating history of the United Kingdom and its royal lineage. As part of my research, I'm eager to get a detailed rundown of all the monarchs who ruled the UK throughout the 19th century. Could you assist by listing these rulers and any noteworthy reforms, royal decrees, or foreign relations that defined their reigns? I’d love to gain insight into how these monarchs navigated the challenges of their time and how their decisions might have left a lasting imprint on both the nation and its colonial territories.",
+    "Hi! I'm piecing together a detailed historical account of the evolution of monarchy in Scandinavia, and I'm presently focused on Norway during the 11th century. Can you provide a comprehensive list of the monarchs who governed during this time? It would be incredibly helpful to include any significant political alliances, wars, or cultural shifts that occurred under their rule. I'm also interested in how these monarchs' reigns have shaped Norway's heritage and their interactions with neighboring regions at that pivotal historical juncture."
+  ]
+}

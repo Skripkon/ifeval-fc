@@ -1,0 +1,45 @@
+{
+  "chosen_param": "main_ingredient",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain at least 5 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "at least",
+      "N": 5
+    }
+  },
+  "fn_schema": {
+    "name": "create_recipe",
+    "description": "Generates a recipe based on given main ingredient and dietary preferences.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "main_ingredient": {
+          "type": "string",
+          "description": "The main ingredient to be used in the recipe, provided in natural language input. The argument value must contain at least 5 words written entirely in capital (uppercase) letters."
+        },
+        "dietary_preferences": {
+          "type": "string",
+          "description": "Dietary preferences such as vegan, vegetarian, gluten-free, etc."
+        },
+        "servings": {
+          "type": "integer",
+          "description": "The number of servings the recipe should yield."
+        }
+      },
+      "required": [
+        "main_ingredient",
+        "dietary_preferences",
+        "servings"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi there! I'm trying to find a new recipe idea for dinner tonight. I have a bunch of fresh eggplants at home and would love to make them the star of the dish. I follow a strict vegan diet, so please make sure there are no animal products or by-products in the recipe. Also, I'm planning to have some friends over and I need enough food for 6 people. Can you create a detailed and delicious recipe using eggplant as the main ingredient that is vegan and serves 6?",
+    "I'm interested in cooking something special this weekend, and I want to try a gluten-free dish since one of my close friends has celiac disease. I have a lot of chicken breast available, and I want the recipe to be centered around that. There will be 4 of us at the dinner table. Could you generate a recipe with chicken breast as the main ingredient that is also gluten-free and yields 4 servings?",
+    "I’m preparing a meal for my family and wanted to experiment with tofu as the main ingredient since we’re cutting down on meat. However, we still include dairy and eggs, so vegetarian is fine, but not vegan. I need a recipe that will be suitable for 3 people, accommodating our preference for vegetarian food. Could you provide a creative and flavorful vegetarian tofu recipe for 3 servings?",
+    "Could you help me out by generating an easy and tasty recipe where salmon is the centerpiece? I am currently following a pescatarian diet and would like the meal to reflect that. I expect to have 5 people at my table for lunch, and I’d love for everyone to enjoy a balanced and delicious pescatarian dish. Please make sure the recipe uses salmon as the main ingredient, fits pescatarian criteria, and serves 5.",
+    "I’m planning a dinner where lentils are the main attraction, as I really enjoy hearty plant-based meals. Since I have a guest who has a nut allergy and prefers gluten-free dishes, I'd like a gluten-free recipe, and I want it to be enough for 8 servings because there will be quite a few people. Can you suggest a recipe that uses lentils as the main ingredient, is gluten-free, and serves 8 people?"
+  ]
+}

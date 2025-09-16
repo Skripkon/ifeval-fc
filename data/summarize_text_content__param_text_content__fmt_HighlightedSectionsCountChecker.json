@@ -1,0 +1,51 @@
+{
+  "chosen_param": "text_content",
+  "format": {
+    "name": "HighlightedSectionsCountChecker",
+    "description": "The argument value must contain exactly 6 sections highlighted using markdown syntax (e.g., *highlighted section* or **highlighted section**). Each section must not be empty.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 6
+    }
+  },
+  "fn_schema": {
+    "name": "summarize_text_content",
+    "description": "Generates a concise summary of the input text while preserving key information.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text_content": {
+          "type": "string",
+          "description": "The text content that needs to be summarized. The argument value must contain exactly 6 sections, each not empty, with each section highlighted using markdown syntax (for example, *highlighted section* or **highlighted section**)."
+        },
+        "summary_length": {
+          "type": "integer",
+          "description": "Preferred length of the summary in number of sentences.",
+          "minimum": 1
+        },
+        "focus_area": {
+          "type": "string",
+          "description": "Specify the focus area for content prioritization.",
+          "enum": [
+            "overview",
+            "details",
+            "conclusion"
+          ]
+        }
+      },
+      "required": [
+        "text_content",
+        "summary_length",
+        "focus_area"
+      ]
+    }
+  },
+  "user_queries": [
+    "I recently came across the following article and I’m hoping to get a well-crafted summary that focuses on the overall gist. Here is the text: \"In the early 21st century, advancements in medical technology have greatly improved the life expectancy of people around the world. Surveillance systems now allow early detection of outbreaks, and new treatments for chronic diseases have emerged. However, global inequalities in healthcare access continue to be a pressing issue, leaving millions without the medical care they require. Research also points to environmental change impacting health outcomes, especially in developing countries.\" Could you please summarize this into 3 sentences, prioritizing an overview?",
+    "Could you help me by condensing the following report into a summary that highlights the significant details? I want the summary to be about 4 sentences long. The text is: \"The annual financial review for the company reveals a steady increase in profits over the last four quarters, mainly driven by the expansion into international markets. Operational costs were reduced by adopting new technologies and streamlining supply chains. Despite these successes, the company faces challenges from new competitors and shifting consumer preferences. The leadership has outlined strategies to address these areas in the upcoming fiscal year.\" Please focus on the details.",
+    "I'm preparing a presentation and need a concise summary focused on the conclusion of the following research document. Please limit the summary to 2 sentences: \"After examining data collected from 850 participants over five years, the study concludes that regular exercise significantly reduces the risk of heart disease. The results remained consistent across all age groups and were particularly pronounced for those who engaged in at least 150 minutes of moderate activity per week. The authors recommend incorporating structured exercise programs into public health initiatives.\" Remember, focus on the conclusion.",
+    "I need a 5-sentence summary focusing on an overview of this lengthy article: \"The global shift to remote working arrangements during the pandemic has brought about many changes in the workplace. Companies were forced to adapt quickly, leading to rapid adoption of digital collaboration tools. While productivity initially suffered, many employees have benefited from more flexible schedules and reduced commuting times. There have also been challenges in maintaining company culture and ensuring effective communication among teams. Surveys indicate that a hybrid model blending remote and in-person work is likely to become standard practice moving forward.\" Please summarize accordingly.",
+    "I'd appreciate your help summarizing the following book chapter into 6 sentences, with an emphasis on the details. The text is: \"Chapter 8 details the development of the solar energy industry in Europe from 2000 to 2020. It begins with descriptions of early government subsidies and the role of private investors. The chapter outlines major advancements in photovoltaic technology and the resulting drop in installation costs. Challenges discussed include fluctuating regulatory policies and competition from traditional energy sectors. The chapter concludes by evaluating the impact of solar energy adoption on regional economies and job creation.\" Please focus on the details."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "chosen_param": "tour_feedback",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "analyze_tour_feedback",
+    "description": "Analyzes feedback from users after a virtual tour to improve future experiences.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "tour_feedback": {
+          "type": "string",
+          "description": "Feedback provided by the user after the virtual tour. The argument value must contain exactly 7 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "user_satisfaction_score": {
+          "type": "integer",
+          "description": "User's satisfaction score for the tour on a scale from 1 to 10."
+        },
+        "areas_of_improvement": {
+          "type": "array",
+          "description": "Specific areas where the user thinks the tour could be improved.",
+          "items": {
+            "type": "string",
+            "description": "An area or aspect of the tour needing improvement.",
+            "enum": [
+              "audio quality",
+              "visual quality",
+              "content depth",
+              "usability",
+              "interaction quality"
+            ]
+          }
+        }
+      },
+      "required": [
+        "tour_feedback",
+        "user_satisfaction_score",
+        "areas_of_improvement"
+      ]
+    }
+  },
+  "user_queries": [
+    "I just finished the virtual museum tour, and I wanted to share my feedback in detail. Overall, I enjoyed exploring the different exhibits from my home, but I did encounter a few issues that made the experience less enjoyable. The audio quality was sometimes muffled, making it difficult to understand the guide, and the visuals, though interesting, appeared slightly pixelated on my screen, especially during zoom-ins on certain artifacts. The content itself was engaging but could use a bit more depth regarding the historical background of some exhibits. I’d rate my satisfaction with the tour as a 6 out of 10. For improvement, I think you should focus on audio quality, visual quality, and content depth.",
+    "After participating in your online historical city tour, I want to give my honest opinion. The tour guide was friendly and the interface was easy to use, but I think some improvements could be made. The visual quality, particularly during panning shots, seemed laggy, and there were moments where the interaction quality felt a bit limited—I wish I could've asked more questions or participated more actively. My overall experience earns a satisfaction score of 7 out of 10. My main suggestions are enhancing visual quality and improving interaction quality to create a more immersive and responsive tour.",
+    "Thank you for organizing the virtual art gallery visit. My feedback is pretty mixed. I loved that I could view famous paintings up close, but I struggled with the usability of the website—it took me too many clicks to get to the artworks I was interested in. Also, the content depth wasn't quite what I expected; I wanted more historical information and artist insights. Out of 10, I’d say my satisfaction score for the experience would be a 5. The two key areas that need attention are usability and content depth.",
+    "I recently completed your virtual science museum tour, and wanted to share my thoughts to help you make it better. The tour covered a lot of ground, which I appreciated, but I was frustrated by the poor audio quality, especially when transitioning between exhibits—the sound would sometimes cut in and out. Usability was also an issue, since the navigation buttons weren't always responsive. On a scale of 1 to 10, my satisfaction score would be a 4. The main aspects that definitely need improvement are audio quality and usability.",
+    "Here's my detailed feedback after attending the live virtual nature walk. I enjoyed seeing the various landscapes, but there are some parts that detracted from the experience. The interaction quality could be improved; at times, my questions in the chat were not answered, making it feel less personal. Also, while most visuals were stunning, certain sections had low visual quality, especially when streaming in high definition. Overall, I'd give this tour an 8 out of 10 for satisfaction. Please consider focusing on interaction quality and visual quality as your key areas for improvement."
+  ]
+}

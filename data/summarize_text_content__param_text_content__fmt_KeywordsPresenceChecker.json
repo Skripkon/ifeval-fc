@@ -1,0 +1,55 @@
+{
+  "chosen_param": "text_content",
+  "format": {
+    "name": "KeywordsPresenceChecker",
+    "description": "The argument value must include the keywords: ['round', 'initial', 'dirty']. Each keyword must appear at least once, in any order. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "list_of_keywords": [
+        "round",
+        "initial",
+        "dirty"
+      ],
+      "must_include": true
+    }
+  },
+  "fn_schema": {
+    "name": "summarize_text_content",
+    "description": "Generates a concise summary of the input text while preserving key information.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text_content": {
+          "type": "string",
+          "description": "The text content that needs to be summarized. The text must include the keywords: 'round', 'initial', and 'dirty', with each keyword appearing at least once, in any order; capitalization is not important."
+        },
+        "summary_length": {
+          "type": "integer",
+          "description": "Preferred length of the summary in number of sentences.",
+          "minimum": 1
+        },
+        "focus_area": {
+          "type": "string",
+          "description": "Specify the focus area for content prioritization.",
+          "enum": [
+            "overview",
+            "details",
+            "conclusion"
+          ]
+        }
+      },
+      "required": [
+        "text_content",
+        "summary_length",
+        "focus_area"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've just finished reading the following lengthy article about climate change, and I want to make sure I understand the general gist without missing out on the most important points. The article text is as follows:\n\n\"Climate change refers to significant, long-term changes in the global climate. The planet's climate has constantly been changing throughout history, but in recent times, the rate of change has accelerated due to human activities, particularly fossil fuel burning, which increases heat-trapping greenhouse gas levels in Earth's atmosphere. These changes are driving shifts in temperature and precipitation patterns, rising sea levels, and more frequent severe weather events such as hurricanes and droughts. The impacts of these shifts are observed in ecosystems, economies, and human health. Scientists are advocating for urgent actions to reduce greenhouse gas emissions and enhance sustainability to mitigate future risks. Governments worldwide are collaborating on agreements, such as the Paris Agreement, aiming to limit global warming and promote adaptation initiatives. Education and innovation play crucial roles in addressing the multifaceted challenges presented by climate change.\"\n\nCan you give me a summary of this article in 4 sentences, focusing on providing an overview?",
+    "I recently read a research paper about advances in AI technology and would love to have a condensed version focusing specifically on technical details. The complete text is: \"Artificial Intelligence (AI) has progressed rapidly in the past decade, revolutionizing industries through machine learning, neural networks, and advanced data analysis techniques. These improvements enable real-time decision making and automation at unprecedented scales. Breakthroughs in natural language processing and image recognition are transforming communication and diagnosis in medicine, as well as self-driving capabilities in vehicles. However, challenges remain in ensuring reliable generalization and ethical considerations in data usage. Ongoing research aims to address issues related to bias, transparency, and accountability while expanding the practical applications of AI across finance, healthcare, and education.\"\nCould you summarize this text for me in 3 sentences, prioritizing details?",
+    "Here's a long passage from a historical biography I'm reading and I'd appreciate it if you could summarize it, focusing on the conclusion. The passage goes: \"Abraham Lincoln's presidency was marked by the immense challenges of the Civil War, a conflict that threatened to tear the nation apart. Lincoln's leadership, determination, and eloquence helped guide the United States through its darkest hours. His commitment to emancipation and reconciliation laid the groundwork for a new era in American history. Despite overwhelming adversity and personal tragedy, he remained steadfast in his pursuit of unity and justice. Ultimately, Lincoln's vision of a nation 'conceived in Liberty, and dedicated to the proposition that all men are created equal' endured beyond his assassination, influencing the course of American democracy for generations.\"\nPlease craft a 2-sentence summary that emphasizes the conclusion.",
+    "I'd like your help in distilling the following text down to its main points. Here is the content: \"The evolution of smartphones has greatly impacted how people interact with technology and each other. Initially, mobile phones were meant only for calls and messaging, but with rapid technological advancements, they have become essential tools for internet access, productivity, and entertainment. Features like high-quality cameras, powerful processors, and extensive app ecosystems have made smartphones the center of daily digital life. Concerns regarding privacy, digital addiction, and environmental impact have also arisen. Manufacturers and developers are responding with innovations in security, ethical manufacturing, and sustainable design to address these challenges.\"\nCould you produce a 5-sentence summary with a focus on giving me an overview?",
+    "Below is a lengthy excerpt from a science textbook on the topic of photosynthesis. I’d appreciate a summary that brings out the most crucial details. The text reads: \"Photosynthesis is a fundamental biological process in which plants, algae, and some bacteria convert light energy into chemical energy, storing it in the bonds of glucose molecules. This process primarily takes place in the chloroplasts, where chlorophyll absorbs sunlight. Through a series of complex reactions, carbon dioxide and water are transformed into sugars and oxygen, essential for plant growth and the survival of most life on earth. Environmental factors such as temperature, light intensity, and availability of water and CO₂ can affect the rate of photosynthesis. Research into these processes helps improve agricultural yields and inform environmental conservation strategies.\"\nPlease provide me with a 3-sentence summary, focusing on the details."
+  ]
+}

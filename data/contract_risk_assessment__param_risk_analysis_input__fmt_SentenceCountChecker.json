@@ -1,0 +1,45 @@
+{
+  "chosen_param": "risk_analysis_input",
+  "format": {
+    "name": "SentenceCountChecker",
+    "description": "The argument value must have at most 4 sentences. Each sentence should be properly punctuated.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 4,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "contract_risk_assessment",
+    "description": "Assesses the risk level of a contract based on specified criteria and a natural language input.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "risk_analysis_input": {
+          "type": "string",
+          "description": "Natural language input specifying the aspects and context of the contract to be assessed. The input must contain at most 4 sentences, with each sentence properly punctuated."
+        },
+        "contract_id": {
+          "type": "string",
+          "description": "Unique identifier of the contract that needs risk assessment."
+        },
+        "include_high_risk_clauses": {
+          "type": "boolean",
+          "description": "Whether to include a detailed analysis of high-risk clauses in the output."
+        }
+      },
+      "required": [
+        "risk_analysis_input",
+        "contract_id",
+        "include_high_risk_clauses"
+      ]
+    }
+  },
+  "user_queries": [
+    "I would like you to thoroughly analyze contract number 5472ABCD and assess the overall risk level associated with this agreement from multiple perspectives, taking into consideration any issues related to indemnification, liability caps, termination clauses, and regulatory compliance that might be relevant to our industry. Please also include a breakdown of any clauses you identify as being particularly high-risk within this document, as this will help us when discussing mitigation strategies with legal counsel. Be as detailed as possible in your assessment and ensure that you clearly point out any red flags.",
+    "Could you review contract ID 2023-CON-9876 for me and evaluate any potential risks it may pose, with a focus on financial exposure, obligations regarding data privacy, and any unfavorable dispute resolution terms? It is crucial that your report highlights all the high-risk sections within the contract, as I need a comprehensive understanding of which clauses may have a substantial negative impact for our company. Please include a detailed analysis for each high-risk clause and explain why you consider them elevated in risk.",
+    "I'm seeking a detailed risk assessment for our contract identified as CONT-1457-XZ. Please examine the agreement, focusing particularly on any automatic renewal conditions, exclusivity requirements, and unusual warranty or guarantee terms that may present a risk. We also need you to include an analysis of all major high-risk clauses, outlining the reasons for their classification and the potential implications should they be enforced or breached. Your comprehensive review will inform our upcoming negotiations.",
+    "Please carry out a risk evaluation of the contract with the reference number BETA-PRJ-2024-001 since we are concerned about possible issues surrounding intellectual property assignments, confidentiality stipulations, and potential penalties for early termination. Additionally, I want you to provide a detailed examination of any high-risk clauses you find within the contract, so we have a clear map of what areas need legal attention before execution. Let me know if you need any further context regarding the business arrangement.",
+    "I would appreciate a comprehensive risk review of contract CTR-9988-DF, looking into aspects such as partner performance obligations, timelines for deliverables, and any non-compete or non-solicitation provisions that might affect our operational flexibility. Please don’t forget to include a detailed identification and analysis of any high-risk clauses in the document, as this information is vital for our risk management team’s decision-making process. Full explanations and recommendations concerning those high-risk sections would be very useful."
+  ]
+}

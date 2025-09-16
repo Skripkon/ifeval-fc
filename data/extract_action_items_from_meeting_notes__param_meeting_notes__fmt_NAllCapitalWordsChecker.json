@@ -1,0 +1,54 @@
+{
+  "chosen_param": "meeting_notes",
+  "format": {
+    "name": "NAllCapitalWordsChecker",
+    "description": "The argument value must contain exactly 7 words written entirely in capital (uppercase) letters.",
+    "group": "CASE",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 7
+    }
+  },
+  "fn_schema": {
+    "name": "extract_action_items_from_meeting_notes",
+    "description": "Extracts actionable items and assigns them to team members from provided meeting notes.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "meeting_notes": {
+          "type": "string",
+          "description": "Detailed notes from a meeting that contain potential action items. The argument value must contain exactly 7 words written entirely in capital (uppercase) letters."
+        },
+        "team_members": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Name of a team member who can be assigned action items."
+          },
+          "description": "List of team members available for assignment."
+        },
+        "priority_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "The default priority level for extracted action items."
+        }
+      },
+      "required": [
+        "meeting_notes",
+        "team_members",
+        "priority_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "During yesterday's marketing strategy meeting, several points were discussed that I believe require follow-up. The meeting notes are as follows: \"Jane highlighted the need to finalize the new advertising campaign budget by next Monday. Tom suggested researching competitor social media tactics, and Lisa said she would gather feedback from last quarter's email campaigns. We also need someone to take responsibility for compiling the updated client presentation deck.\" The available team members are Jane Smith, Tom Lee, Lisa Garner, and Mark Cruz. Please extract all actionable items from these notes, assign them appropriately among the stated team members, and set the default priority level as high.",
+    "Could you review the minutes from our project kickoff meeting, identify any tasks that need follow-up, and allocate them to our team? Here are the notes: \"We agreed that Raj will start drafting the timeline, but this needs to be confirmed. Maria suggested arranging regular check-ins, while George volunteered to coordinate resources for phase one. We also discussed setting up a project folder and ensuring all stakeholders get access.\" The individuals on the team are Raj Patel, Maria Gomez, George Papadakis, and Heather Lin. Set medium as the priority level for all resulting action items.",
+    "I have the following meeting notes from today's engineering sync: \"Michael brought up the issue of code review delays, recommending the creation of a new review schedule. Sarah proposed updating the documentation for the latest API changes. Joe assigned himself to handle the bug in the login module, and Kelly mentioned organizing a backlog refinement session.\" Please assign any tasks that emerge from these notes to the team members: Michael Chen, Sarah Lee, Joe Brown, Kelly Adams. Mark these with a low default priority level.",
+    "We had a lengthy operational review this afternoon, and I need help pulling out actionable items. Here are the notes: \"Emily will check on the equipment maintenance logs. Brian needs to order supplies for the next quarter. Natalie offered to improve the shift schedule, and Oscar should follow up with the vendor about delivery times. Paula raised the need for a safety audit next month.\" The following staff members are available for task assignment: Emily Tran, Brian Davis, Natalie Scott, Oscar Rivera, Paula Stewart. Please extract and assign action items, setting their default priority to medium.",
+    "Our monthly team meeting generated a lot of discussion points and action items. Here are the complete notes: \"Jacob must prepare the sales summary report before Friday. Mia needs to set up the monthly all-hands meeting. Oliver suggested refreshing the client onboarding materials, and Ava will update the company intranet with new HR policies. Ethan should create a proposal for the Q3 team-building event.\" The team consists of Jacob Hill, Mia Adams, Oliver Carter, Ava Robinson, and Ethan Kim. Please list all identifiable action items, assigning them to these team members, and assign a high priority level to each."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "chosen_param": "directed_by",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'n' exactly 7 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "n",
+      "N": 7,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn224__0__Movies_3_FindMovies",
+    "description": "Retrieves a list of movies based on the director, genre, and cast specified by the user.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "directed_by": {
+          "type": "string",
+          "description": "Director of the movie. Use 'dontcare' if the director is not a specific search criterion. The provided name must contain the letter 'n' exactly 7 times, regardless of case."
+        },
+        "genre": {
+          "type": "string",
+          "description": "Genre of the movie. Use 'dontcare' to include all genres or genre is not specified by user",
+          "enum": [
+            "Offbeat",
+            "Fantasy",
+            "World",
+            "Mystery",
+            "Thriller",
+            "Comedy",
+            "Comedy-drama",
+            "Horror",
+            "Animation",
+            "Sci-fi",
+            "Cult",
+            "Drama",
+            "Anime",
+            "Family",
+            "Action",
+            "dontcare"
+          ]
+        },
+        "cast": {
+          "type": "string",
+          "description": "Names of leading actors or actresses in the movie. Use 'dontcare' if the cast is not a specific search criterion."
+        }
+      },
+      "required": [
+        "directed_by"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "I'm planning a weekend movie marathon and I'm really in the mood to explore some films directed by Sofia Coppola. I love her unique style and the way she captures emotional depth and authentic stories. However, I'm not really picky about the genre, so any type of movie is fine as long as it's directed by her. Also, cast doesn't matter to me at this point, so don't worry about specifying any actors or actresses. Please help me compile a list of such movies as I'm eager to dive into her work and experience more of her storytelling magic.",
+    "There have been so many thrillers recommended to me lately, and I've realized that thrillers by Alfred Hitchcock always seem to captivate my interest. I'm looking to watch some of his films because I've heard so much about his legendary work in the thriller genre. I'm not picky about the actors or actresses in these movies, just that Hitchcock is at the helm. So, I would love a little help putting together a list of thrilling masterpieces directed by Alfred Hitchcock, to experience his groundbreaking techniques in suspense and tension.",
+    "I'd like to find films that boast the incredible directorial talents of Quentin Tarantino, as I've become quite fascinated with his unique approach to storytelling and cinematic style. I'm particularly interested in action or drama genres, but I'm not strict about it, any genre will do for a Tarantino film. I'm curious to delve deep into his filmography and see what unexpected twists and memorable dialogues await in his movies. However, the cast isn't crucial, so focus on the director for this search.",
+    "I've recently watched a fantastic performance from Leonardo DiCaprio and I’m eager to explore more films where he played leading roles. However, I want these films to be directed by Martin Scorsese, whose partnership with DiCaprio I find intriguing and compelling. I'm not too concerned about the genre; whether it's drama, action, or anything else, doesn't matter. What captivates me is how Scorsese brings characters to life through his storytelling. Please help compile a list of such films for my next movie night.",
+    "Lately, I have been yearning to explore the fantasy world through films that bear the hallmark of Peter Jackson’s directing genius. I've heard he has an unparalleled ability to transport viewers into fantastical realms with epic narratives and breathtaking visuals. But I'm not really interested in specifying the cast for this search study. I just need to know which movies directed by Peter Jackson fit within the fantasy genre, as I'm looking to witness and get lost in his fantastical worlds that people can't stop talking about."
+  ]
+}

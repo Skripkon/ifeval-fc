@@ -1,0 +1,55 @@
+{
+  "chosen_param": "current_habit",
+  "format": {
+    "name": "PlaceholderCountChecker",
+    "description": "The argument value must contain exactly 3 placeholders, each enclosed in square brackets (e.g., [address]).",
+    "group": "DETECTABLE CONTENT",
+    "args": {
+      "comparison_option": "exactly",
+      "N": 3
+    }
+  },
+  "fn_schema": {
+    "name": "recommend_sustainable_alternatives",
+    "description": "Recommends sustainable product or practice alternatives based on current user habits.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "current_habit": {
+          "type": "string",
+          "description": "Detailed description of the user's current habit or product usage for which they seek sustainable alternatives. The description must contain exactly 3 placeholders, each enclosed in square brackets (e.g., [address])."
+        },
+        "preference": {
+          "type": "string",
+          "enum": [
+            "affordable",
+            "premium",
+            "DIY"
+          ],
+          "description": "User's preference for the type of sustainable alternative they are looking for."
+        },
+        "impact_factor": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "description": "Desired level of environmental impact reduction."
+        }
+      },
+      "required": [
+        "current_habit",
+        "preference",
+        "impact_factor"
+      ]
+    }
+  },
+  "user_queries": [
+    "I’ve been using regular plastic wrap to cover leftovers and pack lunches every day, but I’m worried about all the waste I’m creating. I’d like to hear about some sustainable alternatives, preferably ones that are pretty affordable, since I’m on a tight budget. Also, I’m hoping for suggestions that could make a high impact on reducing my environmental footprint. What options would you recommend?",
+    "Every week, I buy bottled shampoo and conditioner from the supermarket because I find them convenient, but I know the plastic bottles are not great for the environment. Could you recommend some alternative products or routines I could try instead? My preference is for premium options since I'm willing to spend a bit more for quality, and I'd like the alternatives to offer at least a medium level of environmental impact reduction, if possible.",
+    "Currently, my daily habit is using disposable paper coffee cups from coffee shops on my way to work, mostly because it’s easy and I don’t have to carry anything extra. I’m interested in switching to something more sustainable that I could make or create myself – I’m quite handy with DIY projects. I’m looking for solutions that would have a high impact in terms of reducing waste. Can you give me some ideas?",
+    "For years, I’ve always used normal laundry detergents and softeners packed in plastic bottles for washing my clothes, but lately I’ve been trying to be more eco-conscious. I’m interested in alternatives that are affordable rather than expensive, and I would be happy with even a low level of environmental impact reduction. What kind of sustainable laundry practices or products could I switch to?",
+    "I usually pack my children’s lunches in single-use plastic sandwich bags and also rely on individually wrapped snacks for convenience. I want to find a better approach that’s more environmentally friendly, but it’s important to me that the options I consider are more premium, maybe with additional features or benefits. Ideally, I would like suggestions that make a medium difference environmentally. What would you suggest I use instead?"
+  ]
+}

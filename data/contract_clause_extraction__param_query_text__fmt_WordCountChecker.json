@@ -1,0 +1,50 @@
+{
+  "chosen_param": "query_text",
+  "format": {
+    "name": "WordCountChecker",
+    "description": "The argument value must have exactly 4 words. No less, no more.",
+    "group": "LENGTH CONSTRAINTS",
+    "args": {
+      "N": 4,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "contract_clause_extraction",
+    "description": "Extracts specific clauses or sections from a legal contract using natural language queries.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query_text": {
+          "type": "string",
+          "description": "Natural language query to define which clauses or sections to extract from the contract. The argument value must have exactly 4 words—no less, no more."
+        },
+        "contract_id": {
+          "type": "string",
+          "description": "Unique identifier of the contract from which clauses need to be extracted."
+        },
+        "return_format": {
+          "type": "string",
+          "enum": [
+            "plain_text",
+            "html",
+            "json"
+          ],
+          "description": "Desired format for the extracted clauses."
+        }
+      },
+      "required": [
+        "query_text",
+        "contract_id",
+        "return_format"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm currently reviewing our partnership agreement with contract ID 7842-XA-JUNE2021, and I need to ensure we've properly covered confidentiality requirements. Could you please extract and send me all sections from this contract that discuss confidentiality obligations, non-disclosure requirements, or any duties to protect proprietary information? I would like to receive the results in plain text so I can easily read through them and possibly share with my team.",
+    "Hi, for contract ID CONTRACT-89201-23B, I'm trying to locate all clauses that address what happens in case of a breach, specifically any language about penalties, remedies, or legal actions available. Please extract all relevant clauses or sections from this contract regarding breach of contract consequences. I would prefer the extracted information in HTML format so I can integrate it into a summary document I'm preparing.",
+    "Our client is asking about their data protection rights, and I need to reference the exact terms in their service agreement. Can you please extract from contract ID SVC-555-ALPHA all clauses or sections that mention personal data handling, GDPR compliance, or data privacy protections? I'd appreciate it if you could send the extracted terms in a JSON format for ease of reference and for possible analysis.",
+    "For the contract labeled 2023-EMP-0049, we're revisiting employee termination provisions given recent company restructuring. Could you locate and extract all sections outlining termination procedures, notice periods, severance pay, and grounds for dismissal? I need all this information from contract 2023-EMP-0049 in plain text, since we’ll be reviewing the content with HR managers who prefer that format.",
+    "I’m preparing a review for contract ID SUPP-9001-Q2 and want to check all the clauses related to the supplier’s obligations around delivery timelines, shipment delays, and schedules. Could you please extract every section in this contract that addresses delivery dates, lead times, and delay penalties? Make sure to deliver the extracted content to me in HTML format so I can compile it into our internal web-based contract review dashboard."
+  ]
+}

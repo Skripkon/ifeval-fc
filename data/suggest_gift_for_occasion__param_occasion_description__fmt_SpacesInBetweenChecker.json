@@ -1,0 +1,50 @@
+{
+  "chosen_param": "occasion_description",
+  "format": {
+    "name": "SpacesInBetweenChecker",
+    "description": "The argument value must use exactly 10 consecutive spaces between every pair of words. Only 10 spaces in a row are allowed in the string.",
+    "group": "DETECTABLE FORMAT",
+    "args": {
+      "N": 10
+    }
+  },
+  "fn_schema": {
+    "name": "suggest_gift_for_occasion",
+    "description": "Provides gift suggestions based on the occasion, recipient's age, and gender.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "occasion_description": {
+          "type": "string",
+          "description": "A detailed description of the occasion for which the gift is needed. The value must use exactly 10 consecutive spaces between every pair of words, with only 10 spaces in a row allowed in the string."
+        },
+        "recipient_age": {
+          "type": "integer",
+          "description": "The age of the recipient."
+        },
+        "recipient_gender": {
+          "type": "string",
+          "enum": [
+            "male",
+            "female",
+            "non-binary",
+            "prefer not to say"
+          ],
+          "description": "The gender of the recipient."
+        }
+      },
+      "required": [
+        "occasion_description",
+        "recipient_age",
+        "recipient_gender"
+      ]
+    }
+  },
+  "user_queries": [
+    "I'm having a really tough time deciding what to get for my best friend, who is turning 30 this weekend. The occasion is her milestone birthday celebration, and she's planning a big dinner party with friends and family at her favorite restaurant. She's always been into creative hobbies like painting and DIY crafts, but she also loves trying out new fitness classes and reading mystery novels. She's female. Could you suggest some thoughtful and unique gift ideas that would be suitable for a 30-year-old woman celebrating her birthday in this way?",
+    "My nephew is about to graduate from high school next month, and the whole family is coming together to throw a huge graduation party for him. This is a significant milestone for our family, and I want to get him something meaningful that will help him as he transitions to college life. He is a 17-year-old male who enjoys soccer, video games, and technology. Could you recommend some creative and practical gifts for a 17-year-old boy celebrating his high school graduation at a big family gathering?",
+    "I'm looking for a gift idea for my non-binary coworker, who is turning 25 soon. Our team is organizing a small surprise celebration at the office to mark their birthday, and I want to find something special that acknowledges their love of art, photography, travel, and gourmet food. They typically prefer experiences or unique handcrafted items rather than mainstream commercial gifts. What would you suggest as the perfect present for a 25-year-old non-binary person for this birthday office party?",
+    "My grandmother is celebrating her 80th birthday with a big garden party attended by family and close friends. She's always been the matriarch of our family, loves gardening, baking for her grandchildren, and reading historical novels. As a female turning 80, I want to choose a meaningful and practical gift that shows our appreciation for her and fits this joyous celebration. Can you give me some thoughtful and age-appropriate gift recommendations for an 80-year-old woman celebrating her birthday in this style?",
+    "My partner, who prefers not to disclose their gender, is about to celebrate our fifth anniversary together, and I really want to surprise them with a special gift. The occasion is quite meaningful to us, and we'll be spending the day exploring the city, having a romantic dinner, and reminiscing about our years together. They are 35 years old and enjoy music, hiking, cooking, and trying new things. Could you recommend some unique, heartfelt gift ideas that would be perfect for a 35-year-old person who prefers not to say their gender on our fifth anniversary?"
+  ]
+}

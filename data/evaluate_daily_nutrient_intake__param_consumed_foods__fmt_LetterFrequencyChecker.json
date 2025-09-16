@@ -1,0 +1,58 @@
+{
+  "chosen_param": "consumed_foods",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 's' at most 9 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "s",
+      "N": 9,
+      "comparison_option": "at most"
+    }
+  },
+  "fn_schema": {
+    "name": "evaluate_daily_nutrient_intake",
+    "description": "Evaluates the daily nutrient intake based on a given list of foods consumed, comparing it to recommended daily values.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "consumed_foods": {
+          "type": "string",
+          "description": "Free-form text describing the foods consumed by the user in a day. The text must contain the letter 's' no more than 9 times, counting both uppercase and lowercase."
+        },
+        "age_group": {
+          "type": "string",
+          "description": "The age group of the user to determine appropriate nutrient recommendations.",
+          "enum": [
+            "child",
+            "teen",
+            "adult",
+            "senior"
+          ]
+        },
+        "activity_level": {
+          "type": "string",
+          "description": "The user's regular physical activity level.",
+          "enum": [
+            "sedentary",
+            "light",
+            "moderate",
+            "active"
+          ]
+        }
+      },
+      "required": [
+        "consumed_foods",
+        "age_group",
+        "activity_level"
+      ]
+    }
+  },
+  "user_queries": [
+    "Hi, I wanted to get an evaluation of my daily nutrient intake based on what I ate today. For breakfast, I had oatmeal with a sliced banana and a glass of orange juice. For lunch, I had grilled chicken breast, a side salad with vinaigrette, and a cup of brown rice. In the afternoon, I had a snack of Greek yogurt and some almonds. For dinner, I had baked salmon, steamed broccoli, and a baked potato. I'm an adult and my regular physical activity level is moderate. Can you tell me how my nutrition stacks up against daily recommendations?",
+    "I'd like some help understanding if my meals today met my nutritional needs. My meals included two scrambled eggs and whole grain toast for breakfast, a turkey and cheese sandwich with lettuce, tomato, and mayo for lunch, an apple and a handful of walnuts as a snack, and for dinner, a vegetable stir-fry with tofu and brown rice. I'm a senior and my activity level is light. Could you please analyze my daily nutrition?",
+    "Can you review my daily food intake and let me know how it compares to recommended nutrient values? Today I started the day with a bowl of cereal and skim milk. At lunch, I had a cheeseburger, fries, and a soda. In the afternoon, I snacked on carrots and hummus. Dinner was spaghetti with meat sauce, a green salad with ranch dressing, and garlic bread. I am a teen and my lifestyle is fairly active, as I participate in sports after school.",
+    "Please evaluate whether my eating habits today provide sufficient nutrients for my demographic. For breakfast, I had yogurt with granola and blueberries. Lunch was a spinach salad with grilled shrimp, cherry tomatoes, cucumbers, and olive oil dressing, with a slice of whole grain bread. I snacked on a banana and a handful of cashews. Dinner was chicken curry with basmati rice and roasted cauliflower. I'm an adult, and my daily physical activity level is sedentary.",
+    "I'd appreciate it if you could assess how balanced my nutritional intake was today. I had pancakes with maple syrup and strawberries for breakfast, a ham and cheese omelet plus a cup of orange juice for brunch, a tuna salad sandwich and some grapes for lunch, and for dinner I enjoyed beef stew with carrots, peas, and mashed potatoes along with a side of steamed green beans. I'm a child with a moderate activity level. Could you please tell me how my nutrition measures up to daily guidelines?"
+  ]
+}

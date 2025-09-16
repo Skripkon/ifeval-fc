@@ -1,0 +1,46 @@
+{
+  "chosen_param": "law_type",
+  "format": {
+    "name": "LetterFrequencyChecker",
+    "description": "The argument value must contain the letter 'n' exactly 7 times. Case does not matter.",
+    "group": "KEYWORDS",
+    "args": {
+      "letter": "n",
+      "N": 7,
+      "comparison_option": "exactly"
+    }
+  },
+  "fn_schema": {
+    "name": "fn91__0__get_law_categories",
+    "description": "Retrieves the list of categories within a specified type of law.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "law_type": {
+          "type": "string",
+          "description": "The type of law to be searched. The argument value must contain the letter 'n' exactly 7 times. Case does not matter."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the law is applicable."
+        },
+        "specific_category": {
+          "type": "string",
+          "description": "Specific category within the type of law (Optional). Default: 'business'"
+        }
+      },
+      "required": [
+        "law_type",
+        "country"
+      ],
+      "description": ""
+    }
+  },
+  "user_queries": [
+    "Hello there, I am currently conducting some research on labor laws specifically in the United States. I need to get a complete overview of the various categories that exist within this type of law in the US, because I'm trying to compare how labor laws are structured compared to some other countries. Since laws can be vastly different depending on the nation, having a detailed list of categories will really help me understand the nuances and differences involved. Could you assist me with retrieving this information? It would be incredibly helpful for the project I am working on, and I'm hoping to cover categories such as employee rights, workplace safety, unions, and any other relevant subcategories under U.S. labor laws. Thank you very much for your assistance; it's greatly appreciated!",
+    "I am putting together a comprehensive guide on environmental law frameworks and I need to delve into the specifics of how these laws are categorized in the United Kingdom. It's crucial to my research to understand how different countries classify environmental regulations, and because the UK has always had a complex legal structure, having a categorized list would really allow me to better navigate the various legislations involved. I need this information as part of a comparative study with other EU member states, so any help you can offer in providing detailed categories within UK environmental law would be invaluable. If there are also any predominant categories that stand out, please include those too.",
+    "I'm piecing together information for a report that looks at corporate law in Canada. This is particularly important for illustrating how business regulatory practices differ internationally. As such, I require a list of the different categories that are recognized under corporate law within Canada. This would not only aid in presenting a clear picture of regulatory frameworks but also help in pinpointing the specific areas where Canada might align or diverge from other country's practices. So, could you provide me with an exhaustive list of categories within Canadian corporate law? Along with the main topics, I am also interested in any subcategories that could offer more in-depth insights. Thanks in advance for your help.",
+    "I hope you can assist me. I'm in the process of writing an academic paper focusing on family law. For one of my sections, I need a detailed list of the various legal categories under family law as it is constituted in France. Understanding these categories is crucial for outlining the social and legal dynamics within French society, especially since I want to compare it with family laws in other European countries. Therefore, having a clearer breakdown of family law categories as recognized in France will be immensely beneficial. French legal lineage is quite distinct so this detailed categorization would tremendously aid my analysis.",
+    "I'm preparing a legal seminar and need your help with obtaining a categorized outline of intellectual property law as it stands in Japan. This outline is essential for showcasing the intricacies of how intellectual property is managed and protected in Japan to an audience unfamiliar with these laws. Knowing the categories within this law type would really help make the seminar informative and comprehensive. Japan being a hub of technological innovations, understanding its intellectual property law through its various categories is crucial for the participants who are from diverse countries. Your assistance in helping gather these law categories is greatly appreciated. Thank you!"
+  ]
+}

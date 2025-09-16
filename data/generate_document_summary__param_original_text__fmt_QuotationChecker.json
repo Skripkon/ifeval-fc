@@ -1,0 +1,44 @@
+{
+  "chosen_param": "original_text",
+  "format": {
+    "name": "QuotationChecker",
+    "description": "The argument value must be wrapped in double quotation marks.\n No additional characters should appear outside the quotes.",
+    "group": "START_END",
+    "args": {
+      "quotation_type": "double"
+    }
+  },
+  "fn_schema": {
+    "name": "generate_document_summary",
+    "description": "Creates a concise summary of a large text document, highlighting key points and main topics.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "original_text": {
+          "type": "string",
+          "description": "The full text document to summarize. The argument value must be wrapped in double quotation marks, with no additional characters outside the quotes."
+        },
+        "summary_length": {
+          "type": "integer",
+          "description": "Desired length of the summary in number of sentences."
+        },
+        "include_keywords": {
+          "type": "boolean",
+          "description": "Indicates whether to include extracted keywords in the summary output."
+        }
+      },
+      "required": [
+        "original_text",
+        "summary_length",
+        "include_keywords"
+      ]
+    }
+  },
+  "user_queries": [
+    "I've uploaded the following lengthy academic article on climate change impacts and mitigation strategies: 'Climate change is posing significant risks to both natural and human systems world-wide. Key factors including rising sea levels, increased frequency of extreme weather events, and shifting biodiversity patterns are already affecting millions. Global responses have focused on emissions reduction, technological innovation, and adaptation measures at various government levels. The article details international agreements, national policies, community-led initiatives, and ongoing scientific research, highlighting success stories and remaining challenges. Multilateral cooperation and public awareness are cited as crucial in achieving long-term solutions, as are equitable strategies that consider vulnerable populations. The article also analyzes recent data trends and makes recommendations for both immediate and future actions.' Could you please create a detailed summary of this article in about 7 sentences? Also, I would like you to include extracted keywords in the summary output to highlight the main topics discussed.",
+    "Here is the full text from a corporate annual report I've been reviewing: 'In 2023, XYZ Corporation continued its commitment to innovation and sustainability, launching several groundbreaking products while reducing its carbon footprint by 20%. The company's financial performance exceeded expectations, with revenues growing 12% year over year, driven by international expansion and diversification of its product portfolio. Employee engagement programs resulted in a more inclusive workplace culture, and community outreach initiatives provided support to over 100 local groups. Despite global supply chain disruptions, XYZ maintained steady growth through strategic partnerships and agile operational adjustments. The report concludes with future outlooks and targeted goals for the upcoming year.' I need a 5-sentence summary that captures all the key points. Please make sure to include the main keywords from the report in your summary.",
+    "Please help me by reading this extensive research paper: 'The paper delves into the evolution of artificial intelligence, tracing its historical roots from early symbolic systems to the current age of deep learning and neural networks. Key milestones such as the development of expert systems, the emergence of machine learning, and the success of AI in games like chess and Go are discussed. The paper also addresses ethical considerations, including bias in algorithms and the potential impact on employment. Future prospects for human-AI collaboration, advances in natural language processing, and issues of regulation and transparency are thoroughly explored. It concludes with recommendations for responsible AI development.' I am looking for an 8-sentence overview summarizing the main points, and it would be helpful to include prominent keywords in the summary.",
+    "I'm working on a presentation and have this long excerpt from a government report about urban transportation: 'Urban transportation systems worldwide are facing unprecedented challenges due to rapid urbanization, increased vehicle ownership, and infrastructural constraints. The report examines congestion problems, pollution levels, and public health concerns associated with current transit patterns. Solutions such as expanded public transit, implementation of bike lanes, green vehicle incentives, and urban planning reforms are analyzed in detail, with case studies from major cities. Policy recommendations focus on integrating smart technology and fostering intermodal transport options for sustainable urban mobility.' Could you condense these findings into a summary of 4 sentences and include the core keywords from the text in your summary?",
+    "Below is the entirety of a comprehensive news article I read about the economic effects of remote work: 'Since the onset of the pandemic, remote work has dramatically changed the structure of many industries. Employees and employers alike have had to adjust to flexible schedules, digital collaboration tools, and reimagined leadership strategies. There are discussions about productivity, work-life balance, and the potential decline in demand for commercial real estate, with some cities seeing a shift in how office spaces are utilized. The article presents research on both the benefits and drawbacks of remote work, features interviews with business leaders and workers, and explores what the future may hold for hybrid and fully remote models.' Please generate a summary in 6 sentences, and I would like the main keywords included with the summary."
+  ]
+}
