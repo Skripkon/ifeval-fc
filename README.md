@@ -1,3 +1,6 @@
+[![arXiv](http://img.shields.io/badge/cs.AI-arXiv%3A2509.18420-B31B1B.svg?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2509.18420)
+[![python](https://img.shields.io/badge/Python-3.11%2B-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+
 # IFEval-FC Leaderboard
 
 <p align="left">
@@ -73,3 +76,16 @@ Expanded table showing the evaluation of various models, grouped by instruction 
 # TODO
 
 [ ] Try to make the benchmark more difficult: add more available functions (currently, only one function is available and the assistant calls it. It would be more challenging if the assistant had to choose the correct function to call). See if model performance decreases.
+
+
+# Citation
+
+@misc{skripko2025instructionfollowingevaluationfunctioncalling,
+      title={Instruction-Following Evaluation in Function Calling for Large Language Models}, 
+      author={Nikolai Skripko},
+      year={2025},
+      eprint={2509.18420},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2509.18420}, 
+}
